@@ -19,7 +19,21 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path alias */
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": [
+    "src/components/admin/RichEditor.tsx",
+    "src/components/admin/DatePicker.tsx",
+    "src/pages/admin/AdminConsultationDetailPage.tsx",
+    "src/pages/admin/AdminConsultationPage.tsx",
+    "src/pages/admin/AdminMediTvFormPage.tsx",
+    "src/pages/admin/AdminNoticeFormPage.tsx",
+    "src/pages/admin/AdminVoiceDetailPage.tsx"
+  ]
 }

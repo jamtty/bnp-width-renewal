@@ -1,24 +1,39 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { noticeList } from '../data/noticeData';
+import { fetchNoticeList, type NoticeItem } from '../api/notice';
 
-const TOTAL_PAGES = 8;
-
-declare function page_move(page: number): void;
+const PAGE_SIZE = 10;
 
 const NoticePage = () => {
   const navigate = useNavigate();
+  const [inputKeyword, setInputKeyword] = useState('');
   const [keyword, setKeyword] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
+  const [items, setItems] = useState<NoticeItem[]>([]);
+  const [totalCount, setTotalCount] = useState(0);
+  const [totalPages, setTotalPages] = useState(1);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
 
-  const filtered = keyword.trim()
-    ? noticeList.filter((item) => item.title.includes(keyword))
-    : noticeList;
+  useEffect(() => {
+    setLoading(true);
+    setError('');
+    fetchNoticeList({ page: currentPage, size: PAGE_SIZE, keyword: keyword || undefined, type: keyword ? 0 : undefined })
+      .then((res) => {
+        setItems(res.items);
+        setTotalCount(res.totalCount);
+        setTotalPages(res.totalPages);
+      })
+      .catch((e) => setError(e.message || '목록을 불러오지 못했습니다.'))
+      .finally(() => setLoading(false));
+  }, [currentPage, keyword]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
+    setCurrentPage(1);
+    setKeyword(inputKeyword);
   };
 
   const handlePageMove = (e: React.MouseEvent, page: number) => {
@@ -55,8 +70,8 @@ const NoticePage = () => {
                   type="text"
                   id="search_keyword"
                   name="search_keyword"
-                  value={keyword}
-                  onChange={(e) => setKeyword(e.target.value)}
+                  value={inputKeyword}
+                  onChange={(e) => setInputKeyword(e.target.value)}
                 />
                 <button type="submit" className="btn">검색</button>
               </fieldset>
@@ -81,21 +96,23 @@ const NoticePage = () => {
                 </tr>
               </thead>
               <tbody>
-                {filtered.length === 0 ? (
-                  <tr>
-                    <td colSpan={4} className="td_c">게시물이 없습니다.</td>
-                  </tr>
+                {loading ? (
+                  <tr><td colSpan={4} className="td_c">불러오는 중...</td></tr>
+                ) : error ? (
+                  <tr><td colSpan={4} className="td_c">{error}</td></tr>
+                ) : items.length === 0 ? (
+                  <tr><td colSpan={4} className="td_c">게시물이 없습니다.</td></tr>
                 ) : (
-                  filtered.map((item) => (
-                    <tr key={item.detailId}>
-                      <td className="td_c">{item.no}</td>
+                  items.map((item, index) => (
+                    <tr key={item.id}>
+                      <td className="td_c">{totalCount - (currentPage - 1) * PAGE_SIZE - index}</td>
                       <td className="td_c">
-                        <a href="#" onClick={(e) => { e.preventDefault(); navigate(`/notice/${item.detailId}`); }}>
+                        <a href="#" onClick={(e) => { e.preventDefault(); navigate(`/notice/${item.id}`); }}>
                           {item.title}
                         </a>
                       </td>
-                      <td className="td_c">{item.date}</td>
-                      <td className="td_c">{item.views}</td>
+                      <td className="td_c">{item.created_at}</td>
+                      <td className="td_c">{item.view_count}</td>
                     </tr>
                   ))
                 )}
@@ -106,7 +123,7 @@ const NoticePage = () => {
             {/* paging start */}
             <div className="paging">
               <h4 className="blind">paging</h4>
-              {Array.from({ length: TOTAL_PAGES }, (_, i) => i + 1).map((page) => (
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                 <a
                   key={page}
                   href="#"

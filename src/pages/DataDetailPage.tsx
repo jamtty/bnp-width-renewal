@@ -1,17 +1,34 @@
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { dataList } from '../data/dataData';
+import { fetchReportDetail, type ReportDetail, type ReportFile } from '../api/report';
+import { toAbsUrl, resolveContentUrls } from '../utils/uploadUrl';
 
 const DataDetailPage = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const itemId = Number(id);
+  const [item, setItem] = useState<ReportDetail | null>(null);
+  const [files, setFiles] = useState<ReportFile[]>([]);
+  const [prev, setPrev] = useState<{ id: number; title: string } | null>(null);
+  const [next, setNext] = useState<{ id: number; title: string } | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
 
-  const item = dataList.find((d) => d.id === itemId);
-  const currentIndex = item ? dataList.findIndex((d) => d.id === itemId) : -1;
-  const prevItem = currentIndex > 0 ? dataList[currentIndex - 1] : null;
-  const nextItem = currentIndex >= 0 && currentIndex < dataList.length - 1 ? dataList[currentIndex + 1] : null;
+  useEffect(() => {
+    if (!id) return;
+    setLoading(true);
+    setError('');
+    fetchReportDetail(Number(id))
+      .then((res) => {
+        setItem(res.item);
+        setFiles(res.files);
+        setPrev(res.prev);
+        setNext(res.next);
+      })
+      .catch((e) => setError(e.message || '데이터를 불러오지 못했습니다.'))
+      .finally(() => setLoading(false));
+  }, [id]);
 
   return (
     <div className="wrap sub">
@@ -33,7 +50,14 @@ const DataDetailPage = () => {
         <div id="contents">
           <div className="cont_w_area">
 
-            {!item ? (
+            {loading ? (
+              <div style={{ padding: '60px 0', textAlign: 'center' }}>불러오는 중...</div>
+            ) : error ? (
+              <div style={{ padding: '60px 0', textAlign: 'center' }}>
+                <p>{error}</p>
+                <button className="btn" onClick={() => navigate('/data')} style={{ marginTop: '20px' }}>목록으로</button>
+              </div>
+            ) : !item ? (
               <div style={{ padding: '60px 0', textAlign: 'center' }}>
                 <p>해당 자료를 찾을 수 없습니다.</p>
                 <button className="btn" onClick={() => navigate('/data')} style={{ marginTop: '20px' }}>
@@ -47,21 +71,23 @@ const DataDetailPage = () => {
                   <div className="obj_head">
                     <strong>{item.title}</strong>
                     <ul>
-                      <li>분류: {item.category}</li>
-                      <li>등록일: {item.date}</li>
+                      <li>등록일: {item.created_at}</li>
                       <li>
                         첨부파일:{' '}
-                        {item.attachment ? (
-                          <a
-                            href={item.attachment.url}
-                            className="file indent"
-                            download
-                            data-tooltip-text={item.attachment.name}
-                          >
-                            {item.attachment.name}
-                          </a>
+                        {files.length > 0 ? (
+                          files.map((f) => (
+                            <a
+                              key={f.id}
+                              href={toAbsUrl(f.file_url)}
+                              className="file indent"
+                              download={f.ori_name}
+                              data-tooltip-text={f.ori_name}
+                            >
+                              {f.ori_name}
+                            </a>
+                          ))
                         ) : (
-                          <span>{item.fileExt ?? '없음'}</span>
+                          <span>없음</span>
                         )}
                       </li>
                     </ul>
@@ -69,7 +95,7 @@ const DataDetailPage = () => {
                   <div
                     className="obj_cont"
                     dangerouslySetInnerHTML={{
-                      __html: item.content ?? '<p style="color:#888;text-align:center">내용이 없습니다.</p>',
+                      __html: resolveContentUrls(item.content ?? '') || '<p style="color:#888;text-align:center">내용이 없습니다.</p>',
                     }}
                   />
                 </div>
@@ -83,28 +109,28 @@ const DataDetailPage = () => {
                     <col />
                   </colgroup>
                   <tbody>
-                    {prevItem && (
+                    {prev && (
                       <tr>
                         <th scope="row" className="td_c">이전글</th>
                         <td>
                           <a
                             href="#"
-                            onClick={(e) => { e.preventDefault(); navigate(`/data/${prevItem.id}`); }}
+                            onClick={(e) => { e.preventDefault(); navigate(`/data/${prev.id}`); }}
                           >
-                            {prevItem.title}
+                            {prev.title}
                           </a>
                         </td>
                       </tr>
                     )}
-                    {nextItem && (
+                    {next && (
                       <tr>
                         <th scope="row" className="td_c">다음글</th>
                         <td>
                           <a
                             href="#"
-                            onClick={(e) => { e.preventDefault(); navigate(`/data/${nextItem.id}`); }}
+                            onClick={(e) => { e.preventDefault(); navigate(`/data/${next.id}`); }}
                           >
-                            {nextItem.title}
+                            {next.title}
                           </a>
                         </td>
                       </tr>

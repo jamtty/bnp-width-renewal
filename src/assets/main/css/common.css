@@ -326,7 +326,7 @@
 
 
 	/* CI */
-	h1 {font-size:1.500em;color:#000;padding-left:32px;line-height:32px;background-image:url('../images/pc/img_ci.png');}
+	h1 {font-size:1.500em;color:#000;line-height:32px;background-image:url('../images/pc/img_ci.png');}
 	h1 a {line-height:32px;}
 
 

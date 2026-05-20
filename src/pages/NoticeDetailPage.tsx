@@ -1,17 +1,34 @@
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { noticeList } from '../data/noticeData';
+import { fetchNoticeDetail, type NoticeDetail, type NoticeFile } from '../api/notice';
+import { toAbsUrl, resolveContentUrls } from '../utils/uploadUrl';
 
 const NoticeDetailPage = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const detailId = Number(id);
+  const [item, setItem] = useState<NoticeDetail | null>(null);
+  const [files, setFiles] = useState<NoticeFile[]>([]);
+  const [prev, setPrev] = useState<{ id: number; title: string } | null>(null);
+  const [next, setNext] = useState<{ id: number; title: string } | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
 
-  const item = noticeList.find((n) => n.detailId === detailId);
-  const currentIndex = item ? noticeList.findIndex((n) => n.detailId === detailId) : -1;
-  const prevItem = currentIndex > 0 ? noticeList[currentIndex - 1] : null;
-  const nextItem = currentIndex >= 0 && currentIndex < noticeList.length - 1 ? noticeList[currentIndex + 1] : null;
+  useEffect(() => {
+    if (!id) return;
+    setLoading(true);
+    setError('');
+    fetchNoticeDetail(Number(id))
+      .then((res) => {
+        setItem(res.item);
+        setFiles(res.files);
+        setPrev(res.prev);
+        setNext(res.next);
+      })
+      .catch((e) => setError(e.message || '데이터를 불러오지 못했습니다.'))
+      .finally(() => setLoading(false));
+  }, [id]);
 
   return (
     <div className="wrap sub">
@@ -33,7 +50,14 @@ const NoticeDetailPage = () => {
         <div id="contents">
           <div className="cont_w_area">
 
-            {!item ? (
+            {loading ? (
+              <div style={{ padding: '60px 0', textAlign: 'center' }}>불러오는 중...</div>
+            ) : error ? (
+              <div style={{ padding: '60px 0', textAlign: 'center' }}>
+                <p>{error}</p>
+                <button className="btn" onClick={() => navigate('/notice')} style={{ marginTop: '20px' }}>목록으로</button>
+              </div>
+            ) : !item ? (
               <div style={{ padding: '60px 0', textAlign: 'center' }}>
                 <p>해당 공지사항을 찾을 수 없습니다.</p>
                 <button className="btn" onClick={() => navigate('/notice')} style={{ marginTop: '20px' }}>
@@ -47,19 +71,22 @@ const NoticeDetailPage = () => {
                   <div className="obj_head">
                     <strong>{item.title}</strong>
                     <ul>
-                      <li>등록일: {item.date}</li>
-                      <li>조회수: {item.views}</li>
+                      <li>등록일: {item.created_at}</li>
+                      <li>조회수: {item.view_count}</li>
                       <li>
                         첨부파일:{' '}
-                        {item.attachment ? (
-                          <a
-                            href={item.attachment.url}
-                            className="file indent"
-                            download
-                            data-tooltip-text={item.attachment.name}
-                          >
-                            {item.attachment.name}
-                          </a>
+                        {files.length > 0 ? (
+                          files.map((f) => (
+                            <a
+                              key={f.id}
+                              href={toAbsUrl(f.file_url)}
+                              className="file indent"
+                              download={f.ori_name}
+                              data-tooltip-text={f.ori_name}
+                            >
+                              {f.ori_name}
+                            </a>
+                          ))
                         ) : (
                           <span>없음</span>
                         )}
@@ -68,7 +95,7 @@ const NoticeDetailPage = () => {
                   </div>
                   <div
                     className="obj_cont"
-                    dangerouslySetInnerHTML={{ __html: `<p>안녕하세요 위드원상담코칭센터 입니다.</p><p>&nbsp;</p><p>지난 사례개념화 이론 기초/심화 과정이 성공적으로 끝나고 좋은 평이 많았습니다.&nbsp;</p><p>&nbsp;</p><p>4주 특강을 개설하였습니다. 많은 관심 부탁드립니다 ^___^</p><p>&nbsp;</p><p><img src="/upload/editor/20260404160837.png" title="2026?%20?%20??????%20??%20??.png"><br style="clear:both;">&nbsp;</p><p>&nbsp;</p><p>【수용전념치료 특강】&nbsp;</p><p>▷기간: 4월 23일부터 매주 목요일&nbsp;</p><p>▷시간: 오후 6시 30분~9시30분 (3시간씩)</p><p>▷수강료: 32만원 (수련생10% 할인시 288천원)</p><p>신청폼 ▶ <a href="https://forms.gle/RJvVYfYArXMRmXDAA">https://forms.gle/RJvVYfYArXMRmXDAA</a></p><p>&nbsp;</p><div><br></div>` }}
+                    dangerouslySetInnerHTML={{ __html: resolveContentUrls(item.content ?? '') }}
                   />
                 </div>
                 {/* view end */}
@@ -81,28 +108,28 @@ const NoticeDetailPage = () => {
                     <col />
                   </colgroup>
                   <tbody>
-                    {prevItem && (
+                    {prev && (
                       <tr>
                         <th scope="row" className="td_c">이전글</th>
                         <td>
                           <a
                             href="#"
-                            onClick={(e) => { e.preventDefault(); navigate(`/notice/${prevItem.detailId}`); }}
+                            onClick={(e) => { e.preventDefault(); navigate(`/notice/${prev.id}`); }}
                           >
-                            {prevItem.title}
+                            {prev.title}
                           </a>
                         </td>
                       </tr>
                     )}
-                    {nextItem && (
+                    {next && (
                       <tr>
                         <th scope="row" className="td_c">다음글</th>
                         <td>
                           <a
                             href="#"
-                            onClick={(e) => { e.preventDefault(); navigate(`/notice/${nextItem.detailId}`); }}
+                            onClick={(e) => { e.preventDefault(); navigate(`/notice/${next.id}`); }}
                           >
-                            {nextItem.title}
+                            {next.title}
                           </a>
                         </td>
                       </tr>

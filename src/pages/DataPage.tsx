@@ -1,20 +1,40 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { dataList } from '../data/dataData';
+import { fetchReportList, type ReportItem } from '../api/report';
+
+const PAGE_SIZE = 10;
 
 const DataPage = () => {
   const navigate = useNavigate();
+  const [inputKeyword, setInputKeyword] = useState('');
   const [keyword, setKeyword] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [items, setItems] = useState<ReportItem[]>([]);
+  const [totalCount, setTotalCount] = useState(0);
+  const [totalPages, setTotalPages] = useState(1);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    setLoading(true);
+    setError('');
+    fetchReportList({ page: currentPage, size: PAGE_SIZE, keyword: keyword || undefined, type: keyword ? 0 : undefined })
+      .then((res) => {
+        setItems(res.items);
+        setTotalCount(res.totalCount);
+        setTotalPages(res.totalPages);
+      })
+      .catch((e) => setError(e.message || '목록을 불러오지 못했습니다.'))
+      .finally(() => setLoading(false));
+  }, [currentPage, keyword]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
+    setCurrentPage(1);
+    setKeyword(inputKeyword);
   };
-
-  const filtered = keyword.trim()
-    ? dataList.filter((item) => item.title.includes(keyword) || item.category.includes(keyword))
-    : dataList;
 
   return (
     <div className="wrap sub">
@@ -45,8 +65,8 @@ const DataPage = () => {
                   type="text"
                   id="search_keyword"
                   name="search_keyword"
-                  value={keyword}
-                  onChange={(e) => setKeyword(e.target.value)}
+                  value={inputKeyword}
+                  onChange={(e) => setInputKeyword(e.target.value)}
                 />
                 <button type="submit" className="btn">검색</button>
               </fieldset>
@@ -57,8 +77,7 @@ const DataPage = () => {
             <table className="tbl_type01">
               <caption>자료실 리스트</caption>
               <colgroup>
-                <col style={{ width: '8%' }} />
-                <col style={{ width: '15%' }} />
+                <col style={{ width: '12%' }} />
                 <col />
                 <col style={{ width: '18%' }} />
                 <col style={{ width: '12%' }} />
@@ -66,29 +85,29 @@ const DataPage = () => {
               <thead>
                 <tr>
                   <th scope="col">번호</th>
-                  <th scope="col">분류</th>
                   <th scope="col">제목</th>
                   <th scope="col">날짜</th>
                   <th scope="col">파일</th>
                 </tr>
               </thead>
               <tbody>
-                {filtered.length === 0 ? (
-                  <tr>
-                    <td colSpan={5} className="td_c">게시물이 없습니다.</td>
-                  </tr>
+                {loading ? (
+                  <tr><td colSpan={4} className="td_c">불러오는 중...</td></tr>
+                ) : error ? (
+                  <tr><td colSpan={4} className="td_c">{error}</td></tr>
+                ) : items.length === 0 ? (
+                  <tr><td colSpan={4} className="td_c">게시물이 없습니다.</td></tr>
                 ) : (
-                  filtered.map((item) => (
+                  items.map((item, index) => (
                     <tr key={item.id}>
-                      <td className="td_c">{item.id}</td>
-                      <td className="td_c">{item.category}</td>
+                      <td className="td_c">{totalCount - (currentPage - 1) * PAGE_SIZE - index}</td>
                       <td>
                         <a href="#" onClick={(e) => { e.preventDefault(); navigate(`/data/${item.id}`); }}>
                           {item.title}
                         </a>
                       </td>
-                      <td className="td_c">{item.date}</td>
-                      <td className="td_c">{item.fileExt ?? '-'}</td>
+                      <td className="td_c">{item.created_at}</td>
+                      <td className="td_c">{item.file_count > 0 ? '📎' : '-'}</td>
                     </tr>
                   ))
                 )}
@@ -99,7 +118,16 @@ const DataPage = () => {
             {/* paging start */}
             <div className="paging">
               <h4 className="blind">paging</h4>
-              <a href="#" className="on" onClick={(e) => e.preventDefault()}>1</a>
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <a
+                  key={page}
+                  href="#"
+                  className={currentPage === page ? 'on' : undefined}
+                  onClick={(e) => { e.preventDefault(); setCurrentPage(page); }}
+                >
+                  {page}
+                </a>
+              ))}
             </div>
             {/* paging end */}
 

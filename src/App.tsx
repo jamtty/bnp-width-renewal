@@ -1,7 +1,7 @@
 ﻿import { useEffect, useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
-import bannerPc from '../../upload/banner/banner_file_202308222942917.png';
-import bannerMobile from '../../upload/banner/banner_file_202308222639832.png';
+import { Routes, Route, Link, Navigate } from 'react-router-dom';
+import bannerPc from '../../uploads/banner/banner_file_202308222942917.png';
+import bannerMobile from '../../uploads/banner/banner_file_202308222639832.png';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToHash from './components/ScrollToHash';
@@ -13,8 +13,32 @@ import NoticePage from './pages/NoticePage';
 import NoticeDetailPage from './pages/NoticeDetailPage';
 import DataPage from './pages/DataPage';
 import DataDetailPage from './pages/DataDetailPage';
+import AdminLoginPage from './pages/admin/AdminLoginPage';
+import AdminNoticePage from './pages/admin/AdminNoticePage';
+import AdminNoticeFormPage from './pages/admin/AdminNoticeFormPage';
+import AdminDataPage from './pages/admin/AdminDataPage';
+import AdminDataFormPage from './pages/admin/AdminDataFormPage';
+import AdminMyPage from './pages/admin/AdminMyPage';
+import AdminLayout from './components/admin/AdminLayout';
+import { useAuthStore, isTokenExpired } from './store/useAuthStore';
 
 declare var $: any;
+
+function PrivateRoute({ children }: { children: React.ReactNode }) {
+  const { isAuthenticated, accessToken } = useAuthStore();
+  if (!isAuthenticated || isTokenExpired(accessToken)) {
+    return <Navigate to="/admin/login" replace />;
+  }
+  return <>{children}</>;
+}
+
+function AdminRoute({ children }: { children: React.ReactNode }) {
+  return (
+    <AdminLayout>
+      <PrivateRoute>{children}</PrivateRoute>
+    </AdminLayout>
+  );
+}
 
 function App() {
   return (
@@ -30,6 +54,16 @@ function App() {
       <Route path="/notice/:id" element={<NoticeDetailPage />} />
       <Route path="/data" element={<DataPage />} />
       <Route path="/data/:id" element={<DataDetailPage />} />
+      {/* 관리자 */}
+      <Route path="/admin/login" element={<AdminLayout><AdminLoginPage /></AdminLayout>} />
+      <Route path="/admin" element={<AdminRoute><AdminNoticePage /></AdminRoute>} />
+      <Route path="/admin/notice" element={<AdminRoute><AdminNoticePage /></AdminRoute>} />
+      <Route path="/admin/notice/write" element={<AdminRoute><AdminNoticeFormPage /></AdminRoute>} />
+      <Route path="/admin/notice/edit/:id" element={<AdminRoute><AdminNoticeFormPage /></AdminRoute>} />
+      <Route path="/admin/data" element={<AdminRoute><AdminDataPage /></AdminRoute>} />
+      <Route path="/admin/data/write" element={<AdminRoute><AdminDataFormPage /></AdminRoute>} />
+      <Route path="/admin/data/edit/:id" element={<AdminRoute><AdminDataFormPage /></AdminRoute>} />
+      <Route path="/admin/mypage" element={<AdminRoute><AdminMyPage /></AdminRoute>} />
       </Routes>
     </>
   );
