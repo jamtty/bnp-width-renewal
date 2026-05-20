@@ -1,0 +1,19 @@
+-- 구비서류 파일 관리 테이블
+CREATE TABLE IF NOT EXISTS `cert_doc_tbl` (
+  `CD_IDX`       INT          NOT NULL AUTO_INCREMENT COMMENT '파일 IDX',
+  `CD_TITLE`     VARCHAR(200) NOT NULL                COMMENT '파일 제목',
+  `CD_ORI_NAME`  VARCHAR(500) NOT NULL DEFAULT ''     COMMENT '원본 파일명',
+  `CD_SAVE_NAME` VARCHAR(500) NOT NULL DEFAULT ''     COMMENT '저장 파일명',
+  `CD_FILE_PATH` VARCHAR(500) NOT NULL DEFAULT ''     COMMENT '파일 경로',
+  `CD_FILE_SIZE` INT          NOT NULL DEFAULT 0      COMMENT '파일 크기(bytes)',
+  `CD_FILE_EXT`  VARCHAR(20)  NOT NULL DEFAULT ''     COMMENT '파일 확장자',
+  `CD_SORT_ORDER` INT         NOT NULL DEFAULT 0      COMMENT '정렬순서',
+  `CD_USE_YN`    CHAR(1)      NOT NULL DEFAULT 'Y'    COMMENT '사용여부',
+  `CD_DEL_YN`    CHAR(1)      NOT NULL DEFAULT 'N'    COMMENT '삭제여부',
+  `IN_MEM_ID`    VARCHAR(100) NOT NULL DEFAULT ''     COMMENT '등록자',
+  `INPUTDATE`    DATETIME     NOT NULL DEFAULT NOW()  COMMENT '등록일시',
+  `UP_MEM_ID`    VARCHAR(100) NOT NULL DEFAULT ''     COMMENT '수정자',
+  `UPDATEDATE`   DATETIME                             COMMENT '수정일시',
+  PRIMARY KEY (`CD_IDX`),
+  KEY `idx_status` (`CD_DEL_YN`, `CD_USE_YN`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='구비서류 파일 관리';

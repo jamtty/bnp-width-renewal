@@ -1,0 +1,36 @@
+CREATE TABLE `voc_tbl` (
+	`VC_IDX` INT(11) NOT NULL COMMENT '고객의소리 일련번',
+	`VC_CD` VARCHAR(30) NULL DEFAULT NULL COMMENT '고객의소리분류코드' COLLATE 'utf8_general_ci',
+	`VC_NAME` VARCHAR(100) NULL DEFAULT NULL COMMENT '이름' COLLATE 'utf8_general_ci',
+	`VC_PHONE` VARCHAR(50) NULL DEFAULT NULL COMMENT '연락처' COLLATE 'utf8_general_ci',
+	`VC_EMAIL` VARCHAR(150) NULL DEFAULT NULL COMMENT '이메일' COLLATE 'utf8_general_ci',
+	`VC_PWD` VARCHAR(100) NULL DEFAULT NULL COMMENT '비밀번호' COLLATE 'utf8_general_ci',
+	`VC_TITLE` VARCHAR(150) NULL DEFAULT NULL COMMENT '제목' COLLATE 'utf8_general_ci',
+	`VC_CONT` TEXT NULL DEFAULT NULL COMMENT '내용' COLLATE 'utf8_general_ci',
+	`ATCH_FILE_ID` VARCHAR(20) NULL DEFAULT NULL COMMENT '파일아이디' COLLATE 'utf8_general_ci',
+	`INPUTDATE` DATETIME NULL DEFAULT NULL COMMENT '등록일',
+	`UPDATEDATE` DATETIME NULL DEFAULT NULL COMMENT '수정일',
+	`DELDATE` DATETIME NULL DEFAULT NULL COMMENT '삭제일',
+	`VC_DEL_YN` CHAR(1) NULL DEFAULT NULL COMMENT '삭제여부' COLLATE 'utf8_general_ci',
+	`REPDATE` DATETIME NULL DEFAULT NULL COMMENT '답변일',
+	`VC_RE_ID` VARCHAR(50) NULL DEFAULT NULL COMMENT '답변자아이디' COLLATE 'utf8_general_ci',
+	`VC_RE_CONT` TEXT NULL DEFAULT NULL COMMENT '답변내용' COLLATE 'utf8_general_ci',
+	`VC_VIEW` DECIMAL(10,0) NULL DEFAULT NULL,
+	PRIMARY KEY (`VC_IDX`) USING BTREE
+)
+COMMENT='고객의소리'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+;
+
+CREATE TABLE `voc_file` (
+  `id` int(11) NOT NULL,
+  `voc_id` int(11) NOT NULL,
+  `ori_name` varchar(255) NOT NULL,
+  `save_name` varchar(255) NOT NULL,
+  `file_path` varchar(500) NOT NULL,
+  `file_size` int(11) NOT NULL DEFAULT 0,
+  `file_ext` varchar(20) NOT NULL DEFAULT '',
+  `created_at` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='고객의소리 첨부파일 테이블';
+

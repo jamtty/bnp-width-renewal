@@ -1,0 +1,9 @@
+# 디렉토리 목록 비공개
+Options -Indexes
+
+# .env 및 민감 파일 직접 접근 차단
+<FilesMatch "^(\.env|\.env\..*|\.htaccess|\.user\.ini|composer\.json|composer\.lock|\.gitignore)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
