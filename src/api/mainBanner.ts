@@ -2,16 +2,17 @@ import apiClient from './axios'
 
 export interface MainBannerItem {
   id: number
-  url: string
-  link_target: string
-  use_yn: string
-  sort_order: number
-  img_ori_name?: string
-  img_save_name?: string
-  img_url?: string
+  title: string
+  img_web: string        // ÀúÀå ÆÄÀÏ¸í (web)
+  img_mobile: string     // ÀúÀå ÆÄÀÏ¸í (mobile)
+  img_url_web: string    // Àı´ë URL (web) - ¼­¹ö¿¡¼­ Á¶ÇÕ
+  img_url_mobile: string // Àı´ë URL (mobile) - ¾øÀ¸¸é web URL Æú¹é
+  img_web_ori?: string   // ¿øº» ÆÄÀÏ¸í (web)
+  img_mobile_ori?: string // ¿øº» ÆÄÀÏ¸í (mobile)
+  display_yn: string     // Y/N
+  sort_order: number | null
   created_by?: string
   created_at?: string
-  updated_by?: string
   updated_at?: string
 }
 
@@ -23,28 +24,28 @@ export interface MainBannerListResponse {
   size: number
 }
 
-// ê³µê°œìš© (í™œì„± ë°°ë„ˆë§Œ)
+// °ø°³¿ë (display_yn = Y ÀÎ ¹è³Ê¸¸)
 export const fetchActiveBanners = async (): Promise<MainBannerItem[]> => {
   const { data } = await apiClient.get('/api/main-banner/active')
-  if (!data.success) throw new Error(data.message || 'ë°°ë„ˆë¥¼ ë¶ˆëŸ¬ì˜¤ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.')
+  if (!data.success) throw new Error(data.message || '¹è³Ê¸¦ ºÒ·¯¿ÀÁö ¸øÇß½À´Ï´Ù.')
   return data.data
 }
 
-// ê´€ë¦¬ììš© ëª©ë¡
+// °ü¸®ÀÚ ¸ñ·Ï
 export const fetchMainBannerList = async (params: {
   page?: number
   size?: number
   keyword?: string
-  use_yn?: string
+  display_yn?: string
 }): Promise<MainBannerListResponse> => {
   const { data } = await apiClient.get('/api/main-banner', { params })
-  if (!data.success) throw new Error(data.message || 'ëª©ë¡ì„ ë¶ˆëŸ¬ì˜¤ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.')
+  if (!data.success) throw new Error(data.message || '¸ñ·ÏÀ» ºÒ·¯¿ÀÁö ¸øÇß½À´Ï´Ù.')
   return data.data
 }
 
 export const fetchMainBannerDetail = async (id: number): Promise<MainBannerItem> => {
   const { data } = await apiClient.get(`/api/main-banner/${id}`)
-  if (!data.success) throw new Error(data.message || 'ë°ì´í„°ë¥¼ ë¶ˆëŸ¬ì˜¤ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.')
+  if (!data.success) throw new Error(data.message || 'µ¥ÀÌÅÍ¸¦ ºÒ·¯¿ÀÁö ¸øÇß½À´Ï´Ù.')
   return data.data
 }
 
@@ -52,7 +53,7 @@ export const createMainBanner = async (formData: FormData): Promise<{ id: number
   const { data } = await apiClient.post('/api/main-banner', formData, {
     headers: { 'Content-Type': 'multipart/form-data' },
   })
-  if (!data.success) throw new Error(data.message || 'ë“±ë¡ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.')
+  if (!data.success) throw new Error(data.message || 'µî·Ï¿¡ ½ÇÆĞÇß½À´Ï´Ù.')
   return data.data
 }
 
@@ -60,20 +61,20 @@ export const updateMainBanner = async (id: number, formData: FormData): Promise<
   const { data } = await apiClient.post(`/api/main-banner/${id}`, formData, {
     headers: { 'Content-Type': 'multipart/form-data' },
   })
-  if (!data.success) throw new Error(data.message || 'ìˆ˜ì •ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.')
+  if (!data.success) throw new Error(data.message || '¼öÁ¤¿¡ ½ÇÆĞÇß½À´Ï´Ù.')
 }
 
-export const updateMainBannerUseYn = async (id: number, use_yn: 'Y' | 'N'): Promise<void> => {
-  const { data } = await apiClient.post(`/api/main-banner/${id}/use`, { use_yn })
-  if (!data.success) throw new Error(data.message || 'ë³€ê²½ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.')
+export const updateMainBannerDisplayYn = async (id: number, display_yn: 'Y' | 'N'): Promise<void> => {
+  const { data } = await apiClient.post(`/api/main-banner/${id}/display`, { display_yn })
+  if (!data.success) throw new Error(data.message || 'º¯°æ¿¡ ½ÇÆĞÇß½À´Ï´Ù.')
 }
 
 export const updateMainBannerSortOrder = async (id: number, sort_order: number): Promise<void> => {
   const { data } = await apiClient.post(`/api/main-banner/${id}/sort`, { sort_order })
-  if (!data.success) throw new Error(data.message || 'ìˆœì„œ ë³€ê²½ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.')
+  if (!data.success) throw new Error(data.message || '¼ø¼­ º¯°æ¿¡ ½ÇÆĞÇß½À´Ï´Ù.')
 }
 
 export const deleteMainBanner = async (id: number): Promise<void> => {
   const { data } = await apiClient.post(`/api/main-banner/${id}/delete`)
-  if (!data.success) throw new Error(data.message || 'ì‚­ì œì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.')
+  if (!data.success) throw new Error(data.message || '»èÁ¦¿¡ ½ÇÆĞÇß½À´Ï´Ù.')
 }

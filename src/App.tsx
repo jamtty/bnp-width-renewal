@@ -1,7 +1,5 @@
-﻿import { useEffect, useState } from 'react';
+﻿import { useEffect, useState, useRef, useCallback } from 'react';
 import { Routes, Route, Link, Navigate } from 'react-router-dom';
-import bannerPc from '../../uploads/banner/banner_file_202308222942917.png';
-import bannerMobile from '../../uploads/banner/banner_file_202308222639832.png';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToHash from './components/ScrollToHash';
@@ -19,8 +17,11 @@ import AdminNoticeFormPage from './pages/admin/AdminNoticeFormPage';
 import AdminDataPage from './pages/admin/AdminDataPage';
 import AdminDataFormPage from './pages/admin/AdminDataFormPage';
 import AdminMyPage from './pages/admin/AdminMyPage';
+import AdminBannerPage from './pages/admin/AdminBannerPage';
+import AdminBannerFormPage from './pages/admin/AdminBannerFormPage';
 import AdminLayout from './components/admin/AdminLayout';
 import { useAuthStore, isTokenExpired } from './store/useAuthStore';
+import { fetchActiveBanners, type MainBannerItem } from './api/mainBanner';
 
 declare var $: any;
 
@@ -63,6 +64,9 @@ function App() {
       <Route path="/admin/data" element={<AdminRoute><AdminDataPage /></AdminRoute>} />
       <Route path="/admin/data/write" element={<AdminRoute><AdminDataFormPage /></AdminRoute>} />
       <Route path="/admin/data/edit/:id" element={<AdminRoute><AdminDataFormPage /></AdminRoute>} />
+      <Route path="/admin/banner" element={<AdminRoute><AdminBannerPage /></AdminRoute>} />
+      <Route path="/admin/banner/write" element={<AdminRoute><AdminBannerFormPage /></AdminRoute>} />
+      <Route path="/admin/banner/edit/:id" element={<AdminRoute><AdminBannerFormPage /></AdminRoute>} />
       <Route path="/admin/mypage" element={<AdminRoute><AdminMyPage /></AdminRoute>} />
       </Routes>
     </>
@@ -70,25 +74,79 @@ function App() {
 }
 
 function MainPage() {
-  const [bannerUrl, setBannerUrl] = useState(
-    window.innerWidth <= 768 ? bannerMobile : bannerPc
-  );
+  const [banners, setBanners] = useState<MainBannerItem[]>([])
+  const [current, setCurrent] = useState(0)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
   useEffect(() => {
-    const handleResize = () => {
-      setBannerUrl(window.innerWidth <= 768 ? bannerMobile : bannerPc);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => { window.removeEventListener('resize', handleResize); };
-  }, []);
+    fetchActiveBanners().then(setBanners).catch(() => {})
+  }, [])
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  // 자동 슬라이드
+  const startTimer = useCallback(() => {
+    if (timerRef.current) clearInterval(timerRef.current)
+    timerRef.current = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % Math.max(banners.length, 1))
+    }, 4000)
+  }, [banners.length])
+
+  useEffect(() => {
+    if (banners.length > 1) startTimer()
+    return () => { if (timerRef.current) clearInterval(timerRef.current) }
+  }, [banners.length, startTimer])
+
+  // 터치 스와이프
+  const touchStartX = useRef(0)
+  const handleTouchStart = (e: React.TouchEvent) => { touchStartX.current = e.touches[0].clientX }
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const diff = touchStartX.current - e.changedTouches[0].clientX
+    if (Math.abs(diff) < 40) return
+    setCurrent((prev) => {
+      if (diff > 0) return (prev + 1) % banners.length
+      return (prev - 1 + banners.length) % banners.length
+    })
+    startTimer()
+  }
+
+  const goTo = (idx: number) => { setCurrent(idx); startTimer() }
+
+  const bannerUrl = banners.length > 0
+    ? (isMobile ? (banners[current].img_url_mobile || banners[current].img_url_web) : banners[current].img_url_web)
+    : ''
 
   return (
     <div className="wrap main">
       <Header />
       <div id="container">
         <div id="visual">
-          <div className="slider">
-            <div className="bann_img01" style={{ backgroundImage: `url(${bannerUrl})` }} />
+          <div
+            className="slider"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div
+              className="bann_img01"
+              style={{ backgroundImage: bannerUrl ? `url(${bannerUrl})` : undefined }}
+            />
+            {banners.length > 1 && (
+              <div className="slider_dots">
+                {banners.map((_, i) => (
+                  <button
+                    key={i}
+                    className={`slider_dot${i === current ? ' active' : ''}`}
+                    onClick={() => goTo(i)}
+                    aria-label={`배너 ${i + 1}`}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </div>
         <div id="contents">

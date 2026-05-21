@@ -43,10 +43,15 @@ input[type='password']{width:100%;height:35px;color:#666;padding:5px 9px;border:
 
 /* visual */
 .main #visual {position:relative;overflow:hidden;}
+.main #visual > div.slider {position:relative;}
 .main #visual > div.slider div {width:100%;text-align:center;background-size:300% auto;background-repeat: no-repeat;background-position: center center;}
 .main #visual > div.slider div span {overflow:hidden;text-indent:-999999em;display:inline-block;background-size:100% auto;background-position:center top;background-repeat:no-repeat;margin:333px auto 0;}
 .main #visual > div.slider div.bann_img01 {}
 .main #visual > div.slider div.bann_img02 {background-position: 62% 48%;}
+/* 슬라이더 도트 */
+.slider_dots {position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10;}
+.slider_dot {width:10px;height:10px;border-radius:50%;border:none;background:rgba(255,255,255,0.6);cursor:pointer;padding:0;transition:background .2s;}
+.slider_dot.active {background:#fff;}
 
 .sub #visual {background-color:#f2f1ef;}
 .sub #visual > div {height:260px;padding-top:35px;background-size:180% auto;background-repeat:no-repeat;background-position:center 54.5%;box-sizing:border-box;}
