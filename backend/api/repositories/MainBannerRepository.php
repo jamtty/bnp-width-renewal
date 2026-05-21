@@ -1,184 +1,184 @@
 <?php
 /**
- * 메인 배너 Repository
- * 테이블: main_banner_tbl, main_banner_file
+ * ���� ��� Repository
+ * ���̺�: pcs_banner
  */
 class MainBannerRepository extends BaseRepository
 {
-    public function countList(string $keyword, string $useYn): int
+    private function uploadUrl(): string
     {
-        [$where, $params] = $this->buildWhere($keyword, $useYn);
-        return (int)$this->selectScalar("SELECT COUNT(*) FROM main_banner_tbl $where", $params);
+        return rtrim(Env::get('UPLOAD_URL_BANNER', '/uploads/banner/'), '/') . '/';
     }
 
-    public function findList(string $keyword, string $useYn, int $limit, int $offset): array
+    private function withUrls(array &$item): void
     {
-        [$where, $params] = $this->buildWhere($keyword, $useYn);
+        $base = $this->uploadUrl();
+        $item['img_url_web']    = $item['img_web']    ? $base . $item['img_web']    : '';
+        $item['img_url_mobile'] = $item['img_mobile'] ? $base . $item['img_mobile'] : $item['img_url_web'];
+    }
+
+    public function countList(string $keyword, string $displayYn): int
+    {
+        [$where, $params] = $this->buildWhere($keyword, $displayYn);
+        return (int)$this->selectScalar("SELECT COUNT(*) FROM pcs_banner $where", $params);
+    }
+
+    public function findList(string $keyword, string $displayYn, int $limit, int $offset): array
+    {
+        [$where, $params] = $this->buildWhere($keyword, $displayYn);
         $params[':limit']  = $limit;
         $params[':offset'] = $offset;
-        return $this->select(
-            "SELECT BN_IDX AS id,
-                    BN_LINK AS url,
-                    CASE BN_LINK_TARGET WHEN 'B' THEN '_blank' ELSE '_self' END AS link_target,
-                    BN_USE_YN AS use_yn,
-                    CAST(BN_ORD AS UNSIGNED) AS sort_order,
-                    IN_MEM_ID AS created_by,
-                    DATE_FORMAT(INPUTDATE, '%Y-%m-%d') AS created_at
-             FROM main_banner_tbl
+        $items = $this->select(
+            "SELECT banner_key     AS id,
+                    banner_name    AS title,
+                    banner_path    AS img_web,
+                    banner_mobile_path AS img_mobile,
+                    display_yn,
+                    order_num      AS sort_order,
+                    reg_user       AS created_by,
+                    DATE_FORMAT(reg_date, '%Y-%m-%d') AS created_at
+             FROM pcs_banner
              $where
-             ORDER BY BN_ORD ASC, BN_IDX DESC
+             ORDER BY display_yn DESC, order_num ASC, banner_key DESC
              LIMIT :limit OFFSET :offset",
             $params
         );
+        foreach ($items as &$item) { $this->withUrls($item); }
+        unset($item);
+        return $items;
     }
 
     public function findOne(int $id): array|false
     {
-        return $this->selectOne(
-            "SELECT BN_IDX AS id,
-                    BN_LINK AS url,
-                    CASE BN_LINK_TARGET WHEN 'B' THEN '_blank' ELSE '_self' END AS link_target,
-                    BN_USE_YN AS use_yn,
-                    CAST(BN_ORD AS UNSIGNED) AS sort_order,
-                    IN_MEM_ID AS created_by,
-                    DATE_FORMAT(INPUTDATE,  '%Y-%m-%d')        AS created_at,
-                    UP_MEM_ID AS updated_by,
-                    DATE_FORMAT(UPDATEDATE, '%Y-%m-%d %H:%i') AS updated_at
-             FROM main_banner_tbl
-             WHERE BN_IDX = :id AND BN_DEL_YN = 'N'",
+        $item = $this->selectOne(
+            "SELECT banner_key              AS id,
+                    banner_name             AS title,
+                    banner_path             AS img_web,
+                    banner_mobile_path      AS img_mobile,
+                    banner_origin_path      AS img_web_ori,
+                    banner_mobile_origin_path AS img_mobile_ori,
+                    display_yn,
+                    order_num               AS sort_order,
+                    reg_user                AS created_by,
+                    DATE_FORMAT(reg_date, '%Y-%m-%d') AS created_at,
+                    DATE_FORMAT(mod_date, '%Y-%m-%d %H:%i') AS updated_at
+             FROM pcs_banner
+             WHERE banner_key = :id",
             [':id' => $id]
         );
+        if ($item) { $this->withUrls($item); }
+        return $item;
     }
 
-    /** 공개용 (use_yn = Y) */
+    /** ������: display_yn = 'Y', order_num �������� */
     public function findActive(): array
     {
-        return $this->select(
-            "SELECT BN_IDX AS id,
-                    BN_LINK AS url,
-                    CASE BN_LINK_TARGET WHEN 'B' THEN '_blank' ELSE '_self' END AS link_target,
-                    BN_USE_YN AS use_yn,
-                    CAST(BN_ORD AS UNSIGNED) AS sort_order
-             FROM main_banner_tbl
-             WHERE BN_DEL_YN = 'N' AND BN_USE_YN = 'Y'
-             ORDER BY BN_ORD ASC, BN_IDX DESC"
+        $items = $this->select(
+            "SELECT banner_key     AS id,
+                    banner_name    AS title,
+                    banner_path    AS img_web,
+                    banner_mobile_path AS img_mobile,
+                    display_yn,
+                    order_num      AS sort_order
+             FROM pcs_banner
+             WHERE display_yn = 'Y'
+             ORDER BY order_num ASC, banner_key DESC"
         );
+        foreach ($items as &$item) { $this->withUrls($item); }
+        unset($item);
+        return $items;
     }
 
     public function create(array $data): int
     {
-        $nextId = (int)$this->selectScalar(
-            'SELECT COALESCE(MAX(BN_IDX), 0) + 1 FROM main_banner_tbl'
-        );
         $this->execute(
-            "INSERT INTO main_banner_tbl
-             (BN_IDX, BN_LINK, BN_LINK_TARGET, BN_USE_YN, BN_ORD,
-              IN_MEM_ID, BN_DEL_YN, INPUTDATE)
+            "INSERT INTO pcs_banner
+             (banner_name, banner_path, banner_mobile_path,
+              banner_origin_path, banner_mobile_origin_path,
+              display_yn, order_num, reg_user, reg_date)
              VALUES
-             (:bn_idx, :url, :link_target, :use_yn, :sort_order,
-              :created_by, 'N', NOW())",
+             (:title, :img_web, :img_mobile,
+              :img_web_ori, :img_mobile_ori,
+              :display_yn, :sort_order, :reg_user, NOW())",
             [
-                ':bn_idx'      => $nextId,
-                ':url'         => $data['url'],
-                ':link_target' => $data['link_target'],
-                ':use_yn'      => $data['use_yn'],
-                ':sort_order'  => $data['sort_order'],
-                ':created_by'  => $data['created_by'],
+                ':title'          => $data['title'],
+                ':img_web'        => $data['img_web']        ?? '',
+                ':img_mobile'     => $data['img_mobile']     ?? '',
+                ':img_web_ori'    => $data['img_web_ori']    ?? '',
+                ':img_mobile_ori' => $data['img_mobile_ori'] ?? '',
+                ':display_yn'     => $data['display_yn'],
+                ':sort_order'     => $data['sort_order'] !== '' ? $data['sort_order'] : null,
+                ':reg_user'       => $data['reg_user'],
             ]
         );
-        return $nextId;
+        return (int)$this->lastInsertId();
     }
 
     public function update(int $id, array $data): bool
     {
+        $sets   = ['banner_name = :title', 'display_yn = :display_yn',
+                   'order_num = :sort_order', 'mod_date = NOW()'];
+        $params = [
+            ':title'      => $data['title'],
+            ':display_yn' => $data['display_yn'],
+            ':sort_order' => $data['sort_order'] !== '' ? $data['sort_order'] : null,
+            ':id'         => $id,
+        ];
+
+        if (!empty($data['img_web'])) {
+            $sets[]                 = 'banner_path = :img_web';
+            $sets[]                 = 'banner_origin_path = :img_web_ori';
+            $params[':img_web']     = $data['img_web'];
+            $params[':img_web_ori'] = $data['img_web_ori'] ?? '';
+        }
+        if (!empty($data['img_mobile'])) {
+            $sets[]                    = 'banner_mobile_path = :img_mobile';
+            $sets[]                    = 'banner_mobile_origin_path = :img_mobile_ori';
+            $params[':img_mobile']     = $data['img_mobile'];
+            $params[':img_mobile_ori'] = $data['img_mobile_ori'] ?? '';
+        }
+
         return $this->execute(
-            "UPDATE main_banner_tbl SET
-                BN_LINK        = :url,
-                BN_LINK_TARGET = :link_target,
-                BN_USE_YN      = :use_yn,
-                BN_ORD         = :sort_order,
-                UP_MEM_ID      = :updated_by,
-                UPDATEDATE     = NOW()
-             WHERE BN_IDX = :id",
-            [
-                ':url'         => $data['url'],
-                ':link_target' => $data['link_target'],
-                ':use_yn'      => $data['use_yn'],
-                ':sort_order'  => $data['sort_order'],
-                ':updated_by'  => $data['updated_by'],
-                ':id'          => $id,
-            ]
-        ) > 0;
+            'UPDATE pcs_banner SET ' . implode(', ', $sets) . ' WHERE banner_key = :id',
+            $params
+        ) >= 0;
     }
 
     public function delete(int $id): bool
     {
         return $this->execute(
-            "UPDATE main_banner_tbl SET BN_DEL_YN = 'Y', DELDATE = NOW() WHERE BN_IDX = :id",
+            'DELETE FROM pcs_banner WHERE banner_key = :id',
             [':id' => $id]
         ) > 0;
     }
 
-    public function updateUseYn(int $id, string $useYn): bool
+    public function updateDisplayYn(int $id, string $displayYn): bool
     {
         return $this->execute(
-            "UPDATE main_banner_tbl SET BN_USE_YN = :use_yn WHERE BN_IDX = :id",
-            [':use_yn' => $useYn, ':id' => $id]
-        ) > 0;
+            'UPDATE pcs_banner SET display_yn = :yn, mod_date = NOW() WHERE banner_key = :id',
+            [':yn' => $displayYn, ':id' => $id]
+        ) >= 0;
     }
 
     public function updateSortOrder(int $id, int $sortOrder): bool
     {
         return $this->execute(
-            "UPDATE main_banner_tbl SET BN_ORD = :sort_order WHERE BN_IDX = :id",
-            [':sort_order' => $sortOrder, ':id' => $id]
-        ) > 0;
+            'UPDATE pcs_banner SET order_num = :ord, mod_date = NOW() WHERE banner_key = :id',
+            [':ord' => $sortOrder, ':id' => $id]
+        ) >= 0;
     }
 
-    // ── main_banner_file ──────────────────────────────────────────
-
-    public function findFile(int $bnId): array|false
+    private function buildWhere(string $keyword, string $displayYn): array
     {
-        $row = $this->selectOne(
-            'SELECT ori_name, save_name FROM main_banner_file WHERE bn_id = :bn_id LIMIT 1',
-            [':bn_id' => $bnId]
-        );
-        if (!$row) return false;
-
-        $uploadUrl = rtrim(Env::get('UPLOAD_URL_MAIN_BANNER', '/uploads/main_banner/'), '/') . '/';
-        $row['file_url'] = $uploadUrl . $row['save_name'];
-        return $row;
-    }
-
-    public function saveFile(int $bnId, string $oriName, string $saveName, string $filePath, int $fileSize, string $fileExt): void
-    {
-        $this->deleteFile($bnId);
-        $this->execute(
-            'INSERT INTO main_banner_file (bn_id, ori_name, save_name, file_path, file_size, file_ext)
-             VALUES (:bn_id, :ori_name, :save_name, :file_path, :file_size, :file_ext)',
-            [
-                ':bn_id'     => $bnId,
-                ':ori_name'  => $oriName,
-                ':save_name' => $saveName,
-                ':file_path' => $filePath,
-                ':file_size' => $fileSize,
-                ':file_ext'  => $fileExt,
-            ]
-        );
-    }
-
-    public function deleteFile(int $bnId): void
-    {
-        $this->execute('DELETE FROM main_banner_file WHERE bn_id = :bn_id', [':bn_id' => $bnId]);
-    }
-
-    private function buildWhere(string $keyword, string $useYn): array
-    {
-        $conds  = ["BN_DEL_YN = 'N'"];
+        $conds  = ['1=1'];
         $params = [];
-        if ($useYn !== '') {
-            $conds[]           = 'BN_USE_YN = :use_yn';
-            $params[':use_yn'] = $useYn;
+        if ($keyword !== '') {
+            $conds[]            = 'banner_name LIKE :keyword';
+            $params[':keyword'] = '%' . $keyword . '%';
+        }
+        if ($displayYn !== '') {
+            $conds[]               = 'display_yn = :display_yn';
+            $params[':display_yn'] = $displayYn;
         }
         return ['WHERE ' . implode(' AND ', $conds), $params];
     }

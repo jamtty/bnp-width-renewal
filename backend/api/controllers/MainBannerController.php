@@ -1,15 +1,15 @@
 <?php
 /**
- * 메인 배너 Controller
+ * ���� ��� Controller (pcs_banner)
  *
- * GET  /main-banner          → index  (관리자 목록)
- * GET  /main-banner/active   → active (공개용, 활성 배너)
- * GET  /main-banner/{id}     → show
- * POST /main-banner          → store
- * POST /main-banner/{id}     → update
- * POST /main-banner/{id}/use → updateUseYn
- * POST /main-banner/{id}/sort→ updateSortOrder
- * POST /main-banner/{id}/delete → destroy
+ * GET  /main-banner          �� index  (������ ���)
+ * GET  /main-banner/active   �� active (������, display_yn=Y)
+ * GET  /main-banner/{id}     �� show
+ * POST /main-banner          �� store
+ * POST /main-banner/{id}     �� update
+ * POST /main-banner/{id}/display �� updateDisplayYn
+ * POST /main-banner/{id}/sort    �� updateSortOrder
+ * POST /main-banner/{id}/delete  �� destroy
  */
 class MainBannerController
 {
@@ -35,72 +35,86 @@ class MainBannerController
     {
         $id   = (int)($params['id'] ?? 0);
         $item = $this->service->getOne($id);
-        if (!$item) { Response::error('데이터를 찾을 수 없습니다.', 404); return; }
+        if (!$item) { Response::error('�����͸� ã�� �� �����ϴ�.', 404); return; }
         Response::ok($item);
     }
 
     public function store(Request $request): void
     {
         $payload = Token::fromRequest();
-        if (!$payload) { Response::error('인증이 필요합니다.', 401); return; }
+        if (!$payload) { Response::error('������ �ʿ��մϴ�.', 401); return; }
 
-        $data = $this->extractData($request, Token::getLoginIdFromPayload($payload));
+        $data = $this->extractBaseData($request);
         if ($data === null) return;
+        $data['reg_user'] = Token::getLoginIdFromPayload($payload);
 
-        $id = $this->service->create($data);
-
-        $uploaded = FileUploader::process('image', 'main_banner', self::MAX_IMAGE_SIZE);
-        if (!empty($uploaded)) {
-            $f = $uploaded[0];
-            $this->service->saveFile($id, $f['ori_name'], $f['save_name'], $f['file_path'], (int)$f['file_size'], $f['file_ext']);
+        // �̹���(web) ���ε�
+        $uploadedWeb = FileUploader::process('image_web', 'banner', self::MAX_IMAGE_SIZE);
+        if (!empty($uploadedWeb)) {
+            $f = $uploadedWeb[0];
+            $data['img_web']     = $f['save_name'];
+            $data['img_web_ori'] = $f['ori_name'];
+        }
+        // �̹���(mobile) ���ε�
+        $uploadedMobile = FileUploader::process('image_mobile', 'banner', self::MAX_IMAGE_SIZE);
+        if (!empty($uploadedMobile)) {
+            $f = $uploadedMobile[0];
+            $data['img_mobile']     = $f['save_name'];
+            $data['img_mobile_ori'] = $f['ori_name'];
         }
 
-        Response::json(true, ['id' => $id], '등록되었습니다.', 201);
+        $id = $this->service->create($data);
+        Response::json(true, ['id' => $id], '��ϵǾ����ϴ�.', 201);
     }
 
     public function update(Request $request, array $params): void
     {
         $payload = Token::fromRequest();
-        if (!$payload) { Response::error('인증이 필요합니다.', 401); return; }
+        if (!$payload) { Response::error('������ �ʿ��մϴ�.', 401); return; }
 
         $id   = (int)($params['id'] ?? 0);
         $item = $this->service->getOne($id);
-        if (!$item) { Response::error('데이터를 찾을 수 없습니다.', 404); return; }
+        if (!$item) { Response::error('�����͸� ã�� �� �����ϴ�.', 404); return; }
 
-        $data = $this->extractData($request, Token::getLoginIdFromPayload($payload), isUpdate: true);
+        $data = $this->extractBaseData($request, isUpdate: true);
         if ($data === null) return;
 
-        $this->service->update($id, $data);
-
-        $uploaded = FileUploader::process('image', 'main_banner', self::MAX_IMAGE_SIZE);
-        if (!empty($uploaded)) {
-            $this->service->deleteFile($id);
-            $f = $uploaded[0];
-            $this->service->saveFile($id, $f['ori_name'], $f['save_name'], $f['file_path'], (int)$f['file_size'], $f['file_ext']);
+        $uploadedWeb = FileUploader::process('image_web', 'banner', self::MAX_IMAGE_SIZE);
+        if (!empty($uploadedWeb)) {
+            $f = $uploadedWeb[0];
+            $data['img_web']     = $f['save_name'];
+            $data['img_web_ori'] = $f['ori_name'];
+        }
+        $uploadedMobile = FileUploader::process('image_mobile', 'banner', self::MAX_IMAGE_SIZE);
+        if (!empty($uploadedMobile)) {
+            $f = $uploadedMobile[0];
+            $data['img_mobile']     = $f['save_name'];
+            $data['img_mobile_ori'] = $f['ori_name'];
         }
 
+        $this->service->update($id, $data);
         Response::ok(['id' => $id]);
     }
 
-    public function updateUseYn(Request $request, array $params): void
+    public function updateDisplayYn(Request $request, array $params): void
     {
         $payload = Token::fromRequest();
-        if (!$payload) { Response::error('인증이 필요합니다.', 401); return; }
+        if (!$payload) { Response::error('������ �ʿ��մϴ�.', 401); return; }
 
-        $id    = (int)($params['id'] ?? 0);
-        $useYn = strtoupper(trim((string)($request->body['use_yn'] ?? '')));
-        if (!in_array($useYn, ['Y', 'N'], true)) { Response::error('유효하지 않은 값입니다.', 400); return; }
+        $id        = (int)($params['id'] ?? 0);
+        $displayYn = strtoupper(trim((string)($request->body['display_yn'] ?? '')));
+        if (!in_array($displayYn, ['Y', 'N'], true)) { Response::error('��ȿ���� ���� ���Դϴ�.', 400); return; }
 
-        $this->service->updateUseYn($id, $useYn);
+        $this->service->updateDisplayYn($id, $displayYn);
         Response::ok(['id' => $id]);
     }
 
     public function updateSortOrder(Request $request, array $params): void
     {
         $payload = Token::fromRequest();
-        if (!$payload) { Response::error('인증이 필요합니다.', 401); return; }
+        if (!$payload) { Response::error('������ �ʿ��մϴ�.', 401); return; }
 
-        $id        = (int)($params['id'] ?? 0);
+        $id       = (int)($params['id'] ?? 0);
         $sortOrder = (int)($request->body['sort_order'] ?? 0);
 
         $this->service->updateSortOrder($id, $sortOrder);
@@ -110,35 +124,28 @@ class MainBannerController
     public function destroy(Request $request, array $params): void
     {
         $payload = Token::fromRequest();
-        if (!$payload) { Response::error('인증이 필요합니다.', 401); return; }
+        if (!$payload) { Response::error('������ �ʿ��մϴ�.', 401); return; }
 
         $id = (int)($params['id'] ?? 0);
-        $this->service->deleteFile($id);
         $this->service->delete($id);
         Response::ok(['id' => $id]);
     }
 
-    // ── private ──────────────────────────────────────────────────
+    // ���� private ����������������������������������������������������������������������������������������������������
 
-    private function extractData(Request $request, string $userId, bool $isUpdate = false): ?array
+    private function extractBaseData(Request $request, bool $isUpdate = false): ?array
     {
-        $linkTarget = strtolower(trim((string)($request->body['link_target'] ?? '_self')));
-        $dbTarget   = $linkTarget === '_blank' ? 'B' : 'S';
+        $title = trim((string)($request->body['title'] ?? ''));
+        if ($title === '') { Response::error('��ʸ��� �Է����ּ���.', 400); return null; }
 
-        $data = [
-            'url'         => trim((string)($request->body['url']        ?? '')),
-            'link_target' => $dbTarget,
-            'use_yn'      => strtoupper(trim((string)($request->body['use_yn'] ?? 'Y'))),
-            'sort_order'  => (int)($request->body['sort_order'] ?? 1),
+        return [
+            'title'      => $title,
+            'display_yn' => strtoupper(trim((string)($request->body['display_yn'] ?? 'N'))),
+            'sort_order' => trim((string)($request->body['sort_order'] ?? '')),
+            'img_web'        => '',
+            'img_mobile'     => '',
+            'img_web_ori'    => '',
+            'img_mobile_ori' => '',
         ];
-
-        if ($isUpdate) {
-            $data['updated_by'] = $userId;
-        } else {
-            $data['created_by'] = $userId;
-        }
-
-        return $data;
     }
-
 }

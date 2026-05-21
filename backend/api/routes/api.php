@@ -142,6 +142,6 @@ $router->get('/main-banner/active',                  [MainBannerController::clas
 $router->post('/main-banner',                        [MainBannerController::class, 'store']);
 $router->get('/main-banner/{id}',                    [MainBannerController::class, 'show']);
 $router->post('/main-banner/{id}',                   [MainBannerController::class, 'update']);
-$router->post('/main-banner/{id}/use',               [MainBannerController::class, 'updateUseYn']);
+$router->post('/main-banner/{id}/display',            [MainBannerController::class, 'updateDisplayYn']);
 $router->post('/main-banner/{id}/sort',              [MainBannerController::class, 'updateSortOrder']);
 $router->post('/main-banner/{id}/delete',            [MainBannerController::class, 'destroy']);
