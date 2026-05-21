@@ -1,4 +1,4 @@
-import apiClient from './axios'
+﻿import apiClient from './axios'
 
 const UPLOAD_BASE = (import.meta.env.VITE_UPLOAD_BASE_URL || '').replace(/\/$/, '')
 
@@ -19,12 +19,12 @@ function normalizeItem(item: MainBannerItem): MainBannerItem {
 export interface MainBannerItem {
   id: number
   title: string
-  img_web: string        // ���� ���ϸ� (web)
-  img_mobile: string     // ���� ���ϸ� (mobile)
-  img_url_web: string    // ���� URL (web) - �������� ����
-  img_url_mobile: string // ���� URL (mobile) - ������ web URL ����
-  img_web_ori?: string   // ���� ���ϸ� (web)
-  img_mobile_ori?: string // ���� ���ϸ� (mobile)
+  img_web: string        // 저장 파일명 (web)
+  img_mobile: string     // 저장 파일명 (mobile)
+  img_url_web: string    // 이미지 URL (web) - 절대경로로 변환
+  img_url_mobile: string // 이미지 URL (mobile) - 절대경로로 변환
+  img_web_ori?: string   // 원본 파일명 (web)
+  img_mobile_ori?: string // 원본 파일명 (mobile)
   display_yn: string     // Y/N
   sort_order: number | null
   created_by?: string
@@ -40,14 +40,14 @@ export interface MainBannerListResponse {
   size: number
 }
 
-// ������ (display_yn = Y �� ��ʸ�)
+// 활성 배너 목록 (display_yn = Y)
 export const fetchActiveBanners = async (): Promise<MainBannerItem[]> => {
   const { data } = await apiClient.get('/api/main-banner/active')
   if (!data.success) throw new Error(data.message || '배너를 불러오지 못했습니다.')
   return (data.data as MainBannerItem[]).map(normalizeItem)
 }
 
-// ������ ���
+// 배너 목록 조회
 export const fetchMainBannerList = async (params: {
   page?: number
   size?: number
