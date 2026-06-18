@@ -29,4 +29,8 @@ define('ALLOWED_FILE_EXTS',  ['jpg', 'jpeg', 'png', 'gif', 'webp',
 // ============================================================
 // CORS 허용 도메인
 // ============================================================
-define('ALLOWED_ORIGINS', ['https://bnpwith.mycafe24.com']);
+define('ALLOWED_ORIGINS', [
+    'https://bnpwith.mycafe24.com',
+    'http://with1center.com',
+    'https://with1center.com',
+]);
