@@ -1,5 +1,5 @@
-﻿import { useEffect, useState } from 'react';
-import { Routes, Route, Link, Navigate, useNavigate } from 'react-router-dom';
+﻿import { useEffect } from 'react';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -7,10 +7,7 @@ import 'swiper/css/pagination';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToHash from './components/ScrollToHash';
-import InfoPage from './pages/InfoPage';
-import EapPage from './pages/EapPage';
-import CounselingPage from './pages/CounselingPage';
-import EducationPage from './pages/EducationPage';
+import SubPage from './pages/SubPage';
 import NoticePage from './pages/NoticePage';
 import NoticeDetailPage from './pages/NoticeDetailPage';
 import DataPage from './pages/DataPage';
@@ -25,9 +22,10 @@ import AdminBannerPage from './pages/admin/AdminBannerPage';
 import AdminBannerFormPage from './pages/admin/AdminBannerFormPage';
 import AdminLayout from './components/admin/AdminLayout';
 import { useAuthStore, isTokenExpired } from './store/useAuthStore';
-import { fetchActiveBanners, type MainBannerItem } from './api/mainBanner';
-
-declare var $: any;
+import visImg1 from './assets/images/img_vis_1.png';
+import visImg2 from './assets/images/img_vis_2.png';
+import visImg3 from './assets/images/img_vis_3.png';
+import visImg4 from './assets/images/img_vis_4.png';
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
   const { isAuthenticated, accessToken, clearAuth } = useAuthStore();
@@ -74,10 +72,53 @@ function App() {
       <ScrollToHash />
       <Routes>
       <Route path="/" element={<MainPage />} />
-      <Route path="/info" element={<InfoPage />} />
-      <Route path="/eap" element={<EapPage />} />
-      <Route path="/counseling" element={<CounselingPage />} />
-      <Route path="/education" element={<EducationPage />} />
+      {/* 센터소개 */}
+      <Route path="/center/intro" element={<SubPage title="센터소개" />} />
+      <Route path="/center/philosophy" element={<SubPage title="센터철학" />} />
+      <Route path="/center/guide" element={<SubPage title="상담안내" />} />
+      <Route path="/center/experts" element={<SubPage title="전문가 소개" />} />
+      {/* 상담 */}
+      <Route path="/counseling/child" element={<SubPage title="아동 상담" />} />
+      <Route path="/counseling/teen" element={<SubPage title="청소년 상담" />} />
+      <Route path="/counseling/adult" element={<SubPage title="성인 상담" />} />
+      <Route path="/counseling/couple" element={<SubPage title="부부·커플 상담" />} />
+      <Route path="/counseling/senior" element={<SubPage title="시니어 상담" />} />
+      {/* 특화상담 */}
+      <Route path="/specialized/features" element={<SubPage title="특장점" />} />
+      <Route path="/specialized/panic" element={<SubPage title="공황·불안 상담" />} />
+      <Route path="/specialized/burnout" element={<SubPage title="번아웃·직장 스트레스 상담" />} />
+      <Route path="/specialized/adhd" element={<SubPage title="ADHD·실행력 상담" />} />
+      <Route path="/specialized/addiction" element={<SubPage title="중독 회복 상담" />} />
+      <Route path="/specialized/eating" element={<SubPage title="식이장애·감정조절 상담" />} />
+      <Route path="/specialized/career" element={<SubPage title="커리어 전환·방향 설계 상담" />} />
+      {/* 심리검사 */}
+      <Route path="/psychology/oneday" element={<SubPage title="원데이 마음 스캔" />} />
+      <Route path="/psychology/full" element={<SubPage title="종합 심리검사 (Full Battery)" />} />
+      <Route path="/psychology/child" element={<SubPage title="아동 놀이발달 평가" />} />
+      <Route path="/psychology/teen" element={<SubPage title="청소년 심리검사" />} />
+      <Route path="/psychology/career" element={<SubPage title="진로·학습 검사" />} />
+      {/* 코칭 */}
+      <Route path="/coaching/intro" element={<SubPage title="코칭안내" />} />
+      <Route path="/coaching/learning" element={<SubPage title="학습 진로 코칭" />} />
+      <Route path="/coaching/life" element={<SubPage title="라이프 코칭" />} />
+      <Route path="/coaching/leadership" element={<SubPage title="리더십 코칭" />} />
+      <Route path="/coaching/transition" element={<SubPage title="전환기 코칭" />} />
+      <Route path="/coaching/corporate" element={<SubPage title="기업 코칭 & 조직 프로그램" />} />
+      {/* 글로벌 */}
+      <Route path="/global/missionary" element={<SubPage title="선교사 심리상담" />} />
+      <Route path="/global/multicultural" element={<SubPage title="다문화·유학생 심리상담" />} />
+      <Route path="/global/overseas" element={<SubPage title="해외 거주자 상담" />} />
+      <Route path="/global/returnee" element={<SubPage title="귀국자 상담" />} />
+      <Route path="/global/b2b" element={<SubPage title="Global Business (B2B)" />} />
+      {/* 아카데미 */}
+      <Route path="/academy/relationship-coach" element={<SubPage title="관계 대화 코치 과정" />} />
+      <Route path="/academy/counselor-training" element={<SubPage title="전문 상담사 수련 과정" />} />
+      <Route path="/academy/certification" element={<SubPage title="전문 자격 프로그램" />} />
+      <Route path="/academy/education" element={<SubPage title="전문상담사 교육" />} />
+      <Route path="/academy/church" element={<SubPage title="교회·기관 교육 프로그램" />} />
+      <Route path="/academy/corporate" element={<SubPage title="기관·기업 프로그램" />} />
+      <Route path="/academy/seminar" element={<SubPage title="관계 리디자인 세미나" />} />
+      {/* 게시판 */}
       <Route path="/notice" element={<NoticePage />} />
       <Route path="/notice/:id" element={<NoticeDetailPage />} />
       <Route path="/data" element={<DataPage />} />
@@ -100,86 +141,101 @@ function App() {
   );
 }
 
+const VIS_SLIDES = [
+  {
+    img: visImg1,
+    title: '증상을 넘어, 나를 이해하고 삶을 회복하는 공간',
+    desc: '상담 · 코칭 · 글로벌 상담 심리검사 교육을\n한 곳에서 만나는 통합 심리지원 플랫폼',
+  },
+  {
+    img: visImg2,
+    title: '왜 같은 문제가 반복될까요?',
+    desc: '문제보다 원인을 이해할 때 변화가 시작됩니다.\n우울·불안·관계 갈등의 근본 원인을 찾고, 회복과 성장의 방향을 함께 설계합니다.',
+  },
+  {
+    img: visImg3,
+    title: '일반 상담으로 해결되지 않는 문제라면 특화상담',
+    desc: 'ADHD · 공황 · 번아웃 · 식이장애 · 진로전환 등\n분야별 전문가가 함께하는 정밀 진단 기반 특화상담',
+  },
+  {
+    img: visImg4,
+    title: '한국과 세계를 연결하는 글로벌 상담\n유학생 · 선교사 · 해외거주자 · 다문화가정 6개 언어 상담 지원',
+    desc: '',
+  },
+];
+
 function MainPage() {
-  const [banners, setBanners] = useState<MainBannerItem[]>([])
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
-
-  useEffect(() => {
-    fetchActiveBanners().then(setBanners).catch(() => {})
-  }, [])
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 768)
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
   return (
-    <div className="wrap main">
+    <div>
       <Header />
-      <div id="container">
-        <div id="visual">
-          <Swiper
-            modules={[Autoplay, Pagination]}
-            autoplay={banners.length > 1 ? { delay: 4000, disableOnInteraction: false } : false}
-            pagination={banners.length > 1 ? { clickable: true } : false}
-            loop={banners.length > 1}
-            className="main-banner-swiper"
-          >
-            {banners.length > 0 ? banners.map((b) => (
-              <SwiperSlide key={b.id}>
-                <div
-                  className="bann_img01"
-                  style={{ backgroundImage: `url(${isMobile ? (b.img_url_mobile || b.img_url_web) : b.img_url_web})` }}
-                />
-              </SwiperSlide>
-            )) : (
-              <SwiperSlide>
-                <div className="bann_img01" />
-              </SwiperSlide>
-            )}
-          </Swiper>
-        </div>
-        <div id="contents">
-          <div className="cont_w_area">
-            <div className="box_type01">
-              <div className="box_cont bg_img01">
-                <div>
-                  <h4 className="tit_02">EAP</h4>
-                  <p>EAP 프로그램은 개인의 정신 건강과 건강한 기업문화을 기반으로 조직문화 증진 및 생산성 향상을 목적으로 한 기업의 정신건강관리 프로그램 입니다.</p>
-                  <Link to="/eap">More</Link>
-                </div>
-              </div>
-              <div className="box_cont bg_img02">
-                <div>
-                  <h4 className="tit_02">상담 및 코칭</h4>
-                  <p>심리상담, 심리검사, 코칭 등 다양한 프로그램으로 고객들이 원하는 서비스를 제공하고 있습니다.</p>
-                  <Link to="/counseling">More</Link>
-                </div>
-              </div>
-              <div className="box_cont bg_img03">
-                <div>
-                  <h4 className="tit_02">임상 수련/교육</h4>
-                  <p>이 과정은 사람의 마음을 온전히 이해하고자 노력하고, 건강하게 회복하도록 돕고자 자신의 삶을 결정한 전문상담사들의 교육 과정입니다.</p>
-                  <Link to="/education">More</Link>
-                </div>
-              </div>
-            </div>
-            <h4 className="tit_03">서울특별시 영등포구 당산동5가 11-47 로뎀나무내과 5층 <em>헤세드상담코칭연구소</em></h4>
-            <div className="box_map" style={{ overflow: 'hidden' }}>
-              <iframe
-                className="map_area"
-                src="https://maps.google.com/maps?q=37.530774,126.904339&z=16&output=embed"
-                style={{ border: 0, width: '100%', height: '420px' }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="헤세드상담코칭연구소 위치"
+      <div className="visual">
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          loop
+          className="main-vis-swiper"
+        >
+          {VIS_SLIDES.map((slide, i) => (
+            <SwiperSlide key={i}>
+              <div
+                className="vis_slide"
+                style={{ backgroundImage: `url(${slide.img})` }}
               />
-            </div>
-          </div>
-        </div>
+              <div className="vis_text">
+                <h2>{slide.title.split('\n').map((line, j) => (
+                  <span key={j}>{line}<br /></span>
+                ))}</h2>
+                <p>{slide.desc.split('\n').map((line, j) => (
+                  <span key={j}>{line}<br /></span>
+                ))}</p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
+      <section className='section_1'>
+        <div className='tit'>
+            <h2>연구와 임상을 연결하는 회복과 성장의 심리상담</h2>
+            <p>교수진 · 전문상담사 · 글로벌 전문가가 함께하는 연구기반 심리상담</p>
+        </div>
+        <ul className='card'>
+            <li>
+                <p>
+                    <strong>교수급 전문위원 및<br />전문가 시스템</strong>
+                    학술적 연구 역량과<br />
+                    풍부한 임상 경험을 갖춘<br />
+                    석·박사 교수진의 책임 상담
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>검사-상담<br />통합 시스템</strong>
+                    정밀한 심리 평가 데이터로<br />
+                    개인과 조직의 빠른 회복까지<br />
+                    이끄는 통합 솔루션
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>글로벌·다문화 &<br />사역자 상담</strong>
+                    경계를 넘어, 사각지대 없는<br />
+                    온·오프라인 맞춤형 마음 치유
+                </p>
+            </li>
+            <li>
+                <p>
+                    <strong>교육 아카데미</strong>
+                    상담사를 가르치는<br />
+                    NO.1 교육 인프라로 함께<br />
+                    이루는 전문성 성장
+                </p>
+            </li>
+        </ul>
+      </section>
+
+
+
       <Footer />
     </div>
   );
