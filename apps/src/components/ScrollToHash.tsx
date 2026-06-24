@@ -15,6 +15,9 @@ const ScrollToHash = () => {
         }
       }, 50);
       return () => clearTimeout(timer);
+    } else {
+      // 해시가 없을 때(일반 페이지 이동 시) 항상 위로 스크롤
+      window.scrollTo(0, 0);
     }
   }, [hash, pathname]);
 
