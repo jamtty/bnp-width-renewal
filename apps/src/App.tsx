@@ -233,7 +233,22 @@ function MainPage() {
             </li>
         </ul>
       </section>
-
+      <section className='mapWrap'>
+        <div className='tit'>
+            <h2>오시는 길</h2>
+        </div>
+        <div className='map'>
+          <iframe
+            src="https://maps.google.com/maps?q=37.530774,126.904339&z=17&output=embed"
+            style={{ border: 0, width: '100%', height: '100%' }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="헤세드상담코칭연구소 오시는 길"
+          />
+        </div>
+        <p>서울특별시 영등포구 당산동 5가 11-47 로뎀나무내과 5층 헤세드상담코칭연구소</p>
+      </section>
 
 
       <Footer />
