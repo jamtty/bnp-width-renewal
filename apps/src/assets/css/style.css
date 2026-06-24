@@ -23,8 +23,9 @@
 .header { position:fixed; top:0; left:0; width:100%; z-index:999999; transition: background .25s; }
 .header .logo { display:flex; justify-content:center; margin:4.7rem 0 4.1rem; }
 .header .gnb { height:7.2rem; display:flex; align-items: center; justify-content: center; border-top:1px solid rgba(255,255,255,.6); border-bottom:1px solid rgba(255,255,255,.6);  position:relative; padding:0 15rem; }
-.header .gnb li { flex:1;  text-align:center; }
+.header .gnb li { flex:1;  }
 .header .gnb a { font-size:2.2rem; font-weight:600; color:#fff; }
+.header.gnb-open .gnb_item:hover > a { color:#5868F3; }
 
 /* GNB 호버 시 흰색 배경 전환 */
 .header.gnb-open { background:#fff; }
@@ -49,29 +50,27 @@
 }
 
 /* 서브메뉴 */
-.header .sub_menu { display:none; }
 .header .gnb_item { position:relative; }
 .header .gnb_item .sub_menu {
   display:none;
   position:absolute;
   top:100%;
-  left:50%;
+  left:0;
   margin:5rem 0 0;
-  transform:translateX(-50%);
   white-space:nowrap;
   z-index:9;
 }
 /* gnb-open 시 모든 서브메뉴 일괄 표시 */
 .header.gnb-open .gnb_item .sub_menu { display:block; }
-.header .gnb_item .sub_menu li a {
+.header.gnb-open .gnb_item .sub_menu li a {
   display:block;
-  padding:1rem 2.4rem;
+  padding:1rem 0;
   font-size:1.6rem;
   font-weight:500;
   color:#555;
 }
-.header .gnb_item .sub_menu li a:hover,
-.header .gnb_item .sub_menu li a.on { color:#555; font-weight:600; text-decoration: underline;}
+.header.gnb-open .gnb_item .sub_menu li a:hover,
+.header.gnb-open .gnb_item .sub_menu li a.on { color:#555; font-weight:600; text-decoration: underline;}
 
 
 
