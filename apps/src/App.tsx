@@ -26,6 +26,16 @@ import visImg1 from './assets/images/img_vis_1.png';
 import visImg2 from './assets/images/img_vis_2.png';
 import visImg3 from './assets/images/img_vis_3.png';
 import visImg4 from './assets/images/img_vis_4.png';
+import partner1 from './assets/images/ico_partner_1.svg';
+import partner2 from './assets/images/ico_partner_2.svg';
+import partner3 from './assets/images/ico_partner_3.svg';
+import partner4 from './assets/images/ico_partner_4.svg';
+import partner5 from './assets/images/ico_partner_5.svg';
+import partner6 from './assets/images/ico_partner_6.svg';
+import partner7 from './assets/images/ico_partner_7.svg';
+import partner8 from './assets/images/ico_partner_8.svg';
+import partner9 from './assets/images/ico_partner_9.svg';
+import partner10 from './assets/images/ico_partner_10.svg';
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
   const { isAuthenticated, accessToken, clearAuth } = useAuthStore();
@@ -164,6 +174,19 @@ const VIS_SLIDES = [
   },
 ];
 
+const PARTNERS = [
+  partner1,
+  partner2,
+  partner3,
+  partner4,
+  partner5,
+  partner6,
+  partner7,
+  partner8,
+  partner9,
+  partner10,
+];
+
 function MainPage() {
   return (
     <div>
@@ -247,9 +270,15 @@ function MainPage() {
             title="헤세드상담코칭연구소 오시는 길"
           />
         </div>
-        <p>서울특별시 영등포구 당산동 5가 11-47 로뎀나무내과 5층 헤세드상담코칭연구소</p>
+        <p className='addr'>서울특별시 영등포구 당산동 5가 11-47 로뎀나무내과 5층 헤세드상담코칭연구소</p>
+        <ul className='partners'>
+            {PARTNERS.map((img, i) => (
+                <li key={i}>
+                    <img src={img} alt={`파트너사 로고 ${i + 1}`} />
+                </li>
+            ))}
+        </ul>
       </section>
-
 
       <Footer />
     </div>

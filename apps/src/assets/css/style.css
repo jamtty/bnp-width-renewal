@@ -128,9 +128,11 @@
 .mapWrap .tit { text-align:center; margin-bottom: 4rem; }
 .mapWrap .tit h2 { font-size:5.5rem; font-weight:700; color:#222; line-height:1.7; }
 .mapWrap .map { width: 100%; height: 54rem; margin-bottom: 3rem; border-radius: 2rem; overflow: hidden; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); }
-.mapWrap p { font-size: 2.2rem; font-weight: 500; color: #555; text-align: center; }
+.mapWrap .addr { font-size: 2.4rem; font-weight: 500; color: #222; padding-left:6rem; background:url('../images/ico_map.svg') no-repeat 0 50%/contain;  }
 
-
+.partners { margin:10rem 0 0; display:flex; flex-wrap:wrap; gap:3rem 2rem; justify-content: center; }
+.partners li { width:calc(20% - 1.6rem); height:10rem; background:#F1F3FA; border-radius:6rem; display:flex; align-items:center; justify-content:center; padding:1.5rem 3rem; box-sizing:border-box; }
+.partners li img { max-width:100%; max-height:100%; object-fit:contain; }
 
 
 
