@@ -22,8 +22,8 @@
 
 .header { position:fixed; top:0; left:0; width:100%; z-index:999999; transition: background .25s; }
 .header .logo { display:flex; justify-content:center; margin:4.7rem 0 4.1rem; }
-.header .gnb { height:7.2rem; display:flex; align-items: center; justify-content: center; border-top:1px solid rgba(255,255,255,.6); border-bottom:1px solid rgba(255,255,255,.6);  position:relative; padding:0 15rem; }
-.header .gnb li { flex:1;  }
+.header .gnb { height:7.2rem; display:flex; align-items: center; justify-content: center; border-top:1px solid rgba(255,255,255,.6); border-bottom:1px solid rgba(255,255,255,.6);  position:relative; padding:0 15rem; gap:16rem; }
+.header .gnb li { }
 .header .gnb a { font-size:2.2rem; font-weight:600; color:#fff; }
 .header.gnb-open .gnb_item:hover > a { color:#5868F3; }
 
