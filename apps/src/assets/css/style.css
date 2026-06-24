@@ -134,5 +134,12 @@
 .partners li { width:calc((100% - 18rem) / 5); height:10rem; background:#F1F3FA; border-radius:6rem; display:flex; align-items:center; justify-content:center; padding:1.5rem 3rem; box-sizing:border-box; }
 .partners li img { max-width:100%; max-height:100%; object-fit:contain; }
 
+.footer { background:#333; margin-top:10rem; padding:4rem 15rem; }
+.footer .logo { margin:0 0 3rem; }
+.footer .addr { font-size:1.8rem; font-weight:400; color:#fff; line-height:2; }
+.footer .addr span { display:inline-block; vertical-align: middle; width:0.1rem; height:1rem; background:#888; margin:0 1.5rem; }
+.footer .copyright { font-size:1.6rem; font-weight:400; color:#777; }
+
+
 
 

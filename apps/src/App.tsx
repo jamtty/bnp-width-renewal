@@ -189,7 +189,7 @@ const PARTNERS = [
 
 function MainPage() {
   return (
-    <div>
+    <>
       <Header />
       <div className="visual">
         <Swiper
@@ -281,7 +281,7 @@ function MainPage() {
       </section>
 
       <Footer />
-    </div>
+    </>
   );
 }
 
