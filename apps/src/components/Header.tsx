@@ -117,6 +117,14 @@ const Header = () => {
     setGnbOpen(false);
   };
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    closeMenu();
+    if (path === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
         {/* 스킵 네비게이션 */}
@@ -135,7 +143,7 @@ const Header = () => {
             onMouseLeave={() => setGnbOpen(false)}
         >
             <h1 className="logo">
-            <Link to="/" onClick={closeMenu}>
+            <Link to="/" onClick={handleLogoClick}>
                 <img src={gnbOpen || scrolled ? logoActiveImg : logoImg} alt="헤세드상담코칭연구소" />
             </Link>
             </h1>
