@@ -1,6 +1,7 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import Header from '../Header';
 import Footer from '../Footer';
+import ScrollTopButton from '../ScrollTopButton';
 import type { SubNavItem } from '../../constants/nav';
 import { NAV_ITEMS } from '../../constants/nav';
 import icoHome from '../../assets/images/ico_home.svg';
@@ -120,6 +121,7 @@ const SubLayout = ({
         </div>
       </div>
 
+      <ScrollTopButton />
       <Footer />
     </div>
   );

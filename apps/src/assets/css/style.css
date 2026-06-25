@@ -294,6 +294,40 @@
   border: 0;
 }
 
+/* 스크롤 탑 버튼 */
+.scroll_top {
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  z-index: 9999;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: none;
+  background: #5868F3;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1rem);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s, background 0.2s;
+  box-shadow: 0 4px 12px rgba(88, 104, 243, 0.3);
+}
+.scroll_top.on {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll_top:hover {
+  background: #4755E0;
+}
+.scroll_top:active {
+  transform: translateY(0) scale(0.95);
+}
+
 /* 반응형 */
 @media (max-width: 1024px) {
   .sub_visual {

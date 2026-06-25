@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollTopButton from './components/ScrollTopButton';
 import ScrollToHash from './components/ScrollToHash';
 import CenterLayout from './components/subLayout/CenterLayout';
 import CounselingLayout from './components/subLayout/CounselingLayout';
@@ -287,6 +288,7 @@ function MainPage() {
         </ul>
       </section>
 
+      <ScrollTopButton />
       <Footer />
     </>
   );
