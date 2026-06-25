@@ -7,7 +7,14 @@ import 'swiper/css/pagination';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToHash from './components/ScrollToHash';
-import SubPage from './pages/SubPage';
+import CenterLayout from './components/subLayout/CenterLayout';
+import CounselingLayout from './components/subLayout/CounselingLayout';
+import SpecializedLayout from './components/subLayout/SpecializedLayout';
+import PsychologyLayout from './components/subLayout/PsychologyLayout';
+import CoachingLayout from './components/subLayout/CoachingLayout';
+import GlobalLayout from './components/subLayout/GlobalLayout';
+import AcademyLayout from './components/subLayout/AcademyLayout';
+import BoardLayout from './components/subLayout/BoardLayout';
 import NoticePage from './pages/NoticePage';
 import NoticeDetailPage from './pages/NoticeDetailPage';
 import DataPage from './pages/DataPage';
@@ -83,56 +90,56 @@ function App() {
       <Routes>
       <Route path="/" element={<MainPage />} />
       {/* 센터소개 */}
-      <Route path="/center/intro" element={<SubPage title="센터소개" />} />
-      <Route path="/center/philosophy" element={<SubPage title="센터철학" />} />
-      <Route path="/center/guide" element={<SubPage title="상담안내" />} />
-      <Route path="/center/experts" element={<SubPage title="전문가 소개" />} />
+      <Route path="/center/intro" element={<CenterLayout title="센터소개" />} />
+      <Route path="/center/philosophy" element={<CenterLayout title="센터철학" />} />
+      <Route path="/center/guide" element={<CenterLayout title="상담안내" />} />
+      <Route path="/center/experts" element={<CenterLayout title="전문가 소개" />} />
       {/* 상담 */}
-      <Route path="/counseling/child" element={<SubPage title="아동 상담" />} />
-      <Route path="/counseling/teen" element={<SubPage title="청소년 상담" />} />
-      <Route path="/counseling/adult" element={<SubPage title="성인 상담" />} />
-      <Route path="/counseling/couple" element={<SubPage title="부부·커플 상담" />} />
-      <Route path="/counseling/senior" element={<SubPage title="시니어 상담" />} />
+      <Route path="/counseling/child" element={<CounselingLayout title="아동 상담" />} />
+      <Route path="/counseling/teen" element={<CounselingLayout title="청소년 상담" />} />
+      <Route path="/counseling/adult" element={<CounselingLayout title="성인 상담" />} />
+      <Route path="/counseling/couple" element={<CounselingLayout title="부부·커플 상담" />} />
+      <Route path="/counseling/senior" element={<CounselingLayout title="시니어 상담" />} />
       {/* 특화상담 */}
-      <Route path="/specialized/features" element={<SubPage title="특장점" />} />
-      <Route path="/specialized/panic" element={<SubPage title="공황·불안 상담" />} />
-      <Route path="/specialized/burnout" element={<SubPage title="번아웃·직장 스트레스 상담" />} />
-      <Route path="/specialized/adhd" element={<SubPage title="ADHD·실행력 상담" />} />
-      <Route path="/specialized/addiction" element={<SubPage title="중독 회복 상담" />} />
-      <Route path="/specialized/eating" element={<SubPage title="식이장애·감정조절 상담" />} />
-      <Route path="/specialized/career" element={<SubPage title="커리어 전환·방향 설계 상담" />} />
+      <Route path="/specialized/features" element={<SpecializedLayout title="특장점" />} />
+      <Route path="/specialized/panic" element={<SpecializedLayout title="공황·불안 상담" />} />
+      <Route path="/specialized/burnout" element={<SpecializedLayout title="번아웃·직장 스트레스 상담" />} />
+      <Route path="/specialized/adhd" element={<SpecializedLayout title="ADHD·실행력 상담" />} />
+      <Route path="/specialized/addiction" element={<SpecializedLayout title="중독 회복 상담" />} />
+      <Route path="/specialized/eating" element={<SpecializedLayout title="식이장애·감정조절 상담" />} />
+      <Route path="/specialized/career" element={<SpecializedLayout title="커리어 전환·방향 설계 상담" />} />
       {/* 심리검사 */}
-      <Route path="/psychology/oneday" element={<SubPage title="원데이 마음 스캔" />} />
-      <Route path="/psychology/full" element={<SubPage title="종합 심리검사 (Full Battery)" />} />
-      <Route path="/psychology/child" element={<SubPage title="아동 놀이발달 평가" />} />
-      <Route path="/psychology/teen" element={<SubPage title="청소년 심리검사" />} />
-      <Route path="/psychology/career" element={<SubPage title="진로·학습 검사" />} />
+      <Route path="/psychology/oneday" element={<PsychologyLayout title="원데이 마음 스캔" />} />
+      <Route path="/psychology/full" element={<PsychologyLayout title="종합 심리검사 (Full Battery)" />} />
+      <Route path="/psychology/child" element={<PsychologyLayout title="아동 놀이발달 평가" />} />
+      <Route path="/psychology/teen" element={<PsychologyLayout title="청소년 심리검사" />} />
+      <Route path="/psychology/career" element={<PsychologyLayout title="진로·학습 검사" />} />
       {/* 코칭 */}
-      <Route path="/coaching/intro" element={<SubPage title="코칭안내" />} />
-      <Route path="/coaching/learning" element={<SubPage title="학습 진로 코칭" />} />
-      <Route path="/coaching/life" element={<SubPage title="라이프 코칭" />} />
-      <Route path="/coaching/leadership" element={<SubPage title="리더십 코칭" />} />
-      <Route path="/coaching/transition" element={<SubPage title="전환기 코칭" />} />
-      <Route path="/coaching/corporate" element={<SubPage title="기업 코칭 & 조직 프로그램" />} />
+      <Route path="/coaching/intro" element={<CoachingLayout title="코칭안내" />} />
+      <Route path="/coaching/learning" element={<CoachingLayout title="학습 진로 코칭" />} />
+      <Route path="/coaching/life" element={<CoachingLayout title="라이프 코칭" />} />
+      <Route path="/coaching/leadership" element={<CoachingLayout title="리더십 코칭" />} />
+      <Route path="/coaching/transition" element={<CoachingLayout title="전환기 코칭" />} />
+      <Route path="/coaching/corporate" element={<CoachingLayout title="기업 코칭 & 조직 프로그램" />} />
       {/* 글로벌 */}
-      <Route path="/global/missionary" element={<SubPage title="선교사 심리상담" />} />
-      <Route path="/global/multicultural" element={<SubPage title="다문화·유학생 심리상담" />} />
-      <Route path="/global/overseas" element={<SubPage title="해외 거주자 상담" />} />
-      <Route path="/global/returnee" element={<SubPage title="귀국자 상담" />} />
-      <Route path="/global/b2b" element={<SubPage title="Global Business (B2B)" />} />
+      <Route path="/global/missionary" element={<GlobalLayout title="선교사 심리상담" />} />
+      <Route path="/global/multicultural" element={<GlobalLayout title="다문화·유학생 심리상담" />} />
+      <Route path="/global/overseas" element={<GlobalLayout title="해외 거주자 상담" />} />
+      <Route path="/global/returnee" element={<GlobalLayout title="귀국자 상담" />} />
+      <Route path="/global/b2b" element={<GlobalLayout title="Global Business (B2B)" />} />
       {/* 아카데미 */}
-      <Route path="/academy/relationship-coach" element={<SubPage title="관계 대화 코치 과정" />} />
-      <Route path="/academy/counselor-training" element={<SubPage title="전문 상담사 수련 과정" />} />
-      <Route path="/academy/certification" element={<SubPage title="전문 자격 프로그램" />} />
-      <Route path="/academy/education" element={<SubPage title="전문상담사 교육" />} />
-      <Route path="/academy/church" element={<SubPage title="교회·기관 교육 프로그램" />} />
-      <Route path="/academy/corporate" element={<SubPage title="기관·기업 프로그램" />} />
-      <Route path="/academy/seminar" element={<SubPage title="관계 리디자인 세미나" />} />
+      <Route path="/academy/relationship-coach" element={<AcademyLayout title="관계 대화 코치 과정" />} />
+      <Route path="/academy/counselor-training" element={<AcademyLayout title="전문 상담사 수련 과정" />} />
+      <Route path="/academy/certification" element={<AcademyLayout title="전문 자격 프로그램" />} />
+      <Route path="/academy/education" element={<AcademyLayout title="전문상담사 교육" />} />
+      <Route path="/academy/church" element={<AcademyLayout title="교회·기관 교육 프로그램" />} />
+      <Route path="/academy/corporate" element={<AcademyLayout title="기관·기업 프로그램" />} />
+      <Route path="/academy/seminar" element={<AcademyLayout title="관계 리디자인 세미나" />} />
       {/* 게시판 */}
-      <Route path="/notice" element={<NoticePage />} />
-      <Route path="/notice/:id" element={<NoticeDetailPage />} />
-      <Route path="/data" element={<DataPage />} />
-      <Route path="/data/:id" element={<DataDetailPage />} />
+      <Route path="/notice" element={<BoardLayout title="공지사항"><NoticePage /></BoardLayout>} />
+      <Route path="/notice/:id" element={<BoardLayout title="공지사항"><NoticeDetailPage /></BoardLayout>} />
+      <Route path="/data" element={<BoardLayout title="자료실"><DataPage /></BoardLayout>} />
+      <Route path="/data/:id" element={<BoardLayout title="자료실"><DataDetailPage /></BoardLayout>} />
       {/* 관리자 */}
       <Route path="/admin/login" element={<AdminLayout><AdminLoginPage /></AdminLayout>} />
       <Route path="/admin" element={<AdminRoute><AdminNoticePage /></AdminRoute>} />
