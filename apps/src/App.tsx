@@ -16,6 +16,52 @@ import CoachingLayout from './components/subLayout/CoachingLayout';
 import GlobalLayout from './components/subLayout/GlobalLayout';
 import AcademyLayout from './components/subLayout/AcademyLayout';
 import BoardLayout from './components/subLayout/BoardLayout';
+// 센터소개 페이지
+import CenterIntro from './pages/center/Intro';
+import CenterPhilosophy from './pages/center/Philosophy';
+import CenterGuide from './pages/center/Guide';
+import CenterExperts from './pages/center/Experts';
+// 상담 페이지
+import CounselingChild from './pages/counseling/Child';
+import CounselingTeen from './pages/counseling/Teen';
+import CounselingAdult from './pages/counseling/Adult';
+import CounselingCouple from './pages/counseling/Couple';
+import CounselingSenior from './pages/counseling/Senior';
+// 특화상담 페이지
+import SpecializedFeatures from './pages/specialized/Features';
+import SpecializedPanic from './pages/specialized/Panic';
+import SpecializedBurnout from './pages/specialized/Burnout';
+import SpecializedAdhd from './pages/specialized/Adhd';
+import SpecializedAddiction from './pages/specialized/Addiction';
+import SpecializedEating from './pages/specialized/Eating';
+import SpecializedCareer from './pages/specialized/Career';
+// 심리검사 페이지
+import PsychologyOneday from './pages/psychology/Oneday';
+import PsychologyFull from './pages/psychology/Full';
+import PsychologyChild from './pages/psychology/Child';
+import PsychologyTeen from './pages/psychology/Teen';
+import PsychologyCareer from './pages/psychology/Career';
+// 코칭 페이지
+import CoachingIntro from './pages/coaching/Intro';
+import CoachingLearning from './pages/coaching/Learning';
+import CoachingLife from './pages/coaching/Life';
+import CoachingLeadership from './pages/coaching/Leadership';
+import CoachingTransition from './pages/coaching/Transition';
+import CoachingCorporate from './pages/coaching/Corporate';
+// 글로벌 페이지
+import GlobalMissionary from './pages/global/Missionary';
+import GlobalMulticultural from './pages/global/Multicultural';
+import GlobalOverseas from './pages/global/Overseas';
+import GlobalReturnee from './pages/global/Returnee';
+import GlobalB2b from './pages/global/B2b';
+// 아카데미 페이지
+import AcademyRelationshipCoach from './pages/academy/RelationshipCoach';
+import AcademyCounselorTraining from './pages/academy/CounselorTraining';
+import AcademyCertification from './pages/academy/Certification';
+import AcademyEducation from './pages/academy/Education';
+import AcademyChurch from './pages/academy/Church';
+import AcademyCorporatePage from './pages/academy/Corporate';
+import AcademySeminar from './pages/academy/Seminar';
 import NoticePage from './pages/NoticePage';
 import NoticeDetailPage from './pages/NoticeDetailPage';
 import DataPage from './pages/DataPage';
@@ -91,51 +137,51 @@ function App() {
       <Routes>
       <Route path="/" element={<MainPage />} />
       {/* 센터소개 */}
-      <Route path="/center/intro" element={<CenterLayout title="센터소개" />} />
-      <Route path="/center/philosophy" element={<CenterLayout title="센터철학" />} />
-      <Route path="/center/guide" element={<CenterLayout title="상담안내" />} />
-      <Route path="/center/experts" element={<CenterLayout title="전문가 소개" />} />
+      <Route path="/center/intro" element={<CenterLayout title="센터소개"><CenterIntro /></CenterLayout>} />
+      <Route path="/center/philosophy" element={<CenterLayout title="센터철학"><CenterPhilosophy /></CenterLayout>} />
+      <Route path="/center/guide" element={<CenterLayout title="상담안내"><CenterGuide /></CenterLayout>} />
+      <Route path="/center/experts" element={<CenterLayout title="전문가 소개"><CenterExperts /></CenterLayout>} />
       {/* 상담 */}
-      <Route path="/counseling/child" element={<CounselingLayout title="아동 상담" />} />
-      <Route path="/counseling/teen" element={<CounselingLayout title="청소년 상담" />} />
-      <Route path="/counseling/adult" element={<CounselingLayout title="성인 상담" />} />
-      <Route path="/counseling/couple" element={<CounselingLayout title="부부·커플 상담" />} />
-      <Route path="/counseling/senior" element={<CounselingLayout title="시니어 상담" />} />
+      <Route path="/counseling/child" element={<CounselingLayout title="아동 상담"><CounselingChild /></CounselingLayout>} />
+      <Route path="/counseling/teen" element={<CounselingLayout title="청소년 상담"><CounselingTeen /></CounselingLayout>} />
+      <Route path="/counseling/adult" element={<CounselingLayout title="성인 상담"><CounselingAdult /></CounselingLayout>} />
+      <Route path="/counseling/couple" element={<CounselingLayout title="부부·커플 상담"><CounselingCouple /></CounselingLayout>} />
+      <Route path="/counseling/senior" element={<CounselingLayout title="시니어 상담"><CounselingSenior /></CounselingLayout>} />
       {/* 특화상담 */}
-      <Route path="/specialized/features" element={<SpecializedLayout title="특장점" />} />
-      <Route path="/specialized/panic" element={<SpecializedLayout title="공황·불안 상담" />} />
-      <Route path="/specialized/burnout" element={<SpecializedLayout title="번아웃·직장 스트레스 상담" />} />
-      <Route path="/specialized/adhd" element={<SpecializedLayout title="ADHD·실행력 상담" />} />
-      <Route path="/specialized/addiction" element={<SpecializedLayout title="중독 회복 상담" />} />
-      <Route path="/specialized/eating" element={<SpecializedLayout title="식이장애·감정조절 상담" />} />
-      <Route path="/specialized/career" element={<SpecializedLayout title="커리어 전환·방향 설계 상담" />} />
+      <Route path="/specialized/features" element={<SpecializedLayout title="특장점"><SpecializedFeatures /></SpecializedLayout>} />
+      <Route path="/specialized/panic" element={<SpecializedLayout title="공황·불안 상담"><SpecializedPanic /></SpecializedLayout>} />
+      <Route path="/specialized/burnout" element={<SpecializedLayout title="번아웃·직장 스트레스 상담"><SpecializedBurnout /></SpecializedLayout>} />
+      <Route path="/specialized/adhd" element={<SpecializedLayout title="ADHD·실행력 상담"><SpecializedAdhd /></SpecializedLayout>} />
+      <Route path="/specialized/addiction" element={<SpecializedLayout title="중독 회복 상담"><SpecializedAddiction /></SpecializedLayout>} />
+      <Route path="/specialized/eating" element={<SpecializedLayout title="식이장애·감정조절 상담"><SpecializedEating /></SpecializedLayout>} />
+      <Route path="/specialized/career" element={<SpecializedLayout title="커리어 전환·방향 설계 상담"><SpecializedCareer /></SpecializedLayout>} />
       {/* 심리검사 */}
-      <Route path="/psychology/oneday" element={<PsychologyLayout title="원데이 마음 스캔" />} />
-      <Route path="/psychology/full" element={<PsychologyLayout title="종합 심리검사 (Full Battery)" />} />
-      <Route path="/psychology/child" element={<PsychologyLayout title="아동 놀이발달 평가" />} />
-      <Route path="/psychology/teen" element={<PsychologyLayout title="청소년 심리검사" />} />
-      <Route path="/psychology/career" element={<PsychologyLayout title="진로·학습 검사" />} />
+      <Route path="/psychology/oneday" element={<PsychologyLayout title="원데이 마음 스캔"><PsychologyOneday /></PsychologyLayout>} />
+      <Route path="/psychology/full" element={<PsychologyLayout title="종합 심리검사 (Full Battery)"><PsychologyFull /></PsychologyLayout>} />
+      <Route path="/psychology/child" element={<PsychologyLayout title="아동 놀이발달 평가"><PsychologyChild /></PsychologyLayout>} />
+      <Route path="/psychology/teen" element={<PsychologyLayout title="청소년 심리검사"><PsychologyTeen /></PsychologyLayout>} />
+      <Route path="/psychology/career" element={<PsychologyLayout title="진로·학습 검사"><PsychologyCareer /></PsychologyLayout>} />
       {/* 코칭 */}
-      <Route path="/coaching/intro" element={<CoachingLayout title="코칭안내" />} />
-      <Route path="/coaching/learning" element={<CoachingLayout title="학습 진로 코칭" />} />
-      <Route path="/coaching/life" element={<CoachingLayout title="라이프 코칭" />} />
-      <Route path="/coaching/leadership" element={<CoachingLayout title="리더십 코칭" />} />
-      <Route path="/coaching/transition" element={<CoachingLayout title="전환기 코칭" />} />
-      <Route path="/coaching/corporate" element={<CoachingLayout title="기업 코칭 & 조직 프로그램" />} />
+      <Route path="/coaching/intro" element={<CoachingLayout title="코칭안내"><CoachingIntro /></CoachingLayout>} />
+      <Route path="/coaching/learning" element={<CoachingLayout title="학습 진로 코칭"><CoachingLearning /></CoachingLayout>} />
+      <Route path="/coaching/life" element={<CoachingLayout title="라이프 코칭"><CoachingLife /></CoachingLayout>} />
+      <Route path="/coaching/leadership" element={<CoachingLayout title="리더십 코칭"><CoachingLeadership /></CoachingLayout>} />
+      <Route path="/coaching/transition" element={<CoachingLayout title="전환기 코칭"><CoachingTransition /></CoachingLayout>} />
+      <Route path="/coaching/corporate" element={<CoachingLayout title="기업 코칭 & 조직 프로그램"><CoachingCorporate /></CoachingLayout>} />
       {/* 글로벌 */}
-      <Route path="/global/missionary" element={<GlobalLayout title="선교사 심리상담" />} />
-      <Route path="/global/multicultural" element={<GlobalLayout title="다문화·유학생 심리상담" />} />
-      <Route path="/global/overseas" element={<GlobalLayout title="해외 거주자 상담" />} />
-      <Route path="/global/returnee" element={<GlobalLayout title="귀국자 상담" />} />
-      <Route path="/global/b2b" element={<GlobalLayout title="Global Business (B2B)" />} />
+      <Route path="/global/missionary" element={<GlobalLayout title="선교사 심리상담"><GlobalMissionary /></GlobalLayout>} />
+      <Route path="/global/multicultural" element={<GlobalLayout title="다문화·유학생 심리상담"><GlobalMulticultural /></GlobalLayout>} />
+      <Route path="/global/overseas" element={<GlobalLayout title="해외 거주자 상담"><GlobalOverseas /></GlobalLayout>} />
+      <Route path="/global/returnee" element={<GlobalLayout title="귀국자 상담"><GlobalReturnee /></GlobalLayout>} />
+      <Route path="/global/b2b" element={<GlobalLayout title="Global Business (B2B)"><GlobalB2b /></GlobalLayout>} />
       {/* 아카데미 */}
-      <Route path="/academy/relationship-coach" element={<AcademyLayout title="관계 대화 코치 과정" />} />
-      <Route path="/academy/counselor-training" element={<AcademyLayout title="전문 상담사 수련 과정" />} />
-      <Route path="/academy/certification" element={<AcademyLayout title="전문 자격 프로그램" />} />
-      <Route path="/academy/education" element={<AcademyLayout title="전문상담사 교육" />} />
-      <Route path="/academy/church" element={<AcademyLayout title="교회·기관 교육 프로그램" />} />
-      <Route path="/academy/corporate" element={<AcademyLayout title="기관·기업 프로그램" />} />
-      <Route path="/academy/seminar" element={<AcademyLayout title="관계 리디자인 세미나" />} />
+      <Route path="/academy/relationship-coach" element={<AcademyLayout title="관계 대화 코치 과정"><AcademyRelationshipCoach /></AcademyLayout>} />
+      <Route path="/academy/counselor-training" element={<AcademyLayout title="전문 상담사 수련 과정"><AcademyCounselorTraining /></AcademyLayout>} />
+      <Route path="/academy/certification" element={<AcademyLayout title="전문 자격 프로그램"><AcademyCertification /></AcademyLayout>} />
+      <Route path="/academy/education" element={<AcademyLayout title="전문상담사 교육"><AcademyEducation /></AcademyLayout>} />
+      <Route path="/academy/church" element={<AcademyLayout title="교회·기관 교육 프로그램"><AcademyChurch /></AcademyLayout>} />
+      <Route path="/academy/corporate" element={<AcademyLayout title="기관·기업 프로그램"><AcademyCorporatePage /></AcademyLayout>} />
+      <Route path="/academy/seminar" element={<AcademyLayout title="관계 리디자인 세미나"><AcademySeminar /></AcademyLayout>} />
       {/* 게시판 */}
       <Route path="/notice" element={<BoardLayout title="공지사항"><NoticePage /></BoardLayout>} />
       <Route path="/notice/:id" element={<BoardLayout title="공지사항"><NoticeDetailPage /></BoardLayout>} />
