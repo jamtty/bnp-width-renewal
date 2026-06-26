@@ -459,10 +459,28 @@
 .intro .con_2 .con_list .box p { padding:2.8rem; font-size:1.8rem; font-weight:500; color:#222; text-align:center; }
 
 /* 센터소개 - 센터철학 */
-.philosophy { }
-.philosophy .con_1 { position:relative; padding:68rem 0 0; }
-.philosophy .con_1 .img { position:absolute; top:0; left:0; width:100%; text-align:center; padding:0 12rem; }
+.philosophy .con_1 { position:relative; padding:65rem 0 0; }
+.philosophy .con_1 .img { position:absolute; top:0; left:0; width:100%; text-align:center; }
+.philosophy .con_1 .img img { display:block; margin:0 auto; max-width:100%; }
+.philosophy .con_1 .img .txt1 { position:absolute; top:60rem; left:0; }
+.philosophy .con_1 .img .txt2 { position:absolute; top:0; left:0; }
+.philosophy .con_1 .img .txt3 { position:absolute; top:0; left:0; }
 .philosophy .con_1 .bg { height:63rem; background:url('../images/pg_philosophy_con1_bg.png') no-repeat center bottom/cover;  }
+
+/* 센터소개 - 상담안내 */
+.guide { padding:0 0 16rem; }
+.guide .con_1 { position:relative; max-width:162rem; margin:0 auto; }
+.guide .card_list { display:flex; gap:2rem; }
+.guide .card_list li { position:relative; width:calc((100% - 8rem) / 5); height:35.5rem; border-radius:2rem; padding:4.8rem 3rem; }
+.guide .card_list li:nth-child(1) { background:#3B62C8 url('../images/ico_guide_1.svg') no-repeat right 3rem bottom 2.5rem; }
+.guide .card_list li:nth-child(2) { background:#3B62C8 url('../images/ico_guide_2.svg') no-repeat right 3rem bottom 2.5rem; }
+.guide .card_list li:nth-child(3) { background:#3B62C8 url('../images/ico_guide_3.svg') no-repeat right 3rem bottom 2.5rem; }
+.guide .card_list li:nth-child(4) { background:#3B62C8 url('../images/ico_guide_4.svg') no-repeat right 3rem bottom 2.5rem; }
+.guide .card_list li:nth-child(5) { background:#3B62C8 url('../images/ico_guide_5.svg') no-repeat right 3rem bottom 2.5rem; }
+.guide .card_list li h3 { font-size:2.8rem; font-weight:700; color:#fff; margin:0 0 3.2rem; }
+.guide .card_list li p { font-size:1.8rem; font-weight:500; color:#fff; }
+.guide .card_list li .num { position:absolute; top:4.8rem; right:3rem; width:5rem; height:5rem; border-radius:50%; background:rgba(255,255,255,.1); display:flex; align-items: center; justify-content: center; font-size:2.4rem; font-weight:500; color:#fff; }
+
 
 
 
