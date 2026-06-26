@@ -133,7 +133,7 @@
 .partners li { width:calc((100% - 18rem) / 5); height:10rem; background:#F1F3FA; border-radius:6rem; display:flex; align-items:center; justify-content:center; padding:1.5rem 3rem; box-sizing:border-box; }
 .partners li img { max-width:100%; max-height:100%; object-fit:contain; }
 
-.footer { background:#333; margin-top:10rem; padding:4rem 15rem; }
+.footer { background:#333; padding:4rem 15rem; }
 .footer .logo { margin:0 0 3rem; }
 .footer .addr { font-size:1.8rem; font-weight:400; color:#fff; line-height:2; }
 .footer .addr span { display:inline-block; vertical-align: middle; width:0.1rem; height:1rem; background:#888; margin:0 1.5rem; }
@@ -226,10 +226,6 @@
 }
 
 /* 콘텐츠 영역 */
-#contents {
-  padding-bottom: 10rem;
-}
-
 /* LNB + 본문 flex 래퍼 */
 .sub_content_wrap {
   padding: 8rem 0 0;
@@ -385,9 +381,10 @@
 .page_tit h2 { font-size:5.5rem; font-weight:700; color:#222; margin:0 0 2.5rem; }
 .page_tit p { font-size:2.4rem; font-weight:500; color:#555; }
 
-/* 센터소개 - intro 콘텐츠 */
-.con_1 { max-width:140rem; margin:0 auto 20rem; }
-.con_1 .con_list {
+/* 센터소개 - 센터소개 */
+.intro { margin:0 0 16rem; }
+.intro .con_1 { max-width:140rem; margin:0 auto 20rem; }
+.intro .con_1 .con_list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -396,31 +393,31 @@
   gap: 1.8rem;
 }
 
-.con_1  .con_card {
+.intro .con_1  .con_card {
   display: flex;
   align-items: center;
   gap: 12.2rem;
 }
-.con_1 .con_card:nth-child(even) {
+.intro .con_1 .con_card:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-.con_1 .con_card_img {
+.intro .con_1 .con_card_img {
   flex: 1;
   border-radius: 2rem;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,.08);
 }
-.con_1 .con_card_img img {
+.intro .con_1 .con_card_img img {
   width: 100%;
   display: block;
 }
 
-.con_1 .con_card_text {
+.intro .con_1 .con_card_text {
   flex: 1;
 }
 
-.con_1 .con_num {
+.intro .con_1 .con_num {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -433,35 +430,43 @@
   font-weight: 700;
   margin-bottom: 2.5rem;
 }
-.con_1 .con_card_text h3 {
+.intro .con_1 .con_card_text h3 {
   font-size: 3.5rem;
   font-weight: 700;
   color: #333;
   line-height: 1.5;
   margin-bottom: 2rem;
 }
-.con_1 .con_card_text p {
+.intro .con_1 .con_card_text p {
   font-size: 1.8rem;
   font-weight: 500;
   color: #555;
   line-height: 1.5;
 }
-.con_1 .con_stat strong {
+.intro .con_1 .con_stat strong {
   font-weight: 800;
 }
 
+.intro .con_2 .con_list { display:flex; gap:2rem; position:relative; padding:0 15rem; z-index:2; }
+.intro .con_2 .con_list::before { content:""; position:absolute;  z-index:1; top:5rem; left:0; width:100%; border-bottom:1px solid rgba(88, 104, 243, .2); }
+.intro .con_2 .con_list li { width:calc((100% - 8rem) / 5); }
+.intro .con_2 .con_list .card { position:relative; width:100%; height:10rem; background:#5868F3; display:flex; align-items: center; justify-content: center; font-size:2.4rem; font-weight:600; color:#fff; margin:0 0 7.2rem; border-radius:2rem; }
+.intro .con_2 .con_list .card::after { content:""; position:absolute; top:100%; left:50%; transform:translateX(-50%); width:2.4rem; height:6rem; background:url('../images/ico_con_arrow.svg') no-repeat center/contain;  }
 
-.con_2 {  }
-.con_2 .con_list { display:flex; gap:2rem; position:relative; padding:0 15rem; z-index:2; }
-.con_2 .con_list::before { content:""; position:absolute;  z-index:1; top:5rem; left:0; width:100%; border-bottom:1px solid rgba(88, 104, 243, .2); }
-.con_2 .con_list li { width:calc((100% - 8rem) / 5); }
-.con_2 .con_list .card { position:relative; width:100%; height:10rem; background:#5868F3; display:flex; align-items: center; justify-content: center; font-size:2.4rem; font-weight:600; color:#fff; margin:0 0 7.2rem; border-radius:2rem; }
-.con_2 .con_list .card::after { content:""; position:absolute; top:100%; left:50%; transform:translateX(-50%); width:2.4rem; height:6rem; background:url('../images/ico_con_arrow.svg') no-repeat center/contain;  }
+.intro .con_2 .con_list .box { background:rgba(88, 104, 243, .1); border-radius:2rem; overflow:hidden; }
+.intro .con_2 .con_list .box .thumbnail { height:24rem;  }
+.intro .con_2 .con_list .box .thumbnail img { width:100%; height:100%; object-fit:cover; }
+.intro .con_2 .con_list .box p { padding:2.8rem; font-size:1.8rem; font-weight:500; color:#222; text-align:center; }
 
-.con_2 .con_list .box { background:rgba(88, 104, 243, .1); border-radius:2rem; overflow:hidden; }
-.con_2 .con_list .box .thumbnail { height:24rem;  }
-.con_2 .con_list .box .thumbnail img { width:100%; height:100%; object-fit:cover; }
-.con_2 .con_list .box p { padding:2.8rem; font-size:1.8rem; font-weight:500; color:#222; text-align:center; }
+/* 센터소개 - 센터철학 */
+.philosophy { }
+.philosophy .con_1 { position:relative; padding:68rem 0 0; }
+.philosophy .con_1 .img { position:absolute; top:0; left:0; width:100%; text-align:center; padding:0 12rem; }
+.philosophy .con_1 .bg { height:63rem; background:url('../images/pg_philosophy_con1_bg.png') no-repeat center bottom/cover;  }
+
+
+
+
 
 
 

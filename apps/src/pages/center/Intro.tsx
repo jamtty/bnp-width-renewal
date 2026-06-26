@@ -12,7 +12,7 @@ import con2_5Img from '../../assets/images/pg_intro_con2_5.png';
 
 const CenterIntro = () => {
   return (
-    <div className="page_cont">
+    <div className="page_cont intro">
         <div className="page_tit">
             <h2>위드원 상담코칭센터</h2>
             <p>상담 · 교육 · 연구가 연결된 회복 중심 상담 코칭 센터</p>
