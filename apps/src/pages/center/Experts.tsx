@@ -125,7 +125,7 @@ const CenterExperts = () => {
   };
 
   return (
-    <div className="page_cont experts">
+    <div className="page_cont page_sub experts">
         <div className="page_tit">
             <h2>상담의 기준과 깊이를 지키는 전문가 그룹</h2>
             <p>자문위원 및 슈퍼바이저와 전문상담사 전문 코치</p>
