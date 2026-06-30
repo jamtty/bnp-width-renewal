@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import img_counseling_child from '../../assets/images/img_counseling_child.png';
+import img_counseling from '../../assets/images/img_counseling_child.png';
 
 const tabList = [
   '특장점',
@@ -35,7 +35,7 @@ const CounselingChild = () => {
                 {activeTab === 0 && (
                     <>
                         <div className='tit_img'>
-                            <img src={img_counseling_child} alt="아동 상담" />
+                            <img src={img_counseling} alt="아동 상담" />
                         </div>
                         <div className='tit'>
                             <h3>아이를 고치기보다, 아이의 마음을 먼저 이해합니다</h3>
@@ -44,7 +44,6 @@ const CounselingChild = () => {
                         <div className='box'>
                             <div className='s_tit'>
                                 <h3>무엇이 다른가요?</h3>
-                                <p>3개 이상 반복된다면 전문가 상담을 권합니다.</p>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
@@ -116,10 +115,10 @@ const CounselingChild = () => {
                             <div className='s_info'>
                                 <ul className='ul_list_3'>
                                     <li>초기 면담 : 50분</li>
-                                    <li>심리검사: 60~120분</li>
                                     <li>아동 상담: 40~50분</li>
-                                    <li>해석 상담: 50분</li>
                                     <li>부모 상담: 50분</li>
+                                    <li>심리검사: 60~120분</li>
+                                    <li>해석 상담: 50분</li> 
                                 </ul>
                             </div>
                         </div>
@@ -128,7 +127,7 @@ const CounselingChild = () => {
                 {activeTab === 1 && (
                     <>
                         <div className='tit'>
-                            <h3>집중이 어렵고 산만한 아이,<br />단순한 성격 문제가 아닙니다.</h3>
+                            <h3>집중이 어렵고 산만한 아이,<span className='mobile_br'></span>단순한 성격 문제가 아닙니다.</h3>
                             <p>
                                 해야 할 일을 알고 있지만 끝까지 이어가지 못하는 경우가 많습니다.<br />
                                 주의력과 실행기능, 자기조절 능력을 함께 살펴야 합니다.
@@ -156,7 +155,7 @@ const CounselingChild = () => {
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
                                     <li>의지가 부족한 게 아니라 도움이 필요한 신호입니다. 멈추는 연습이 필요합니다.</li>
-                                    <li>놀이치료 · 부모훈련 · 행동수정 · 실행기능훈련 · 자기조절훈련<br />정밀 평가 + 부모코칭 + 자기조절 훈련 통합 진행</li>
+                                    <li>놀이치료 · 부모훈련 · 행동수정 · 실행기능훈련 · 자기조절훈련<span className='mobile_br'></span>정밀 평가 + 부모코칭 + 자기조절 훈련 통합 진행</li>
                                 </ul>
                             </div>
                         </div>
@@ -165,7 +164,7 @@ const CounselingChild = () => {
                 {activeTab === 2 && (
                     <>
                         <div className='tit'>
-                            <h3>게임과 스마트폰 문제는<br />단순 사용 시간이 아니라 스스로 멈추기 어려운<br />조절 문제와 연결됩니다.</h3>
+                            <h3>게임과 스마트폰 문제는<span className='mobile_br'></span>단순 사용 시간이 아니라 스스로 멈추기 어려운<span className='mobile_br'></span>조절 문제와 연결됩니다.</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -198,7 +197,7 @@ const CounselingChild = () => {
                 {activeTab === 3 && (
                     <>
                         <div className='tit'>
-                            <h3>틱은 습관이 아니라<br />아이의 긴장과 불안이<br />몸으로 표현되는 신호입니다.</h3>
+                            <h3>틱은 습관이 아니라<span className='mobile_br'></span>아이의 긴장과 불안이<span className='mobile_br'></span>몸으로 표현되는 신호입니다.</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -221,7 +220,7 @@ const CounselingChild = () => {
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
-                                    <li>몸으로 터져 나오는 긴장을 말과 호흡으로 안전하게 풀어내어,<br />아이의 몸과 마음을 편안하게 만듭니다.</li>
+                                    <li>몸으로 터져 나오는 긴장을 말과 호흡으로 안전하게 풀어내어,<span className='mobile_br'></span>아이의 몸과 마음을 편안하게 만듭니다.</li>
                                     <li>긴장이완훈련 · 불안조절훈련 · 가족반응코칭 · 놀이치료</li>
                                 </ul>
                             </div>
@@ -231,7 +230,7 @@ const CounselingChild = () => {
                 {activeTab === 4 && (
                     <>
                         <div className='tit'>
-                            <h3>집중이 어렵고 산만한 아이 노력하는데도<br />자꾸 놓치는 아이가 있습니다.</h3>
+                            <h3>집중이 어렵고 산만한 아이 노력하는데도<span className='mobile_br'></span>자꾸 놓치는 아이가 있습니다.</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -264,7 +263,7 @@ const CounselingChild = () => {
                 {activeTab === 5 && (
                     <>
                         <div className='tit'>
-                            <h3>아이의 자신감은 칭찬보다<br />경험 속에서 자랍니다.</h3>
+                            <h3>아이의 자신감은 칭찬보다<span className='mobile_br'></span>경험 속에서 자랍니다.</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -287,8 +286,7 @@ const CounselingChild = () => {
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
-                                    <li>아이가 자신의 강점과 가능성을 발견하고, 스스로를 긍정적으로 바라볼 수 있도록 돕습니다.<br />
-작은 성공 경험을 통해 "나도 할 수 있다"는 자신감을 키워갑니다.</li>
+                                    <li>아이가 자신의 강점과 가능성을 발견하고, 스스로를 긍정적으로 바라볼 수 있도록 돕습니다.<span className='mobile_br'></span>작은 성공 경험을 통해 "나도 할 수 있다"는 자신감을 키워갑니다.</li>
                                     <li>자기이해상담 , 놀이치료 , 자기표현훈련, 인지재구성 , 강점 발견 및 성공경험 훈련</li>
                                 </ul>
                             </div>
@@ -298,7 +296,7 @@ const CounselingChild = () => {
                 {activeTab === 6 && (
                     <>
                         <div className='tit'>
-                            <h3>관계 문제는 시간이 지날수록<br />아이의 자존감과 학교 생활 전반에 영향을 줍니다.</h3>
+                            <h3>관계 문제는 시간이 지날수록<span className='mobile_br'></span>아이의 자존감과 학교 생활 전반에 영향을 줍니다.</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -321,7 +319,7 @@ const CounselingChild = () => {
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
-                                    <li>친구의 마음을 읽고 갈등을 해결하는 연습을 통해, 어떤 상황에서도<br />당당하게 어울릴 수 있는 대화 기술을 배웁니다</li>
+                                    <li>친구의 마음을 읽고 갈등을 해결하는 연습을 통해, 어떤 상황에서도<span className='mobile_br'></span>당당하게 어울릴 수 있는 대화 기술을 배웁니다</li>
                                     <li>사회성훈련 · 역할놀이 · 갈등해결훈련 · 부모상담</li>
                                 </ul>
                             </div>

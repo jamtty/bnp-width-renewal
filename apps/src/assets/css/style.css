@@ -1,5 +1,7 @@
 ﻿@charset "utf-8";
 
+.mobile_br { display:block; }
+
 #skipNavigation {
   position: absolute;
   left: -9999px;
@@ -482,7 +484,7 @@
 .guide .card_list li .num { position:absolute; top:4.8rem; right:3rem; width:5rem; height:5rem; border-radius:50%; background:rgba(255,255,255,.1); display:flex; align-items: center; justify-content: center; font-size:2.4rem; font-weight:500; color:#fff; }
 
 /* 서브 공통 - 탭 */
-.page_sub .tab_wrap { position:relative; display:flex; margin:0 0 12rem; padding:3rem 0 0; border-top:4px solid #E2E2E2; }
+.page_sub .tab_wrap { position:relative; /*position:sticky; top:22.4rem;*/ display:flex; margin:0 0 9rem; padding:3rem 0; border-top:4px solid #E2E2E2; background:#fff; }
 .page_sub .tab_btn { flex:1; border:none; background:none; font-size:2.4rem; font-weight:600; color:#999; cursor:pointer; text-align:center; white-space:nowrap; }
 .page_sub .tab_btn.on { color:#222; }
 .page_sub .tab_bar { position:absolute; top:-0.4rem; left:0; width:50%; height:0.4rem; background:#5868F3; border-radius:0.2rem; transition:left 0.3s; }
@@ -526,6 +528,7 @@
 .child .box .s_tit h3 { font-size:4.2rem; font-weight:700;}
 .child .box .s_tit p {  margin:2rem 0 0;  font-size:1.8rem; font-weight:600; color:#FF5F37; }
 .child .box .s_info { flex:1; }
+.child .box .s_info p { font-size:2.4rem; font-weight:600; margin:2rem 0 0; }
 .child .box .s_info .ul_list_1 { display:flex; gap:3rem 8rem; flex-wrap: wrap; }
 .child .box .s_info .ul_list_1 li { width:calc((100% - 8rem) / 2); font-size:2.4rem; font-weight:600; background:url('../images/ico_list_chk.svg') no-repeat left 0.5rem; padding-left:4rem; letter-spacing: -1px; }
 .child .box .s_info .ul_list_2 { margin:1rem 0 0; }
