@@ -54,6 +54,7 @@ import GlobalMulticultural from './pages/global/Multicultural';
 import GlobalOverseas from './pages/global/Overseas';
 import GlobalReturnee from './pages/global/Returnee';
 import GlobalB2b from './pages/global/B2b';
+import GlobalFeatures from './pages/global/Features';
 import GlobalPartnership from './pages/global/Partnership';
 // 아카데미 페이지
 import AcademyRelationshipCoach from './pages/academy/RelationshipCoach';
@@ -170,6 +171,7 @@ function App() {
       <Route path="/coaching/transition" element={<CoachingLayout title="전환기 코칭"><CoachingTransition /></CoachingLayout>} />
       <Route path="/coaching/corporate" element={<CoachingLayout title="기업 코칭 & 조직 프로그램"><CoachingCorporate /></CoachingLayout>} />
       {/* 글로벌 */}
+      <Route path="/global/features" element={<GlobalLayout title="특장점"><GlobalFeatures /></GlobalLayout>} />
       <Route path="/global/missionary" element={<GlobalLayout title="선교사 심리상담"><GlobalMissionary /></GlobalLayout>} />
       <Route path="/global/multicultural" element={<GlobalLayout title="다문화·유학생 심리상담"><GlobalMulticultural /></GlobalLayout>} />
       <Route path="/global/overseas" element={<GlobalLayout title="해외 거주자 상담"><GlobalOverseas /></GlobalLayout>} />

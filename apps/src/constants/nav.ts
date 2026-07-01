@@ -59,6 +59,7 @@ export const NAV_ITEMS: NavItem[] = [
     id: 'global',
     label: '글로벌',
     sub: [
+      { label: '특장점', to: '/global/features' },
       { label: '선교사 심리상담', to: '/global/missionary' },
       { label: '다문화·유학생 심리상담', to: '/global/multicultural' },
       { label: '해외 거주자 상담', to: '/global/overseas' },
