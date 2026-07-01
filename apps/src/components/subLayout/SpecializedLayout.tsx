@@ -1,5 +1,5 @@
 import SubLayout from './SubLayout';
-import subVisBg from '../../assets/images/bg_subvis_1.png';
+import subVisBg from '../../assets/images/bg_subvis_3.png';
 import { NAV_ITEMS } from '../../constants/nav';
 
 const specializedNav = NAV_ITEMS.find((n) => n.id === 'specialized')!;
