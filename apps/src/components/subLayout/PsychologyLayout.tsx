@@ -1,5 +1,5 @@
 import SubLayout from './SubLayout';
-import subVisBg from '../../assets/images/bg_subvis_1.png';
+import subVisBg from '../../assets/images/bg_subvis_4.png';
 import { NAV_ITEMS } from '../../constants/nav';
 
 const psychologyNav = NAV_ITEMS.find((n) => n.id === 'psychology')!;
