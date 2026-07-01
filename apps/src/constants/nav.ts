@@ -48,11 +48,23 @@ export const NAV_ITEMS: NavItem[] = [
     id: 'psychology',
     label: '심리검사',
     sub: [
-      { label: '원데이 마음 스캔', to: '/psychology/oneday' },
+      { label: '원데이 마음 검사', to: '/psychology/oneday' },
       { label: '종합 심리검사 (Full Battery)', to: '/psychology/full' },
       { label: '아동 놀이발달 평가', to: '/psychology/child' },
       { label: '청소년 심리검사', to: '/psychology/teen' },
       { label: '진로·학습 검사', to: '/psychology/career' },
+    ],
+  },
+  {
+    id: 'global',
+    label: '글로벌',
+    sub: [
+      { label: '선교사 심리상담', to: '/global/missionary' },
+      { label: '다문화·유학생 심리상담', to: '/global/multicultural' },
+      { label: '해외 거주자 상담', to: '/global/overseas' },
+      { label: '귀국자 상담', to: '/global/returnee' },
+      { label: 'Global Business (B2B)', to: '/global/b2b' },
+      { label: 'Partnership', to: '/global/partnership' },
     ],
   },
   {
@@ -65,17 +77,6 @@ export const NAV_ITEMS: NavItem[] = [
       { label: '리더십 코칭', to: '/coaching/leadership' },
       { label: '전환기 코칭', to: '/coaching/transition' },
       { label: '기업 코칭 & 조직 프로그램', to: '/coaching/corporate' },
-    ],
-  },
-  {
-    id: 'global',
-    label: '글로벌',
-    sub: [
-      { label: '선교사 심리상담', to: '/global/missionary' },
-      { label: '다문화·유학생 심리상담', to: '/global/multicultural' },
-      { label: '해외 거주자 상담', to: '/global/overseas' },
-      { label: '귀국자 상담', to: '/global/returnee' },
-      { label: 'Global Business (B2B)', to: '/global/b2b' },
     ],
   },
   {

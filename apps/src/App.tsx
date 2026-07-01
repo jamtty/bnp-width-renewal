@@ -54,6 +54,7 @@ import GlobalMulticultural from './pages/global/Multicultural';
 import GlobalOverseas from './pages/global/Overseas';
 import GlobalReturnee from './pages/global/Returnee';
 import GlobalB2b from './pages/global/B2b';
+import GlobalPartnership from './pages/global/Partnership';
 // 아카데미 페이지
 import AcademyRelationshipCoach from './pages/academy/RelationshipCoach';
 import AcademyCounselorTraining from './pages/academy/CounselorTraining';
@@ -156,7 +157,7 @@ function App() {
       <Route path="/specialized/eating" element={<SpecializedLayout title="식이장애·감정조절 상담"><SpecializedEating /></SpecializedLayout>} />
       <Route path="/specialized/career" element={<SpecializedLayout title="커리어 전환·방향 설계 상담"><SpecializedCareer /></SpecializedLayout>} />
       {/* 심리검사 */}
-      <Route path="/psychology/oneday" element={<PsychologyLayout title="원데이 마음 스캔"><PsychologyOneday /></PsychologyLayout>} />
+      <Route path="/psychology/oneday" element={<PsychologyLayout title="원데이 마음 검사"><PsychologyOneday /></PsychologyLayout>} />
       <Route path="/psychology/full" element={<PsychologyLayout title="종합 심리검사 (Full Battery)"><PsychologyFull /></PsychologyLayout>} />
       <Route path="/psychology/child" element={<PsychologyLayout title="아동 놀이발달 평가"><PsychologyChild /></PsychologyLayout>} />
       <Route path="/psychology/teen" element={<PsychologyLayout title="청소년 심리검사"><PsychologyTeen /></PsychologyLayout>} />
@@ -174,6 +175,7 @@ function App() {
       <Route path="/global/overseas" element={<GlobalLayout title="해외 거주자 상담"><GlobalOverseas /></GlobalLayout>} />
       <Route path="/global/returnee" element={<GlobalLayout title="귀국자 상담"><GlobalReturnee /></GlobalLayout>} />
       <Route path="/global/b2b" element={<GlobalLayout title="Global Business (B2B)"><GlobalB2b /></GlobalLayout>} />
+      <Route path="/global/partnership" element={<GlobalLayout title="Partnership"><GlobalPartnership /></GlobalLayout>} />
       {/* 아카데미 */}
       <Route path="/academy/relationship-coach" element={<AcademyLayout title="관계 대화 코치 과정"><AcademyRelationshipCoach /></AcademyLayout>} />
       <Route path="/academy/counselor-training" element={<AcademyLayout title="전문 상담사 수련 과정"><AcademyCounselorTraining /></AcademyLayout>} />
