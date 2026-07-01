@@ -492,6 +492,7 @@
 
 /* 센터소개 - 전문가소개 */
 .experts { padding:0 0 16rem; }
+.experts .con_1 { position:relative; max-width:162rem; margin:0 auto; }
 .experts .card_list { display:flex; flex-wrap:wrap; gap:9rem; }
 .experts .card_list li { position:relative; width:calc((100% - 9rem) / 2); height:37rem; display:flex; gap:4rem; }
 .experts .card_list li .thumbnail { width:33.7rem; height:100%; overflow:hidden; border-radius:4rem; }
