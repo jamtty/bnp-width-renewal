@@ -4,7 +4,7 @@ const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
         <div className="page_tit">
-            <h2>종합 심리검사 (Full Battery)</h2>
+            <h2>종합 심리검사<span>Full Battery</span></h2>
         </div>
         <section className="con_1">
             <div className='tit_img'>

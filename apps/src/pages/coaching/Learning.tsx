@@ -1,8 +1,70 @@
-const CoachingLearning = () => {
+const SpecializedFeatures = () => {
   return (
-    <div className="page_cont">
-      <p className="page_desc">학습과 진로에 대한 코칭을 통해 효과적인 학습 전략과 진로 방향을 설계합니다.</p>
+    <div className="page_cont page_sub child">
+        <div className="page_tit">
+            <h2>학습 진로 코칭</h2>
+        </div>
+        <section className="con_1">
+            <div className='tit'>
+                <h3>생각을 바꾸는 것이 아니라, 실행이 바뀌는 코칭</h3>
+                <p>학습과 진로의 문제는 의지 부족이 아니라<span className='mobile_br'></span>자신에게 맞지 않는 방식과 방향의 문제일 수 있습니다.</p>
+            </div>
+            <div className='box'>
+                <div className='s_tit'>
+                    <h3>학습 코칭</h3>
+                </div>
+                <div className='s_info'>
+                    <p className="top">공부를 못하는 것이 아니라, 공부하는 방식의 문제일 수 있습니다.</p>
+                    <ul className='ul_list_2'>
+                        <li>대상 - 학습 효율이 낮은 학생 , 시험 불안이 큰 학생 , 성인 학습자</li>
+                        <li>핵심 영역 - 집중력 , 학습 습관 , 시간 관리, 자기조절</li>
+                        <li>
+                            위드원만의 차별성
+                            <p className="sm">
+                                심리검사(TCI·MLST) 기반 분석<br />
+                                개인의 기질과 동기를 반영한 학습 전략 설계<br />
+                                잔소리 없이 스스로 움직이는 학습 시스템 구축
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div className='box'>
+                <div className='s_tit'>
+                    <h3>진로 코칭</h3>
+                </div>
+                <div className='s_info'>
+                    <p className="top">진로는 직업 선택이 아니라, 삶의 방향을 찾는 과정입니다.</p>
+                    <ul className='ul_list_2'>
+                        <li>대상 - 청소년, 대학생, 취업 준비생, 직장인</li>
+                        <li>핵심 영역 - 강점 발견 , 의사결정 , 커리어 설계 , 직업 적합성</li>
+                        <li>
+                            위드원만의 차별성
+                            <p className="sm">
+                                성격·가치·역량 통합 분석<br />
+                                검사 결과를 실제 진로 선택으로 연결<br />
+                                흥미보다 지속 가능한 진로 방향 설계
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div className='box'>
+                <div className='s_tit'>
+                    <h3>코칭 결과</h3>
+                </div>
+                <div className='s_info'>
+                    <p className="top">무엇을 해야 할지보다, 어떻게 할 수 있는지가 중요합니다.</p>
+                    <ul className='ul_list_2'>
+                        <li>공부가 쉬워집니다.</li>
+                        <li>실행이 지속됩니다.</li>
+                        <li>진로가 선명해집니다.</li>
+                        <li>선택의 확신이 생깁니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
   );
 };
-export default CoachingLearning;
+export default SpecializedFeatures;
