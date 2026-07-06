@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import img_counseling from '../../assets/images/img_counseling_child.png';
 
 const tabList = [
   '미술치료 자격과정(한국아동미술치료학회)',
