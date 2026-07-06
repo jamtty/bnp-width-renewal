@@ -85,6 +85,7 @@ export const NAV_ITEMS: NavItem[] = [
     id: 'academy',
     label: '아카데미',
     sub: [
+      { label: '아카데미 소개', to: '/academy/intro' },
       { label: '관계 대화 코치 과정', to: '/academy/relationship-coach' },
       { label: '전문 상담사 수련 과정', to: '/academy/counselor-training' },
       { label: '전문 자격 프로그램', to: '/academy/certification' },

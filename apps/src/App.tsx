@@ -58,6 +58,7 @@ import GlobalB2b from './pages/global/B2b';
 import GlobalFeatures from './pages/global/Features';
 import GlobalPartnership from './pages/global/Partnership';
 // 아카데미 페이지
+import AcademyIntro from './pages/academy/Intro';
 import AcademyRelationshipCoach from './pages/academy/RelationshipCoach';
 import AcademyCounselorTraining from './pages/academy/CounselorTraining';
 import AcademyCertification from './pages/academy/Certification';
@@ -181,6 +182,7 @@ function App() {
       <Route path="/global/b2b" element={<GlobalLayout title="Global Business (B2B)"><GlobalB2b /></GlobalLayout>} />
       <Route path="/global/partnership" element={<GlobalLayout title="Partnership"><GlobalPartnership /></GlobalLayout>} />
       {/* 아카데미 */}
+      <Route path="/academy/intro" element={<AcademyLayout title="아카데미 소개"><AcademyIntro /></AcademyLayout>} />
       <Route path="/academy/relationship-coach" element={<AcademyLayout title="관계 대화 코치 과정"><AcademyRelationshipCoach /></AcademyLayout>} />
       <Route path="/academy/counselor-training" element={<AcademyLayout title="전문 상담사 수련 과정"><AcademyCounselorTraining /></AcademyLayout>} />
       <Route path="/academy/certification" element={<AcademyLayout title="전문 자격 프로그램"><AcademyCertification /></AcademyLayout>} />

@@ -38,7 +38,7 @@ const CounselingChild = () => {
                             <img src={img_counseling} alt="아동 상담" />
                         </div>
                         <div className='tit'>
-                            <h3>아이를 고치기보다, 아이의 마음을 먼저 이해합니다</h3>
+                            <h3>아이를 고치기보다,<span className='mobile_br'></span>아이의 마음을 먼저 이해합니다</h3>
                             <p>아이의 변화가 상담실에서 끝나지 않고 가정과 학교까지 이어지도록 함께합니다.</p>
                         </div>
                         <div className='box'>
