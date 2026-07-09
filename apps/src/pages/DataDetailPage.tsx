@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchReportDetail, type ReportDetail, type ReportFile } from '../api/report';
 import { toAbsUrl, resolveContentUrls } from '../utils/uploadUrl';
+import icoPrint from '../assets/images/ico_board_print.svg';
+import icoShare from '../assets/images/ico_board_share.svg';
 
 const DataDetailPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -28,8 +30,58 @@ const DataDetailPage = () => {
       .finally(() => setLoading(false));
   }, [id]);
 
+  const handleShare = async () => {
+    const url = window.location.href;
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: item?.title, url });
+      } else {
+        await navigator.clipboard.writeText(url);
+        alert('현재 페이지 주소가 복사되었습니다.');
+      }
+    } catch {
+      // 사용자 취소 등은 무시
+    }
+  };
+
+  const handlePrint = () => {
+    if (!item) return;
+    const printWindow = window.open('', '_blank', 'width=800,height=600');
+    if (!printWindow) { window.print(); return; }
+    const content = resolveContentUrls(item.content ?? '');
+    const title = item.title;
+    const date = item.created_at?.slice(0, 10).replace(/-/g, '.');
+    const author = item.author_name;
+    printWindow.document.write(`<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="UTF-8"><title>${title}</title>
+<style>
+  @page { margin:1.5cm; }
+  body { font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif; padding:0; margin:0; color:#222; line-height:1.8; }
+  h1 { font-size:2rem; margin:0 0 0.8rem; page-break-after:avoid; }
+  .meta { font-size:1.3rem; color:#888; margin:0 0 2rem; padding:0 0 1.5rem; border-bottom:1px solid #ddd; page-break-after:avoid; }
+  .content { font-size:1.5rem; }
+  .content img { max-width:100%; height:auto; display:block; }
+</style></head>
+<body>
+  <h1>${title}</h1>
+  <div class="meta">${date} | ${author} | 자료실</div>
+  <div class="content">${content}</div>
+</body></html>`);
+    printWindow.document.close();
+    printWindow.focus();
+    printWindow.onload = () => {
+      printWindow.print();
+      printWindow.onafterprint = () => printWindow.close();
+    };
+  };
+
   return (
-    <>
+    <div className="board_list">
+      <div className="page_tit">
+        <h2>자료실</h2>
+      </div>
+      
       {loading ? (
         <div style={{ padding: '60px 0', textAlign: 'center' }}>불러오는 중...</div>
       ) : error ? (
@@ -49,50 +101,64 @@ const DataDetailPage = () => {
           {/* view start */}
           <div className="box_view">
             <div className="obj_head">
-              <strong>{item.title}</strong>
-              <ul>
-                <li>등록일: {item.created_at}</li>
-                <li>
-                  첨부파일:{' '}
-                  {files.length > 0 ? (
-                    files.map((f) => (
-                      <a
-                        key={f.id}
-                        href={toAbsUrl(f.file_url)}
-                        className="file indent"
-                        download={f.ori_name}
-                        data-tooltip-text={f.ori_name}
-                      >
-                        {f.ori_name}
-                      </a>
-                    ))
-                  ) : (
-                    <span>없음</span>
+              <div className="tit_row">
+                <strong>{item.title}</strong>
+              </div>
+              <div className="meta_row">
+                <ul>
+                  <li>{item.created_at?.slice(0, 10).replace(/-/g, '.')}</li>
+                  <li>{item.author_name}</li>
+                  <li>자료실</li>
+                  {files.length > 0 && (
+                    <li>
+                      첨부파일{' '}
+                      {files.map((f) => (
+                        <a
+                          key={f.id}
+                          href={toAbsUrl(f.file_url)}
+                          className="file indent"
+                          download={f.ori_name}
+                          data-tooltip-text={f.ori_name}
+                        >
+                          {f.ori_name}
+                        </a>
+                      ))}
+                    </li>
                   )}
-                </li>
-              </ul>
+                </ul>
+                <ul className="share_btns">
+                  <li>
+                    <button type="button" aria-label="인쇄" onClick={handlePrint}>
+                      <img src={icoPrint} alt="인쇄" />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" aria-label="공유" onClick={handleShare}>
+                      <img src={icoShare} alt="공유" />
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div
               className="obj_cont"
-              dangerouslySetInnerHTML={{
-                __html: resolveContentUrls(item.content ?? '') || '<p style="color:#888;text-align:center">내용이 없습니다.</p>',
-              }}
+              dangerouslySetInnerHTML={{ __html: resolveContentUrls(item.content ?? '') }}
             />
           </div>
           {/* view end */}
 
           {/* prev/next start */}
-          <table className="tbl_type01" style={{ marginTop: '10px' }}>
+          <table className="tbl_prevnext" style={{ marginTop: '10px' }}>
             <caption>이전글 / 다음글</caption>
             <colgroup>
-              <col style={{ width: '15%' }} />
+              <col style={{ width: '13.5rem' }} />
               <col />
             </colgroup>
             <tbody>
               {prev && (
                 <tr>
-                  <th scope="row" className="td_c">이전글</th>
-                  <td>
+                  <th scope="row">이전글</th>
+                  <td className="td_l">
                     <a
                       href="#"
                       onClick={(e) => { e.preventDefault(); navigate(`/data/${prev.id}`); }}
@@ -104,8 +170,8 @@ const DataDetailPage = () => {
               )}
               {next && (
                 <tr>
-                  <th scope="row" className="td_c">다음글</th>
-                  <td>
+                  <th scope="row">다음글</th>
+                  <td className="td_l">
                     <a
                       href="#"
                       onClick={(e) => { e.preventDefault(); navigate(`/data/${next.id}`); }}
@@ -128,7 +194,7 @@ const DataDetailPage = () => {
           {/* btn end */}
         </>
       )}
-    </>
+    </div>
   );
 };
 

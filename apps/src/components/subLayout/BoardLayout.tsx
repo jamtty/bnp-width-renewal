@@ -1,5 +1,5 @@
 import SubLayout from './SubLayout';
-import subVisBg from '../../assets/images/bg_subvis_1.png';
+import subVisBg from '../../assets/images/bg_subvis_8.png';
 import { NAV_ITEMS } from '../../constants/nav';
 
 const boardNav = NAV_ITEMS.find((n) => n.id === 'board')!;
