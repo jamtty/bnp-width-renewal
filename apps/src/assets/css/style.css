@@ -24,6 +24,14 @@
 
 .header { position:fixed; top:0; left:0; width:100%; z-index:999999; transition: background .25s; }
 .header .logo { display:flex; justify-content:center; margin:4.7rem 0 4.1rem; }
+
+/* 로고 기본/활성 전환 */
+.header .logo-default { display:block; }
+.header .logo-active { display:none; }
+.header.gnb-open .logo-default,
+.header.scrolled .logo-default { display:none; }
+.header.gnb-open .logo-active,
+.header.scrolled .logo-active { display:block; }
 .header .gnb { height:7.2rem; display:flex; align-items: center; justify-content: center; border-top:1px solid rgba(255,255,255,.6); border-bottom:1px solid rgba(255,255,255,.6);  position:relative; padding:0 15rem; gap:16rem; }
 .header .gnb li { }
 .header .gnb a { font-size:2.2rem; font-weight:600; color:#fff; }
@@ -74,7 +82,134 @@
 .header.gnb-open .gnb_item .sub_menu li a:hover,
 .header.gnb-open .gnb_item .sub_menu li a.on { color:#555; font-weight:600; text-decoration: underline;}
 
+/* ===== 모바일 햄버거 버튼 ===== */
+.mobile_menu_btn {
+    display:none;
+    width:2rem;
+    height:2rem;
+    position:absolute;
+    right:1.6rem;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:1000001;
+    background:url('../images/ico_mobile_menu.svg') no-repeat center/contain;
+    border:none;
+    cursor:pointer;
+    padding:0;
+}
 
+/* ===== 모바일 오버레이 ===== */
+.mobile_overlay {
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.4);
+    z-index:999998;
+}
+
+/* ===== 모바일 드로어 메뉴 ===== */
+.mobile_nav {
+    display:none;
+    position:fixed;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background:#fff;
+    z-index:999999;
+    transform:translateX(100%);
+    transition:transform 0.3s ease;
+    overflow-y:auto;
+    padding:0 0 4rem;
+    box-shadow:-4px 0 20px rgba(0,0,0,0.12);
+}
+.mobile_nav.open { transform:translateX(0); }
+
+/* 모바일 메뉴 상단 (로고 + 닫기) */
+.mobile_nav_head {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:1.5rem 2.4rem;
+    border-bottom:1px solid #f0f0f0;
+}
+.mobile_nav_logo img { height:3rem; width:auto; }
+.mobile_nav_close {
+    width:3.2rem;
+    height:3.2rem;
+    border:none;
+    background:none;
+    cursor:pointer;
+    color:#666;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0;
+}
+.mobile_nav_close svg { width:2rem; height:2rem; }
+.mobile_nav_close:hover { color:#5868F3; }
+
+.mobile_gnb { }
+.mobile_gnb_item { border-bottom:1px solid #f0f0f0; }
+.mobile_gnb_btn {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    padding:1.8rem 2.4rem;
+    font-size:1.8rem;
+    font-weight:600;
+    color:#222;
+    background:none;
+    border:none;
+    cursor:pointer;
+    text-align:left;
+}
+.mobile_gnb_btn.on { color:#5868F3; }
+.mobile_gnb_arrow {
+    display:inline-block;
+    width:1rem;
+    height:1rem;
+    border-right:2px solid #aaa;
+    border-bottom:2px solid #aaa;
+    transform:rotate(-45deg);
+    transition:transform 0.25s;
+    flex-shrink:0;
+    margin-right:0.4rem;
+}
+.mobile_gnb_item.expanded .mobile_gnb_arrow { transform:rotate(45deg); }
+.mobile_sub { display:none; background:#fafafa; }
+.mobile_gnb_item.expanded .mobile_sub { display:block; }
+.mobile_sub li a {
+    display:block;
+    padding:1.2rem 2.4rem 1.2rem 3.6rem;
+    font-size:1.6rem;
+    font-weight:500;
+    color:#555;
+}
+.mobile_sub li a.on { color:#5868F3; font-weight:600; }
+.mobile_sub li a:active { background:#f0f0f0; }
+
+/* ===== 반응형 ===== */
+@media (max-width: 1024px) {
+    .mobile_menu_btn { display:block; }
+    .mobile_overlay { display:block; }
+    .mobile_nav { display:block; }
+    .header nav#gnbMenu,
+    .header .gnb-panel { display:none !important; }
+    .header {
+        display:flex;
+        align-items:center;
+        padding:0 2rem;
+        height:6rem;
+        background:#fff;
+    }
+    .header .logo { margin:0; }
+    .header .logo img { height:3rem; width:auto; }
+    /* 모바일에서는 항상 액티브 로고 */
+    .header .logo-default { display:none !important; }
+    .header .logo-active { display:block !important; }
+}
 
 /* 메인 비주얼 스와이퍼 */
 .visual {
@@ -113,6 +248,45 @@
   background: #5868F3;
 }
 
+@media (max-width: 1024px) {
+    /* 메인 비주얼 스와이퍼 */
+    .visual {
+    width: 100%;
+    height: 45rem;
+    }
+
+    .main-vis-swiper {
+    width: 100%;
+    height: 100%;
+    }
+
+    .vis_slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position:relative;
+    }
+
+    .vis_text { position:absolute; left:0; bottom:8rem; padding:0 1.5rem;  }
+    .vis_text h2 { font-size:3rem; font-weight:700; color:#fff; margin:0 0 1.4rem; line-height:1.3; }
+    .vis_text p { font-size:1.6rem; font-weight:500; color:#fff; }
+
+    .main-vis-swiper .swiper-pagination { bottom:3.5rem !important; }
+    .main-vis-swiper .swiper-pagination-bullet {
+    width: 1rem;
+    height: 1rem;
+    background: #fff;
+    opacity: 1;
+    margin:0 0.5rem !important;
+    }
+
+    .main-vis-swiper .swiper-pagination-bullet-active {
+    background: #5868F3;
+    }
+}
+
 .section_1 { background:#FAFAFA; padding:12rem 15rem;  }
 .section_1 .tit h2 { font-size:5rem; font-weight:700; color:#222; line-height:1.7; }
 .section_1 .tit p { font-size:2.8rem; font-weight:500; color:#555; line-height:1.7; }
@@ -140,6 +314,37 @@
 .footer .addr { font-size:1.8rem; font-weight:400; color:#fff; line-height:2; }
 .footer .addr span { display:inline-block; vertical-align: middle; width:0.1rem; height:1rem; background:#888; margin:0 1.5rem; }
 .footer .copyright { font-size:1.6rem; font-weight:400; color:#777; }
+
+@media (max-width: 1024px) {
+    .section_1 { background:#FAFAFA; padding:12rem 15rem;  }
+    .section_1 .tit h2 { font-size:5rem; font-weight:700; color:#222; line-height:1.7; }
+    .section_1 .tit p { font-size:2.8rem; font-weight:500; color:#555; line-height:1.7; }
+    .section_1 .card { display:flex; gap:3rem; margin:4rem 0 0; }
+    .section_1 .card li { flex:1; height:60rem; border-radius:2rem; overflow:hidden; display:flex; align-items: flex-end; justify-content: center; }
+    .section_1 .card li:nth-child(1) { background:url('../images/img_section_1.png') no-repeat center/cover; }
+    .section_1 .card li:nth-child(2) { background:url('../images/img_section_2.png') no-repeat center/cover; }
+    .section_1 .card li:nth-child(3) { background:url('../images/img_section_3.png') no-repeat center/cover; }
+    .section_1 .card li:nth-child(4) { background:url('../images/img_section_4.png') no-repeat center/cover; }
+    .section_1 .card li p { width:100%; text-align:center; padding:0 0 4rem; font-size:1.8rem; font-weight:500; color:#fff; }
+    .section_1 .card li p strong { display:block; margin:0 0 3rem; font-size:3.2rem; font-weight:700; color:#fff; }
+
+    .mapWrap { padding:10rem 15rem; }
+    .mapWrap .tit { text-align:center; margin-bottom: 4rem; }
+    .mapWrap .tit h2 { font-size:5.5rem; font-weight:700; color:#222; line-height:1.7; }
+    .mapWrap .map { width: 100%; height: 54rem; margin-bottom: 3rem; border-radius: 2rem; overflow: hidden; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); }
+    .mapWrap .addr { font-size: 2.4rem; font-weight: 500; color: #222; padding-left:6rem; background:url('../images/ico_map.svg') no-repeat 0 50%/contain;  }
+
+    .partners { margin:10rem 0 0; display:flex; flex-wrap:wrap; gap:3rem 4.5rem; justify-content: center; }
+    .partners li { width:calc((100% - 18rem) / 5); height:10rem; background:#F1F3FA; border-radius:6rem; display:flex; align-items:center; justify-content:center; padding:1.5rem 3rem; box-sizing:border-box; }
+    .partners li img { max-width:100%; max-height:100%; object-fit:contain; }
+
+    .footer { background:#333; padding:4rem 15rem; }
+    .footer .logo { margin:0 0 3rem; }
+    .footer .addr { font-size:1.8rem; font-weight:400; color:#fff; line-height:2; }
+    .footer .addr span { display:inline-block; vertical-align: middle; width:0.1rem; height:1rem; background:#888; margin:0 1.5rem; }
+    .footer .copyright { font-size:1.6rem; font-weight:400; color:#777; }
+}
+
 
 /* ============================================
    서브페이지 공통
