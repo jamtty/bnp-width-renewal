@@ -83,6 +83,13 @@ if (($segments[0] ?? '') === 'upload') {
     exit;
 }
 
+// [전문가 관리] ------------------------------------------------------
+if (($segments[0] ?? '') === 'expert') {
+    require_once __DIR__ . '/routes/expert.php';
+    handleExpert($segments, $method);
+    exit;
+}
+
 // [인증] -------------------------------------------------------------
 if (($segments[0] ?? '') === 'auth') {
     require_once __DIR__ . '/routes/auth.php';

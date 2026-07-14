@@ -10,6 +10,7 @@ export const sideMenuSections: MenuSection[] = [
     sectionLabel: '운영관리',
     items: [
       { label: '배너 관리', to: '/admin/banner', icon: 'wallpaper' },
+      { label: '전문가 관리', to: '/admin/expert', icon: 'group' },
     ],
   },
   {

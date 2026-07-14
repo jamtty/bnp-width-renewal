@@ -78,6 +78,8 @@ import AdminDataFormPage from './pages/admin/AdminDataFormPage';
 import AdminMyPage from './pages/admin/AdminMyPage';
 import AdminBannerPage from './pages/admin/AdminBannerPage';
 import AdminBannerFormPage from './pages/admin/AdminBannerFormPage';
+import AdminExpertPage from './pages/admin/AdminExpertPage';
+import AdminExpertFormPage from './pages/admin/AdminExpertFormPage';
 import AdminLayout from './components/admin/AdminLayout';
 import { useAuthStore, isTokenExpired } from './store/useAuthStore';
 import visImg1 from './assets/images/img_vis_1.png';
@@ -207,6 +209,9 @@ function App() {
       <Route path="/admin/banner" element={<AdminRoute><AdminBannerPage /></AdminRoute>} />
       <Route path="/admin/banner/write" element={<AdminRoute><AdminBannerFormPage /></AdminRoute>} />
       <Route path="/admin/banner/edit/:id" element={<AdminRoute><AdminBannerFormPage /></AdminRoute>} />
+      <Route path="/admin/expert" element={<AdminRoute><AdminExpertPage /></AdminRoute>} />
+      <Route path="/admin/expert/write" element={<AdminRoute><AdminExpertFormPage /></AdminRoute>} />
+      <Route path="/admin/expert/edit/:id" element={<AdminRoute><AdminExpertFormPage /></AdminRoute>} />
       <Route path="/admin/mypage" element={<AdminRoute><AdminMyPage /></AdminRoute>} />
       </Routes>
     </>

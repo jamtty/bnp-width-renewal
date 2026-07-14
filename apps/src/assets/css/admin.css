@@ -979,6 +979,23 @@ select.adm_btn_secondary {
 .adm_form_input:focus {
   border-color: #2563eb;
 }
+.adm_form_textarea {
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.6rem;
+  font-size: 1.4rem;
+  font-family: inherit;
+  outline: none;
+  box-sizing: border-box;
+  resize: vertical;
+  line-height: 1.6;
+  transition: border-color 0.15s;
+  background: #fff;
+}
+.adm_form_textarea:focus {
+  border-color: #2563eb;
+}
 .adm_checkbox_label {
   display: flex;
   align-items: center;

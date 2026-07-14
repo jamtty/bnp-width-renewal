@@ -1044,8 +1044,10 @@
 .experts { padding:0 0 16rem; }
 .experts .con_1 { position:relative; max-width:162rem; margin:0 auto; }
 .experts .card_list { display:flex; flex-wrap:wrap; gap:9rem; }
-.experts .card_list li { position:relative; width:calc((100% - 9rem) / 2); height:37rem; display:flex; gap:4rem; }
-.experts .card_list li .thumbnail { width:33.7rem; height:100%; overflow:hidden; border-radius:4rem; }
+.experts .card_list li { position:relative; width:calc((100% - 9rem) / 2); display:flex; gap:4rem; }
+.experts .card_list li .thumbnail { width:34rem; height:37rem; overflow:hidden; border-radius:4rem; }
+.experts .card_list li .thumbnail img { width:100%; height:100%; object-fit:cover; }
+.experts .card_list li .thumbnail .no_image { width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:#f0f0f0; color:#bbb; font-size:1.6rem; font-weight:500; }
 .experts .card_list li .txt { flex:1; padding:4rem 0 0; }
 .experts .card_list li .txt .tit { border-bottom:1px solid #E8E8E8; padding:0 0 3rem; }
 .experts .card_list li .txt .tit h3 { font-size:2.8rem; font-weight:700;}
@@ -1074,6 +1076,7 @@
     .experts .card_list li { position:relative; width:100%; height:auto; display:flex; gap:2rem; flex-direction: column; }
     .experts .card_list li .thumbnail { width:100%; height:100%; overflow:hidden; border-radius:4rem; }
     .experts .card_list li .thumbnail img { width:100%; height:auto; object-fit: cover; }
+    .experts .card_list li .thumbnail .no_image { width:100%; height:20rem; display:flex; align-items:center; justify-content:center; background:#f0f0f0; color:#bbb; font-size:1.4rem; font-weight:500; }
     .experts .card_list li .txt { flex:1; padding:0; }
     .experts .card_list li .txt .tit { border-bottom:1px solid #E8E8E8; padding:0 0 1rem; }
     .experts .card_list li .txt .tit h3 { font-size:2rem; font-weight:700;}
