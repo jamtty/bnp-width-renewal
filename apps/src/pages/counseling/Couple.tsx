@@ -35,9 +35,9 @@ const CounselingChild = () => {
                         </div>
                         <div className='tit'>
                             <h3>
-                                반복되는 싸움에는 이유가 있습니다.<span className='mobile_br'></span>
+                                반복되는 싸움에는 이유가 있습니다.<span className='pc_br'></span>
                                 서로를 바꾸려 하기보다
-                                왜 같은 갈등이 반복되는지<span className='mobile_br'></span>이해하고
+                                왜 같은 갈등이 반복되는지<span className='pc_br'></span>이해하고
                                 관계의 패턴을 바꾸어 갑니다.
                             </h3>
                         </div>
@@ -123,7 +123,7 @@ const CounselingChild = () => {
                 {activeTab === 1 && (
                     <>
                         <div className='tit'>
-                            <h3>반복되는 갈등 뒤에는<span className='mobile_br'></span>감정 반응, 애착 방식, 소통 패턴이 숨어 있습니다</h3>
+                            <h3>반복되는 갈등 뒤에는<span className='pc_br'></span>감정 반응, 애착 방식, 소통 패턴이 숨어 있습니다</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -188,7 +188,7 @@ const CounselingChild = () => {
                         <div className='box'>
                             <div className='s_tit'>
                                 <h3>이혼 전 결정 상담</h3>
-                                <p>감정이 아닌 기준으로 관계의<span className='mobile_br'></span>현재 상태와 회복 가능성을 점검합니다.</p>
+                                <p>감정이 아닌 기준으로 관계의<span className='pc_br'></span>현재 상태와 회복 가능성을 점검합니다.</p>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
@@ -201,7 +201,7 @@ const CounselingChild = () => {
                         <div className='box'>
                             <div className='s_tit'>
                                 <h3>가까워질 용기<br />(부부관계 재설계 상담)</h3>
-                                <p>관계 속에 사라진 친밀감과 정서적 연결을 회복하고,<span className='mobile_br'></span>다시 함께 살아갈 방법을 만들어 갑니다.</p>
+                                <p>관계 속에 사라진 친밀감과 정서적 연결을 회복하고,<span className='pc_br'></span>다시 함께 살아갈 방법을 만들어 갑니다.</p>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
@@ -216,12 +216,12 @@ const CounselingChild = () => {
                 {activeTab === 2 && (
                     <>
                         <div className='tit'>
-                            <h3>사랑도 소통도 연습이 필요합니다<span className='mobile_br'></span>서로의 감정과 애착 방식을 이해하고 건강한 관계를 만들어 갑니다.<span className='mobile_br'></span>애착 이해 · 감정 소통 · 건강한 관계 만들기</h3>
+                            <h3>사랑도 소통도 연습이 필요합니다<span className='pc_br'></span>서로의 감정과 애착 방식을 이해하고 건강한 관계를 만들어 갑니다.<span className='pc_br'></span>애착 이해 · 감정 소통 · 건강한 관계 만들기</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
                                 <h3>사랑에도 연습이 필요해요<br />(데이트 관계 상담)</h3>
-                                <p>좋아하는 마음만으로는<span className='mobile_br'></span>건강한 관계가 유지되지 않습니다.</p>
+                                <p>좋아하는 마음만으로는<span className='pc_br'></span>건강한 관계가 유지되지 않습니다.</p>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
@@ -234,7 +234,7 @@ const CounselingChild = () => {
                         <div className='box'>
                             <div className='s_tit'>
                                 <h3>다시 만날 수 있을까<br />(이별 후 재회 상담)</h3>
-                                <p>헤어진 이유를 객관적으로 돌아보고<span className='mobile_br'></span>재회의 가능성과 현실성을 함께 점검합니다.</p>
+                                <p>헤어진 이유를 객관적으로 돌아보고<span className='pc_br'></span>재회의 가능성과 현실성을 함께 점검합니다.</p>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>

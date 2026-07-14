@@ -6,7 +6,7 @@ const SpecializedFeatures = () => {
         </div>
         <section className="con_1">
             <div className='tit'>
-                <h3>글로벌 환경의 복잡성이 성과를 흔들릴 때<span className='mobile_br'></span>사람과 조직의 안정성이 경쟁력이 됩니다</h3>
+                <h3>글로벌 환경의 복잡성이 성과를 흔들릴 때<span className='pc_br'></span>사람과 조직의 안정성이 경쟁력이 됩니다</h3>
                 <p>해외 지사, 외국계 기업, 글로벌 조직을 위한 문화·정서·관계 관리 솔루션을 제공합니다.</p>
             </div>
             <div className='box'>

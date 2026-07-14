@@ -7,7 +7,7 @@ const SpecializedFeatures = () => {
         <section className="con_1">
             <div className='tit'>
                 <h3>사명을 지키기 위한, 마음의 회복</h3>
-                <p>사역의 자리에서 오래 버텨온 사람일수록 감정을 돌보지 못한 채 살아가는 경우가 많습니다.<span className='mobile_br'></span>WithOne은 선교사와 사역자의 삶을 이해하는 전문 심리상담과<span className='mobile_br'></span>회복 프로그램을 제공합니다.</p>
+                <p>사역의 자리에서 오래 버텨온 사람일수록 감정을 돌보지 못한 채 살아가는 경우가 많습니다.<span className='pc_br'></span>WithOne은 선교사와 사역자의 삶을 이해하는 전문 심리상담과<span className='pc_br'></span>회복 프로그램을 제공합니다.</p>
             </div>
             <div className='box'>
                 <div className='s_tit'>

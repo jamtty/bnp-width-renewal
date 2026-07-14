@@ -12,7 +12,7 @@ const SpecializedPanic = () => {
             </div>
             <div className='tit'>
                 <h3>이유 없는 불안이 반복되나요?</h3>
-                <p>갑작스러운 두근거림, 숨 막힘, 끊이지 않는 걱정과 불안.<span className='mobile_br'></span>반복되는 불안은 의지의 문제가 아니라 몸과 마음이 보내는 신호일 수 있습니다.</p>
+                <p>갑작스러운 두근거림, 숨 막힘, 끊이지 않는 걱정과 불안.<span className='pc_br'></span>반복되는 불안은 의지의 문제가 아니라 몸과 마음이 보내는 신호일 수 있습니다.</p>
             </div>
             <div className='box'>
                 <div className='s_tit'>

@@ -11,8 +11,8 @@ const SpecializedEating = () => {
                 <img src={img_counseling} alt="식이장애 · 감정조절" />
             </div>
             <div className='tit'>
-                <h3>반복되는 폭식과 절식,<span className='mobile_br'></span>그 뒤에 감정이 있습니다.</h3>
-                <p>폭식, 거식, 체중 집착이 반복된다면 단순 식습관이 아니라<span className='mobile_br'></span>감정 조절의 어려움이 연결된 상태일 수 있습니다.</p>
+                <h3>반복되는 폭식과 절식,<span className='pc_br'></span>그 뒤에 감정이 있습니다.</h3>
+                <p>폭식, 거식, 체중 집착이 반복된다면 단순 식습관이 아니라<span className='pc_br'></span>감정 조절의 어려움이 연결된 상태일 수 있습니다.</p>
             </div>
             <div className='box'>
                 <div className='s_tit'>

@@ -12,7 +12,7 @@ const SpecializedAddiction = () => {
             </div>
             <div className='tit'>
                 <h3>끊고 싶은데, 왜 자꾸 반복될까요?</h3>
-                <p>게임, 스마트폰, 술, 도박, 쇼핑 등 같은 행동이 반복된다면<span className='mobile_br'></span>의지 부족이 아니라 반복 행동의 구조가 형성된 상태일 수 있습니다.</p>
+                <p>게임, 스마트폰, 술, 도박, 쇼핑 등 같은 행동이 반복된다면<span className='pc_br'></span>의지 부족이 아니라 반복 행동의 구조가 형성된 상태일 수 있습니다.</p>
             </div>
             <div className='box'>
                 <div className='s_tit'>

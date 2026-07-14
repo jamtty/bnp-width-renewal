@@ -7,7 +7,7 @@ const SpecializedFeatures = () => {
         <section className="con_1">
             <div className='tit'>
                 <h3>삶의 균형과 방향을 다시 설계합니다</h3>
-                <p>열심히 살아왔지만 더 이상 지금의 방식으로는 만족스럽지 않을 때,<span className='mobile_br'></span>삶의 우선순위와 방향을 다시 정리합니다.</p>
+                <p>열심히 살아왔지만 더 이상 지금의 방식으로는 만족스럽지 않을 때,<span className='pc_br'></span>삶의 우선순위와 방향을 다시 정리합니다.</p>
             </div>
             <div className='box'>
                 <div className='s_tit'>

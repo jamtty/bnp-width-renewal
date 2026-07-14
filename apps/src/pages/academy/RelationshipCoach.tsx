@@ -6,7 +6,7 @@ const SpecializedFeatures = () => {
         </div>
         <section className="con_1">
             <div className='tit'>
-                <h3>관계를 바꾸는 사람은 말을 잘하는 사람이 아니라,<span className='mobile_br'></span>마음을 읽는 사람입니다</h3>
+                <h3>관계를 바꾸는 사람은 말을 잘하는 사람이 아니라,<span className='pc_br'></span>마음을 읽는 사람입니다</h3>
                 <p>배운 사람이 아니라, 변화를 만드는 사람으로 성장합니다.</p>
             </div>
             <div className='box'>

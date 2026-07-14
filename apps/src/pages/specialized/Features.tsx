@@ -11,7 +11,7 @@ const SpecializedFeatures = () => {
                 <img src={img_counseling} alt="특장점" />
             </div>
             <div className='tit'>
-                <h3>반복되는 문제에는<span className='mobile_br'></span>더 전문적인 접근이 필요합니다.</h3>
+                <h3>반복되는 문제에는<span className='pc_br'></span>더 전문적인 접근이 필요합니다.</h3>
                 <p>일반 상담만으로 해결하기 어려운 문제를 전문 평가와 맞춤 개입으로 돕습니다.</p>
             </div>
             <div className='box'>

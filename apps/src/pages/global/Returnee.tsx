@@ -7,7 +7,7 @@ const SpecializedFeatures = () => {
         <section className="con_1">
             <div className='tit'>
                 <h3>익숙한 곳에서 낯설어진 나를 위한 회복</h3>
-                <p>돌아왔지만 이전과 같은 삶으로 돌아가기 어려울 때<span className='mobile_br'></span>재적응과 정체성 회복이 함께 필요합니다.</p>
+                <p>돌아왔지만 이전과 같은 삶으로 돌아가기 어려울 때<span className='pc_br'></span>재적응과 정체성 회복이 함께 필요합니다.</p>
             </div>
             <div className='box'>
                 <div className='s_tit'>

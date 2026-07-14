@@ -12,7 +12,7 @@ const SpecializedAdhd = () => {
             </div>
             <div className='tit'>
                 <h3>해야 하는 걸 알지만, 왜 자꾸 미루게 될까요?</h3>
-                <p>계획은 세우지만 실행이 어렵고 시작은 하지만 끝까지 이어지지 않는다면<span className='mobile_br'></span>의지 부족이 아니라 실행 시스템이 흔들리는 상태일 수 있습니다.</p>
+                <p>계획은 세우지만 실행이 어렵고 시작은 하지만 끝까지 이어지지 않는다면<span className='pc_br'></span>의지 부족이 아니라 실행 시스템이 흔들리는 상태일 수 있습니다.</p>
             </div>
             <div className='box'>
                 <div className='s_tit'>

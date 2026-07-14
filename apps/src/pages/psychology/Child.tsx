@@ -12,7 +12,7 @@ const SpecializedFeatures = () => {
             </div>
             <div className='tit'>
                 <h3>아이의 행동에는 이유가 있습니다</h3>
-                <p>산만함, 짜증, 위축, 떼쓰기 고쳐야 할 문제가 아니라<span className='mobile_br'></span>이해해야 할 신호입니다</p>
+                <p>산만함, 짜증, 위축, 떼쓰기 고쳐야 할 문제가 아니라<span className='pc_br'></span>이해해야 할 신호입니다</p>
             </div>
             <div className='box'>
                 <div className='s_tit'>

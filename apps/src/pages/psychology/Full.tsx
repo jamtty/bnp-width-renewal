@@ -11,9 +11,9 @@ const SpecializedFeatures = () => {
                 <img src={img_counseling} alt="종합 심리검사 (Full Battery)" />
             </div>
             <div className='tit'>
-                <h3>문제의 원인을 정확히 알고 싶다면<span className='mobile_br'></span>반복되는 어려움과 감정의 혼란은</h3>
-                <p><span className='mobile_br'></span>겉으로 보이는 증상만으로는 알기 어렵습니다.<br />
-                    종합심리검사는 현재의 문제뿐 아니라 그 원인이 되는<span className='mobile_br'></span>심리적 구조까지 함께 이해하도록 돕습니다.
+                <h3>문제의 원인을 정확히 알고 싶다면<span className='pc_br'></span>반복되는 어려움과 감정의 혼란은</h3>
+                <p><span className='pc_br'></span>겉으로 보이는 증상만으로는 알기 어렵습니다.<br />
+                    종합심리검사는 현재의 문제뿐 아니라 그 원인이 되는<span className='pc_br'></span>심리적 구조까지 함께 이해하도록 돕습니다.
                 </p>
             </div>
             <div className='box'>

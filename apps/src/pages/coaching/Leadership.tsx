@@ -6,7 +6,7 @@ const SpecializedFeatures = () => {
         </div>
         <section className="con_1">
             <div className='tit'>
-                <h3>좋은 리더는 사람을 관리하지 않고,<span className='mobile_br'></span>관계를 이끕니다</h3>
+                <h3>좋은 리더는 사람을 관리하지 않고,<span className='pc_br'></span>관계를 이끕니다</h3>
                 <p>성과와 관계 사이에서 고민하는 리더에게 사람의 마음을 이해하는 리더십을 제공합니다.</p>
             </div>
             <div className='box'>

@@ -37,7 +37,7 @@ const CounselingChild = () => {
                             <img src={img_counseling} alt="성인 상담" />
                         </div>
                         <div className='tit'>
-                            <h3>반복되는 문제 속에서<span className='mobile_br'></span>나를 이해하고 삶의 방향을 다시 찾는 시간</h3>
+                            <h3>반복되는 문제 속에서<span className='pc_br'></span>나를 이해하고 삶의 방향을 다시 찾는 시간</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -121,7 +121,7 @@ const CounselingChild = () => {
                 {activeTab === 1 && (
                     <>
                         <div className='tit'>
-                            <h3>감정의 어려움은 단순한 기분 문제가 아니라<span className='mobile_br'></span>삶의 에너지와 방향에 영향을 주는 중요한 신호입니다.</h3>
+                            <h3>감정의 어려움은 단순한 기분 문제가 아니라<span className='pc_br'></span>삶의 에너지와 방향에 영향을 주는 중요한 신호입니다.</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -169,7 +169,7 @@ const CounselingChild = () => {
                 {activeTab === 2 && (
                     <>
                         <div className='tit'>
-                            <h3>관계에서 반복되는 패턴은<span className='mobile_br'></span>나의 감정과 삶 전체에 영향을 미칩니다.</h3>
+                            <h3>관계에서 반복되는 패턴은<span className='pc_br'></span>나의 감정과 삶 전체에 영향을 미칩니다.</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -202,7 +202,7 @@ const CounselingChild = () => {
                 {activeTab === 3 && (
                     <>
                         <div className='tit'>
-                            <h3>지속적인 피로와 무기력은<span className='mobile_br'></span>단순 피곤함이 아니라 회복이 필요한 상태입니다.</h3>
+                            <h3>지속적인 피로와 무기력은<span className='pc_br'></span>단순 피곤함이 아니라 회복이 필요한 상태입니다.</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -235,7 +235,7 @@ const CounselingChild = () => {
                 {activeTab === 4 && (
                     <>
                         <div className='tit'>
-                            <h3>방향이 흔들릴 때<span className='mobile_br'></span>삶 전체가 막막하게 느껴질 수 있습니다.</h3>
+                            <h3>방향이 흔들릴 때<span className='pc_br'></span>삶 전체가 막막하게 느껴질 수 있습니다.</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -268,7 +268,7 @@ const CounselingChild = () => {
                 {activeTab === 5 && (
                     <>
                         <div className='tit'>
-                            <h3>자존감의 문제는<span className='mobile_br'></span>내가 나를 어떻게 바라보는지에서 시작됩니다.</h3>
+                            <h3>자존감의 문제는<span className='pc_br'></span>내가 나를 어떻게 바라보는지에서 시작됩니다.</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>

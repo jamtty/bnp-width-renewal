@@ -7,7 +7,7 @@ const SpecializedFeatures = () => {
         <section className="con_1">
             <div className='tit'>
                 <h3>언어가 아니라, 마음을 이해하는 상담</h3>
-                <p>해외생활, 선교사역, 다문화 환경에서 경험하는<span className='mobile_br'></span>정서·관계·정체성의 어려움을 함께 다룹니다.</p>
+                <p>해외생활, 선교사역, 다문화 환경에서 경험하는<span className='pc_br'></span>정서·관계·정체성의 어려움을 함께 다룹니다.</p>
             </div>
             <div className='box'>
                 <div className='s_tit'>

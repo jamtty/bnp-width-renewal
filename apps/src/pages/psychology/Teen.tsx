@@ -12,7 +12,7 @@ const SpecializedFeatures = () => {
             </div>
             <div className='tit'>
                 <h3>문제가 아니라, 방향의 문제일 수 있습니다</h3>
-                <p>무기력, 반항, 학업 문제는 단순한 의지의 문제가 아니라<span className='mobile_br'></span>정서·관계·진로가 연결된 결과일 수 있습니다.</p>
+                <p>무기력, 반항, 학업 문제는 단순한 의지의 문제가 아니라<span className='pc_br'></span>정서·관계·진로가 연결된 결과일 수 있습니다.</p>
             </div>
             <div className='box'>
                 <div className='s_tit'>

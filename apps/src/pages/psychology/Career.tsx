@@ -12,7 +12,7 @@ const SpecializedFeatures = () => {
             </div>
             <div className='tit'>
                 <h3>왜 안 되는지 알면, 방향이 보입니다</h3>
-                <p>공부가 안 되는 이유, 진로가 막막한 이유는<span className='mobile_br'></span>능력 부족이 아니라 나에게 맞는 방식과 방향을 아직 찾지 못했기 때문일 수 있습니다.</p>
+                <p>공부가 안 되는 이유, 진로가 막막한 이유는<span className='pc_br'></span>능력 부족이 아니라 나에게 맞는 방식과 방향을 아직 찾지 못했기 때문일 수 있습니다.</p>
             </div>
             <div className='box'>
                 <div className='s_tit'>

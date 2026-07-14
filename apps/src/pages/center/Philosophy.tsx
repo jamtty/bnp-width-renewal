@@ -1,4 +1,5 @@
 import con1Img from '../../assets/images/pg_philosophy_con1.png';
+import con1MoImg from '../../assets/images/pg_philosophy_con1_mo.png';
 
 const CenterPhilosophy = () => {
   return (
@@ -25,7 +26,8 @@ const CenterPhilosophy = () => {
                         <p className='fs_bold'>회복을 넘어 성장을 함께 합니다</p>
                         <p className='fs_basic'>자신을 이해하고 관계를 회복하며 삶의 방향을 다시 세워갑니다.</p>
                     </div> */}
-                    <img src={con1Img} alt="증상을 넘어, 나를 이해하고 삶을 회복하는 공간" />
+                    <img src={con1Img} alt="증상을 넘어, 나를 이해하고 삶을 회복하는 공간" className="pc_br" />
+                    <img src={con1MoImg} alt="증상을 넘어, 나를 이해하고 삶을 회복하는 공간" className="mo_br" />
                 </div>
             </div>
         </section>

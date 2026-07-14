@@ -6,7 +6,7 @@ const SpecializedFeatures = () => {
         </div>
         <section className="con_1">
             <div className='tit'>
-                <h3>사람이 바뀌면 성과가 바뀌고,<span className='mobile_br'></span>관계가 바뀌면 조직이 바뀝니다</h3>
+                <h3>사람이 바뀌면 성과가 바뀌고,<span className='pc_br'></span>관계가 바뀌면 조직이 바뀝니다</h3>
             </div>
             <div className='box'>
                 <div className='s_tit'>

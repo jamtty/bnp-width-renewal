@@ -140,7 +140,7 @@ const CounselingChild = () => {
                 {activeTab === 1 && (
                     <>
                         <div className='tit'>
-                            <h3>감정의 혼란은 청소년기의<span className='mobile_br'></span>중요한 성장 신호일 수 있습니다.</h3>
+                            <h3>감정의 혼란은 청소년기의<span className='pc_br'></span>중요한 성장 신호일 수 있습니다.</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -173,7 +173,7 @@ const CounselingChild = () => {
                 {activeTab === 2 && (
                     <>
                         <div className='tit'>
-                            <h3>진로 문제는 단순 선택이 아니라<span className='mobile_br'></span>“나는 누구인가”의 문제입니다.</h3>
+                            <h3>진로 문제는 단순 선택이 아니라<span className='pc_br'></span>“나는 누구인가”의 문제입니다.</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -206,7 +206,7 @@ const CounselingChild = () => {
                 {activeTab === 3 && (
                     <>
                         <div className='tit'>
-                            <h3>관계의 어려움은 정서와 자존감에<span className='mobile_br'></span>직접적인 영향을 줍니다.</h3>
+                            <h3>관계의 어려움은 정서와 자존감에<span className='pc_br'></span>직접적인 영향을 줍니다.</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -239,7 +239,7 @@ const CounselingChild = () => {
                 {activeTab === 4 && (
                     <>
                         <div className='tit'>
-                            <h3>학습의 어려움은<span className='mobile_br'></span>단순한 성적 문제가 아니라<span className='mobile_br'></span>주의력, 감정, 동기와 깊이 연결되어 있습니다</h3>
+                            <h3>학습의 어려움은<span className='pc_br'></span>단순한 성적 문제가 아니라<span className='pc_br'></span>주의력, 감정, 동기와 깊이 연결되어 있습니다</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -272,7 +272,7 @@ const CounselingChild = () => {
                 {activeTab === 5 && (
                     <>
                         <div className='tit'>
-                            <h3>디지털 과의존은 단순한 습관이 아니라<span className='mobile_br'></span>자기조절의 문제입니다.</h3>
+                            <h3>디지털 과의존은 단순한 습관이 아니라<span className='pc_br'></span>자기조절의 문제입니다.</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>

@@ -34,7 +34,7 @@ const CounselingChild = () => {
                             <img src={img_counseling} alt="아동 상담" />
                         </div>
                         <div className='tit'>
-                            <h3>아이의 행동은 고쳐야 할 문제가 아니라<span className='mobile_br'></span>이해해야 할 신호일 수 있습니다</h3>
+                            <h3>아이의 행동은 고쳐야 할 문제가 아니라<span className='pc_br'></span>이해해야 할 신호일 수 있습니다</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -104,7 +104,7 @@ const CounselingChild = () => {
                 {activeTab === 2 && (
                     <>
                         <div className='tit'>
-                            <h3>반복되는 감정과 스트레스가 있다면<span className='mobile_br'></span>단순 기분이 아니라 패턴일 수 있습니다</h3>
+                            <h3>반복되는 감정과 스트레스가 있다면<span className='pc_br'></span>단순 기분이 아니라 패턴일 수 있습니다</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>

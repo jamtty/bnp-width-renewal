@@ -13,7 +13,7 @@ const SpecializedCareer = () => {
             </div>
             <div className='tit'>
                 <h3>지금 이 방향이 맞는지 확신이 없으신가요?</h3>
-                <p>이직, 공백기, 진로 고민이 반복된다면 정보 부족이 아니라<span className='mobile_br'></span>선택 기준이 흔들리는 상태일 수 있습니다.</p>
+                <p>이직, 공백기, 진로 고민이 반복된다면 정보 부족이 아니라<span className='pc_br'></span>선택 기준이 흔들리는 상태일 수 있습니다.</p>
             </div>
             <div className='box'>
                 <div className='s_tit'>

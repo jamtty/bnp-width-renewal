@@ -281,7 +281,7 @@ function MainPage() {
       </div>
       <section className='section_1'>
         <div className='tit'>
-            <h2>연구와 임상을 연결하는 회복과 성장의 심리상담</h2>
+            <h2>연구와 임상을 연결하는<span className='mo_br'></span>회복과 성장의 심리상담</h2>
             <p>교수진 · 전문상담사 · 글로벌 전문가가 함께하는 연구기반 심리상담</p>
         </div>
         <ul className='card'>
@@ -332,7 +332,7 @@ function MainPage() {
             title="헤세드상담코칭연구소 오시는 길"
           />
         </div>
-        <p className='addr'>서울특별시 영등포구 당산동 5가 11-47 로뎀나무내과 5층 헤세드상담코칭연구소</p>
+        <p className='addr'>서울특별시 영등포구 당산동 5가 11-47<span className='mo_br'></span>로뎀나무내과 5층 헤세드상담코칭연구소</p>
         <ul className='partners'>
             {PARTNERS.map((img, i) => (
                 <li key={i}>

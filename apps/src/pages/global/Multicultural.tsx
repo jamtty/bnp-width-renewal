@@ -7,7 +7,7 @@ const SpecializedFeatures = () => {
         <section className="con_1">
             <div className='tit'>
                 <h3>낯선 환경 속에서도, 나를 잃지 않도록</h3>
-                <p>문화가 달라질 때 문제는 단순 적응이 아니라 정체성 · 관계 · 미래의 문제로 확장됩니다.<span className='mobile_br'></span>WithOne은 정서 + 관계 + 진로를 통합적으로 다룹니다.</p>
+                <p>문화가 달라질 때 문제는 단순 적응이 아니라 정체성 · 관계 · 미래의 문제로 확장됩니다.<span className='pc_br'></span>WithOne은 정서 + 관계 + 진로를 통합적으로 다룹니다.</p>
             </div>
             <div className='box'>
                 <div className='s_tit'>

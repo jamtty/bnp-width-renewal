@@ -14,7 +14,7 @@ const SpecializedFeatures = () => {
                 <h3>이해를 넘어, 행동이 바뀌는 코칭</h3>
                 <p>
                     목표를 세우는 것보다 중요한 것은 실행이 지속되는 구조를 만드는 것입니다.<br />
-                    WithOne은 ICF 인증 코치와 상담학 전문가가 함께하여<span className='mobile_br'></span>
+                    WithOne은 ICF 인증 코치와 상담학 전문가가 함께하여<span className='pc_br'></span>
                     심리와 행동을 연결하는 코칭을 제공합니다.
                 </p>
             </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import con1_Img from '../../assets/images/img_sample.png';
 
 const advisorList = [
@@ -154,7 +154,7 @@ const CenterExperts = () => {
                             </div>
                             <div className="info">
                                 <strong>{item.desc}</strong>
-                                <p>{item.career.map((c, idx) => (<>{idx > 0 && <br />}{c}</>))}</p>
+                                <p>{item.career.map((c, idx) => (<React.Fragment key={idx}>{idx > 0 && <br />}{c}</React.Fragment>))}</p>
                             </div>
                         </div>
                     </li>

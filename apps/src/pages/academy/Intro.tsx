@@ -4,7 +4,7 @@ const AcademyIntro = () => {
   return (
     <div className="page_cont page_sub child">
         <div className="page_tit">
-            <h2>이해에서 시작해,<span className='mobile_br'></span>전문가로 완성되는 성장의 여정</h2>
+            <h2>이해에서 시작해,<span className='pc_br'></span>전문가로 완성되는 성장의 여정</h2>
             <p>배우는 것을 넘어 상담 · 코칭 · 강의 · 기관 활동까지 연결되는 성장 시스템</p>
         </div>
         <section className="con_1">
@@ -42,7 +42,7 @@ const AcademyIntro = () => {
                     </li>
                 </ul>
                 <div className="roadmap_quote">
-                    <p>한 번의 교육이 아니라, 평생 성장하는 전문가 플랫폼</p>
+                    <p>한 번의 교육이 아니라,<span className='mo_br'></span> 평생 성장하는 전문가 플랫폼</p>
                 </div>
             </div>
 

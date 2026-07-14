@@ -30,7 +30,7 @@ const CounselingChild = () => {
                 {activeTab === 0 && (
                     <>
                         <div className='tit'>
-                            <h3>표현을 통해 마음을 읽고,<span className='mobile_br'></span>치료로 연결하는 전문가 과정</h3>
+                            <h3>표현을 통해 마음을 읽고,<span className='pc_br'></span>치료로 연결하는 전문가 과정</h3>
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
@@ -74,7 +74,7 @@ const CounselingChild = () => {
                 {activeTab === 1 && (
                     <>
                         <div className='tit'>
-                            <h3>놀이를 통해 아이의 마음을 이해하고<span className='mobile_br'></span>관계를 회복하는 전문가 과정</h3>
+                            <h3>놀이를 통해 아이의 마음을 이해하고<span className='pc_br'></span>관계를 회복하는 전문가 과정</h3>
                             <p>아이를 이해하는 것을 넘어, 가족을 이해하는 전문가로 성장합니다</p>
                         </div>
                         <div className='box'>
@@ -121,7 +121,7 @@ const CounselingChild = () => {
                 {activeTab === 2 && (
                     <>
                         <div className='tit'>
-                            <h3>심리검사를 넘어,<span className='mobile_br'></span>평가와 상담을 연결하는 임상 전문가 과정</h3>
+                            <h3>심리검사를 넘어,<span className='pc_br'></span>평가와 상담을 연결하는 임상 전문가 과정</h3>
                             <p>좋은 검사는 점수를 읽는 것이 아니라, 사람을 이해하는 데서 시작됩니다.</p>
                         </div>
                         <div className='box'>

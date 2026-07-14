@@ -7,7 +7,7 @@ const SpecializedFeatures = () => {
         <section className="con_1">
             <div className='tit'>
                 <h3>생각을 바꾸는 것이 아니라, 실행이 바뀌는 코칭</h3>
-                <p>학습과 진로의 문제는 의지 부족이 아니라<span className='mobile_br'></span>자신에게 맞지 않는 방식과 방향의 문제일 수 있습니다.</p>
+                <p>학습과 진로의 문제는 의지 부족이 아니라<span className='pc_br'></span>자신에게 맞지 않는 방식과 방향의 문제일 수 있습니다.</p>
             </div>
             <div className='box'>
                 <div className='s_tit'>

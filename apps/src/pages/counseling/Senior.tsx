@@ -35,8 +35,8 @@ const CounselingChild = () => {
                         </div>
                         <div className='tit'>
                             <h3>
-                                은퇴 이후에도 삶은 계속됩니다<span className='mobile_br'></span>
-                                상실과 변화의 시간을 지나<span className='mobile_br'></span>
+                                은퇴 이후에도 삶은 계속됩니다<span className='pc_br'></span>
+                                상실과 변화의 시간을 지나<span className='pc_br'></span>
                                 다시 의미 있는 삶을 만들어 가는 상담입니다.
                             </h3>
                         </div>
@@ -124,7 +124,7 @@ const CounselingChild = () => {
                         <div className='box'>
                             <div className='s_tit'>
                                 <h3>시니어 종합 마음 건강 진단</h3>
-                                <p>정서·인지·관계·삶의 만족도를 종합적으로 확인하여<span className='mobile_br'></span>현재의 상태와 회복 방향을 찾습니다.</p>
+                                <p>정서·인지·관계·삶의 만족도를 종합적으로 확인하여<span className='pc_br'></span>현재의 상태와 회복 방향을 찾습니다.</p>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
@@ -140,7 +140,7 @@ const CounselingChild = () => {
                         <div className='box'>
                             <div className='s_tit'>
                                 <h3>기억·인지 기능 정밀 진단</h3>
-                                <p>기억력 저하와 인지 기능 변화를 확인하고<span className='mobile_br'></span>치매 예방 및 조기 발견을 돕습니다.</p>
+                                <p>기억력 저하와 인지 기능 변화를 확인하고<span className='pc_br'></span>치매 예방 및 조기 발견을 돕습니다.</p>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
@@ -156,7 +156,7 @@ const CounselingChild = () => {
                         <div className='box'>
                             <div className='s_tit'>
                                 <h3>정서·상실 반응 진단</h3>
-                                <p>사별, 외로움, 우울감, 무기력 등<span className='mobile_br'></span>노년기 정서 상태를 확인합니다.</p>
+                                <p>사별, 외로움, 우울감, 무기력 등<span className='pc_br'></span>노년기 정서 상태를 확인합니다.</p>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
@@ -176,7 +176,7 @@ const CounselingChild = () => {
                         <div className='box'>
                             <div className='s_tit'>
                                 <h3>상실 회복 프로그램</h3>
-                                <p>사별 · 외로움 · 무의미감<span className='mobile_br'></span>상실을 정리하고 삶의 의미를 다시 연결합니다.</p>
+                                <p>사별 · 외로움 · 무의미감<span className='pc_br'></span>상실을 정리하고 삶의 의미를 다시 연결합니다.</p>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
@@ -189,7 +189,7 @@ const CounselingChild = () => {
                         <div className='box'>
                             <div className='s_tit'>
                                 <h3>가족 관계 회복 프로그램</h3>
-                                <p>자녀 갈등 · 돌봄 스트레스<span className='mobile_br'></span>세대 간 거리와 감정을 조율합니다.</p>
+                                <p>자녀 갈등 · 돌봄 스트레스<span className='pc_br'></span>세대 간 거리와 감정을 조율합니다.</p>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
@@ -202,7 +202,7 @@ const CounselingChild = () => {
                         <div className='box'>
                             <div className='s_tit'>
                                 <h3>인지·기억 유지 프로그램</h3>
-                                <p>기억력 저하 · 치매 불안<span className='mobile_br'></span>인지 기능을 유지하고 일상을 안정시킵니다.</p>
+                                <p>기억력 저하 · 치매 불안<span className='pc_br'></span>인지 기능을 유지하고 일상을 안정시킵니다.</p>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>

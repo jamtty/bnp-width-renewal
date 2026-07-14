@@ -12,7 +12,7 @@ const SpecializedBurnout = () => {
             </div>
             <div className='tit'>
                 <h3>버티고 있는데, 점점 무너지는 느낌인가요?</h3>
-                <p>쉬어도 회복되지 않고 의욕과 에너지가 계속 떨어진다면<span className='mobile_br'></span>단순한 피로가 아니라 번아웃일 수 있습니다.</p>
+                <p>쉬어도 회복되지 않고 의욕과 에너지가 계속 떨어진다면<span className='pc_br'></span>단순한 피로가 아니라 번아웃일 수 있습니다.</p>
             </div>
             <div className='box'>
                 <div className='s_tit'>
