@@ -3,7 +3,7 @@
 .pc_br { display:block !important; }
 .mo_br { display:none !important; }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     .pc_br { display:none !important; }
     .mo_br { display:block !important; }
     .hidden { display:none !important;}
@@ -201,7 +201,7 @@
 .mobile_sub li a:active { background:#f0f0f0; }
 
 /* ===== 반응형 ===== */
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     .mobile_menu_btn { display:block; }
     .mobile_overlay { display:block; }
     .mobile_nav { display:block; }
@@ -258,7 +258,7 @@
   background: #5868F3;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     /* 메인 비주얼 스와이퍼 */
     .visual {
     width: 100%;
@@ -325,7 +325,7 @@
 .footer .addr .line { display:inline-block; vertical-align: middle; width:0.1rem; height:1rem; background:#888; margin:0 1.5rem; }
 .footer .copyright { font-size:1.6rem; font-weight:400; color:#777; }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     .section_1 { background:#FAFAFA; padding:4rem 1.5rem;  }
     .section_1 .tit h2 { font-size:3.2rem; font-weight:700; color:#222; line-height:1.3; margin:0 0 1.2rem; }
     .section_1 .tit p { font-size:1.8rem; font-weight:500; color:#555; line-height:1.3; }
@@ -442,7 +442,7 @@
   font-weight: 600;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     /* 서브 비주얼 */
     .sub_visual {
     margin:6rem 0 0;
@@ -572,7 +572,7 @@
   box-shadow: 0 0 0 2px rgba(88, 104, 243, 0.15);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     /* 콘텐츠 영역 */
     /* LNB + 본문 flex 래퍼 */
     .sub_content_wrap {
@@ -688,7 +688,7 @@
 .page_tit h2 span { display:block; font-size:3rem; }
 .page_tit p { font-size:2.4rem; font-weight:500; color:#555; }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
 
     .page_tit { text-align: center; margin:0 0 5.5rem; }
     .page_tit h2 { font-size:2.5rem; font-weight:700; color:#222; margin:0 0 1.2rem; }
@@ -764,7 +764,7 @@
 .board_list .btn_area .btn { display:flex; align-items: center; justify-content: center; height:5rem; padding:0 3.4rem; border:1px solid #ccc; border-radius:2.5rem; background:#333; font-size:1.8rem; font-weight:500; color:#fff; cursor:pointer; transition:all 0.2s; }
 .board_list .btn_area .btn:hover { background:#5868F3; color:#fff; }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     /* 게시판 목록 */
     .board_list { padding:0 1.5rem 10rem; }
     .board_list .board_search { justify-content:stretch; }
@@ -892,7 +892,7 @@
 .intro .con_2 .con_list .box .thumbnail img { width:100%; height:100%; object-fit:cover; }
 .intro .con_2 .con_list .box p { padding:2.8rem; font-size:1.8rem; font-weight:500; color:#222; text-align:center; }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     /* 센터소개 - 센터소개 */
     .intro { margin:0 0 10rem; padding:0 1.5rem; }
     .intro .con_1 { max-width:100%; padding:0; margin:0 0 10rem; }
@@ -983,7 +983,7 @@
 .philosophy .con_1 .img .txt3 { position:absolute; top:0; left:0; }
 .philosophy .con_1 .bg { height:63rem; background:url('../images/pg_philosophy_con1_bg.png') no-repeat center bottom/cover;  }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     /* 센터소개 - 센터철학 */
     .philosophy .con_1 { position:relative; padding:120rem 0 0; }
     .philosophy .con_1 .img { position:absolute; top:0; left:0; width:100%; text-align:center; }
@@ -1008,7 +1008,7 @@
 .guide .card_list li p { font-size:1.8rem; font-weight:500; color:#fff; }
 .guide .card_list li .num { position:absolute; top:4.8rem; right:3rem; width:5rem; height:5rem; border-radius:50%; background:rgba(255,255,255,.1); display:flex; align-items: center; justify-content: center; font-size:2.4rem; font-weight:500; color:#fff; }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     /* 센터소개 - 상담안내 */
     .guide { padding:0 1.5rem 10rem; }
     .guide .con_1 { position:relative; max-width:162rem; margin:0 auto; }
@@ -1031,7 +1031,7 @@
 .page_sub .tab_bar { position:absolute; top:-0.4rem; left:0; width:50%; height:0.4rem; background:#5868F3; border-radius:0.2rem; transition:left 0.3s; }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     /* 서브 공통 - 탭 */
     .page_sub .tab_wrap { position:relative; display:flex; flex-wrap:wrap; margin:0 0 6rem; border-top:4px solid #5868F3; background:#fff; }
     .page_sub .tab_btn { padding:1.6rem 1rem; flex:0 0 50%; box-sizing:border-box; border:none; border-bottom:1px solid #E2E2E2; background:none; font-size:1.5rem; font-weight:600; color:#999; cursor:pointer; text-align:center; word-break:keep-all; line-height:1.4; }
@@ -1068,7 +1068,7 @@
 .experts .pagination .page_num.on { background:#F3F3F3; font-size:1.8rem; font-weight:600; color:#333;  }
 .experts .pagination .page_num:not(.on):hover { color:#5868F3; }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     /* 센터소개 - 전문가소개 */
     .experts { padding:0 1.5rem 10rem; }
     .experts .con_1 { position:relative; max-width:162rem; margin:0 auto; }
@@ -1169,7 +1169,7 @@
 .child .btn_wrap .btn_secondary { background:#333; color:#fff; }
 .child .btn_wrap .btn_secondary:hover { background:#222; }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     /* 상담 ~ 아카데미 공통 레이아웃 */
     .child { padding:0 1.5rem 10rem; }
     .child .con_1 { position:relative; max-width:162rem; margin:0 auto; }
