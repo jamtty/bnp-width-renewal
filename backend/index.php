@@ -92,8 +92,18 @@ if (($segments[0] ?? '') === 'expert') {
 
 // [팝업 관리] --------------------------------------------------------
 if (($segments[0] ?? '') === 'popup') {
-    require_once __DIR__ . '/routes/popup.php';
-    handlePopup($segments, $method);
+    $popupFile = __DIR__ . '/routes/popup.php';
+    if (file_exists($popupFile)) {
+        require_once $popupFile;
+        handlePopup($segments, $method);
+    } else {
+        http_response_code(500);
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode([
+            'success' => false,
+            'message' => 'popup.php 파일이 서버에 없습니다. FTP로 backend/routes/popup.php 업로드가 필요합니다.',
+        ], JSON_UNESCAPED_UNICODE);
+    }
     exit;
 }
 
