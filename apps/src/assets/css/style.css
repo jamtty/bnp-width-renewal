@@ -1226,8 +1226,8 @@
 .child .box .s_info .step_list li strong { display:block; font-size:2rem; font-weight:700; color:#5868F3; margin:0 0 1.6rem;}
 .child .box .s_info .step_list li span { display:block; font-size:1.6rem; font-weight:500; color:#333;}
 
-.child .box .s_info2 { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.8rem;}
-.child .box .s_info2 p { font-size:4rem; font-weight:600; color:#5868F3; text-align:center; margin:1rem 0;}
+.child .box .s_info2 { margin:0 auto; position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.8rem;}
+.child .box .s_info2 p { font-size:3rem; font-weight:600; color:#5868F3; text-align:center; margin:1rem 0;}
 .child .box .s_info2::before { content:''; width:3.7rem; height:2.2rem; background:url('../images/ico_seminar_tta1.svg') no-repeat center/contain;}
 .child .box .s_info2::after { content:''; width:3.7rem; height:2.2rem; background:url('../images/ico_seminar_tta2.svg') no-repeat center/contain;}
 
@@ -1239,7 +1239,7 @@
 .child .con_1 .roadmap_circle { width:20rem; height:20rem; border-radius:50%; border:1.5px solid #8b97f4; background:#fff; display:flex; align-items:center; justify-content:center; font-size:2.5rem; font-weight:700; color:#5868F3; box-shadow:3px 4px 18.8px rgba(88,104,243,0.19);}
 .child .con_1 .roadmap_arrow { width:3.3rem; height:5rem; margin:0 1rem -2rem; background:url('../images/ico_academy_arrow.svg') no-repeat center/contain; flex-shrink:0; z-index:1;}
 .child .con_1 .roadmap_quote { margin-top:12rem; text-align:center; display:flex; justify-content: center; align-items: flex-start;}
-.child .con_1 .roadmap_quote p { font-size:4.5rem; font-weight:700; color:#555; margin:4rem 3rem 0;}
+.child .con_1 .roadmap_quote p { font-size:3rem; font-weight:700; color:#555; margin:4rem 3rem 0;}
 .child .con_1 .roadmap_quote::before { content:''; display:inline-block; vertical-align: top; width:6.5rem; height:15.6rem; background:url('../images/ico_academy_tta1.svg') no-repeat top/contain; margin-right:1.2rem;}
 .child .con_1 .roadmap_quote::after { content:''; display:inline-block; vertical-align: top; width:6.5rem; height:15.6rem; background:url('../images/ico_academy_tta2.svg') no-repeat top/contain; margin-left:1.2rem;}
 
@@ -1259,13 +1259,13 @@
  .child .tit h3 { font-size:2rem; font-weight:700; margin:0 0 1.2rem;}
  .child .tit p { font-size:1.4rem; font-weight:500; color:#555;}
  .child .box { display:flex; flex-direction: column; background:rgba(166,175,255,0.05); border-radius:2rem; padding:3rem; margin:0 0 2rem; gap:2rem;}
- .child .box .bg { flex:1; display:flex; align-items: center; background:url('../images/ico_seminar_arrow.svg') no-repeat center center/21.6rem;}
+ .child .box .bg { flex:1; display:flex; flex-direction: column; align-items: flex-start; gap:3rem; background:none; }
  .child .box.d-block { display:block;}
  .child .box.d-block .s_tit { width:100% !important;}
  .child .box .s_tit { width:100%;}
  .child .box .s_tit h3 { font-size:1.8rem; font-weight:700;}
  .child .box .s_tit p { margin:1.1rem 0 0; font-size:1.4rem; font-weight:600; color:#FF5F37;}
- .child .box .s_info { flex:1; font-size:1.4rem; font-weight:600;}
+ .child .box .s_info { flex:1; font-size:1.4rem; font-weight:600; }
  .child .box .s_info .no-margin { margin-top:0.5rem !important;}
  .child .box .s_info p { font-size:1.4rem; font-weight:600; margin:3rem 0 0;}
  .child .box .s_info .top { font-size:1.4rem; font-weight:600; margin:0 0 3rem;}
@@ -1299,7 +1299,7 @@
  .child .box .s_info .step_list li span { display:block; font-size:1.6rem; font-weight:500; color:#333;}
 
  .child .box .s_info2 { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.8rem;}
- .child .box .s_info2 p { font-size:4rem; font-weight:600; color:#5868F3; text-align:center; margin:1rem 0;}
+ .child .box .s_info2 p { font-size:2.5rem; font-weight:600; color:#5868F3; text-align:center; margin:1rem auto; }
  .child .box .s_info2::before { content:''; width:3.7rem; height:2.2rem; background:url('../images/ico_seminar_tta1.svg') no-repeat center/contain;}
  .child .box .s_info2::after { content:''; width:3.7rem; height:2.2rem; background:url('../images/ico_seminar_tta2.svg') no-repeat center/contain;}
 
