@@ -127,7 +127,7 @@ const CounselingChild = () => {
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
-                                <h3>데이트 관계<br />진단 패키지</h3>
+                                <h3>데이트 관계 진단 패키지</h3>
                                 <p>반복되는 연애 패턴을 이해하고, 관계의 방향을 찾아갑니다.</p>
                             </div>
                             <div className='s_info'>
@@ -141,7 +141,7 @@ const CounselingChild = () => {
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
-                                <h3>신혼부부 관계<br />진단 패키지</h3>
+                                <h3>신혼부부 관계 진단 패키지</h3>
                                 <p>왜 같은 사람에게 상처받고, 같은 갈등이 반복되는지 이해합니다.</p>
                             </div>
                             <div className='s_info'>
@@ -155,7 +155,7 @@ const CounselingChild = () => {
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
-                                <h3>부부 관계<br />진단 패키지</h3>
+                                <h3>부부 관계 진단 패키지</h3>
                                 <p>반복되는 갈등의 이유를 감정이 아닌 구조로 이해합니다.</p>
                             </div>
                             <div className='s_info'>
@@ -171,7 +171,7 @@ const CounselingChild = () => {
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
-                                <h3>이혼 전 결정<br />진단 패키지</h3>
+                                <h3>이혼 전 결정 진단 패키지</h3>
                                 <p>감정이 아닌 객관적 기준으로 관계를 점검합니다.</p>
                             </div>
                             <div className='s_info'>
