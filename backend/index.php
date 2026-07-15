@@ -200,8 +200,7 @@ function handlePopup(array $seg, string $method): void
     errorResponse('잘못된 요청입니다.',400);
 }
 function _popupUrl(array $row): array {
-    $base = rtrim(defined('UPLOAD_BASE_URL')?UPLOAD_BASE_URL:'/uploads','/');
-    $row['img_url_full'] = (!empty($row['img_url'])&&strpos($row['img_url'],'http')!==0) ? $base.(strpos($row['img_url'],'/')===0?$row['img_url']:'/'.$row['img_url']) : ($row['img_url']??'');
+    $row['img_url_full'] = $row['img_url'] ?? '';
     return $row;
 }
 
