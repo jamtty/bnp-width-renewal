@@ -979,6 +979,12 @@ select.adm_btn_secondary {
 .adm_form_input:focus {
   border-color: #2563eb;
 }
+.adm_form_inline {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex: 1;
+}
 .adm_form_textarea {
   width: 100%;
   padding: 1.2rem;
