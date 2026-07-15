@@ -119,91 +119,115 @@ export default function AdminPopupPage() {
                     value={inputKeyword}
                     onChange={(e) => setInputKeyword(e.target.value)}
                   />
-                  <button type="submit" className="adm_btn adm_btn_sm">검색</button>
-                  <button type="button" className="adm_btn adm_btn_sm adm_btn_secondary" onClick={handleReset}>초기화</button>
+                  <button type="submit" className="adm_search_btn">
+                    <span className="material-icons">search</span>
+                  </button>
+                  <button type="button" className="adm_btn_secondary" onClick={handleReset}>초기화</button>
                 </div>
               </form>
+              <button className="adm_btn_primary" onClick={() => navigate('/admin/popup/write')}>
+                + 등록
+              </button>
             </div>
 
-            <div className="adm_list_header">
-              <span className="adm_total">
-                총 <strong>{total.toLocaleString()}</strong>건
-              </span>
-              <div className="adm_list_actions">
-                <button type="button" className="adm_btn adm_btn_sm adm_btn_danger" onClick={handleBulkDelete} disabled={checkedIds.length === 0}>
-                  선택삭제 ({checkedIds.length})
-                </button>
-                <button type="button" className="adm_btn adm_btn_sm adm_btn_primary" onClick={() => navigate('/admin/popup/write')}>
-                  팝업 등록
-                </button>
-              </div>
-            </div>
-
-            {error && <p className="adm_error">{error}</p>}
-
-            <table className="adm_table">
-              <thead>
-                <tr>
-                  <th style={{ width: 48 }}>
-                    <input type="checkbox" checked={allChecked} onChange={handleCheckAll} />
-                  </th>
-                  <th style={{ width: 60 }}>번호</th>
-                  <th>제목</th>
-                  <th style={{ width: 120 }}>게시기간</th>
-                  <th style={{ width: 80 }}>사용여부</th>
-                  <th style={{ width: 80 }}>순서</th>
-                  <th style={{ width: 150 }}>등록일</th>
-                  <th style={{ width: 150 }}>관리</th>
-                </tr>
-              </thead>
-              <tbody>
-                {loading ? (
-                  <tr><td colSpan={8} className="adm_empty">불러오는 중...</td></tr>
-                ) : items.length === 0 ? (
-                  <tr><td colSpan={8} className="adm_empty">등록된 팝업이 없습니다.</td></tr>
-                ) : (
-                  items.map((item, idx) => (
+            <div className="adm_table_wrap">
+              <table className="adm_table">
+                <thead>
+                  <tr>
+                    <th style={{ width: '4%' }}>
+                      <input type="checkbox" checked={allChecked} onChange={handleCheckAll} />
+                    </th>
+                    <th style={{ width: '6%' }}>번호</th>
+                    <th>제목</th>
+                    <th style={{ width: '14%' }}>게시기간</th>
+                    <th style={{ width: '10%' }}>사용여부</th>
+                    <th style={{ width: '8%' }}>순서</th>
+                    <th style={{ width: '12%' }}>등록일</th>
+                    <th style={{ width: '14%' }}>관리</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {loading ? (
+                    <tr><td colSpan={8} className="adm_table_empty">불러오는 중...</td></tr>
+                  ) : error ? (
+                    <tr><td colSpan={8} className="adm_table_empty">오류: {error}</td></tr>
+                  ) : items.length === 0 ? (
+                    <tr><td colSpan={8} className="adm_table_empty">등록된 팝업이 없습니다.</td></tr>
+                  ) : items.map((item, idx) => (
                     <tr key={item.id}>
-                      <td>
+                      <td className="adm_td_center">
                         <input type="checkbox" checked={checkedIds.includes(item.id)} onChange={() => handleCheckOne(item.id)} />
                       </td>
-                      <td>{total - ((page - 1) * PAGE_SIZE) - idx}</td>
-                      <td className="adm_td_title">{item.title}</td>
+                      <td className="adm_td_center">{total - (page - 1) * PAGE_SIZE - idx}</td>
                       <td>
+                        <a
+                          href="#"
+                          className="adm_table_link"
+                          onClick={(e) => { e.preventDefault(); navigate(`/admin/popup/edit/${item.id}`) }}
+                        >
+                          {item.title}
+                        </a>
+                      </td>
+                      <td className="adm_td_center">
                         {item.period_start || item.period_end
                           ? `${item.period_start || ''} ~ ${item.period_end || ''}`
                           : '상시'}
                       </td>
-                      <td>
+                      <td className="adm_td_center">
                         <button
-                          type="button"
-                          className={`adm_toggle_btn ${item.use_yn === 'Y' ? 'on' : ''}`}
+                          className={item.use_yn === 'Y' ? 'adm_badge_on' : 'adm_badge_off'}
                           onClick={() => handleToggleUse(item)}
+                          title="클릭하여 사용/미사용 전환"
                         >
                           {item.use_yn === 'Y' ? '사용' : '미사용'}
                         </button>
                       </td>
-                      <td>{item.sort_order ?? '-'}</td>
-                      <td>{item.created_at?.split(' ')[0] ?? '-'}</td>
-                      <td className="adm_td_actions">
-                        <button type="button" className="adm_btn adm_btn_xs" onClick={() => navigate(`/admin/popup/edit/${item.id}`)}>수정</button>
-                        <button type="button" className="adm_btn adm_btn_xs adm_btn_danger" onClick={() => handleDelete(item.id, item.title)}>삭제</button>
+                      <td className="adm_td_center">{item.sort_order ?? '-'}</td>
+                      <td className="adm_td_center">{item.created_at?.split(' ')[0] ?? '-'}</td>
+                      <td className="adm_td_center">
+                        <div className="adm_action_btns">
+                          <button
+                            className="adm_btn_edit"
+                            onClick={() => navigate(`/admin/popup/edit/${item.id}`)}
+                          >수정</button>
+                          <button
+                            className="adm_btn_delete"
+                            onClick={() => handleDelete(item.id, item.title)}
+                          >삭제</button>
+                        </div>
                       </td>
                     </tr>
-                  ))
-                )}
-              </tbody>
-            </table>
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
-            {totalPages > 1 && (
-              <div className="adm_pagination">
-                <button disabled={page <= 1} onClick={() => setPage(page - 1)}>이전</button>
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
-                  <button key={p} className={p === page ? 'active' : ''} onClick={() => setPage(p)}>{p}</button>
-                ))}
-                <button disabled={page >= totalPages} onClick={() => setPage(page + 1)}>다음</button>
+            <div className="adm_pagination">
+              <div className="adm_pagination_left">
+                {checkedIds.length > 0 && (
+                  <button className="adm_btn_delete" onClick={handleBulkDelete}>
+                    선택 삭제 ({checkedIds.length})
+                  </button>
+                )}
+                <span className="adm_total_count">총 {total.toLocaleString()}건</span>
               </div>
-            )}
+              {totalPages > 1 && (
+                <div className="adm_page_btns">
+                  <button className="adm_page_btn" disabled={page <= 1} onClick={() => setPage(1)}>{'<<'}</button>
+                  <button className="adm_page_btn" disabled={page <= 1} onClick={() => setPage((p) => p - 1)}>{'<'}</button>
+                  {(() => {
+                    const delta = 4
+                    const start = Math.max(1, page - delta)
+                    const end = Math.min(totalPages, page + delta)
+                    return Array.from({ length: end - start + 1 }, (_, i) => start + i).map((p) => (
+                      <button key={p} className={`adm_page_btn ${p === page ? 'on' : ''}`} onClick={() => setPage(p)}>{p}</button>
+                    ))
+                  })()}
+                  <button className="adm_page_btn" disabled={page >= totalPages} onClick={() => setPage((p) => p + 1)}>{'>'}</button>
+                  <button className="adm_page_btn" disabled={page >= totalPages} onClick={() => setPage(totalPages)}>{'>>'}</button>
+                </div>
+              )}
+            </div>
           </section>
         </main>
       </div>
