@@ -60,7 +60,7 @@ const Header = () => {
 
         {/* header */}
         <div
-            className={`header${gnbOpen ? ' gnb-open' : ''}${scrolled && !gnbOpen ? ' scrolled' : ''}${mobileOpen ? ' mobile-open' : ''}`}
+            className={`header${gnbOpen ? ' gnb-open' : ''}${scrolled ? ' scrolled' : ''}${mobileOpen ? ' mobile-open' : ''}`}
             onMouseEnter={() => setGnbOpen(true)}
             onMouseLeave={() => setGnbOpen(false)}
         >

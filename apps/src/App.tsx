@@ -1,9 +1,10 @@
-﻿import { useEffect } from 'react';
+﻿import { useEffect, useState, useCallback } from 'react';
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollTopButton from './components/ScrollTopButton';
@@ -255,16 +256,24 @@ const PARTNERS = [
 ];
 
 function MainPage() {
+  const [slideKey, setSlideKey] = useState(0);
+
+  const handleSlideChange = useCallback(() => {
+    setSlideKey(prev => prev + 1);
+  }, []);
+
   return (
     <>
       <Header />
       <div className="visual">
         <Swiper
-          modules={[Autoplay, Pagination]}
+          modules={[Autoplay, Pagination, Navigation]}
           autoplay={{ delay: 4000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
+          navigation
           loop
           className="main-vis-swiper"
+          onSlideChange={handleSlideChange}
         >
           {VIS_SLIDES.map((slide, i) => (
             <SwiperSlide key={i}>
@@ -272,7 +281,7 @@ function MainPage() {
                 className="vis_slide"
                 style={{ backgroundImage: `url(${slide.img})` }}
               />
-              <div className="vis_text">
+              <div className="vis_text" key={`text-${slideKey}-${i}`}>
                 <h2>{slide.title.split('\n').map((line, j) => (
                   <span key={j}>{line}<br /></span>
                 ))}</h2>
@@ -285,66 +294,70 @@ function MainPage() {
         </Swiper>
       </div>
       <section className='section_1'>
-        <div className='tit'>
-            <h2>연구와 임상을 연결하는<span className='mo_br'></span>회복과 성장의 심리상담</h2>
-            <p>교수진 · 전문상담사 · 글로벌 전문가가 함께하는 연구기반 심리상담</p>
+        <div className='inner'>
+            <div className='tit'>
+                <h2>연구와 임상을 연결하는<span className='mo_br'></span>회복과 성장의 심리상담</h2>
+                <p>교수진 · 전문상담사 · 글로벌 전문가가 함께하는 연구기반 심리상담</p>
+            </div>
+            <ul className='card'>
+                <li>
+                    <p>
+                        <strong>교수급 전문위원 및<br />전문가 시스템</strong>
+                        학술적 연구 역량과<br />
+                        풍부한 임상 경험을 갖춘<br />
+                        석·박사 교수진의 책임 상담
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>검사-상담<br />통합 시스템</strong>
+                        정밀한 심리 평가 데이터로<br />
+                        개인과 조직의 빠른 회복까지<br />
+                        이끄는 통합 솔루션
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>글로벌·다문화 &<br />사역자 상담</strong>
+                        경계를 넘어, 사각지대 없는<br />
+                        온·오프라인 맞춤형 마음 치유
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <strong>교육 아카데미</strong>
+                        상담사를 가르치는<br />
+                        NO.1 교육 인프라로 함께<br />
+                        이루는 전문성 성장
+                    </p>
+                </li>
+            </ul>
         </div>
-        <ul className='card'>
-            <li>
-                <p>
-                    <strong>교수급 전문위원 및<br />전문가 시스템</strong>
-                    학술적 연구 역량과<br />
-                    풍부한 임상 경험을 갖춘<br />
-                    석·박사 교수진의 책임 상담
-                </p>
-            </li>
-            <li>
-                <p>
-                    <strong>검사-상담<br />통합 시스템</strong>
-                    정밀한 심리 평가 데이터로<br />
-                    개인과 조직의 빠른 회복까지<br />
-                    이끄는 통합 솔루션
-                </p>
-            </li>
-            <li>
-                <p>
-                    <strong>글로벌·다문화 &<br />사역자 상담</strong>
-                    경계를 넘어, 사각지대 없는<br />
-                    온·오프라인 맞춤형 마음 치유
-                </p>
-            </li>
-            <li>
-                <p>
-                    <strong>교육 아카데미</strong>
-                    상담사를 가르치는<br />
-                    NO.1 교육 인프라로 함께<br />
-                    이루는 전문성 성장
-                </p>
-            </li>
-        </ul>
       </section>
       <section className='mapWrap'>
-        <div className='tit'>
-            <h2>오시는 길</h2>
+        <div className='inner'>
+            <div className='tit'>
+                <h2>오시는 길</h2>
+            </div>
+            <div className='map'>
+            <iframe
+                src="https://maps.google.com/maps?q=37.530774,126.904339&z=17&output=embed"
+                style={{ border: 0, width: '100%', height: '100%' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="헤세드상담코칭연구소 오시는 길"
+            />
+            </div>
+            <p className='addr'>서울특별시 영등포구 당산동 5가 11-47<span className='mo_br'></span>로뎀나무내과 5층 헤세드상담코칭연구소</p>
+            <ul className='partners'>
+                {PARTNERS.map((img, i) => (
+                    <li key={i}>
+                        <img src={img} alt={`파트너사 로고 ${i + 1}`} />
+                    </li>
+                ))}
+            </ul>
         </div>
-        <div className='map'>
-          <iframe
-            src="https://maps.google.com/maps?q=37.530774,126.904339&z=17&output=embed"
-            style={{ border: 0, width: '100%', height: '100%' }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="헤세드상담코칭연구소 오시는 길"
-          />
-        </div>
-        <p className='addr'>서울특별시 영등포구 당산동 5가 11-47<span className='mo_br'></span>로뎀나무내과 5층 헤세드상담코칭연구소</p>
-        <ul className='partners'>
-            {PARTNERS.map((img, i) => (
-                <li key={i}>
-                    <img src={img} alt={`파트너사 로고 ${i + 1}`} />
-                </li>
-            ))}
-        </ul>
       </section>
 
       <ScrollTopButton />
