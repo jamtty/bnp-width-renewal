@@ -8,8 +8,6 @@ CREATE TABLE IF NOT EXISTS popup_banner (
   period_end    DATE          NULL,
   author        VARCHAR(100)  NOT NULL DEFAULT '',
   use_yn        CHAR(1)       NOT NULL DEFAULT 'Y',
-  img_width     INT           NOT NULL DEFAULT 0,
-  img_height    INT           NOT NULL DEFAULT 0,
   img_pos_left  INT           NOT NULL DEFAULT 0,
   img_pos_top   INT           NOT NULL DEFAULT 0,
   sort_order    INT           NOT NULL DEFAULT 1,

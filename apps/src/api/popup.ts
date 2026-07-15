@@ -28,8 +28,6 @@ export interface PopupItem {
   img_save_name: string
   img_url: string
   img_url_full: string
-  img_width: number
-  img_height: number
   img_pos_left: number
   img_pos_top: number
   created_by?: string
