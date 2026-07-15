@@ -118,7 +118,7 @@ function handlePopup(array $seg, string $method): void
     // GET /api/popup/active
     if ($method === 'GET' && ($seg[1] ?? '') === 'active') {
         $today = date('Y-m-d');
-        $stmt = $pdo->prepare("SELECT id, admin_title AS title, url, link_target, img_width, img_height, img_ori_name, img_save_name, img_url, sort_order FROM popup_banner WHERE use_yn='Y' AND (period_start IS NULL OR period_start<=?) AND (period_end IS NULL OR period_end>=?) ORDER BY sort_order ASC, id ASC");
+        $stmt = $pdo->prepare("SELECT id, admin_title AS title, url, link_target, img_width, img_height, img_pos_left, img_pos_top, img_ori_name, img_save_name, img_url, sort_order FROM popup_banner WHERE use_yn='Y' AND (period_start IS NULL OR period_start<=?) AND (period_end IS NULL OR period_end>=?) ORDER BY sort_order ASC, id ASC");
         $stmt->execute([$today, $today]);
         $items = $stmt->fetchAll();
         foreach ($items as &$r) { $r = _popupUrl($r); } unset($r);
