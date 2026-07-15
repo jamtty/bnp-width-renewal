@@ -207,28 +207,6 @@ export default function AdminPopupFormPage() {
               </div>
 
               <div className="adm_form_row">
-                <label className="adm_form_label">이미지 크기</label>
-                <div className="adm_form_inline">
-                  <input
-                    type="number"
-                    className="adm_form_input adm_form_input_sm"
-                    placeholder="가로"
-                    value={imgWidth}
-                    onChange={(e) => setImgWidth(e.target.value)}
-                  />
-                  <span className="adm_form_sep">×</span>
-                  <input
-                    type="number"
-                    className="adm_form_input adm_form_input_sm"
-                    placeholder="세로"
-                    value={imgHeight}
-                    onChange={(e) => setImgHeight(e.target.value)}
-                  />
-                  <span className="adm_form_hint">px (0 = 원본 크기)</span>
-                </div>
-              </div>
-
-              <div className="adm_form_row">
                 <label className="adm_form_label">팝업 위치</label>
                 <div className="adm_form_inline">
                   <span className="adm_form_hint">좌측</span>
