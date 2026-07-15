@@ -81,6 +81,9 @@ import AdminBannerPage from './pages/admin/AdminBannerPage';
 import AdminBannerFormPage from './pages/admin/AdminBannerFormPage';
 import AdminExpertPage from './pages/admin/AdminExpertPage';
 import AdminExpertFormPage from './pages/admin/AdminExpertFormPage';
+import AdminPopupPage from './pages/admin/AdminPopupPage';
+import AdminPopupFormPage from './pages/admin/AdminPopupFormPage';
+import PopupLayer from './components/PopupLayer';
 import AdminLayout from './components/admin/AdminLayout';
 import { useAuthStore, isTokenExpired } from './store/useAuthStore';
 import visImg1 from './assets/images/img_vis_1.png';
@@ -213,6 +216,9 @@ function App() {
       <Route path="/admin/expert" element={<AdminRoute><AdminExpertPage /></AdminRoute>} />
       <Route path="/admin/expert/write" element={<AdminRoute><AdminExpertFormPage /></AdminRoute>} />
       <Route path="/admin/expert/edit/:id" element={<AdminRoute><AdminExpertFormPage /></AdminRoute>} />
+      <Route path="/admin/popup" element={<AdminRoute><AdminPopupPage /></AdminRoute>} />
+      <Route path="/admin/popup/write" element={<AdminRoute><AdminPopupFormPage /></AdminRoute>} />
+      <Route path="/admin/popup/edit/:id" element={<AdminRoute><AdminPopupFormPage /></AdminRoute>} />
       <Route path="/admin/mypage" element={<AdminRoute><AdminMyPage /></AdminRoute>} />
       </Routes>
     </>
@@ -265,6 +271,7 @@ function MainPage() {
   return (
     <>
       <Header />
+      <PopupLayer />
       <div className="visual">
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
