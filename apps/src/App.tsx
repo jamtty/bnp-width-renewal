@@ -1,10 +1,11 @@
 ﻿import { useEffect, useState, useCallback } from 'react';
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollTopButton from './components/ScrollTopButton';
@@ -274,9 +275,11 @@ function MainPage() {
       <PopupLayer />
       <div className="visual">
         <Swiper
-          modules={[Autoplay, Pagination, Navigation]}
+          modules={[Autoplay, Pagination, Navigation, EffectFade]}
+          effect="fade"
+          fadeEffect={{ crossFade: true }}
           autoplay={{ delay: 6000, disableOnInteraction: false }}
-          speed={1000}
+          speed={800}
           pagination={{ clickable: true }}
           navigation
           loop
