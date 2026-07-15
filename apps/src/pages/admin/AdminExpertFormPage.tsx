@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import AdminHeader from '@/components/admin/AdminHeader'
 import AdminSidebar from '@/components/admin/AdminSidebar'
@@ -234,7 +234,7 @@ export default function AdminExpertFormPage() {
                 <label className="adm_form_label" htmlFor="sort_order">정렬순서</label>
                 <select
                   id="sort_order"
-                  className="adm_form_select"
+                  className="adm_search_select"
                   value={sortOrder}
                   onChange={(e) => setSortOrder(e.target.value)}
                 >

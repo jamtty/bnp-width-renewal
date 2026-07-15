@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import AdminHeader from '@/components/admin/AdminHeader'
 import AdminSidebar from '@/components/admin/AdminSidebar'
@@ -150,7 +150,7 @@ export default function AdminPopupFormPage() {
               <div className="adm_form_row">
                 <label className="adm_form_label">링크 대상</label>
                 <select
-                  className="adm_form_select"
+                  className="adm_search_select"
                   value={linkTarget}
                   onChange={(e) => setLinkTarget(e.target.value)}
                 >
@@ -182,7 +182,7 @@ export default function AdminPopupFormPage() {
               <div className="adm_form_row">
                 <label className="adm_form_label">사용 여부</label>
                 <select
-                  className="adm_form_select"
+                  className="adm_search_select"
                   value={useYn}
                   onChange={(e) => setUseYn(e.target.value as 'Y' | 'N')}
                 >
@@ -195,7 +195,7 @@ export default function AdminPopupFormPage() {
                 <label className="adm_form_label" htmlFor="sort_order">정렬 순서</label>
                 <select
                   id="sort_order"
-                  className="adm_form_select"
+                  className="adm_search_select"
                   value={sortOrder}
                   onChange={(e) => setSortOrder(e.target.value)}
                 >
