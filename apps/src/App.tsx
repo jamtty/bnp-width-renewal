@@ -275,7 +275,8 @@ function MainPage() {
       <div className="visual">
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          autoplay={{ delay: 6000, disableOnInteraction: false }}
+          speed={1000}
           pagination={{ clickable: true }}
           navigation
           loop
