@@ -983,7 +983,6 @@ select.adm_btn_secondary {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  flex: 1;
 }
 .adm_form_textarea {
   width: 100%;
