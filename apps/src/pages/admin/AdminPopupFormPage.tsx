@@ -236,12 +236,12 @@ export default function AdminPopupFormPage() {
                 </div>
               </div>
 
-              <div className="adm_form_actions">
-                <button type="submit" className="adm_btn adm_btn_primary" disabled={loading}>
-                  {loading ? '저장 중...' : isEdit ? '수정' : '등록'}
-                </button>
-                <button type="button" className="adm_btn adm_btn_secondary" onClick={() => navigate('/admin/popup')}>
+              <div className="adm_form_btns">
+                <button type="button" className="adm_btn_secondary" onClick={() => navigate('/admin/popup')}>
                   취소
+                </button>
+                <button type="submit" className="adm_btn_primary" disabled={loading}>
+                  {loading ? '저장 중...' : isEdit ? '수정' : '등록'}
                 </button>
               </div>
             </form>
