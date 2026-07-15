@@ -169,11 +169,12 @@ function handlePopup(array $seg, string $method): void
         $psd=$_POST['period_start']??null; $ped=$_POST['period_end']??null;
         $uy=$_POST['use_yn']??'N'; $so=(int)($_POST['sort_order']??1);
         $iw=(int)($_POST['img_width']??0); $ih=(int)($_POST['img_height']??0);
+        $ipl=(int)($_POST['img_pos_left']??0); $ipt=(int)($_POST['img_pos_top']??0);
         if ($t==='') errorResponse('제목을 입력해주세요.');
         $ion=''; $isn=''; $iurl='';
         if (!empty($_FILES['img_file']['name'])) { $ion=$_FILES['img_file']['name']; $isn=uploadFile($_FILES['img_file'],'popup'); $iurl='/uploads/popup/'.$isn; }
-        $pdo->prepare("INSERT INTO popup_banner (admin_title,url,link_target,period_start,period_end,use_yn,sort_order,img_width,img_height,img_pos_left,img_pos_top,img_ori_name,img_save_name,img_url,created_by,author) VALUES (?,?,?,?,?,?,?,?,?,0,0,?,?,?,?,?)")
-            ->execute([$t,$u,$lt,$psd?:null,$ped?:null,$uy,$so,$iw,$ih,$ion,$isn,$iurl,$auth['name']??'',$auth['name']??'']);
+        $pdo->prepare("INSERT INTO popup_banner (admin_title,url,link_target,period_start,period_end,use_yn,sort_order,img_width,img_height,img_pos_left,img_pos_top,img_ori_name,img_save_name,img_url,created_by,author) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+            ->execute([$t,$u,$lt,$psd?:null,$ped?:null,$uy,$so,$iw,$ih,$ipl,$ipt,$ion,$isn,$iurl,$auth['name']??'',$auth['name']??'']);
         successResponse(['id'=>(int)$pdo->lastInsertId()],'등록되었습니다.');
     }
     // POST /api/popup/{id} (수정)
@@ -183,6 +184,7 @@ function handlePopup(array $seg, string $method): void
         $psd=$_POST['period_start']??null; $ped=$_POST['period_end']??null;
         $uy=$_POST['use_yn']??'N'; $so=(int)($_POST['sort_order']??1);
         $iw=(int)($_POST['img_width']??0); $ih=(int)($_POST['img_height']??0);
+        $ipl=(int)($_POST['img_pos_left']??0); $ipt=(int)($_POST['img_pos_top']??0);
         if ($t==='') errorResponse('제목을 입력해주세요.');
         $s=$pdo->prepare("SELECT img_save_name, img_url FROM popup_banner WHERE id=?"); $s->execute([$id]); $old=$s->fetch();
         if (!$old) errorResponse('팝업을 찾을 수 없습니다.',404);
@@ -191,8 +193,8 @@ function handlePopup(array $seg, string $method): void
             if ($old['img_save_name']) deleteUploadedFile('popup',$old['img_save_name']);
             $ion=$_FILES['img_file']['name']; $isn=uploadFile($_FILES['img_file'],'popup'); $iurl='/uploads/popup/'.$isn;
         }
-        $pdo->prepare("UPDATE popup_banner SET admin_title=?,url=?,link_target=?,period_start=?,period_end=?,use_yn=?,sort_order=?,img_width=?,img_height=?,img_ori_name=?,img_save_name=?,img_url=?,updated_by=?,updated_at=NOW() WHERE id=?")
-            ->execute([$t,$u,$lt,$psd?:null,$ped?:null,$uy,$so,$iw,$ih,$ion?:($old['img_save_name']?basename($old['img_save_name']):''),$isn,$iurl,$auth['name']??'',$id]);
+        $pdo->prepare("UPDATE popup_banner SET admin_title=?,url=?,link_target=?,period_start=?,period_end=?,use_yn=?,sort_order=?,img_width=?,img_height=?,img_pos_left=?,img_pos_top=?,img_ori_name=?,img_save_name=?,img_url=?,updated_by=?,updated_at=NOW() WHERE id=?")
+            ->execute([$t,$u,$lt,$psd?:null,$ped?:null,$uy,$so,$iw,$ih,$ipl,$ipt,$ion?:($old['img_save_name']?basename($old['img_save_name']):''),$isn,$iurl,$auth['name']??'',$id]);
         successResponse(null,'수정되었습니다.');
     }
     errorResponse('잘못된 요청입니다.',400);

@@ -25,6 +25,8 @@ export default function AdminPopupFormPage() {
   const [sortOrder, setSortOrder] = useState('')
   const [imgWidth, setImgWidth] = useState('')
   const [imgHeight, setImgHeight] = useState('')
+  const [imgPosLeft, setImgPosLeft] = useState('0')
+  const [imgPosTop, setImgPosTop] = useState('0')
 
   const [imgFile, setImgFile] = useState<File | null>(null)
   const [imgPreview, setImgPreview] = useState('')
@@ -46,6 +48,8 @@ export default function AdminPopupFormPage() {
         setSortOrder(item.sort_order != null ? String(item.sort_order) : '')
         setImgWidth(item.img_width ? String(item.img_width) : '')
         setImgHeight(item.img_height ? String(item.img_height) : '')
+        setImgPosLeft(item.img_pos_left ? String(item.img_pos_left) : '0')
+        setImgPosTop(item.img_pos_top ? String(item.img_pos_top) : '0')
         setImgCurrentUrl(item.img_url_full || '')
       })
       .catch(() => {
@@ -78,6 +82,8 @@ export default function AdminPopupFormPage() {
     fd.append('sort_order', sortOrder)
     fd.append('img_width', imgWidth || '0')
     fd.append('img_height', imgHeight || '0')
+    fd.append('img_pos_left', imgPosLeft || '0')
+    fd.append('img_pos_top', imgPosTop || '0')
     if (imgFile) fd.append('img_file', imgFile)
 
     setLoading(true)
@@ -219,6 +225,31 @@ export default function AdminPopupFormPage() {
                     onChange={(e) => setImgHeight(e.target.value)}
                   />
                   <span className="adm_form_hint">px (0 = 원본 크기)</span>
+                </div>
+              </div>
+
+              <div className="adm_form_row">
+                <label className="adm_form_label">팝업 위치</label>
+                <div className="adm_form_inline">
+                  <span className="adm_form_hint">좌측</span>
+                  <input
+                    type="number"
+                    className="adm_form_input adm_form_input_sm"
+                    placeholder="left"
+                    value={imgPosLeft}
+                    onChange={(e) => setImgPosLeft(e.target.value)}
+                  />
+                  <span className="adm_form_sep">px</span>
+                  <span className="adm_form_hint">상단</span>
+                  <input
+                    type="number"
+                    className="adm_form_input adm_form_input_sm"
+                    placeholder="top"
+                    value={imgPosTop}
+                    onChange={(e) => setImgPosTop(e.target.value)}
+                  />
+                  <span className="adm_form_sep">px</span>
+                  <span className="adm_form_hint">0 = 중앙 정렬</span>
                 </div>
               </div>
 
