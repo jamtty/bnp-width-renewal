@@ -1329,23 +1329,19 @@
   position: fixed;
   inset: 0;
   z-index: 9999999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  pointer-events: none;
 }
 .popup_overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 0;
+  display: none;
 }
 .popup_box {
-  position: relative;
+  position: absolute;
   z-index: 1;
   background: #fff;
   overflow: hidden;
   max-width: 90vw;
   max-height: 90vh;
+  pointer-events: auto;
 }
 .popup_content {
   line-height: 0;

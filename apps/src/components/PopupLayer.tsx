@@ -67,7 +67,11 @@ export default function PopupLayer() {
   return (
     <div className="popup_layer">
       <div className="popup_overlay" />
-      <div className="popup_box">
+      <div className="popup_box" style={{
+        left: current.img_pos_left ? `${current.img_pos_left}px` : '50%',
+        top: current.img_pos_top ? `${current.img_pos_top}px` : '50%',
+        transform: (current.img_pos_left || current.img_pos_top) ? 'none' : 'translate(-50%, -50%)',
+      }}>
         <div className="popup_content" onClick={handlePopupClick} style={{ cursor: current.url ? 'pointer' : 'default' }}>
           {current.img_url_full ? (
             <img src={current.img_url_full} alt={current.title} />
