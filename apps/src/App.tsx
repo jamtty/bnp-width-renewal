@@ -278,7 +278,7 @@ function MainPage() {
           modules={[Autoplay, Pagination, Navigation, EffectFade]}
           effect="fade"
           fadeEffect={{ crossFade: true }}
-          autoplay={{ delay: 6000, disableOnInteraction: false }}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
           speed={800}
           pagination={{ clickable: true }}
           navigation
