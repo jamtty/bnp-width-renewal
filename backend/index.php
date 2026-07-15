@@ -10,6 +10,13 @@ require_once __DIR__ . '/helpers/upload.php';
 // 전역 예외 처리 - 500 에러 시 JSON으로 반환
 set_exception_handler(function (Throwable $e) {
     http_response_code(500);
+    // CORS 헤더 (예외 상황에서도 필요)
+    $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+    $isLocalhost = (bool)preg_match('#^https?://(localhost|127\.0\.0\.1)(:\d+)?$#', $origin);
+    if ($isLocalhost || in_array($origin, ALLOWED_ORIGINS, true)) {
+        header('Access-Control-Allow-Origin: ' . $origin);
+    }
+    header('Access-Control-Allow-Credentials: true');
     header('Content-Type: application/json; charset=utf-8');
     echo json_encode([
         'success' => false,
