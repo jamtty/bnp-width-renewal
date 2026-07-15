@@ -260,7 +260,7 @@ export default function AdminPopupFormPage() {
                 <div className="adm_form_file_wrap">
                   <input type="file" accept="image/*" onChange={handleImgChange} />
                   {(imgPreview || imgCurrentUrl) && (
-                    <div className="adm_form_preview">
+                    <div className="adm_form_preview" style={{ marginTop: '1.2rem' }}>
                       <img src={imgPreview || imgCurrentUrl} alt="팝업 미리보기" />
                     </div>
                   )}
