@@ -67,13 +67,10 @@ export default function PopupLayer() {
   return (
     <div className="popup_layer">
       <div className="popup_overlay" />
-      <div className="popup_box" style={{
-        width: current.img_width ? `${current.img_width}px` : 'auto',
-        height: current.img_height ? `${current.img_height}px` : 'auto',
-      }}>
+      <div className="popup_box">
         <div className="popup_content" onClick={handlePopupClick} style={{ cursor: current.url ? 'pointer' : 'default' }}>
           {current.img_url_full ? (
-            <img src={current.img_url_full} alt={current.title} style={{ maxWidth: '100%', display: 'block' }} />
+            <img src={current.img_url_full} alt={current.title} />
           ) : (
             <div className="popup_text">{current.title}</div>
           )}
@@ -85,14 +82,9 @@ export default function PopupLayer() {
               checked={dontShowToday}
               onChange={(e) => setDontShowToday(e.target.checked)}
             />
-            오늘 하루 동안 열지 않기
+            오늘 하루 보지않기
           </label>
-          <div className="popup_actions">
-            {popups.length > 1 && (
-              <span className="popup_count">{visibleIdx + 1} / {popups.length}</span>
-            )}
-            <button type="button" className="popup_close_btn" onClick={handleClose}>닫기</button>
-          </div>
+          <button type="button" className="popup_close_btn" onClick={handleClose}>닫기</button>
         </div>
       </div>
     </div>
