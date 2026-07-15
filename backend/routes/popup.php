@@ -13,6 +13,32 @@
 function handlePopup(array $seg, string $method): void
 {
     $pdo = getDB();
+
+    // 테이블 자동 생성 (없을 경우)
+    $pdo->exec("CREATE TABLE IF NOT EXISTS popup_banner (
+        id INT NOT NULL AUTO_INCREMENT,
+        admin_title VARCHAR(200) NOT NULL DEFAULT '',
+        url VARCHAR(500) NOT NULL DEFAULT '',
+        link_target VARCHAR(10) NOT NULL DEFAULT '_self',
+        period_start DATE NULL,
+        period_end DATE NULL,
+        use_yn CHAR(1) NOT NULL DEFAULT 'Y',
+        img_width INT NOT NULL DEFAULT 0,
+        img_height INT NOT NULL DEFAULT 0,
+        img_pos_left INT NOT NULL DEFAULT 0,
+        img_pos_top INT NOT NULL DEFAULT 0,
+        sort_order INT NOT NULL DEFAULT 1,
+        img_ori_name VARCHAR(255) NOT NULL DEFAULT '',
+        img_save_name VARCHAR(255) NOT NULL DEFAULT '',
+        img_url VARCHAR(500) NOT NULL DEFAULT '',
+        author VARCHAR(100) NOT NULL DEFAULT '',
+        created_by VARCHAR(100) NOT NULL DEFAULT '',
+        created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_by VARCHAR(100) NOT NULL DEFAULT '',
+        updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        PRIMARY KEY (id)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='팝업 배너 관리'");
+
     $id  = isset($seg[1]) && is_numeric($seg[1]) ? (int)$seg[1] : null;
     $sub = $seg[2] ?? '';
 
