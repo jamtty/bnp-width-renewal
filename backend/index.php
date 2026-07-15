@@ -118,7 +118,7 @@ function handlePopup(array $seg, string $method): void
     // GET /api/popup/active
     if ($method === 'GET' && ($seg[1] ?? '') === 'active') {
         $today = date('Y-m-d');
-        $stmt = $pdo->prepare("SELECT id, admin_title AS title, url, link_target, img_pos_left, img_pos_top, img_pos_left, img_pos_top, img_ori_name, img_save_name, img_url, sort_order FROM popup_banner WHERE use_yn='Y' AND (period_start IS NULL OR period_start<=?) AND (period_end IS NULL OR period_end>=?) ORDER BY sort_order ASC, id ASC");
+        $stmt = $pdo->prepare("SELECT id, admin_title AS title, url, link_target, img_pos_left, img_pos_top, img_ori_name, img_save_name, img_url, sort_order FROM popup_banner WHERE use_yn='Y' AND (period_start IS NULL OR period_start<=?) AND (period_end IS NULL OR period_end>=?) ORDER BY sort_order ASC, id ASC");
         $stmt->execute([$today, $today]);
         $items = $stmt->fetchAll();
         foreach ($items as &$r) { $r = _popupUrl($r); } unset($r);
@@ -141,7 +141,7 @@ function handlePopup(array $seg, string $method): void
     }
     // GET /api/popup/{id}
     if ($method === 'GET' && $id !== null) {
-        $stmt = $pdo->prepare("SELECT id, admin_title AS title, url, link_target, period_start, period_end, use_yn, sort_order, img_ori_name, img_save_name, img_url, img_pos_left, img_pos_top, img_pos_left, img_pos_top, created_by, created_at, updated_at FROM popup_banner WHERE id=?");
+        $stmt = $pdo->prepare("SELECT id, admin_title AS title, url, link_target, period_start, period_end, use_yn, sort_order, img_ori_name, img_save_name, img_url, img_pos_left, img_pos_top, created_by, created_at, updated_at FROM popup_banner WHERE id=?");
         $stmt->execute([$id]); $row = $stmt->fetch();
         if (!$row) errorResponse('팝업을 찾을 수 없습니다.',404);
         successResponse(_popupUrl($row));
