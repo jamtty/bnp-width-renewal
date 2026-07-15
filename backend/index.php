@@ -92,18 +92,7 @@ if (($segments[0] ?? '') === 'expert') {
 
 // [팝업 관리] --------------------------------------------------------
 if (($segments[0] ?? '') === 'popup') {
-    $popupFile = __DIR__ . '/routes/popup.php';
-    if (file_exists($popupFile)) {
-        require_once $popupFile;
-        handlePopup($segments, $method);
-    } else {
-        http_response_code(500);
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode([
-            'success' => false,
-            'message' => 'popup.php 파일이 서버에 없습니다. FTP로 backend/routes/popup.php 업로드가 필요합니다.',
-        ], JSON_UNESCAPED_UNICODE);
-    }
+    handlePopup($segments, $method);
     exit;
 }
 
@@ -112,6 +101,106 @@ if (($segments[0] ?? '') === 'auth') {
     require_once __DIR__ . '/routes/auth.php';
     handleAuth($segments, $method);
     exit;
+}
+
+/* ================================================================
+ * 팝업 관리 핸들러 (index.php 내부 통합)
+ * ================================================================ */
+function handlePopup(array $seg, string $method): void
+{
+    $pdo = getDB();
+    if (($method === 'GET') && ($_GET['debug'] ?? '') === '1') {
+        successResponse(['status' => 'ok', 'message' => 'popup route reached']);
+    }
+    $id  = isset($seg[1]) && is_numeric($seg[1]) ? (int)$seg[1] : null;
+    $sub = $seg[2] ?? '';
+
+    // GET /api/popup/active
+    if ($method === 'GET' && ($seg[1] ?? '') === 'active') {
+        $today = date('Y-m-d');
+        $stmt = $pdo->prepare("SELECT id, admin_title AS title, url, link_target, img_width, img_height, img_ori_name, img_save_name, img_url, sort_order FROM popup_banner WHERE use_yn='Y' AND (period_start IS NULL OR period_start<=?) AND (period_end IS NULL OR period_end>=?) ORDER BY sort_order ASC, id ASC");
+        $stmt->execute([$today, $today]);
+        $items = $stmt->fetchAll();
+        foreach ($items as &$r) { $r = _popupUrl($r); } unset($r);
+        successResponse($items);
+    }
+    // GET /api/popup (목록)
+    if ($method === 'GET' && $id === null) {
+        $page = max(1, (int)($_GET['page']??1)); $size = max(1, min(100, (int)($_GET['size']??10)));
+        $kw = trim($_GET['keyword']??''); $uy = $_GET['use_yn']??''; $off = ($page-1)*$size;
+        $wh=[]; $ps=[];
+        if ($kw!=='') { $wh[]='admin_title LIKE ?'; $ps[]='%'.$kw.'%'; }
+        if (in_array($uy,['Y','N'],true)) { $wh[]='use_yn=?'; $ps[]=$uy; }
+        $ws = $wh ? 'WHERE '.implode(' AND ',$wh) : '';
+        $cnt = $pdo->prepare("SELECT COUNT(*) FROM popup_banner $ws"); $cnt->execute($ps); $total = (int)$cnt->fetchColumn();
+        $lst = $pdo->prepare("SELECT id, admin_title AS title, url, link_target, period_start, period_end, use_yn, sort_order, img_ori_name, img_save_name, img_url, img_width, img_height, created_by, created_at, updated_at FROM popup_banner $ws ORDER BY use_yn DESC, sort_order ASC, id ASC LIMIT ? OFFSET ?");
+        $lst->execute(array_merge($ps,[$size,$off]));
+        $items = $lst->fetchAll();
+        foreach ($items as &$r) { $r = _popupUrl($r); } unset($r);
+        successResponse(['items'=>$items,'total'=>$total,'total_pages'=>(int)ceil($total/$size),'page'=>$page,'size'=>$size]);
+    }
+    // GET /api/popup/{id}
+    if ($method === 'GET' && $id !== null) {
+        $stmt = $pdo->prepare("SELECT id, admin_title AS title, url, link_target, period_start, period_end, use_yn, sort_order, img_ori_name, img_save_name, img_url, img_width, img_height, img_pos_left, img_pos_top, created_by, created_at, updated_at FROM popup_banner WHERE id=?");
+        $stmt->execute([$id]); $row = $stmt->fetch();
+        if (!$row) errorResponse('팝업을 찾을 수 없습니다.',404);
+        successResponse(_popupUrl($row));
+    }
+    // POST /api/popup/{id}/display
+    if ($method === 'POST' && $id !== null && $sub === 'display') {
+        requireAuth(); $body = json_decode(file_get_contents('php://input'),true)??[];
+        $uy = $body['use_yn']??''; if (!in_array($uy,['Y','N'],true)) errorResponse('use_yn 필요');
+        $pdo->prepare("UPDATE popup_banner SET use_yn=?, updated_at=NOW() WHERE id=?")->execute([$uy,$id]);
+        successResponse(null,'변경되었습니다.');
+    }
+    // POST /api/popup/{id}/delete
+    if ($method === 'POST' && $id !== null && $sub === 'delete') {
+        requireAuth();
+        $s=$pdo->prepare("SELECT img_save_name FROM popup_banner WHERE id=?"); $s->execute([$id]); $r=$s->fetch();
+        if (!$r) errorResponse('팝업을 찾을 수 없습니다.',404);
+        if ($r['img_save_name']) deleteUploadedFile('popup',$r['img_save_name']);
+        $pdo->prepare("DELETE FROM popup_banner WHERE id=?")->execute([$id]);
+        successResponse(null,'삭제되었습니다.');
+    }
+    // POST /api/popup (등록)
+    if ($method === 'POST' && $id === null) {
+        $auth = requireAuth();
+        $t=trim($_POST['title']??''); $u=trim($_POST['url']??''); $lt=$_POST['link_target']??'_self';
+        $psd=$_POST['period_start']??null; $ped=$_POST['period_end']??null;
+        $uy=$_POST['use_yn']??'N'; $so=(int)($_POST['sort_order']??1);
+        $iw=(int)($_POST['img_width']??0); $ih=(int)($_POST['img_height']??0);
+        if ($t==='') errorResponse('제목을 입력해주세요.');
+        $ion=''; $isn=''; $iurl='';
+        if (!empty($_FILES['img_file']['name'])) { $ion=$_FILES['img_file']['name']; $isn=uploadFile($_FILES['img_file'],'popup'); $iurl='/uploads/popup/'.$isn; }
+        $pdo->prepare("INSERT INTO popup_banner (admin_title,url,link_target,period_start,period_end,use_yn,sort_order,img_width,img_height,img_pos_left,img_pos_top,img_ori_name,img_save_name,img_url,created_by,author) VALUES (?,?,?,?,?,?,?,?,?,0,0,?,?,?,?,?)")
+            ->execute([$t,$u,$lt,$psd?:null,$ped?:null,$uy,$so,$iw,$ih,$ion,$isn,$iurl,$auth['name']??'',$auth['name']??'']);
+        successResponse(['id'=>(int)$pdo->lastInsertId()],'등록되었습니다.');
+    }
+    // POST /api/popup/{id} (수정)
+    if ($method === 'POST' && $id !== null && $sub === '') {
+        $auth = requireAuth();
+        $t=trim($_POST['title']??''); $u=trim($_POST['url']??''); $lt=$_POST['link_target']??'_self';
+        $psd=$_POST['period_start']??null; $ped=$_POST['period_end']??null;
+        $uy=$_POST['use_yn']??'N'; $so=(int)($_POST['sort_order']??1);
+        $iw=(int)($_POST['img_width']??0); $ih=(int)($_POST['img_height']??0);
+        if ($t==='') errorResponse('제목을 입력해주세요.');
+        $s=$pdo->prepare("SELECT img_save_name, img_url FROM popup_banner WHERE id=?"); $s->execute([$id]); $old=$s->fetch();
+        if (!$old) errorResponse('팝업을 찾을 수 없습니다.',404);
+        $isn=$old['img_save_name']; $iurl=$old['img_url']; $ion='';
+        if (!empty($_FILES['img_file']['name'])) {
+            if ($old['img_save_name']) deleteUploadedFile('popup',$old['img_save_name']);
+            $ion=$_FILES['img_file']['name']; $isn=uploadFile($_FILES['img_file'],'popup'); $iurl='/uploads/popup/'.$isn;
+        }
+        $pdo->prepare("UPDATE popup_banner SET admin_title=?,url=?,link_target=?,period_start=?,period_end=?,use_yn=?,sort_order=?,img_width=?,img_height=?,img_ori_name=?,img_save_name=?,img_url=?,updated_by=?,updated_at=NOW() WHERE id=?")
+            ->execute([$t,$u,$lt,$psd?:null,$ped?:null,$uy,$so,$iw,$ih,$ion?:($old['img_save_name']?basename($old['img_save_name']):''),$isn,$iurl,$auth['name']??'',$id]);
+        successResponse(null,'수정되었습니다.');
+    }
+    errorResponse('잘못된 요청입니다.',400);
+}
+function _popupUrl(array $row): array {
+    $base = rtrim(defined('UPLOAD_BASE_URL')?UPLOAD_BASE_URL:'/uploads','/');
+    $row['img_url_full'] = (!empty($row['img_url'])&&strpos($row['img_url'],'http')!==0) ? $base.(strpos($row['img_url'],'/')===0?$row['img_url']:'/'.$row['img_url']) : ($row['img_url']??'');
+    return $row;
 }
 
 errorResponse('요청한 API를 찾을 수 없습니다.', 404);
