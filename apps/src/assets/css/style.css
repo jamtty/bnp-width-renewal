@@ -601,7 +601,7 @@
  overflow:hidden;
 }
  .breadcrumb_home {
- display: flex;
+ display: none;
  align-items: center;
  color: #999;
  transition: color 0.2s;
@@ -615,6 +615,7 @@
  height:3rem;
  background:#d9d9d9;
  margin:0 1.5rem;
+ display:none;
 }
  .breadcrumb_item a {
  color: #666;
@@ -662,7 +663,7 @@
  color: #555;
  background:#fafafa;
  cursor: pointer;
- min-width: 14rem;
+ width: auto;
  transition: border-color 0.2s;
 }
 .lnb_select:hover {
@@ -708,8 +709,7 @@
  color: #555;
  background:#fafafa;
  cursor: pointer;
- min-width: 10rem;
- width:10rem;
+ width: auto;
  transition: border-color 0.2s;
 }
  .lnb_select:hover {
@@ -855,6 +855,7 @@
 .board_list .obj_head ul li a.file { color:#5868F3; text-decoration:underline; margin-right:0.8rem;}
 .board_list .obj_cont { padding:8rem 0; min-height:20rem; font-size:1.6rem; color:#333;}
 .board_list .obj_cont img { max-width:80rem; height:auto; margin:0 auto;}
+.board_list .obj_cont table { width:100% !important; }
 
 .board_list .tbl_prevnext { border-top:1px solid #E2E2E2;}
 .board_list .tbl_prevnext tbody th { height:5rem; padding:0 1rem; font-size:1.5rem; font-weight:500; color:#777; text-align:center; border-bottom:1px solid #E2E2E2;}
