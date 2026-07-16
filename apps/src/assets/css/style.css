@@ -687,7 +687,7 @@
  position: relative;
  display: inline-flex;
  align-items: center;
-}
+ }
  .lnb_select_wrap::after {
  content: '';
  position: absolute;
@@ -703,7 +703,7 @@
  appearance: none;
  -webkit-appearance: none;
  border-radius: 0.6rem;
- padding: 0;
+ padding: 0 3rem 0 0;
  font-size: 1.4rem;
  font-weight: 500;
  color: #555;
