@@ -34,7 +34,13 @@ const DataPage = () => {
     setKeyword(inputKeyword);
   };
 
-  const PAGE_GROUP_SIZE = 10;
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const onResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+  const PAGE_GROUP_SIZE = windowWidth <= 768 ? 5 : 10;
   const groupStart = Math.floor((currentPage - 1) / PAGE_GROUP_SIZE) * PAGE_GROUP_SIZE + 1;
   const groupEnd = Math.min(groupStart + PAGE_GROUP_SIZE - 1, totalPages);
   const pageNumbers = Array.from({ length: groupEnd - groupStart + 1 }, (_, i) => groupStart + i);
