@@ -785,7 +785,8 @@
  overflow-x:hidden;
 }
 
-.page_tit { text-align: center; margin:0 0 8rem; }
+.page_tit { text-align: center; margin:0 0 6rem; }
+.page_tit::after { content:''; display:block; width:1px; height:4rem; background:#333; margin:3rem auto 0;}
 .page_tit h2 { font-size:4rem; font-weight:700; color:#222; margin:0 0 1rem;}
 .page_tit h2 span { display:block; font-size:3rem;}
 .page_tit p { font-size:1.8rem; font-weight:500; color:#555;}
@@ -1207,7 +1208,7 @@
 .child .box.d-block { display:block;}
 .child .box.d-block .s_tit { width:100% !important;}
 .child .box .s_tit { width:45rem;}
-.child .box .s_tit h3 { font-size:2.4rem; font-weight:700;}
+.child .box .s_tit h3 { display:inline-block; font-size:2.4rem; font-weight:700; background:#CFD9FF; border-radius:1.5rem; padding:2rem 4rem;  }
 .child .box .s_tit p { margin:1rem 0 0; font-size:1.5rem; font-weight:600; color:#FF5F37;}
 .child .box .s_info { flex:1; font-size:1.6rem; font-weight:600;}
 .child .box .s_info .no-margin { margin-top:0.5rem !important;}

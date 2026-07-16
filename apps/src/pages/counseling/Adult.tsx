@@ -125,7 +125,7 @@ const CounselingChild = () => {
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
-                                <h3>우울<br />체크리스트</h3>
+                                <h3>우울 체크리스트</h3>
                                 <p>2개 이상 해당 시 우울·불안 상담을 권장 합니다.</p>
                             </div>
                             <div className='s_info'>
@@ -140,7 +140,7 @@ const CounselingChild = () => {
                         </div>
                         <div className='box'>
                             <div className='s_tit'>
-                                <h3>불안 · 공황<br />체크리스트</h3>
+                                <h3>불안 · 공황 체크리스트</h3>
                                 <p>2개 이상 해당 시 우울·불안 상담을 권장 합니다.</p>
                             </div>
                             <div className='s_info'>
