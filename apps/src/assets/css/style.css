@@ -939,6 +939,9 @@
 .intro .con_1 .con_card:nth-child(even) {
  flex-direction: row-reverse;
 }
+.intro .con_1 .con_card:nth-child(even) .con_card_text {
+  text-align: right;
+}
 
 .intro .con_1 .con_card_img {
  flex: 1;
@@ -1015,6 +1018,9 @@
 }
  .intro .con_1 .con_card:nth-child(even) {
  flex-direction: column;
+}
+ .intro .con_1 .con_card:nth-child(even) .con_card_text {
+  text-align: right;
 }
 
  .intro .con_1 .con_card_img {
