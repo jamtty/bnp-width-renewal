@@ -1020,7 +1020,7 @@
  flex-direction: column;
 }
  .intro .con_1 .con_card:nth-child(even) .con_card_text {
-  text-align: right;
+  text-align: left;
 }
 
  .intro .con_1 .con_card_img {
