@@ -1,15 +1,16 @@
+import AnimatedSection from '../../components/AnimatedSection';
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>특장점</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit'>
+            <AnimatedSection className="tit" direction="up">
                 <h3>언어가 아니라, 마음을 이해하는 상담</h3>
                 <p>해외생활, 선교사역, 다문화 환경에서 경험하는<span className='pc_br'></span>정서·관계·정체성의 어려움을 함께 다룹니다.</p>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>WithOne Global<br /> 차별성</h3>
                 </div>
@@ -22,8 +23,8 @@ const SpecializedFeatures = () => {
                         <li>상담·코칭·교육 통합 지원</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>글로벌 상담은<br />어떻게 다른가요?</h3>
                 </div>
@@ -32,8 +33,8 @@ const SpecializedFeatures = () => {
                         <li>글로벌 상담은 문화와 환경 속에서 반복되는 적응·관계·정체성의 어려움을 함께 이해하는 과정입니다.</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box d-block'>
+            </AnimatedSection>
+            <AnimatedSection className="box d-block" direction="up">
                 <div className='s_tit'>
                     <h3>진행과정</h3>
                 </div>
@@ -71,11 +72,11 @@ const SpecializedFeatures = () => {
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div className='btn_wrap'>
+            </AnimatedSection>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>상담 신청하기</button>
                 <button type="button" className='btn_secondary'>교육 프로그램 신청하기</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

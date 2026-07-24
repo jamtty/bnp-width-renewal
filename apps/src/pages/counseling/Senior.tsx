@@ -1,3 +1,4 @@
+import AnimatedSection from '../../components/AnimatedSection';
 import { useState } from 'react';
 import img_counseling from '../../assets/images/img_counseling_senior.png';
 
@@ -12,9 +13,9 @@ const CounselingChild = () => {
 
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>시니어 상담</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
             <div className="tab_wrap">
                 <span className="tab_bar" style={{ left: `${(100 / tabList.length) * activeTab}%`, width: `${100 / tabList.length}%` }} />
@@ -30,17 +31,17 @@ const CounselingChild = () => {
             <div className="tab_content">
                 {activeTab === 0 && (
                     <>
-                        <div className='tit_img'>
+                        <AnimatedSection className="tit_img" direction="up">
                             <img src={img_counseling} alt="성인 상담" />
-                        </div>
-                        <div className='tit'>
+                        </AnimatedSection>
+                        <AnimatedSection className="tit" direction="up">
                             <h3>
                                 은퇴 이후에도 삶은 계속됩니다<span className='pc_br'></span>
                                 상실과 변화의 시간을 지나<span className='pc_br'></span>
                                 다시 의미 있는 삶을 만들어 가는 상담입니다.
                             </h3>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>무엇이 다른가요?</h3>
                             </div>
@@ -53,8 +54,8 @@ const CounselingChild = () => {
                                     <li>가족과 함께하는 의사결정 및 돌봄 상담</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>상담은 어떻게 진행되나요?</h3>
                             </div>
@@ -63,8 +64,8 @@ const CounselingChild = () => {
                                     <li>"나이가 들어도 삶은 계속됩니다." 정서와 관계를 회복하고 다시 의미 있는 삶을 만들어 가는 상담입니다.</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box d-block'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box d-block" direction="up">
                             <div className='s_tit'>
                                 <h3>진행과정</h3>
                             </div>
@@ -102,8 +103,8 @@ const CounselingChild = () => {
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>상담 시간 안내</h3>
                             </div>
@@ -116,12 +117,12 @@ const CounselingChild = () => {
                                     <li>상황에 따라 유연하게 조정됩니다.</li>
                                 </ul>
                             </div>
-                        </div>
+                        </AnimatedSection>
                     </>
                 )}
                 {activeTab === 1 && (
                     <>
-                        <div className='box'>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>시니어 종합 마음 건강 진단</h3>
                                 <p>정서·인지·관계·삶의 만족도를 종합적으로 확인하여<span className='pc_br'></span>현재의 상태와 회복 방향을 찾습니다.</p>
@@ -136,8 +137,8 @@ const CounselingChild = () => {
                                 </ul>
                                 <p>현재 나의 마음 건강 상태와 필요한 도움을 확인합니다.</p>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>기억·인지 기능 정밀 진단</h3>
                                 <p>기억력 저하와 인지 기능 변화를 확인하고<span className='pc_br'></span>치매 예방 및 조기 발견을 돕습니다.</p>
@@ -152,8 +153,8 @@ const CounselingChild = () => {
                                 </ul>
                                 <p>기억력 저하의 원인을 확인하고 필요한 대응 방향을 안내합니다.</p>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>정서·상실 반응 진단</h3>
                                 <p>사별, 외로움, 우울감, 무기력 등<span className='pc_br'></span>노년기 정서 상태를 확인합니다.</p>
@@ -168,12 +169,12 @@ const CounselingChild = () => {
                                 </ul>
                                 <p>정서 회복을 위한 상담 방향을 함께 설계합니다.</p>
                             </div>
-                        </div>
+                        </AnimatedSection>
                     </>
                 )}
                 {activeTab === 2 && (
                     <>
-                        <div className='box'>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>상실 회복 프로그램</h3>
                                 <p>사별 · 외로움 · 무의미감<span className='pc_br'></span>상실을 정리하고 삶의 의미를 다시 연결합니다.</p>
@@ -185,8 +186,8 @@ const CounselingChild = () => {
                                     <li>삶의 의미 재구성</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>가족 관계 회복 프로그램</h3>
                                 <p>자녀 갈등 · 돌봄 스트레스<span className='pc_br'></span>세대 간 거리와 감정을 조율합니다.</p>
@@ -198,8 +199,8 @@ const CounselingChild = () => {
                                     <li>가족 역할 정리</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>인지·기억 유지 프로그램</h3>
                                 <p>기억력 저하 · 치매 불안<span className='pc_br'></span>인지 기능을 유지하고 일상을 안정시킵니다.</p>
@@ -211,14 +212,14 @@ const CounselingChild = () => {
                                     <li>일상 기능 유지</li>
                                 </ul>
                             </div>
-                        </div>
+                        </AnimatedSection>
                     </>
                 )}
             </div>
-            <div className='btn_wrap'>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>시니어 상담 신청하기</button>
                 <button type="button" className='btn_secondary'>검사 &amp; 해석 상담 신청하기</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

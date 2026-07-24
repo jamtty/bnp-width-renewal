@@ -1,15 +1,16 @@
+import AnimatedSection from '../../components/AnimatedSection';
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>다문화 · 유학생 심리상담</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit'>
+            <AnimatedSection className="tit" direction="up">
                 <h3>낯선 환경 속에서도, 나를 잃지 않도록</h3>
                 <p>문화가 달라질 때 문제는 단순 적응이 아니라 정체성 · 관계 · 미래의 문제로 확장됩니다.<span className='pc_br'></span>WithOne은 정서 + 관계 + 진로를 통합적으로 다룹니다.</p>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>핵심 접근</h3>
                 </div>
@@ -18,8 +19,8 @@ const SpecializedFeatures = () => {
                         <li>문화·정체성 통합 상담</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>상담 대상</h3>
                 </div>
@@ -28,8 +29,8 @@ const SpecializedFeatures = () => {
                         <li>유학생 · 다문화 청년 · 결혼이주민 자녀 · 해외경험 청년</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>주요 문제</h3>
                 </div>
@@ -39,8 +40,8 @@ const SpecializedFeatures = () => {
                         <li>부모-자녀 갈등 · 정체성 혼란 · 차별 경험</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>특장점</h3>
                 </div>
@@ -52,8 +53,8 @@ const SpecializedFeatures = () => {
                         <li>학업·진로 상담 → 진로 탐색 및 적응 지원</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>교육 프로그램</h3>
                 </div>
@@ -66,11 +67,11 @@ const SpecializedFeatures = () => {
                         <li>경계를 넘어, 관계로</li>
                     </ul>
                 </div>
-            </div>
-            <div className='btn_wrap'>
+            </AnimatedSection>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>상담 신청하기</button>
                 <button type="button" className='btn_secondary'>정밀 진단부터 시작하기</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

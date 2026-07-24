@@ -1,20 +1,21 @@
+import AnimatedSection from '../../components/AnimatedSection';
 import img_counseling from '../../assets/images/img_specialized_features.png';
 
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>특장점</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit_img'>
+            <AnimatedSection className="tit_img" direction="up">
                 <img src={img_counseling} alt="특장점" />
-            </div>
-            <div className='tit'>
+            </AnimatedSection>
+            <AnimatedSection className="tit" direction="up">
                 <h3>반복되는 문제에는<span className='pc_br'></span>더 전문적인 접근이 필요합니다.</h3>
                 <p>일반 상담만으로 해결하기 어려운 문제를 전문 평가와 맞춤 개입으로 돕습니다.</p>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>무엇이 다른가요?</h3>
                 </div>
@@ -27,8 +28,8 @@ const SpecializedFeatures = () => {
                         <li>실제 생활 적용 전략 제공</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>상담은 어떻게 진행되나요?</h3>
                 </div>
@@ -37,8 +38,8 @@ const SpecializedFeatures = () => {
                         <li>문제를 해결하는 것을 넘어 반복되는 패턴의 구조를 바꾸는 과정입니다.</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box d-block'>
+            </AnimatedSection>
+            <AnimatedSection className="box d-block" direction="up">
                 <div className='s_tit'>
                     <h3>진행과정</h3>
                 </div>
@@ -76,8 +77,8 @@ const SpecializedFeatures = () => {
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>상담 및 코칭 방향</h3>
                 </div>
@@ -86,11 +87,11 @@ const SpecializedFeatures = () => {
                         <li>문제를 이해하는 것을 넘어, 반복되는 패턴을 바꾸는 상담입니다.</li>
                     </ul>
                 </div>
-            </div>
-            <div className='btn_wrap'>
+            </AnimatedSection>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>상담 신청하기</button>
                 <button type="button" className='btn_secondary'>정밀 진단부터 시작하기</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

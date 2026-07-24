@@ -1,14 +1,15 @@
+import AnimatedSection from '../../components/AnimatedSection';
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>코칭 안내</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit'>
+            <AnimatedSection className="tit" direction="up">
                 <h3>이해에서 끝나지 않고, 삶이 바뀌는 코칭</h3>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>무엇이 다른가요?</h3>
                 </div>
@@ -20,8 +21,8 @@ const SpecializedFeatures = () => {
                         <li>변화 유지 시스템 - 코칭 이후까지 실행을 점검합니다.</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>코칭 프로그램</h3>
                 </div>
@@ -32,8 +33,8 @@ const SpecializedFeatures = () => {
                         <li>10회 과정 - 목표 달성 · 행동 변화 · 삶의 전환</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box d-block'>
+            </AnimatedSection>
+            <AnimatedSection className="box d-block" direction="up">
                 <div className='s_tit'>
                     <h3>진행과정</h3>
                     <p>좋은 계획보다 중요한 것은 지속되는 실행입니다.</p>
@@ -73,8 +74,8 @@ const SpecializedFeatures = () => {
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>상담 및 코칭 방향</h3>
                 </div>
@@ -83,7 +84,7 @@ const SpecializedFeatures = () => {
                         <li>좋은 계획보다 중요한 것은 지속되는 실행입니다.</li>
                     </ul>
                 </div>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

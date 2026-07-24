@@ -2,6 +2,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import Header from '../Header';
 import Footer from '../Footer';
 import ScrollTopButton from '../ScrollTopButton';
+import AnimatedSection from '../AnimatedSection';
 import type { SubNavItem } from '../../constants/nav';
 import { NAV_ITEMS } from '../../constants/nav';
 import icoHome from '../../assets/images/ico_home.svg';
@@ -56,14 +57,16 @@ const SubLayout = ({
           style={{ backgroundImage: `url(${bgImage})` }}
         >
           <div className="sub_vis_inner">
-            <h2 className="sub_vis_title">{categoryLabel}</h2>
+            <AnimatedSection direction="up" duration={0.7}>
+              <h2 className="sub_vis_title">{categoryLabel}</h2>
+            </AnimatedSection>
           </div>
         </div>
 
         {/* 브레드크럼 + 콘텐츠 */}
         <div id="contents">
           {/* 브레드크럼 + LNB 드롭다운 */}
-          <div className="breadcrumb">
+          <AnimatedSection className="breadcrumb" direction="up" delay={0.15} duration={0.5}>
             <div className="breadcrumb_inner">
               {/* Home 아이콘 */}
               <button
@@ -109,9 +112,9 @@ const SubLayout = ({
                 </select>
               </div>
             </div>
-          </div>
+          </AnimatedSection>
 
-          {/* 본문 */}
+          {/* 본문 - 각 페이지에서 자체 AnimatedSection으로 섹션별 애니메이션 적용 */}
           <div className="sub_content_wrap">
             <div className="cont_w_area">
               <h2 className="page-title sr-only">{title}</h2>

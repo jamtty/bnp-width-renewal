@@ -6,10 +6,13 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollTopButton from './components/ScrollTopButton';
 import ScrollToHash from './components/ScrollToHash';
+import AnimatedSection from './components/AnimatedSection';
 import CenterLayout from './components/subLayout/CenterLayout';
 import CounselingLayout from './components/subLayout/CounselingLayout';
 import SpecializedLayout from './components/subLayout/SpecializedLayout';
@@ -244,8 +247,8 @@ const VIS_SLIDES = [
   },
   {
     img: visImg4,
-    title: '한국과 세계를 연결하는 글로벌 상담',
-    desc: '유학생 · 선교사 · 해외거주자 · 다문화가정 6개 언어 상담 지원',
+    title: '한국과 세계를 연결하는 글로벌 상담\n유학생 · 선교사 · 해외거주자 · 다문화가정 6개 언어 상담 지원',
+    desc: '',
   },
 ];
 
@@ -267,6 +270,16 @@ function MainPage() {
 
   const handleSlideChange = useCallback(() => {
     setSlideKey(prev => prev + 1);
+  }, []);
+
+  // ScrollTrigger 플러그인 등록 및 초기 레이아웃 refresh
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    // 레이아웃 완료 후 ScrollTrigger 위치 재계산
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 300);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -306,51 +319,51 @@ function MainPage() {
       </div>
       <section className='section_1'>
         <div className='inner'>
-            <div className='tit'>
+            <AnimatedSection className='tit' direction='up' duration={0.7}>
                 <h2>연구와 임상을 연결하는<span className='mo_br'></span>회복과 성장의 심리상담</h2>
                 <p>교수진 · 전문상담사 · 글로벌 전문가가 함께하는 연구기반 심리상담</p>
-            </div>
-            <ul className='card'>
+            </AnimatedSection>
+            <AnimatedSection className='card' direction='up' delay={0.2} duration={0.7} as="ul">
                 <li>
+                    <h4>교수급 전문위원 및<br />전문가 시스템</h4>
                     <p>
-                        <strong>교수급 전문위원 및<br />전문가 시스템</strong>
                         학술적 연구 역량과<br />
                         풍부한 임상 경험을 갖춘<br />
                         석·박사 교수진의 책임 상담
                     </p>
                 </li>
                 <li>
+                    <h4>검사-상담<br />통합 시스템</h4>
                     <p>
-                        <strong>검사-상담<br />통합 시스템</strong>
                         정밀한 심리 평가 데이터로<br />
                         개인과 조직의 빠른 회복까지<br />
                         이끄는 통합 솔루션
                     </p>
                 </li>
                 <li>
+                    <h4>글로벌·다문화 &<br />사역자 상담</h4>
                     <p>
-                        <strong>글로벌·다문화 &<br />사역자 상담</strong>
                         경계를 넘어, 사각지대 없는<br />
                         온·오프라인 맞춤형 마음 치유
                     </p>
                 </li>
                 <li>
+                    <h4>교육 아카데미</h4>
                     <p>
-                        <strong>교육 아카데미</strong>
                         상담사를 가르치는<br />
                         NO.1 교육 인프라로 함께<br />
                         이루는 전문성 성장
                     </p>
                 </li>
-            </ul>
+            </AnimatedSection>
         </div>
       </section>
       <section className='mapWrap'>
         <div className='inner'>
-            <div className='tit'>
+            <AnimatedSection className='tit' direction='up' duration={0.7}>
                 <h2>오시는 길</h2>
-            </div>
-            <div className='map'>
+            </AnimatedSection>
+            <AnimatedSection className='map' direction='up' duration={0.8}>
             <iframe
                 src="https://maps.google.com/maps?q=37.530774,126.904339&z=17&output=embed"
                 style={{ border: 0, width: '100%', height: '100%' }}
@@ -359,15 +372,26 @@ function MainPage() {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="헤세드상담코칭연구소 오시는 길"
             />
-            </div>
-            <p className='addr'>서울특별시 영등포구 당산동 5가 11-47<span className='mo_br'></span>로뎀나무내과 5층 헤세드상담코칭연구소</p>
+            </AnimatedSection>
+            <AnimatedSection direction='up' delay={0.1} duration={0.6}>
+              <p className='addr'>서울특별시 영등포구 당산동 5가 11-47<span className='mo_br'></span>로뎀나무내과 5층 헤세드상담코칭연구소</p>
+            </AnimatedSection>
+            <AnimatedSection direction='fade' delay={0.2} duration={0.6}>
             <ul className='partners'>
-                {PARTNERS.map((img, i) => (
-                    <li key={i}>
-                        <img src={img} alt={`파트너사 로고 ${i + 1}`} />
-                    </li>
-                ))}
+                <div className='partners_track'>
+                    {PARTNERS.map((img, i) => (
+                        <li key={i}>
+                            <img src={img} alt={`파트너사 로고 ${i + 1}`} />
+                        </li>
+                    ))}
+                    {PARTNERS.map((img, i) => (
+                        <li key={`dup-${i}`}>
+                            <img src={img} alt={`파트너사 로고 ${i + 1}`} />
+                        </li>
+                    ))}
+                </div>
             </ul>
+            </AnimatedSection>
         </div>
       </section>
 

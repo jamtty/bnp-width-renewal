@@ -1,19 +1,20 @@
+import AnimatedSection from '../../components/AnimatedSection';
 import img_academy from '../../assets/images/img_academy.png';
 
 const AcademyIntro = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>이해에서 시작해,<span className='pc_br'></span>전문가로 완성되는 성장의 여정</h2>
             <p>배우는 것을 넘어 상담 · 코칭 · 강의 · 기관 활동까지 연결되는 성장 시스템</p>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit_img'>
+            <AnimatedSection className="tit_img" direction="up">
                 <img src={img_academy} alt="특장점" />
-            </div>
-            <div className='tit'>
+            </AnimatedSection>
+            <AnimatedSection className="tit" direction="up">
                 <h3>성장 로드맵</h3>
-            </div>
+            </AnimatedSection>
             <div className="roadmap">
                 <ul className="roadmap_steps">
                     <li className="roadmap_item">

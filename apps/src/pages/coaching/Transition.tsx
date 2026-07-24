@@ -1,14 +1,15 @@
+import AnimatedSection from '../../components/AnimatedSection';
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>전환기 코칭<span>Life Transition Coaching</span></h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit'>
+            <AnimatedSection className="tit" direction="up">
                 <h3>변화의 시기는 위기가 아니라<span className='pc_br'></span>새로운 시작입니다</h3>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>대상</h3>
                 </div>
@@ -21,8 +22,8 @@ const SpecializedFeatures = () => {
                         <li>번아웃 이후 방향 찾기</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>핵심 영역</h3>
                 </div>
@@ -35,8 +36,8 @@ const SpecializedFeatures = () => {
                         <li>미래 설계</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>위드원만의 차별성</h3>
                 </div>
@@ -48,8 +49,8 @@ const SpecializedFeatures = () => {
                         <li>실행 가능한 변화 계획 수립</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>이런 고민을 다룹니다</h3>
                 </div>
@@ -62,8 +63,8 @@ const SpecializedFeatures = () => {
                         <li>미래 설계</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>코칭 결과</h3>
                 </div>
@@ -77,7 +78,7 @@ const SpecializedFeatures = () => {
                         <li>나다운 삶을 설계하게 됩니다</li>
                     </ul>
                 </div>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

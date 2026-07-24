@@ -1,15 +1,16 @@
+import AnimatedSection from '../../components/AnimatedSection';
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>Global Business (B2B)</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit'>
+            <AnimatedSection className="tit" direction="up">
                 <h3>글로벌 환경의 복잡성이 성과를 흔들릴 때<span className='pc_br'></span>사람과 조직의 안정성이 경쟁력이 됩니다</h3>
                 <p>해외 지사, 외국계 기업, 글로벌 조직을 위한 문화·정서·관계 관리 솔루션을 제공합니다.</p>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>핵심 프로그램</h3>
                 </div>
@@ -21,8 +22,8 @@ const SpecializedFeatures = () => {
                         <li>Leadership EQ - 글로벌 리더의 관계·소통 역량 강화</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>적용 대상</h3>
                 </div>
@@ -35,8 +36,8 @@ const SpecializedFeatures = () => {
                         <li>다문화 팀</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>핵심 강점</h3>
                 </div>
@@ -49,8 +50,8 @@ const SpecializedFeatures = () => {
                         <li>상담·교육 통합</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>기대 효과</h3>
                 </div>
@@ -63,10 +64,10 @@ const SpecializedFeatures = () => {
                         <li>조직 안정성 향상</li>
                     </ul>
                 </div>
-            </div>
-            <div className='btn_wrap'>
+            </AnimatedSection>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>기업 상담 · 제안서 요청하기</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

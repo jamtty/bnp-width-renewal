@@ -1,20 +1,21 @@
+import AnimatedSection from '../../components/AnimatedSection';
 import img_counseling from '../../assets/images/img_psychology_child.png';
 
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>아동 놀이·발달 검사</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit_img'>
+            <AnimatedSection className="tit_img" direction="up">
                 <img src={img_counseling} alt="아동 놀이·발달 검사" />
-            </div>
-            <div className='tit'>
+            </AnimatedSection>
+            <AnimatedSection className="tit" direction="up">
                 <h3>아이의 행동에는 이유가 있습니다</h3>
                 <p>산만함, 짜증, 위축, 떼쓰기 고쳐야 할 문제가 아니라<span className='pc_br'></span>이해해야 할 신호입니다</p>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>이런 경우 필요합니다</h3>
                 </div>
@@ -26,8 +27,8 @@ const SpecializedFeatures = () => {
                         <li>양육 방향이 고민될 때</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>무엇을 확인하나요?</h3>
                 </div>
@@ -39,8 +40,8 @@ const SpecializedFeatures = () => {
                         <li>부모-자녀 상호작용</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>평가 구성</h3>
                 </div>
@@ -51,8 +52,8 @@ const SpecializedFeatures = () => {
                         <li>부모 양육 분석 → 상호작용 및 양육 패턴 분석</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>검사를 통해<br />얻을 수 있는 것</h3>
                 </div>
@@ -65,10 +66,10 @@ const SpecializedFeatures = () => {
                         <li>가정·학교 지원 방법 제안</li>
                     </ul>
                 </div>
-            </div>
-            <div className='btn_wrap'>
+            </AnimatedSection>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>아동 심리검사 예약하기</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

@@ -1,15 +1,16 @@
+import AnimatedSection from '../../components/AnimatedSection';
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>관계 대화 코치 과정</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit'>
+            <AnimatedSection className="tit" direction="up">
                 <h3>관계를 바꾸는 사람은 말을 잘하는 사람이 아니라,<span className='pc_br'></span>마음을 읽는 사람입니다</h3>
                 <p>배운 사람이 아니라, 변화를 만드는 사람으로 성장합니다.</p>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>입문 과정</h3>
                 </div>
@@ -22,8 +23,8 @@ const SpecializedFeatures = () => {
                         <li>관계를 여는 질문</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>심화 과정</h3>
                 </div>
@@ -35,8 +36,8 @@ const SpecializedFeatures = () => {
                         <li>10회 과정 - 목표 달성 · 행동 변화 · 삶의 전환</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>전문가 과정</h3>
                 </div>
@@ -49,11 +50,11 @@ const SpecializedFeatures = () => {
                         <li>학교·교회·기관 강사 활동</li>
                     </ul>
                 </div>
-            </div>
-            <div className='btn_wrap'>
+            </AnimatedSection>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>코칭 프로그램 제안서 요청하기</button>
                 <button type="button" className='btn_secondary'>비즈니스 미팅 신청</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

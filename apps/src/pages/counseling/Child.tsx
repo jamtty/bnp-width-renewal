@@ -1,3 +1,4 @@
+import AnimatedSection from '../../components/AnimatedSection';
 import { useState } from 'react';
 import img_counseling from '../../assets/images/img_counseling_child.png';
 
@@ -16,9 +17,9 @@ const CounselingChild = () => {
 
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>아동 상담 (만 4세 ~ 12세)</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
             <div className="tab_wrap">
                 <span className="tab_bar" style={{ left: `${(100 / tabList.length) * activeTab}%`, width: `${100 / tabList.length}%` }} />
@@ -34,14 +35,14 @@ const CounselingChild = () => {
             <div className="tab_content">
                 {activeTab === 0 && (
                     <>
-                        <div className='tit_img'>
+                        <AnimatedSection className="tit_img" direction="up">
                             <img src={img_counseling} alt="아동 상담" />
-                        </div>
-                        <div className='tit'>
+                        </AnimatedSection>
+                        <AnimatedSection className="tit" direction="up">
                             <h3>아이를 고치기보다,<span className='pc_br'></span>아이의 마음을 먼저 이해합니다</h3>
                             <p>아이의 변화가 상담실에서 끝나지 않고 가정과 학교까지 이어지도록 함께합니다.</p>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>무엇이 다른가요?</h3>
                             </div>
@@ -54,8 +55,8 @@ const CounselingChild = () => {
                                     <li>놀이·정서·행동·관계를 함께 보는 통합 상담</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>상담은 어떻게 진행되나요?</h3>
                             </div>
@@ -64,8 +65,8 @@ const CounselingChild = () => {
                                     <li>아이의 현재 상태를 이해하고 정서와 행동의 변화를 함께 만들어가는 과정입니다.</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box d-block'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box d-block" direction="up">
                             <div className='s_tit'>
                                 <h3>진행과정</h3>
                             </div>
@@ -107,8 +108,8 @@ const CounselingChild = () => {
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>상담 시간 안내</h3>
                             </div>
@@ -121,19 +122,19 @@ const CounselingChild = () => {
                                     <li>해석 상담: 50분</li> 
                                 </ul>
                             </div>
-                        </div>
+                        </AnimatedSection>
                     </>
                 )}
                 {activeTab === 1 && (
                     <>
-                        <div className='tit'>
+                        <AnimatedSection className="tit" direction="up">
                             <h3>집중이 어렵고 산만한 아이,<span className='pc_br'></span>단순한 성격 문제가 아닙니다.</h3>
                             <p>
                                 해야 할 일을 알고 있지만 끝까지 이어가지 못하는 경우가 많습니다.<br />
                                 주의력과 실행기능, 자기조절 능력을 함께 살펴야 합니다.
                             </p>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>체크리스트</h3>
                                 <p>3개 이상 반복된다면 전문가 상담을 권합니다.</p>
@@ -147,8 +148,8 @@ const CounselingChild = () => {
                                     <li>충동적으로 행동하는 경우가 많다</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>치료 방법</h3>
                             </div>
@@ -158,15 +159,15 @@ const CounselingChild = () => {
                                     <li>놀이치료 · 부모훈련 · 행동수정 · 실행기능훈련 · 자기조절훈련<span className='pc_br'></span>정밀 평가 + 부모코칭 + 자기조절 훈련 통합 진행</li>
                                 </ul>
                             </div>
-                        </div>
+                        </AnimatedSection>
                     </>
                 )}
                 {activeTab === 2 && (
                     <>
-                        <div className='tit'>
+                        <AnimatedSection className="tit" direction="up">
                             <h3>게임과 스마트폰 문제는<span className='pc_br'></span>단순 사용 시간이 아니라 스스로 멈추기 어려운<span className='pc_br'></span>조절 문제와 연결됩니다.</h3>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>체크리스트</h3>
                                 <p>3개 이상 반복된다면 전문가 상담을 권합니다.</p>
@@ -180,8 +181,8 @@ const CounselingChild = () => {
                                     <li>부모 통제가 갈등으로 이어진다</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>치료 방법</h3>
                             </div>
@@ -191,15 +192,15 @@ const CounselingChild = () => {
                                     <li>디지털조절훈련 · 부모코칭 · 생활습관훈련 · 자기조절훈련</li>
                                 </ul>
                             </div>
-                        </div>
+                        </AnimatedSection>
                     </>
                 )}
                 {activeTab === 3 && (
                     <>
-                        <div className='tit'>
+                        <AnimatedSection className="tit" direction="up">
                             <h3>틱은 습관이 아니라<span className='pc_br'></span>아이의 긴장과 불안이<span className='pc_br'></span>몸으로 표현되는 신호입니다.</h3>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>체크리스트</h3>
                                 <p>3개 이상 반복된다면 전문적인 점검이 도움이 됩니다</p>
@@ -213,8 +214,8 @@ const CounselingChild = () => {
                                     <li>아이가 부끄러워한다</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>치료 방법</h3>
                             </div>
@@ -224,15 +225,15 @@ const CounselingChild = () => {
                                     <li>긴장이완훈련 · 불안조절훈련 · 가족반응코칭 · 놀이치료</li>
                                 </ul>
                             </div>
-                        </div>
+                        </AnimatedSection>
                     </>
                 )}
                 {activeTab === 4 && (
                     <>
-                        <div className='tit'>
+                        <AnimatedSection className="tit" direction="up">
                             <h3>집중이 어렵고 산만한 아이 노력하는데도<span className='pc_br'></span>자꾸 놓치는 아이가 있습니다.</h3>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>체크리스트</h3>
                                 <p>3개 이상 반복된다면 정서 상담을 권합니다.</p>
@@ -246,8 +247,8 @@ const CounselingChild = () => {
                                     <li>예민하고 감정 기복이 크다</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>치료 방법</h3>
                             </div>
@@ -257,15 +258,15 @@ const CounselingChild = () => {
                                     <li>놀이치료 · 감정코칭 · 정서조절훈련 · 자기표현훈련</li>
                                 </ul>
                             </div>
-                        </div>
+                        </AnimatedSection>
                     </>
                 )}
                 {activeTab === 5 && (
                     <>
-                        <div className='tit'>
+                        <AnimatedSection className="tit" direction="up">
                             <h3>아이의 자신감은 칭찬보다<span className='pc_br'></span>경험 속에서 자랍니다.</h3>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>체크리스트</h3>
                                 <p>3개 이상 반복된다면 자존감 및 자기이해 상담을 권합니다.</p>
@@ -279,8 +280,8 @@ const CounselingChild = () => {
                                     <li>위축되거나 자신감이 부족하다</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>치료 방법</h3>
                             </div>
@@ -290,15 +291,15 @@ const CounselingChild = () => {
                                     <li>자기이해상담 , 놀이치료 , 자기표현훈련, 인지재구성 , 강점 발견 및 성공경험 훈련</li>
                                 </ul>
                             </div>
-                        </div>
+                        </AnimatedSection>
                     </>
                 )}
                 {activeTab === 6 && (
                     <>
-                        <div className='tit'>
+                        <AnimatedSection className="tit" direction="up">
                             <h3>관계 문제는 시간이 지날수록<span className='pc_br'></span>아이의 자존감과 학교 생활 전반에 영향을 줍니다.</h3>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>체크리스트</h3>
                                 <p>3개 이상 반복된다면 또래관계·학교적응 상담을 권합니다</p>
@@ -312,8 +313,8 @@ const CounselingChild = () => {
                                     <li>집단 활동에서 불편함을 느낀다</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>치료 방법</h3>
                             </div>
@@ -323,14 +324,14 @@ const CounselingChild = () => {
                                     <li>사회성훈련 · 역할놀이 · 갈등해결훈련 · 부모상담</li>
                                 </ul>
                             </div>
-                        </div>
+                        </AnimatedSection>
                     </>
                 )}
             </div>
-            <div className='btn_wrap'>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>아동 상담 신청하기</button>
                 <button type="button" className='btn_secondary'>검사 &amp; 해석 상담 신청하기</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

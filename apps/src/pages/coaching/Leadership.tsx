@@ -1,15 +1,16 @@
+import AnimatedSection from '../../components/AnimatedSection';
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>리더십 코칭</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit'>
+            <AnimatedSection className="tit" direction="up">
                 <h3>좋은 리더는 사람을 관리하지 않고,<span className='pc_br'></span>관계를 이끕니다</h3>
                 <p>성과와 관계 사이에서 고민하는 리더에게 사람의 마음을 이해하는 리더십을 제공합니다.</p>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>대상</h3>
                 </div>
@@ -21,8 +22,8 @@ const SpecializedFeatures = () => {
                         <li>교회·사역 리더</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>핵심 영역</h3>
                 </div>
@@ -35,8 +36,8 @@ const SpecializedFeatures = () => {
                         <li>의사결정</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>위드원만의 차별성</h3>
                 </div>
@@ -48,8 +49,8 @@ const SpecializedFeatures = () => {
                         <li>실제 대화 중심 코칭</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>이런 문제를 다룹니다</h3>
                 </div>
@@ -62,8 +63,8 @@ const SpecializedFeatures = () => {
                         <li>조직 내 관계 스트레스</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>코칭 결과</h3>
                 </div>
@@ -77,7 +78,7 @@ const SpecializedFeatures = () => {
                         <li>리더십이 안정됩니다</li>
                     </ul>
                 </div>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

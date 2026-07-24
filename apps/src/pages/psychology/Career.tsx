@@ -1,20 +1,21 @@
+import AnimatedSection from '../../components/AnimatedSection';
 import img_counseling from '../../assets/images/img_psychology_career.png';
 
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>진로·학습 검사</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit_img'>
+            <AnimatedSection className="tit_img" direction="up">
                 <img src={img_counseling} alt="진로·학습 검사" />
-            </div>
-            <div className='tit'>
+            </AnimatedSection>
+            <AnimatedSection className="tit" direction="up">
                 <h3>왜 안 되는지 알면, 방향이 보입니다</h3>
                 <p>공부가 안 되는 이유, 진로가 막막한 이유는<span className='pc_br'></span>능력 부족이 아니라 나에게 맞는 방식과 방향을 아직 찾지 못했기 때문일 수 있습니다.</p>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>이런 경우 필요합니다</h3>
                 </div>
@@ -26,8 +27,8 @@ const SpecializedFeatures = () => {
                         <li>무엇을 좋아하는지 모르겠는 경우</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>무엇을 정확히<br />알 수 있나요?</h3>
                 </div>
@@ -39,8 +40,8 @@ const SpecializedFeatures = () => {
                         <li>진로 적합성과 흥미 분야</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>검사 구성</h3>
                 </div>
@@ -52,8 +53,8 @@ const SpecializedFeatures = () => {
                         <li>동기 및 행동 패턴 탐색</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>검사를 통해<br />얻을 수 있는 것</h3>
                 </div>
@@ -66,10 +67,10 @@ const SpecializedFeatures = () => {
                         <li>자신감과 동기 향상</li>
                     </ul>
                 </div>
-            </div>
-            <div className='btn_wrap'>
+            </AnimatedSection>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>진로·학습 검사 예약하기</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

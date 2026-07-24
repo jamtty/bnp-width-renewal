@@ -1,3 +1,4 @@
+import AnimatedSection from '../../components/AnimatedSection';
 import React, { useState, useEffect, useCallback } from 'react';
 import { fetchExpertList, type ExpertItem } from '../../api/expert';
 
@@ -53,10 +54,10 @@ const CenterExperts = () => {
   if (loading) {
     return (
       <div className="page_cont page_sub experts">
-        <div className="page_tit">
-          <h2>상담의 기준과 깊이를 지키는 전문가 그룹</h2>
-          <p>자문위원 및 슈퍼바이저와 전문상담사 전문 코치</p>
-        </div>
+        <AnimatedSection className="page_tit" direction="up">
+            <h2>상담의 기준과 깊이를 지키는 전문가 그룹</h2>
+            <p>자문위원 및 슈퍼바이저와 전문상담사 전문 코치</p>
+        </AnimatedSection>
         <section className="con_1" style={{ textAlign: 'center', padding: '4rem 0' }}>
           불러오는 중...
         </section>
@@ -66,10 +67,10 @@ const CenterExperts = () => {
 
   return (
     <div className="page_cont page_sub experts">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>상담의 기준과 깊이를 지키는 전문가 그룹</h2>
             <p>자문위원 및 슈퍼바이저와 전문상담사 전문 코치</p>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
             <div className="tab_wrap">
                 <span className="tab_bar" style={{ left: activeTab === 0 ? '0' : '50%' }} />

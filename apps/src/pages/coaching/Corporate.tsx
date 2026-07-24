@@ -1,14 +1,15 @@
+import AnimatedSection from '../../components/AnimatedSection';
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>기업 코칭 & 조직 프로그램</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit'>
+            <AnimatedSection className="tit" direction="up">
                 <h3>사람이 바뀌면 성과가 바뀌고,<span className='pc_br'></span>관계가 바뀌면 조직이 바뀝니다</h3>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>핵심 프로그램</h3>
                 </div>
@@ -21,8 +22,8 @@ const SpecializedFeatures = () => {
                         <li>번아웃 예방 및 회복 프로그램</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>특장점</h3>
                 </div>
@@ -35,8 +36,8 @@ const SpecializedFeatures = () => {
                         <li>관계 변화가 성과로 연결되는 설계</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box d-block'>
+            </AnimatedSection>
+            <AnimatedSection className="box d-block" direction="up">
                 <div className='s_tit'>
                     <h3>운영 프로세스</h3>
                     <p>성과를 만드는 것은 전략이지만, 성과를 지속시키는 것은 관계입니다.</p>
@@ -69,10 +70,10 @@ const SpecializedFeatures = () => {
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div className='btn_wrap'>
+            </AnimatedSection>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>기업코칭 프로그램 신청하기</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

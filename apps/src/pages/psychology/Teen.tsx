@@ -1,20 +1,21 @@
+import AnimatedSection from '../../components/AnimatedSection';
 import img_counseling from '../../assets/images/img_psychology_teen.png';
 
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>청소년 심리검사</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit_img'>
+            <AnimatedSection className="tit_img" direction="up">
                 <img src={img_counseling} alt="청소년 심리검사" />
-            </div>
-            <div className='tit'>
+            </AnimatedSection>
+            <AnimatedSection className="tit" direction="up">
                 <h3>문제가 아니라, 방향의 문제일 수 있습니다</h3>
                 <p>무기력, 반항, 학업 문제는 단순한 의지의 문제가 아니라<span className='pc_br'></span>정서·관계·진로가 연결된 결과일 수 있습니다.</p>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>이런 경우 필요합니다</h3>
                 </div>
@@ -26,8 +27,8 @@ const SpecializedFeatures = () => {
                         <li>부모와 갈등이 많아진 경우</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>무엇을 확인하나요?</h3>
                 </div>
@@ -40,8 +41,8 @@ const SpecializedFeatures = () => {
                         <li>부모·또래 관계</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>검사 구성</h3>
                 </div>
@@ -53,8 +54,8 @@ const SpecializedFeatures = () => {
                         <li>학습·실행 기능 분석 → 집중력·미루기·동기</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>검사를 통해<br />얻을 수 있는 것</h3>
                 </div>
@@ -67,10 +68,10 @@ const SpecializedFeatures = () => {
                         <li>부모와 자녀의 상호 이해 증진</li>
                     </ul>
                 </div>
-            </div>
-            <div className='btn_wrap'>
+            </AnimatedSection>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>청소년 심리검사 예약하기</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

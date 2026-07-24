@@ -1,15 +1,16 @@
+import AnimatedSection from '../../components/AnimatedSection';
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>라이프 코칭</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit'>
+            <AnimatedSection className="tit" direction="up">
                 <h3>삶의 균형과 방향을 다시 설계합니다</h3>
                 <p>열심히 살아왔지만 더 이상 지금의 방식으로는 만족스럽지 않을 때,<span className='pc_br'></span>삶의 우선순위와 방향을 다시 정리합니다.</p>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>대상</h3>
                 </div>
@@ -21,8 +22,8 @@ const SpecializedFeatures = () => {
                         <li>의미와 동기를 잃은 사람</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>핵심 영역</h3>
                 </div>
@@ -35,8 +36,8 @@ const SpecializedFeatures = () => {
                         <li>목표 재설계</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>무엇이 달라지나요?</h3>
                 </div>
@@ -48,8 +49,8 @@ const SpecializedFeatures = () => {
                         <li>나에게 맞는 삶의 방향을 찾게 됩니다.</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>위드원만의 차별성</h3>
                 </div>
@@ -62,7 +63,7 @@ const SpecializedFeatures = () => {
                         <li>지속 가능한 삶의 구조 만들기</li>
                     </ul>
                 </div>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

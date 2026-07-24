@@ -90,6 +90,37 @@
     url('../fonts/Pretendard/Pretendard-Thin.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'GmarketSans';
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local('Gmarket Sans Bold'),
+    url('../fonts/GmarketSans/GmarketSansTTFBold.woff2') format('woff2'),
+    url('../fonts/GmarketSans/GmarketSansTTFBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'GmarketSans';
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local('Gmarket Sans Medium'),
+    url('../fonts/GmarketSans/GmarketSansTTFMedium.woff2') format('woff2'),
+    url('../fonts/GmarketSans/GmarketSansTTFMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'GmarketSans';
+  font-weight: 300;
+  font-display: swap;
+  src:
+    local('Gmarket Sans Light'),
+    url('../fonts/GmarketSans/GmarketSansTTFLight.woff2') format('woff2'),
+    url('../fonts/GmarketSans/GmarketSansTTFLight.woff') format('woff');
+}
+
+
 /* 초기화 */
 html { font-size:10px; }
 html,

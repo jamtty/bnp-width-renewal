@@ -1,14 +1,15 @@
+import AnimatedSection from '../../components/AnimatedSection';
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>전문 상담사 수련 과정</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit'>
+            <AnimatedSection className="tit" direction="up">
                 <h3>기법보다 사람을 이해하는 상담자</h3>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>인턴 레지던트 수련<br />(Compass)</h3>
                 </div>
@@ -20,8 +21,8 @@ const SpecializedFeatures = () => {
                         <li>학회 자격 연계</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>슈퍼바이저</h3>
                 </div>
@@ -31,8 +32,8 @@ const SpecializedFeatures = () => {
                         <li>대상관계·정신분석·사례개념화 전문 지도</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>학회 자격 연계</h3>
                 </div>
@@ -45,11 +46,11 @@ const SpecializedFeatures = () => {
                         <li>EAP상담협회</li>
                     </ul>
                 </div>
-            </div>
-            <div className='btn_wrap'>
+            </AnimatedSection>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>코칭 프로그램 제안서 요청하기</button>
                 <button type="button" className='btn_secondary'>비즈니스 미팅 신청</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

@@ -1,15 +1,16 @@
+import AnimatedSection from '../../components/AnimatedSection';
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>해외 거주자 상담</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit'>
+            <AnimatedSection className="tit" direction="up">
                 <h3>멀리 있어 더 고립되는 마음을 위한 상담</h3>
                 <p>해외 생활은 환경의 문제가 아니라 정서와 관계의 문제로 이어집니다.</p>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>핵심 접근</h3>
                 </div>
@@ -20,8 +21,8 @@ const SpecializedFeatures = () => {
                         <li>온라인 기반 글로벌 상담</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>상담 대상</h3>
                 </div>
@@ -33,8 +34,8 @@ const SpecializedFeatures = () => {
                         <li>해외 이주 준비자</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>주요 어려움</h3>
                 </div>
@@ -47,8 +48,8 @@ const SpecializedFeatures = () => {
                         <li>정체성 혼란</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>특장점</h3>
                 </div>
@@ -60,8 +61,8 @@ const SpecializedFeatures = () => {
                         <li>정밀 심리평가 → 개인 맞춤 회복 전략 설계</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>해외 거주자<br />회복 프로그램</h3>
                 </div>
@@ -74,11 +75,11 @@ const SpecializedFeatures = () => {
                         <li>경계를 넘어, 관계로 - 문화와 환경의 차이를 넘어 관계 형성하기</li>
                     </ul>
                 </div>
-            </div>
-            <div className='btn_wrap'>
+            </AnimatedSection>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>상담 신청하기</button>
                 <button type="button" className='btn_secondary'>정밀 진단부터 시작하기</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

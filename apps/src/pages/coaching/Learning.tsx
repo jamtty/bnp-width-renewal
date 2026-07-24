@@ -1,15 +1,16 @@
+import AnimatedSection from '../../components/AnimatedSection';
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>학습 진로 코칭</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit'>
+            <AnimatedSection className="tit" direction="up">
                 <h3>생각을 바꾸는 것이 아니라, 실행이 바뀌는 코칭</h3>
                 <p>학습과 진로의 문제는 의지 부족이 아니라<span className='pc_br'></span>자신에게 맞지 않는 방식과 방향의 문제일 수 있습니다.</p>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>학습 코칭</h3>
                 </div>
@@ -28,8 +29,8 @@ const SpecializedFeatures = () => {
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>진로 코칭</h3>
                 </div>
@@ -48,8 +49,8 @@ const SpecializedFeatures = () => {
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>코칭 결과</h3>
                 </div>
@@ -62,7 +63,7 @@ const SpecializedFeatures = () => {
                         <li>선택의 확신이 생깁니다.</li>
                     </ul>
                 </div>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

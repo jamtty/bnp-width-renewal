@@ -1,18 +1,19 @@
+import AnimatedSection from '../../components/AnimatedSection';
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>관계 리디자인 세미나</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit'>
+            <AnimatedSection className="tit" direction="up">
                 <h3>관계는 바꿀 수 있습니다</h3>
                 <p>
                     반복되는 갈등과 거리감은사람의 문제가 아니라 관계 패턴의 문제일 수 있습니다.<br />
                     관계를 이해하고, 실제로 변화시키는 대화와 연결의 방법을 배웁니다.
                 </p>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>부부 프로그램</h3>
                 </div>
@@ -29,8 +30,8 @@ const SpecializedFeatures = () => {
                         <p>서로를 다시 이해하고<br />연결되는 경험</p>
                     </div>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>부모 프로그램</h3>
                 </div>
@@ -47,8 +48,8 @@ const SpecializedFeatures = () => {
                         <p>아이와의 관계가<br />달라지는 부모 코칭</p>
                     </div>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>가족 프로그램</h3>
                 </div>
@@ -65,11 +66,11 @@ const SpecializedFeatures = () => {
                         <p>가족 관계를<br />다시 연결하는 경험</p>
                     </div>
                 </div>
-            </div>
-            <div className='btn_wrap'>
+            </AnimatedSection>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>코칭 프로그램 제안서 요청하기</button>
                 <button type="button" className='btn_secondary'>비즈니스 미팅 신청</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

@@ -1,13 +1,14 @@
+import AnimatedSection from '../../components/AnimatedSection';
 import con1Img from '../../assets/images/pg_philosophy_con1.png';
 import con1MoImg from '../../assets/images/pg_philosophy_con1_mo.png';
 
 const CenterPhilosophy = () => {
   return (
     <div className="page_cont philosophy">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>증상을 넘어, 나를 이해하고 삶을 회복하는 공간</h2>
             <p>상담 · 코칭 · 심리검사 · 특화상담· 글로벌 상담 ·교육</p>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
             <div className="bg">
                 <div className="img">

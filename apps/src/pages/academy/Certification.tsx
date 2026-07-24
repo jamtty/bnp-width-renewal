@@ -1,3 +1,4 @@
+import AnimatedSection from '../../components/AnimatedSection';
 import { useState } from 'react';
 
 const tabList = [
@@ -11,9 +12,9 @@ const CounselingChild = () => {
 
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>전문 자격 프로그램</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
             <div className="tab_wrap">
                 <span className="tab_bar" style={{ left: `${(100 / tabList.length) * activeTab}%`, width: `${100 / tabList.length}%` }} />
@@ -29,10 +30,10 @@ const CounselingChild = () => {
             <div className="tab_content">
                 {activeTab === 0 && (
                     <>
-                        <div className='tit'>
+                        <AnimatedSection className="tit" direction="up">
                             <h3>표현을 통해 마음을 읽고,<span className='pc_br'></span>치료로 연결하는 전문가 과정</h3>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>자격 단계</h3>
                             </div>
@@ -43,8 +44,8 @@ const CounselingChild = () => {
                                     <li>슈퍼바이저 과정: 교육 및 임상 지도자 과정</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>핵심 교육</h3>
                             </div>
@@ -56,8 +57,8 @@ const CounselingChild = () => {
                                     <li>집단 프로그램 설계 및 운영</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>과정 특징</h3>
                             </div>
@@ -68,16 +69,16 @@ const CounselingChild = () => {
                                     <li>임상 적용 중심 실무형 교육</li>
                                 </ul>
                             </div>
-                        </div>
+                        </AnimatedSection>
                     </>
                 )}
                 {activeTab === 1 && (
                     <>
-                        <div className='tit'>
+                        <AnimatedSection className="tit" direction="up">
                             <h3>놀이를 통해 아이의 마음을 이해하고<span className='pc_br'></span>관계를 회복하는 전문가 과정</h3>
                             <p>아이를 이해하는 것을 넘어, 가족을 이해하는 전문가로 성장합니다</p>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>자격 단계</h3>
                             </div>
@@ -87,8 +88,8 @@ const CounselingChild = () => {
                                     <li>1급 과정: 심화 개입 및 부모상담 통합</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>핵심 교육</h3>
                             </div>
@@ -101,8 +102,8 @@ const CounselingChild = () => {
                                     <li>사례개념화 및 슈퍼비전</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>과정 특징</h3>
                             </div>
@@ -115,16 +116,16 @@ const CounselingChild = () => {
                                     <li>현장 적용 중심 전문가 과정</li>
                                 </ul>
                             </div>
-                        </div>
+                        </AnimatedSection>
                     </>
                 )}
                 {activeTab === 2 && (
                     <>
-                        <div className='tit'>
+                        <AnimatedSection className="tit" direction="up">
                             <h3>심리검사를 넘어,<span className='pc_br'></span>평가와 상담을 연결하는 임상 전문가 과정</h3>
                             <p>좋은 검사는 점수를 읽는 것이 아니라, 사람을 이해하는 데서 시작됩니다.</p>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>자격 단계</h3>
                             </div>
@@ -133,8 +134,8 @@ const CounselingChild = () => {
                                     <li>임상심리사 2급 / 1급 시험 대비 과정</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>핵심 교육</h3>
                             </div>
@@ -147,8 +148,8 @@ const CounselingChild = () => {
                                     <li>사례개념화 및 임상적 판단</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>과정 특징</h3>
                             </div>
@@ -161,8 +162,8 @@ const CounselingChild = () => {
                                     <li>상담센터 실무 즉시 적용</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className='box'>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>공통 수련 시스템</h3>
                             </div>
@@ -175,14 +176,14 @@ const CounselingChild = () => {
                                     <li>검사와 상담을 연결하는 임상 훈련</li>
                                 </ul>
                             </div>
-                        </div>
+                        </AnimatedSection>
                     </>
                 )}
             </div>
-            <div className='btn_wrap'>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>코칭 프로그램 제안서 요청하기</button>
                 <button type="button" className='btn_secondary'>비즈니스 미팅 신청</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

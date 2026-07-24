@@ -1,22 +1,23 @@
+import AnimatedSection from '../../components/AnimatedSection';
 import img_counseling from '../../assets/images/img_psychology_full.png';
 
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>종합 심리검사<span>Full Battery</span></h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit_img'>
+            <AnimatedSection className="tit_img" direction="up">
                 <img src={img_counseling} alt="종합 심리검사 (Full Battery)" />
-            </div>
-            <div className='tit'>
+            </AnimatedSection>
+            <AnimatedSection className="tit" direction="up">
                 <h3>문제의 원인을 정확히 알고 싶다면<span className='pc_br'></span>반복되는 어려움과 감정의 혼란은</h3>
                 <p><span className='pc_br'></span>겉으로 보이는 증상만으로는 알기 어렵습니다.<br />
                     종합심리검사는 현재의 문제뿐 아니라 그 원인이 되는<span className='pc_br'></span>심리적 구조까지 함께 이해하도록 돕습니다.
                 </p>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>종합심리검사란<br />무엇인가요?</h3>
                 </div>
@@ -32,8 +33,8 @@ const SpecializedFeatures = () => {
                         <li>정확한 진단과 상담 방향이 필요할 때</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>아동 종합검사</h3>
                 </div>
@@ -45,8 +46,8 @@ const SpecializedFeatures = () => {
                         <li>부모-자녀 상호작용 분석</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>청소년 종합검사</h3>
                 </div>
@@ -61,8 +62,8 @@ const SpecializedFeatures = () => {
                         <li>부모와의 관계</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>성인 종합검사</h3>
                 </div>
@@ -77,8 +78,8 @@ const SpecializedFeatures = () => {
                         <li>내면 갈등 및 심리적 특성</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>검사 구성</h3>
                 </div>
@@ -93,8 +94,8 @@ const SpecializedFeatures = () => {
                     </ul>
                     <p>※ 개인의 특성과 호소문제에 따라 맞춤 구성됩니다.</p>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>진행 과정</h3>
                 </div>
@@ -106,8 +107,8 @@ const SpecializedFeatures = () => {
                         <li>상담 및 개입 방향 제시</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>검사를 통해<br />얻을 수 있는 것</h3>
                 </div>
@@ -120,10 +121,10 @@ const SpecializedFeatures = () => {
                         <li>변화와 성장의 방향 설정</li>
                     </ul>
                 </div>
-            </div>
-            <div className='btn_wrap'>
+            </AnimatedSection>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>종합 심리검사 예약하기</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );

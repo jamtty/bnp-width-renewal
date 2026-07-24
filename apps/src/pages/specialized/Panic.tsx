@@ -1,20 +1,21 @@
+import AnimatedSection from '../../components/AnimatedSection';
 import img_counseling from '../../assets/images/img_specialized_panic.png';
 
 const SpecializedPanic = () => {
   return (
     <div className="page_cont page_sub child">
-        <div className="page_tit">
+        <AnimatedSection className="page_tit" direction="up">
             <h2>공황 · 불안</h2>
-        </div>
+        </AnimatedSection>
         <section className="con_1">
-            <div className='tit_img'>
+            <AnimatedSection className="tit_img" direction="up">
                 <img src={img_counseling} alt="공황 · 불안" />
-            </div>
-            <div className='tit'>
+            </AnimatedSection>
+            <AnimatedSection className="tit" direction="up">
                 <h3>이유 없는 불안이 반복되나요?</h3>
                 <p>갑작스러운 두근거림, 숨 막힘, 끊이지 않는 걱정과 불안.<span className='pc_br'></span>반복되는 불안은 의지의 문제가 아니라 몸과 마음이 보내는 신호일 수 있습니다.</p>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>핵심 접근</h3>
                 </div>
@@ -23,8 +24,8 @@ const SpecializedPanic = () => {
                         <li>신체–생각–행동 통합 상담</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>왜 반복될까요?</h3>
                 </div>
@@ -33,8 +34,8 @@ const SpecializedPanic = () => {
                         <li>몸의 반응 → 불안한 생각 → 회피 행동 이 패턴이 반복되며 불안이 유지됩니다.</li>
                     </ul>
                 </div>
-            </div>
-            <div className='box'>
+            </AnimatedSection>
+            <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>특장점</h3>
                 </div>
@@ -45,11 +46,11 @@ const SpecializedPanic = () => {
                         <li>심리검사 기반 맞춤 상담 설계</li>
                     </ul>
                 </div>
-            </div>
-            <div className='btn_wrap'>
+            </AnimatedSection>
+            <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>상담 신청하기</button>
                 <button type="button" className='btn_secondary'>정밀 진단부터 시작하기</button>
-            </div>
+            </AnimatedSection>
         </section>
     </div>
   );
