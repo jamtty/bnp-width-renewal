@@ -48,8 +48,8 @@ const CenterIntro = () => {
                     </div>
                     <div className="con_card_text">
                     <span className="con_num">3</span>
-                    <h3>Professor Network</h3>
-                    <p>교수 및 전문위원 네트워크<br />교수 · 슈퍼바이저 · 전문상담사 협력 시스템</p>
+                    <h3>Languages</h3>
+                    <p>글로벌 특화 상담<br />영어 · 중국어 · 일본어 · 베트남어 · 몽골어 · 한국어</p>
                     </div>
                 </AnimatedSection>
                 <AnimatedSection direction="up" as="li" className="con_card">
@@ -58,8 +58,8 @@ const CenterIntro = () => {
                     </div>
                     <div className="con_card_text">
                     <span className="con_num">4</span>
-                    <h3>Languages</h3>
-                    <p>글로벌 특화 상담<br />영어 · 중국어 · 일본어 · 베트남어 · 몽골어 · 한국어</p>
+                    <h3>Partnership</h3>
+                    <p>국내외 기관 협력<br />기업 · 학교 · 교회 · 선교단체</p>
                     </div>
                 </AnimatedSection>
                 <AnimatedSection direction="up" as="li" className="con_card">
@@ -68,16 +68,6 @@ const CenterIntro = () => {
                     </div>
                     <div className="con_card_text">
                     <span className="con_num">5</span>
-                    <h3>Partnership</h3>
-                    <p>국내외 기관 협력<br />기업 · 학교 · 교회 · 선교단체</p>
-                    </div>
-                </AnimatedSection>
-                <AnimatedSection direction="up" as="li" className="con_card">
-                    <div className="con_card_img">
-                    <img src={con6Img} alt="One-Stop Platform" />
-                    </div>
-                    <div className="con_card_text">
-                    <span className="con_num">6</span>
                     <h3>One-Stop Platform</h3>
                     <p>상담 · 검사 · 교육 통합 시스템<br />진단부터 회복까지 연결되는 통합 플랫폼</p>
                     </div>
