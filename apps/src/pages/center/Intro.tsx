@@ -4,7 +4,6 @@ import con2Img from '../../assets/images/pg_intro_con2.png';
 import con3Img from '../../assets/images/pg_intro_con3.png';
 import con4Img from '../../assets/images/pg_intro_con4.png';
 import con5Img from '../../assets/images/pg_intro_con5.png';
-import con6Img from '../../assets/images/pg_intro_con6.png';
 import con2_1Img from '../../assets/images/pg_intro_con2_1.png';
 import con2_2Img from '../../assets/images/pg_intro_con2_2.png';
 import con2_3Img from '../../assets/images/pg_intro_con2_3.png';
