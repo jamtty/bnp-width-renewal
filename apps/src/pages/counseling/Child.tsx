@@ -1,6 +1,8 @@
 import AnimatedSection from '../../components/AnimatedSection';
 import { useState } from 'react';
 import img_counseling from '../../assets/images/img_counseling_child.png';
+import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
+import ico_box_bg_time from '../../assets/images/ico_box_bg_time.svg';
 
 const tabList = [
   '특장점',
@@ -45,6 +47,7 @@ const CounselingChild = () => {
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>무엇이 다른가요?</h3>
+                                <p>3개 이상 반복된다면 전문가 상담을 권합니다.</p>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
@@ -55,59 +58,48 @@ const CounselingChild = () => {
                                     <li>놀이·정서·행동·관계를 함께 보는 통합 상담</li>
                                 </ul>
                             </div>
-                        </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
-                            <div className='s_tit'>
-                                <h3>상담은 어떻게 진행되나요?</h3>
-                            </div>
-                            <div className='s_info'>
-                                <ul className='ul_list_2'>
-                                    <li>아이의 현재 상태를 이해하고 정서와 행동의 변화를 함께 만들어가는 과정입니다.</li>
-                                </ul>
-                            </div>
+                            <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box d-block" direction="up">
                             <div className='s_tit'>
-                                <h3>진행과정</h3>
+                                <h3>상담은 어떻게 진행되나요?</h3>
+                                <p>아이의 현재 상태를 이해하고 정서와 행동의 변화를 함께 만들어가는 과정입니다.</p>
                             </div>
                             <div className='s_info'>
-                                <ul className='step_list'>
+                                <ul className='step_list_child'>
                                     <li>
-                                        <div className='ico'></div>
-                                        <div className='line'></div>
-                                        <strong>초기 면담</strong>
-                                        <span>아이의 일상과 부모의 고민 이해</span>
+                                        <div className='ico'>
+                                            <p>초기 면담</p>
+                                        </div>
+                                        <p className='txt'>아이의 일상과<br />부모의 고민 이해</p>
                                     </li>
                                     <li>
-                                        <div className='ico'></div>
-                                        <div className='line'></div>
-                                        <strong>심리검사(필요시)</strong>
-                                        <span>정서·주의력·발달 상태 확인</span>
+                                        <div className='ico'>
+                                            <p>심리검사(필요시)</p>
+                                        </div>
+                                        <p className='txt'>정서·주의력·발달<br />상태 확인</p>
                                     </li>
                                     <li>
-                                        <div className='ico'></div>
-                                        <div className='line'></div>
-                                        <strong>해석 상담</strong>
-                                        <span>아이의 어려움과 원인 설명</span>
+                                        <div className='ico'>
+                                            <p>해석 상담</p>
+                                        </div>
+                                        <p className='txt'>아이의 어려움과<br />원인 설명</p>
                                     </li>
                                     <li>
-                                        <div className='ico'></div>
-                                        <div className='line'></div>
-                                        <strong>상담 방향 설정</strong>
-                                        <span>아이에게 맞는 개입 방향 설정</span>
+                                        <div className='ico'>
+                                            <p>상담 방향 설정</p>
+                                        </div>
+                                        <p className='txt'>아이에게 맞는<br />개입 방향 설정</p>
                                     </li>
                                     <li>
-                                        <div className='ico'></div>
-                                        <div className='line'></div>
-                                        <strong>상담 진행 &amp; 부모코칭</strong>
-                                        <span>
-                                            아이에게 맞는 개입 방향 설정<br />
-                                            상담 진행 & 부모코칭<br />
-                                            아이 변화와 가정 내 변화 연결
-                                        </span>
+                                        <div className='ico'>
+                                            <p>상담 진행<br />&<br />부모코칭</p>
+                                        </div>
+                                        <p className='txt'>아이에게 맞는 개입 방향 설정<br />상담 진행 & 부모코칭<br />아이 변화와 가정 내 변화 연결</p>
                                     </li>
                                 </ul>
                             </div>
+                            
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -116,12 +108,13 @@ const CounselingChild = () => {
                             <div className='s_info'>
                                 <ul className='ul_list_3'>
                                     <li>초기 면담 : 50분</li>
-                                    <li>아동 상담: 40~50분</li>
-                                    <li>부모 상담: 50분</li>
                                     <li>심리검사: 60~120분</li>
-                                    <li>해석 상담: 50분</li> 
+                                    <li>아동 상담: 40~50분</li>
+                                    <li>해석 상담: 50분</li>
+                                    <li>부모 상담: 50분</li> 
                                 </ul>
                             </div>
+                            <img src={ico_box_bg_time} alt="" className="bg_img" />
                         </AnimatedSection>
                     </>
                 )}
