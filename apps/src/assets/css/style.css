@@ -503,8 +503,8 @@
 
 /* 브레드크럼 */
 .breadcrumb {
- margin:1.5rem auto 0;
- height:6rem;
+ margin:3.4rem auto 0;
+ height:7.5rem;
  display:flex;
  align-items: center;
  max-width:162rem;
@@ -523,7 +523,6 @@
  color: #999;
  border-radius:1rem;
  overflow:hidden;
- border:1px solid #ddd;
 }
 .breadcrumb_home {
  display: flex;
@@ -531,7 +530,7 @@
  color: #999;
  transition: color 0.2s;
 }
-.breadcrumb_home img { width:1.5rem;}
+.breadcrumb_home img { width:2.5rem;}
 .breadcrumb_home:hover {
  color: #5868F3;
 }
@@ -667,7 +666,7 @@
  -webkit-appearance: none;
  border-radius: 0.6rem;
  padding: 0.7rem 3rem 0.7rem 1.2rem;
- font-size: 1.6rem;
+ font-size: 2rem;
  font-weight: 500;
  color: #555;
  background:#fafafa;
