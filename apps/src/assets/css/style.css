@@ -1210,11 +1210,11 @@
 /* 상담 ~ 아카데미 공통 레이아웃 */
 .child { padding:0 0 16rem;}
 .child .con_1 { position:relative; max-width:162rem; margin:0 auto;}
-.child .tit_img { display:flex; justify-content: center; margin:0 0 4rem; height:40rem; }
+.child .tit_img { display:flex; justify-content: center; margin:0 0 7rem; height:40rem; }
 .child .tit { text-align:center; margin:0 0 7rem;}
 .child .tit h3 { font-family: 'GmarketSans'; font-size:4.5rem; font-weight:700; margin:0 0 2.5rem;}
 .child .tit p { font-size:2rem; font-weight:500; color:#555;}
-.child .box { display:flex; background-color:rgba(166, 175, 255, 0.05) !important; border-radius:2rem; padding:10rem 12rem; margin:0 0 3rem; gap:3rem; position:relative; }
+.child .box { display:flex; background-color:rgba(166, 175, 255, 0.05) !important; border-radius:2rem; padding:10rem 12rem; margin:0 0 3rem; gap:3rem; position:relative; overflow:hidden; }
 
 .child .box .bg_img { position:absolute; right:0; top:0; pointer-events:none; z-index:-1; }
 
