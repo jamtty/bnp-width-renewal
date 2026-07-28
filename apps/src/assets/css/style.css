@@ -1226,9 +1226,9 @@
 .child .box.d-block .s_tit p { margin:2rem 0 0; font-size:2rem; font-weight:600; color:#333; }
 .child .box .s_info { flex:1; font-size:1.6rem; font-weight:600; }
 .child .box .s_info .no-margin { margin-top:0.5rem !important;}
-.child .box .s_info p { font-size:1.6rem; font-weight:600; margin:2rem 0 0;}
-.child .box .s_info .top { font-size:1.6rem; font-weight:600; margin:0 0 2rem;}
-.child .box .s_info .sm { font-size:1.6rem; margin:1rem 0 0;}
+.child .box .s_info p { font-size:2rem; font-weight:600; margin:2rem 0 0;}
+.child .box .s_info .top { font-size:2rem; font-weight:600; margin:0 0 2rem;}
+.child .box .s_info .sm { font-size:2rem; margin:1rem 0 0;}
 
 .child .box .s_info .ul_list_1 { display:flex; gap:2rem 0; flex-wrap: wrap;  }
 .child .box .s_info .ul_list_1 li { width:50%; font-size:2rem; font-weight:500; background:url('../images/ico_list_chk.svg') no-repeat left 0.5rem; background-size:2rem; padding-left:3rem; letter-spacing: -1px;}

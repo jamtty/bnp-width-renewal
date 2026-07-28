@@ -1,5 +1,10 @@
 import AnimatedSection from '../../components/AnimatedSection';
 import img_counseling from '../../assets/images/img_psychology_full.png';
+import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
+import ico_box_bg2 from '../../assets/images/ico_box_bg2.svg';
+import ico_box_bg3 from '../../assets/images/ico_box_bg3.svg';
+import ico_box_bg4 from '../../assets/images/ico_box_bg4.svg';
+import ico_box_bg5 from '../../assets/images/ico_box_bg5.svg';
 
 const SpecializedFeatures = () => {
   return (
@@ -23,7 +28,7 @@ const SpecializedFeatures = () => {
                 </div>
                 <div className='s_info'>
                     <p className='top'>
-                        지능, 정서, 성격, 행동, 관계, 주의집중 및 스트레스 반응까지 심리 기능 전반을 종합적으로 평가하여 현재 어려움의 원인과 개입 방향을 찾는 정밀검사입니다.<br /><br />이런 경우 권합니다.
+                        지능, 정서, 성격, 행동, 관계, 주의집중 및 스트레스 반응까지 심리 기능 전반을 종합적으로 평가하여<span className='pc_br'></span> 현재 어려움의 원인과 개입 방향을 찾는 정밀검사입니다.<br /><br />이런 경우 권합니다.
                     </p>
                     <ul className='ul_list_1'>
                         <li>ADHD가 의심될 때</li>
@@ -33,6 +38,7 @@ const SpecializedFeatures = () => {
                         <li>정확한 진단과 상담 방향이 필요할 때</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg1} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -46,6 +52,7 @@ const SpecializedFeatures = () => {
                         <li>부모-자녀 상호작용 분석</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg2} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -62,6 +69,7 @@ const SpecializedFeatures = () => {
                         <li>부모와의 관계</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg3} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -78,6 +86,7 @@ const SpecializedFeatures = () => {
                         <li>내면 갈등 및 심리적 특성</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg4} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -89,11 +98,12 @@ const SpecializedFeatures = () => {
                         <li>정서·성격검사 (MMPI-2, MMPI-A)</li>
                         <li>기질·성격검사 (TCI)</li>
                         <li>투사검사 (SCT, 로샤 등)</li>
-                        <li>그림검사 (HTP, KFD 등)</li>
+                        <li>그림검사 (HTP, KFD 등)</li>검사 구성
                         <li>BGT</li>
                     </ul>
-                    <p>※ 개인의 특성과 호소문제에 따라 맞춤 구성됩니다.</p>
+                    <p>개인의 특성과 호소문제에 따라 맞춤 구성됩니다.</p>
                 </div>
+                <img src={ico_box_bg5} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -107,6 +117,7 @@ const SpecializedFeatures = () => {
                         <li>상담 및 개입 방향 제시</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg1} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -121,6 +132,7 @@ const SpecializedFeatures = () => {
                         <li>변화와 성장의 방향 설정</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg2} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>종합 심리검사 예약하기</button>

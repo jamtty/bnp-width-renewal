@@ -1,6 +1,11 @@
 import AnimatedSection from '../../components/AnimatedSection';
 import { useState } from 'react';
-import img_counseling from '../../assets/images/img_counseling_child.png';
+import img_counseling1 from '../../assets/images/img_counseling_child.png';
+import img_counseling2 from '../../assets/images/img_psychology_oneday2.png';
+import img_counseling3 from '../../assets/images/img_psychology_oneday3.png';
+import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
+import ico_box_bg2 from '../../assets/images/ico_box_bg2.svg';
+import ico_box_bg3 from '../../assets/images/ico_box_bg3.svg';
 
 const tabList = [
   '아동 원데이 마음 검사',
@@ -32,7 +37,7 @@ const CounselingChild = () => {
                 {activeTab === 0 && (
                     <>
                         <AnimatedSection className="tit_img" direction="up">
-                            <img src={img_counseling} alt="아동 상담" />
+                            <img src={img_counseling1} alt="아동 상담" />
                         </AnimatedSection>
                         <AnimatedSection className="tit" direction="up">
                             <h3>아이의 행동은 고쳐야 할 문제가 아니라<span className='pc_br'></span>이해해야 할 신호일 수 있습니다</h3>
@@ -49,6 +54,7 @@ const CounselingChild = () => {
                                     <li>양육 태도와 반응 패턴</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -64,11 +70,15 @@ const CounselingChild = () => {
                                 </ul>
                                 <p>아이의 상태를 자연스럽게 이해하고, 부모의 방향까지 함께 정리합니다</p>
                             </div>
+                            <img src={ico_box_bg2} alt="" className="bg_img" />
                         </AnimatedSection>
                     </>
                 )}
                 {activeTab === 1 && (
                     <>
+                        <AnimatedSection className="tit_img" direction="up">
+                            <img src={img_counseling2} alt="청소년 원데이 마음 검사" />
+                        </AnimatedSection>
                         <AnimatedSection className="tit" direction="up">
                             <h3>무기력, 학업 문제, 감정 기복</h3>
                             <p>단순 문제가 아니라 정서·학습·관계가 함께 영향을 주고 있을 수 있습니다</p>
@@ -85,6 +95,7 @@ const CounselingChild = () => {
                                     <li>부모와의 관계 상태</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -99,11 +110,15 @@ const CounselingChild = () => {
                                 </ul>
                                 <p>혼란을 정리하고 방향을 잡는 데 도움을 줍니다.</p>
                             </div>
+                            <img src={ico_box_bg2} alt="" className="bg_img" />
                         </AnimatedSection>
                     </>
                 )}
                 {activeTab === 2 && (
                     <>
+                        <AnimatedSection className="tit_img" direction="up">
+                            <img src={img_counseling3} alt="성인 원데이 마음 검사" />
+                        </AnimatedSection>
                         <AnimatedSection className="tit" direction="up">
                             <h3>반복되는 감정과 스트레스가 있다면<span className='pc_br'></span>단순 기분이 아니라 패턴일 수 있습니다</h3>
                         </AnimatedSection>
@@ -118,6 +133,7 @@ const CounselingChild = () => {
                                     <li>반복되는 생각과 관계 패턴</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -130,6 +146,7 @@ const CounselingChild = () => {
                                     <li>생각·감정 흐름 탐색 (SCT)</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg2} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -141,6 +158,7 @@ const CounselingChild = () => {
                                     <li>해석 상담 (50분)</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg3} alt="" className="bg_img" />
                         </AnimatedSection>
                     </>
                 )}

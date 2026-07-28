@@ -1,5 +1,9 @@
 import AnimatedSection from '../../components/AnimatedSection';
 import img_counseling from '../../assets/images/img_psychology_child.png';
+import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
+import ico_box_bg2 from '../../assets/images/ico_box_bg2.svg';
+import ico_box_bg3 from '../../assets/images/ico_box_bg3.svg';
+import ico_box_bg4 from '../../assets/images/ico_box_bg4.svg';
 
 const SpecializedFeatures = () => {
   return (
@@ -27,6 +31,7 @@ const SpecializedFeatures = () => {
                         <li>양육 방향이 고민될 때</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg1} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -40,6 +45,7 @@ const SpecializedFeatures = () => {
                         <li>부모-자녀 상호작용</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg2} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -52,6 +58,7 @@ const SpecializedFeatures = () => {
                         <li>부모 양육 분석 → 상호작용 및 양육 패턴 분석</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg3} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -66,6 +73,7 @@ const SpecializedFeatures = () => {
                         <li>가정·학교 지원 방법 제안</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg4} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>아동 심리검사 예약하기</button>

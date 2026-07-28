@@ -106,7 +106,6 @@ const CounselingChild = () => {
                                     </li>
                                 </ul>
                             </div>
-                            
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
