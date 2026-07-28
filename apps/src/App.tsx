@@ -34,12 +34,6 @@ import CounselingCouple from './pages/counseling/Couple';
 import CounselingSenior from './pages/counseling/Senior';
 // 특화상담 페이지
 import SpecializedFeatures from './pages/specialized/Features';
-import SpecializedPanic from './pages/specialized/Panic';
-import SpecializedBurnout from './pages/specialized/Burnout';
-import SpecializedAdhd from './pages/specialized/Adhd';
-import SpecializedAddiction from './pages/specialized/Addiction';
-import SpecializedEating from './pages/specialized/Eating';
-import SpecializedCareer from './pages/specialized/Career';
 // 심리검사 페이지
 import PsychologyOneday from './pages/psychology/Oneday';
 import PsychologyFull from './pages/psychology/Full';
@@ -162,13 +156,7 @@ function App() {
       <Route path="/counseling/couple" element={<CounselingLayout title="부부·커플 상담"><CounselingCouple /></CounselingLayout>} />
       <Route path="/counseling/senior" element={<CounselingLayout title="시니어 상담"><CounselingSenior /></CounselingLayout>} />
       {/* 특화상담 */}
-      <Route path="/specialized/features" element={<SpecializedLayout title="특장점"><SpecializedFeatures /></SpecializedLayout>} />
-      <Route path="/specialized/panic" element={<SpecializedLayout title="공황·불안 상담"><SpecializedPanic /></SpecializedLayout>} />
-      <Route path="/specialized/burnout" element={<SpecializedLayout title="번아웃·직장 스트레스 상담"><SpecializedBurnout /></SpecializedLayout>} />
-      <Route path="/specialized/adhd" element={<SpecializedLayout title="ADHD·실행력 상담"><SpecializedAdhd /></SpecializedLayout>} />
-      <Route path="/specialized/addiction" element={<SpecializedLayout title="중독 회복 상담"><SpecializedAddiction /></SpecializedLayout>} />
-      <Route path="/specialized/eating" element={<SpecializedLayout title="식이장애·감정조절 상담"><SpecializedEating /></SpecializedLayout>} />
-      <Route path="/specialized/career" element={<SpecializedLayout title="커리어 전환·방향 설계 상담"><SpecializedCareer /></SpecializedLayout>} />
+      <Route path="/specialized/features" element={<SpecializedLayout title="특화상담"><SpecializedFeatures /></SpecializedLayout>} />
       {/* 심리검사 */}
       <Route path="/psychology/oneday" element={<PsychologyLayout title="원데이 마음 검사"><PsychologyOneday /></PsychologyLayout>} />
       <Route path="/psychology/full" element={<PsychologyLayout title="종합 심리검사 (Full Battery)"><PsychologyFull /></PsychologyLayout>} />
