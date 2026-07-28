@@ -9,8 +9,6 @@ import img_counseling6 from '../../assets/images/img_counseling_teen6.png';
 import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
 import ico_box_bg2 from '../../assets/images/ico_box_bg2.svg';
 import ico_box_bg3 from '../../assets/images/ico_box_bg3.svg';
-import ico_box_bg4 from '../../assets/images/ico_box_bg4.svg';
-import ico_box_bg5 from '../../assets/images/ico_box_bg5.svg';
 import ico_box_bg_time from '../../assets/images/ico_box_bg_time.svg';
 
 const tabList = [

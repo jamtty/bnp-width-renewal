@@ -1,6 +1,14 @@
 import AnimatedSection from '../../components/AnimatedSection';
 import { useState } from 'react';
 import img_counseling from '../../assets/images/img_counseling_couple.png';
+import img_counseling2 from '../../assets/images/img_counseling_couple2.png';
+import img_counseling3 from '../../assets/images/img_counseling_couple3.png';
+import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
+import ico_box_bg2 from '../../assets/images/ico_box_bg2.svg';
+import ico_box_bg3 from '../../assets/images/ico_box_bg3.svg';
+import ico_box_bg4 from '../../assets/images/ico_box_bg4.svg';
+import ico_box_bg5 from '../../assets/images/ico_box_bg5.svg';
+import ico_box_bg_time from '../../assets/images/ico_box_bg_time.svg';
 
 const tabList = [
   '특장점',
@@ -55,52 +63,44 @@ const CounselingChild = () => {
                                     <li>관계 회복부터 이혼 결정까지 함께 상담</li>
                                 </ul>
                             </div>
-                        </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
-                            <div className='s_tit'>
-                                <h3>상담은 어떻게 진행되나요?</h3>
-                            </div>
-                            <div className='s_info'>
-                                <ul className='ul_list_2'>
-                                    <li>현재의 갈등을 함께 이해하고 관계의 방향까지 함께 만들어 가는 과정입니다. 문제를 해결하고, 관계의 방향까지 함께 정리하는 상담입니다.</li>
-                                </ul>
-                            </div>
+                            <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box d-block" direction="up">
                             <div className='s_tit'>
-                                <h3>진행과정</h3>
+                                <h3>상담은 어떻게 진행되나요?</h3>
+                                <p>현재의 갈등을 함께 이해하고 관계의 방향까지 함께 만들어 가는 과정입니다.<br />문제를 해결하고, 관계의 방향까지 함께 정리하는 상담입니다.</p>
                             </div>
                             <div className='s_info'>
-                                <ul className='step_list'>
+                                <ul className='step_list_child'>
                                     <li>
-                                        <div className='ico'></div>
-                                        <div className='line'></div>
-                                        <strong>초기 면담<br />(동반 상담)</strong>
-                                        <span>현재 갈등과 반복되는 관계 패턴 이해</span>
+                                        <div className='ico'>
+                                            <p>초기 면담</p>
+                                        </div>
+                                        <p className='txt'>현재 문제와 상황 이해</p>
                                     </li>
                                     <li>
-                                        <div className='ico'></div>
-                                        <div className='line'></div>
-                                        <strong>관계 진단<br />(필요시)</strong>
-                                        <span>애착·성격·소통 패턴 객관적 확인</span>
+                                        <div className='ico'>
+                                            <p>심리검사</p>
+                                        </div>
+                                        <p className='txt'>정서·성격·진로 상태 확인</p>
                                     </li>
                                     <li>
-                                        <div className='ico'></div>
-                                        <div className='line'></div>
-                                        <strong>해석 상담</strong>
-                                        <span>갈등이 반복되는 구조와 원인 이해</span>
+                                        <div className='ico'>
+                                            <p>해석 상담</p>
+                                        </div>
+                                        <p className='txt'>문제의 원인과 반복되는<span className='pc_br'></span> 패턴 이해</p>
                                     </li>
                                     <li>
-                                        <div className='ico'></div>
-                                        <div className='line'></div>
-                                        <strong>상담 방향 설정</strong>
-                                        <span>회복 또는 이혼 방향 정리</span>
+                                        <div className='ico'>
+                                            <p>상담 방향 설정</p>
+                                        </div>
+                                        <p className='txt'>변화 목표 및 방향 설정</p>
                                     </li>
                                     <li>
-                                        <div className='ico'></div>
-                                        <div className='line'></div>
-                                        <strong>상담 진행</strong>
-                                        <span>감정 회복 · 대화 변화 · 관계 회복</span>
+                                        <div className='ico'>
+                                            <p>상담 진행</p>
+                                        </div>
+                                        <p className='txt'>일상 속 변화와 회복</p>
                                     </li>
                                 </ul>
                             </div>
@@ -118,11 +118,15 @@ const CounselingChild = () => {
                                     <li>상황에 따라 유연하게 조정됩니다.</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg_time} alt="" className="bg_img" />
                         </AnimatedSection>
                     </>
                 )}
                 {activeTab === 1 && (
                     <>
+                        <AnimatedSection className="tit_img" direction="up">
+                            <img src={img_counseling2} alt="관계 정밀 진단 및 분석" />
+                        </AnimatedSection>
                         <AnimatedSection className="tit" direction="up">
                             <h3>반복되는 갈등 뒤에는<span className='pc_br'></span>감정 반응, 애착 방식, 소통 패턴이 숨어 있습니다</h3>
                         </AnimatedSection>
@@ -139,6 +143,7 @@ const CounselingChild = () => {
                                     <li>갈등 반응 패턴 검사</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -153,6 +158,7 @@ const CounselingChild = () => {
                                     <li>가치관 분석</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg2} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -169,6 +175,7 @@ const CounselingChild = () => {
                                 </ul>
                                 <p>관계 회복 가능성 · 핵심 문제 · 변화 방향 제시</p>
                             </div>
+                            <img src={ico_box_bg3} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -185,6 +192,7 @@ const CounselingChild = () => {
                                 </ul>
                                 <p>회복 가능성 · 관계 유지 가능성 · 이혼 결정 기준 정리</p>
                             </div>
+                            <img src={ico_box_bg4} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -198,6 +206,7 @@ const CounselingChild = () => {
                                     <li>후회 없는 선택을 위한 방향 정리</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg5} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -211,11 +220,15 @@ const CounselingChild = () => {
                                     <li>관계 재정비</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
                     </>
                 )}
                 {activeTab === 2 && (
                     <>
+                        <AnimatedSection className="tit_img" direction="up">
+                            <img src={img_counseling3} alt="부부 커플 상담" />
+                        </AnimatedSection>
                         <AnimatedSection className="tit" direction="up">
                             <h3>사랑도 소통도 연습이 필요합니다<span className='pc_br'></span>서로의 감정과 애착 방식을 이해하고 건강한 관계를 만들어 갑니다.<span className='pc_br'></span>애착 이해 · 감정 소통 · 건강한 관계 만들기</h3>
                         </AnimatedSection>
@@ -231,6 +244,7 @@ const CounselingChild = () => {
                                     <li>건강한 소통 전략</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -244,6 +258,7 @@ const CounselingChild = () => {
                                     <li>재회 현실성 판단</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg2} alt="" className="bg_img" />
                         </AnimatedSection>
                     </>
                 )}
