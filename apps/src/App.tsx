@@ -41,7 +41,6 @@ import PsychologyChild from './pages/psychology/Child';
 import PsychologyTeen from './pages/psychology/Teen';
 // 코칭 페이지
 import CoachingFeatures from './pages/coaching/Features';
-import CoachingIntro from './pages/coaching/Intro';
 import CoachingLearning from './pages/coaching/Learning';
 import CoachingLife from './pages/coaching/Life';
 import CoachingLeadership from './pages/coaching/Leadership';
@@ -157,7 +156,6 @@ function App() {
       <Route path="/psychology/teen" element={<PsychologyLayout title="청소년 심리검사"><PsychologyTeen /></PsychologyLayout>} />
       {/* 코칭 */}
       <Route path="/coaching/features" element={<CoachingLayout title="특장점"><CoachingFeatures /></CoachingLayout>} />
-      <Route path="/coaching/intro" element={<CoachingLayout title="코칭안내"><CoachingIntro /></CoachingLayout>} />
       <Route path="/coaching/learning" element={<CoachingLayout title="학습 진로 코칭"><CoachingLearning /></CoachingLayout>} />
       <Route path="/coaching/life" element={<CoachingLayout title="라이프 코칭"><CoachingLife /></CoachingLayout>} />
       <Route path="/coaching/leadership" element={<CoachingLayout title="리더십 코칭"><CoachingLeadership /></CoachingLayout>} />

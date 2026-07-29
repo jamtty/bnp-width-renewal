@@ -1,4 +1,10 @@
 import AnimatedSection from '../../components/AnimatedSection';
+import img_coaching from '../../assets/images/img_coaching_features3.png';
+import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
+import ico_box_bg2 from '../../assets/images/ico_box_bg2.svg';
+import ico_box_bg3 from '../../assets/images/ico_box_bg3.svg';
+import ico_box_bg4 from '../../assets/images/ico_box_bg4.svg';
+
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
@@ -6,6 +12,9 @@ const SpecializedFeatures = () => {
             <h2>라이프 코칭</h2>
         </AnimatedSection>
         <section className="con_1">
+            <AnimatedSection className="tit_img" direction="up">
+                <img src={img_coaching} alt="라이프 코칭" />
+            </AnimatedSection>
             <AnimatedSection className="tit" direction="up">
                 <h3>삶의 균형과 방향을 다시 설계합니다</h3>
                 <p>열심히 살아왔지만 더 이상 지금의 방식으로는 만족스럽지 않을 때,<span className='pc_br'></span>삶의 우선순위와 방향을 다시 정리합니다.</p>
@@ -22,6 +31,7 @@ const SpecializedFeatures = () => {
                         <li>의미와 동기를 잃은 사람</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg1} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -36,6 +46,7 @@ const SpecializedFeatures = () => {
                         <li>목표 재설계</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg2} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -49,6 +60,7 @@ const SpecializedFeatures = () => {
                         <li>나에게 맞는 삶의 방향을 찾게 됩니다.</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg3} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -63,6 +75,7 @@ const SpecializedFeatures = () => {
                         <li>지속 가능한 삶의 구조 만들기</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg4} alt="" className="bg_img" />
             </AnimatedSection>
         </section>
     </div>

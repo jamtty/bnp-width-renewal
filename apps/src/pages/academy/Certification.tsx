@@ -1,5 +1,6 @@
 import AnimatedSection from '../../components/AnimatedSection';
 import { useState } from 'react';
+import img_academy from '../../assets/images/img_academy4.png';
 
 const tabList = [
   '미술치료 자격과정(한국아동미술치료학회)',
@@ -16,6 +17,9 @@ const CounselingChild = () => {
             <h2>전문 자격 프로그램</h2>
         </AnimatedSection>
         <section className="con_1">
+            <AnimatedSection className="tit_img" direction="up">
+                <img src={img_academy} alt="전문 자격 프로그램" />
+            </AnimatedSection>
             <div className="tab_wrap">
                 <span className="tab_bar" style={{ left: `${(100 / tabList.length) * activeTab}%`, width: `${100 / tabList.length}%` }} />
                 {tabList.map((tab, i) => (

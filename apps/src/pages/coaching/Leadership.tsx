@@ -1,4 +1,11 @@
 import AnimatedSection from '../../components/AnimatedSection';
+import img_coaching from '../../assets/images/img_coaching_features4.png';
+import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
+import ico_box_bg2 from '../../assets/images/ico_box_bg2.svg';
+import ico_box_bg3 from '../../assets/images/ico_box_bg3.svg';
+import ico_box_bg4 from '../../assets/images/ico_box_bg4.svg';
+import ico_box_bg5 from '../../assets/images/ico_box_bg5.svg';
+
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
@@ -6,6 +13,9 @@ const SpecializedFeatures = () => {
             <h2>리더십 코칭</h2>
         </AnimatedSection>
         <section className="con_1">
+            <AnimatedSection className="tit_img" direction="up">
+                <img src={img_coaching} alt="리더십 코칭" />
+            </AnimatedSection>
             <AnimatedSection className="tit" direction="up">
                 <h3>좋은 리더는 사람을 관리하지 않고,<span className='pc_br'></span>관계를 이끕니다</h3>
                 <p>성과와 관계 사이에서 고민하는 리더에게 사람의 마음을 이해하는 리더십을 제공합니다.</p>
@@ -22,6 +32,7 @@ const SpecializedFeatures = () => {
                         <li>교회·사역 리더</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg1} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -36,6 +47,7 @@ const SpecializedFeatures = () => {
                         <li>의사결정</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg2} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -49,6 +61,7 @@ const SpecializedFeatures = () => {
                         <li>실제 대화 중심 코칭</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg3} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -63,6 +76,7 @@ const SpecializedFeatures = () => {
                         <li>조직 내 관계 스트레스</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg4} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -78,6 +92,7 @@ const SpecializedFeatures = () => {
                         <li>리더십이 안정됩니다</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg5} alt="" className="bg_img" />
             </AnimatedSection>
         </section>
     </div>

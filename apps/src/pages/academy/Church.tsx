@@ -1,4 +1,5 @@
 import AnimatedSection from '../../components/AnimatedSection';
+import img_academy from '../../assets/images/img_academy6.png';
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
@@ -6,6 +7,9 @@ const SpecializedFeatures = () => {
             <h2>교회 기관 교육 프로그램</h2>
         </AnimatedSection>
         <section className="con_1">
+            <AnimatedSection className="tit_img" direction="up">
+                <img src={img_academy} alt="교회 기관 교육 프로그램" />
+            </AnimatedSection>
             <AnimatedSection className="tit" direction="up">
                 <h3>개인의 변화가 조직의 문화를 바꿉니다</h3>
                 <p>관계와 정서를 다루는 전문 프로그램으로 조직의 갈등을 줄이고, 지속 가능한 성과를 만듭니다.<br />사역자를 지키는 것이 교회를 지키는 일입니다.</p>

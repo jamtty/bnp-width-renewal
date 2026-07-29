@@ -72,7 +72,6 @@ export const NAV_ITEMS: NavItem[] = [
     label: '코칭',
     sub: [
       { label: '특장점', to: '/coaching/features' },
-      { label: '코칭안내', to: '/coaching/intro' },
       { label: '학습 진로 코칭', to: '/coaching/learning' },
       { label: '라이프 코칭', to: '/coaching/life' },
       { label: '리더십 코칭', to: '/coaching/leadership' },

@@ -1,4 +1,9 @@
 import AnimatedSection from '../../components/AnimatedSection';
+import img_coaching from '../../assets/images/img_coaching_features2.png';
+import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
+import ico_box_bg2 from '../../assets/images/ico_box_bg2.svg';
+import ico_box_bg3 from '../../assets/images/ico_box_bg3.svg';
+
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
@@ -6,6 +11,9 @@ const SpecializedFeatures = () => {
             <h2>학습 진로 코칭</h2>
         </AnimatedSection>
         <section className="con_1">
+            <AnimatedSection className="tit_img" direction="up">
+                <img src={img_coaching} alt="학습 진로 코칭" />
+            </AnimatedSection>
             <AnimatedSection className="tit" direction="up">
                 <h3>생각을 바꾸는 것이 아니라, 실행이 바뀌는 코칭</h3>
                 <p>학습과 진로의 문제는 의지 부족이 아니라<span className='pc_br'></span>자신에게 맞지 않는 방식과 방향의 문제일 수 있습니다.</p>
@@ -29,6 +37,7 @@ const SpecializedFeatures = () => {
                         </li>
                     </ul>
                 </div>
+                <img src={ico_box_bg1} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -49,6 +58,7 @@ const SpecializedFeatures = () => {
                         </li>
                     </ul>
                 </div>
+                <img src={ico_box_bg2} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -63,6 +73,7 @@ const SpecializedFeatures = () => {
                         <li>선택의 확신이 생깁니다.</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg3} alt="" className="bg_img" />
             </AnimatedSection>
         </section>
     </div>

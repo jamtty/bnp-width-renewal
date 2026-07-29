@@ -1,4 +1,5 @@
 import AnimatedSection from '../../components/AnimatedSection';
+import img_academy from '../../assets/images/img_academy7.png';
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
@@ -6,6 +7,9 @@ const SpecializedFeatures = () => {
             <h2>기관 기업 프로그램</h2>
         </AnimatedSection>
         <section className="con_1">
+            <AnimatedSection className="tit_img" direction="up">
+                <img src={img_academy} alt="기관 기업 프로그램" />
+            </AnimatedSection>
             <AnimatedSection className="tit" direction="up">
                 <h3>성과의 문제는 결국 사람의 문제입니다</h3>
             </AnimatedSection>

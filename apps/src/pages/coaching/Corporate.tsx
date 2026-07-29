@@ -1,4 +1,8 @@
 import AnimatedSection from '../../components/AnimatedSection';
+import img_coaching from '../../assets/images/img_coaching_features6.png';
+import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
+import ico_box_bg2 from '../../assets/images/ico_box_bg2.svg';
+
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
@@ -6,6 +10,9 @@ const SpecializedFeatures = () => {
             <h2>기업 코칭 & 조직 프로그램</h2>
         </AnimatedSection>
         <section className="con_1">
+            <AnimatedSection className="tit_img" direction="up">
+                <img src={img_coaching} alt="기업 코칭 & 조직 프로그램" />
+            </AnimatedSection>
             <AnimatedSection className="tit" direction="up">
                 <h3>사람이 바뀌면 성과가 바뀌고,<span className='pc_br'></span>관계가 바뀌면 조직이 바뀝니다</h3>
             </AnimatedSection>
@@ -22,6 +29,7 @@ const SpecializedFeatures = () => {
                         <li>번아웃 예방 및 회복 프로그램</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg1} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -36,6 +44,7 @@ const SpecializedFeatures = () => {
                         <li>관계 변화가 성과로 연결되는 설계</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg2} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box d-block" direction="up">
                 <div className='s_tit'>
@@ -43,30 +52,30 @@ const SpecializedFeatures = () => {
                     <p>성과를 만드는 것은 전략이지만, 성과를 지속시키는 것은 관계입니다.</p>
                 </div>
                 <div className='s_info'>
-                    <ul className='step_list'>
+                    <ul className='step_list_child'>
                         <li>
-                            <div className='ico'></div>
-                            <div className='line'></div>
-                            <strong>STEP 1</strong>
-                            <span>조직 진단 및 인터뷰</span>
+                            <div className='ico'>
+                                <p>STEP 1</p>
+                            </div>
+                            <p className='txt'>조직 진단 및 인터뷰</p>
                         </li>
                         <li>
-                            <div className='ico'></div>
-                            <div className='line'></div>
-                            <strong>STEP 2</strong>
-                            <span>핵심 관계 구조 분석</span>
+                            <div className='ico'>
+                                <p>STEP 2</p>
+                            </div>
+                            <p className='txt'>핵심 관계 구조 분석</p>
                         </li>
                         <li>
-                            <div className='ico'></div>
-                            <div className='line'></div>
-                            <strong>STEP 3</strong>
-                            <span>맞춤 코칭·워크숍 진행</span>
+                            <div className='ico'>
+                                <p>STEP 3</p>
+                            </div>
+                            <p className='txt'>맞춤 코칭·워크숍 진행</p>
                         </li>
                         <li>
-                            <div className='ico'></div>
-                            <div className='line'></div>
-                            <strong>STEP 4</strong>
-                            <span>실행 점검 및 사후 관리</span>
+                            <div className='ico'>
+                                <p>STEP 4</p>
+                            </div>
+                            <p className='txt'>실행 점검 및 사후 관리</p>
                         </li>
                     </ul>
                 </div>

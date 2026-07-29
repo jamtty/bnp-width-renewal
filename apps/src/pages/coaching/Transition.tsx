@@ -1,4 +1,11 @@
 import AnimatedSection from '../../components/AnimatedSection';
+import img_coaching from '../../assets/images/img_coaching_features5.png';
+import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
+import ico_box_bg2 from '../../assets/images/ico_box_bg2.svg';
+import ico_box_bg3 from '../../assets/images/ico_box_bg3.svg';
+import ico_box_bg4 from '../../assets/images/ico_box_bg4.svg';
+import ico_box_bg5 from '../../assets/images/ico_box_bg5.svg';
+
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
@@ -6,6 +13,9 @@ const SpecializedFeatures = () => {
             <h2>전환기 코칭<span>Life Transition Coaching</span></h2>
         </AnimatedSection>
         <section className="con_1">
+            <AnimatedSection className="tit_img" direction="up">
+                <img src={img_coaching} alt="전환기 코칭" />
+            </AnimatedSection>
             <AnimatedSection className="tit" direction="up">
                 <h3>변화의 시기는 위기가 아니라<span className='pc_br'></span>새로운 시작입니다</h3>
             </AnimatedSection>
@@ -22,6 +32,7 @@ const SpecializedFeatures = () => {
                         <li>번아웃 이후 방향 찾기</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg1} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -36,6 +47,7 @@ const SpecializedFeatures = () => {
                         <li>미래 설계</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg2} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -49,6 +61,7 @@ const SpecializedFeatures = () => {
                         <li>실행 가능한 변화 계획 수립</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg3} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -63,6 +76,7 @@ const SpecializedFeatures = () => {
                         <li>미래 설계</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg4} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -78,6 +92,7 @@ const SpecializedFeatures = () => {
                         <li>나다운 삶을 설계하게 됩니다</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg5} alt="" className="bg_img" />
             </AnimatedSection>
         </section>
     </div>
