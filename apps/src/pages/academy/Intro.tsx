@@ -17,34 +17,34 @@ const AcademyIntro = () => {
             </AnimatedSection>
             <div className="roadmap">
                 <ul className="roadmap_steps">
-                    <li className="roadmap_item">
+                    <AnimatedSection className="roadmap_item" direction="up" delay={0} as="li">
                         <span className="roadmap_num">1</span>
                         <div className="roadmap_circle"><span>입문</span></div>
-                    </li>
+                    </AnimatedSection>
                     <li className="roadmap_arrow" aria-hidden="true"></li>
-                    <li className="roadmap_item">
+                    <AnimatedSection className="roadmap_item" direction="up" delay={0.15} as="li">
                         <span className="roadmap_num">2</span>
                         <div className="roadmap_circle"><span>심화</span></div>
-                    </li>
+                    </AnimatedSection>
                     <li className="roadmap_arrow" aria-hidden="true"></li>
-                    <li className="roadmap_item">
+                    <AnimatedSection className="roadmap_item" direction="up" delay={0.3} as="li">
                         <span className="roadmap_num">3</span>
                         <div className="roadmap_circle"><span>전문가</span></div>
-                    </li>
+                    </AnimatedSection>
                     <li className="roadmap_arrow" aria-hidden="true"></li>
-                    <li className="roadmap_item">
+                    <AnimatedSection className="roadmap_item" direction="up" delay={0.45} as="li">
                         <span className="roadmap_num">4</span>
                         <div className="roadmap_circle"><span>강사</span></div>
-                    </li>
+                    </AnimatedSection>
                     <li className="roadmap_arrow" aria-hidden="true"></li>
-                    <li className="roadmap_item">
+                    <AnimatedSection className="roadmap_item" direction="up" delay={0.6} as="li">
                         <span className="roadmap_num">5</span>
                         <div className="roadmap_circle"><span>파트너</span></div>
-                    </li>
+                    </AnimatedSection>
                 </ul>
-                <div className="roadmap_quote">
+                <AnimatedSection className="roadmap_quote" direction="up" delay={0.8}>
                     <p>한 번의 교육이 아니라,<span className='mo_br'></span> 평생 성장하는 전문가 플랫폼</p>
-                </div>
+                </AnimatedSection>
             </div>
 
         </section>

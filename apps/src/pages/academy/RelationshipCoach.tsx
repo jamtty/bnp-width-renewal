@@ -1,5 +1,9 @@
 import AnimatedSection from '../../components/AnimatedSection';
 import img_academy from '../../assets/images/img_academy2.png';
+import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
+import ico_box_bg2 from '../../assets/images/ico_box_bg2.svg';
+import ico_box_bg3 from '../../assets/images/ico_box_bg3.svg';
+
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
@@ -27,6 +31,7 @@ const SpecializedFeatures = () => {
                         <li>관계를 여는 질문</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg1} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -40,6 +45,7 @@ const SpecializedFeatures = () => {
                         <li>10회 과정 - 목표 달성 · 행동 변화 · 삶의 전환</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg2} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -54,6 +60,7 @@ const SpecializedFeatures = () => {
                         <li>학교·교회·기관 강사 활동</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg3} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>코칭 프로그램 제안서 요청하기</button>

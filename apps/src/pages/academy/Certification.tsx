@@ -1,6 +1,10 @@
 import AnimatedSection from '../../components/AnimatedSection';
 import { useState } from 'react';
 import img_academy from '../../assets/images/img_academy4.png';
+import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
+import ico_box_bg2 from '../../assets/images/ico_box_bg2.svg';
+import ico_box_bg3 from '../../assets/images/ico_box_bg3.svg';
+import ico_box_bg4 from '../../assets/images/ico_box_bg4.svg';
 
 const tabList = [
   '미술치료 자격과정(한국아동미술치료학회)',
@@ -48,6 +52,7 @@ const CounselingChild = () => {
                                     <li>슈퍼바이저 과정: 교육 및 임상 지도자 과정</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -61,6 +66,7 @@ const CounselingChild = () => {
                                     <li>집단 프로그램 설계 및 운영</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg2} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -73,6 +79,7 @@ const CounselingChild = () => {
                                     <li>임상 적용 중심 실무형 교육</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg3} alt="" className="bg_img" />
                         </AnimatedSection>
                     </>
                 )}
@@ -92,6 +99,7 @@ const CounselingChild = () => {
                                     <li>1급 과정: 심화 개입 및 부모상담 통합</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -106,6 +114,7 @@ const CounselingChild = () => {
                                     <li>사례개념화 및 슈퍼비전</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg2} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -120,6 +129,7 @@ const CounselingChild = () => {
                                     <li>현장 적용 중심 전문가 과정</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg3} alt="" className="bg_img" />
                         </AnimatedSection>
                     </>
                 )}
@@ -138,6 +148,7 @@ const CounselingChild = () => {
                                     <li>임상심리사 2급 / 1급 시험 대비 과정</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -152,6 +163,7 @@ const CounselingChild = () => {
                                     <li>사례개념화 및 임상적 판단</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg2} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -166,6 +178,7 @@ const CounselingChild = () => {
                                     <li>상담센터 실무 즉시 적용</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg3} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -180,6 +193,7 @@ const CounselingChild = () => {
                                     <li>검사와 상담을 연결하는 임상 훈련</li>
                                 </ul>
                             </div>
+                            <img src={ico_box_bg4} alt="" className="bg_img" />
                         </AnimatedSection>
                     </>
                 )}

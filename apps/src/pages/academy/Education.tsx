@@ -1,5 +1,7 @@
 import AnimatedSection from '../../components/AnimatedSection';
 import img_academy from '../../assets/images/img_academy5.png';
+import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
+
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
@@ -42,6 +44,7 @@ const SpecializedFeatures = () => {
                         </li>
                     </ul>
                 </div>
+                <img src={ico_box_bg1} alt="" className="bg_img" />
             </AnimatedSection>
             
             <AnimatedSection className="btn_wrap" direction="up">

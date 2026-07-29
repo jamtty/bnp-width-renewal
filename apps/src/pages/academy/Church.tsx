@@ -1,5 +1,8 @@
 import AnimatedSection from '../../components/AnimatedSection';
 import img_academy from '../../assets/images/img_academy6.png';
+import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
+import ico_box_bg2 from '../../assets/images/ico_box_bg2.svg';
+
 const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
@@ -26,6 +29,7 @@ const SpecializedFeatures = () => {
                         <li>성도 관계 회복 - 상처 · 갈등 · 소통 단절 회복 , 관계 대화 훈련</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg1} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -39,6 +43,7 @@ const SpecializedFeatures = () => {
                         <li>소명 리디자인 - 사역의 의미와 방향 재정립</li>
                     </ul>
                 </div>
+                <img src={ico_box_bg2} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="btn_wrap" direction="up">
                 <button type="button" className='btn_primary'>코칭 프로그램 제안서 요청하기</button>
