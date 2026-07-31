@@ -126,7 +126,7 @@ const CounselingChild = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>시니어 종합 마음 건강 진단</h3>
+                                <h3>시니어 종합 마음건강 진단</h3>
                                 <p>정서·인지·관계·삶의 만족도를 종합적으로 확인하여<span className='pc_br'></span>현재의 상태와 회복 방향을 찾습니다.</p>
                             </div>
                             <div className='s_info'>
@@ -185,7 +185,7 @@ const CounselingChild = () => {
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>상실 회복 프로그램</h3>
-                                <p>사별 · 외로움 · 무의미감<span className='pc_br'></span>상실을 정리하고 삶의 의미를 다시 연결합니다.</p>
+                                <p>사별 · 외로움 · 무의미감<br />상실의 감정을 이해하고 애도하며 삶의 의미를 다시 연결합니다.</p>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
@@ -199,13 +199,14 @@ const CounselingChild = () => {
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>가족 관계 회복 프로그램</h3>
-                                <p>자녀 갈등 · 돌봄 스트레스<span className='pc_br'></span>세대 간 거리와 감정을 조율합니다.</p>
+                                <p>자녀 갈등 · 부부 갈등 · 돌봄 스트레스<br />세대 간의 차이와 쌓인 감정을 이해하고, 가족 안에서 건강한 관계와 역할을 다시 만들어갑니다.</p>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
                                     <li>자녀 관계 회복</li>
+                                    <li>가족 간 의사소통</li>
                                     <li>돌봄 부담 조율</li>
-                                    <li>가족 역할 정리</li>
+                                    <li>가족 역할 재정립</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -213,12 +214,13 @@ const CounselingChild = () => {
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>인지·기억 유지 프로그램</h3>
-                                <p>기억력 저하 · 치매 불안<span className='pc_br'></span>인지 기능을 유지하고 일상을 안정시킵니다.</p>
+                                <p>기억력 저하 · 인지 변화에 대한 걱정<br />현재의 인지 기능을 바탕으로 기억과 주의력을 자극하고, 안정적인 일상생활을 유지하도록 돕습니다.</p>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
-                                    <li>기억력 훈련</li>
-                                    <li>주의력 강화</li>
+                                    <li>기억력 자극</li>
+                                    <li>주의집중력 강화</li>
+                                    <li>인지 활동</li>
                                     <li>일상 기능 유지</li>
                                 </ul>
                             </div>

@@ -8,6 +8,7 @@ import img_specialized4 from '../../assets/images/img_specialized_features4.png'
 import img_specialized5 from '../../assets/images/img_specialized_features5.png';
 import img_specialized6 from '../../assets/images/img_specialized_features6.png';
 import img_specialized7 from '../../assets/images/img_specialized_features7.png';
+import img_specialized8 from '../../assets/images/img_specialized_features8.png';
 import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
 import ico_box_bg2 from '../../assets/images/ico_box_bg2.svg';
 import ico_box_bg3 from '../../assets/images/ico_box_bg3.svg';
@@ -18,12 +19,13 @@ const tabList = [
   '공황·불안 상담',
   '번아웃·직장 스트레스 상담',
   'ADHD·실행력 상담',
+  '은둔 · 고립 청년 상담',
   '중독 회복 상담',
-  '식이장애·감정조절 상담',
+  '식이장애·섭식문제 상담',
   '커리어 전환·방향 설계 상담'
 ];
 
-const tabKeys = ['features', 'panic', 'burnout', 'adhd', 'addiction', 'eating', 'career'];
+const tabKeys = ['features', 'panic', 'burnout', 'adhd', 'recluse', 'addiction', 'eating', 'career'];
 
 const SpecializedFeatures = () => {
   const [searchParams] = useSearchParams();
@@ -175,9 +177,9 @@ const SpecializedFeatures = () => {
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
-                                    <li>불안을 피하지 않고 다루는 힘 회복</li>
-                                    <li>공황·불안 반복 패턴의 원인 분석</li>
-                                    <li>심리검사 기반 맞춤 상담 설계</li>
+                                    <li>불안과 신체 반응을 스스로 조절하는 힘 회복</li>
+                                    <li>공황·불안을 지속시키는 반복 패턴의 이해와 변화</li>
+                                    <li>심리검사 기반 개인별 맞춤 상담 설계</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg3} alt="" className="bg_img" />
@@ -225,10 +227,12 @@ const SpecializedFeatures = () => {
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
-                                    <li>번아웃·직장 스트레스 전문 상담</li>
-                                    <li>심리검사 기반 원인 분석 및 맞춤 설계</li>
-                                    <li>버티는 삶이 아닌 회복 가능한 삶으로 전환</li>
+                                    <li>번아웃·직장 스트레스에 대한 전문 상담</li>
+                                    <li>심리검사 기반 소진 패턴 이해 및 맞춤 상담 설계</li>
+                                    <li>회복을 방해하는 일과 관계의 패턴 점검</li>
+                                    <li>버티는 삶에서 지속 가능한 삶으로의 전환</li>
                                 </ul>
+                                <p>단순히 쉬는 것이 아니라 다시 소진되지 않는 삶의 방식을 만듭니다.</p>
                             </div>
                             <img src={ico_box_bg3} alt="" className="bg_img" />
                         </AnimatedSection>
@@ -245,7 +249,9 @@ const SpecializedFeatures = () => {
                         </AnimatedSection>
                         <AnimatedSection className="tit" direction="up">
                             <h3>해야 하는 걸 알지만, 왜 자꾸 미루게 될까요?</h3>
-                            <p>계획은 세우지만 실행이 어렵고 시작은 하지만 끝까지 이어지지 않는다면<span className='pc_br'></span>의지 부족이 아니라 실행 시스템이 흔들리는 상태일 수 있습니다.</p>
+                            <p>
+                                계획은 세우지만 실행이 어렵고, 시작해도 끝까지 이어지지 않는다면<span className='pc_br'></span>단순한 의지의 문제가 아니라 주의집중과 실행기능, 자기조절의 어려움과 관련될 수 있습니다.
+                            </p>
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -253,7 +259,7 @@ const SpecializedFeatures = () => {
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
-                                    <li>실행력 · 자기조절 회복 상담</li>
+                                    <li>실행기능과 자기조절력을 강화하는 맞춤 상담·코칭</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
@@ -264,7 +270,7 @@ const SpecializedFeatures = () => {
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
-                                    <li>생각 → 계획 → 미루기 → 죄책감 이 흐름이 반복되면서 실행 자신감이 점점 낮아집니다.</li>
+                                    <li>해야 할 일은 많아지고 → 시작은 어려워지고 → 미루게 되고 → 자책과 죄책감이 쌓이면서 실행에 대한 자신감이 점점 낮아질 수 있습니다.</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -276,10 +282,11 @@ const SpecializedFeatures = () => {
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
                                     <li>미루기 감소와 실행력 향상</li>
-                                    <li>집중력과 자기조절 능력 회복</li>
-                                    <li>현실적인 목표·습관 시스템 구축</li>
-                                    <li>"해야 하는 사람"에서 "실행하는 사람"으로 변화</li>
+                                    <li>집중력과 자기조절 능력 강화</li>
+                                    <li>시간관리와 우선순위 설정</li>
+                                    <li>현실적인 목표와 지속 가능한 습관 구축</li>
                                 </ul>
+                                <p>생각에 머무르지 않고, 나에게 맞는 방식으로 실행하는 힘을 키웁니다.</p>
                             </div>
                             <img src={ico_box_bg3} alt="" className="bg_img" />
                         </AnimatedSection>
@@ -290,6 +297,58 @@ const SpecializedFeatures = () => {
                     </>
                 )}
                 {activeTab === 4 && (
+                    <>
+                        <AnimatedSection className="tit_img" direction="up">
+                            <img src={img_specialized8} alt="은둔 · 고립 청년" />
+                        </AnimatedSection>
+                        <AnimatedSection className="tit" direction="up">
+                            <h3>사람을 만나고 세상으로 나가야 한다는 건 알지만,<span className='pc_br'></span>왜 점점 더 혼자 있고 싶어질까요?</h3>
+                            <p>오랜 시간 관계와 사회생활을 피하고 집 안에 머무는 시간이 늘어난다면<span className='pc_br'></span>단순한 의지 부족이 아니라 불안·상처·실패 경험·관계의 어려움이 쌓인 결과일 수 있습니다.</p>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
+                            <div className='s_tit'>
+                                <h3>핵심 접근</h3>
+                            </div>
+                            <div className='s_info'>
+                                <ul className='ul_list_2'>
+                                    <li>안전한 관계에서 시작해 세상과 다시 연결되는 힘을 회복하는 상담</li>
+                                </ul>
+                            </div>
+                            <img src={ico_box_bg1} alt="" className="bg_img" />
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
+                            <div className='s_tit'>
+                                <h3>왜 반복될까요?</h3>
+                            </div>
+                            <div className='s_info'>
+                                <ul className='ul_list_2'>
+                                    <li>불안과 상처 → 관계·사회생활 회피 → 고립 → 자신감 저하의 흐름이 반복되면서 세상으로 다시 나가는 일이 점점 더 어려워질 수 있습니다.</li>
+                                </ul>
+                            </div>
+                            <img src={ico_box_bg2} alt="" className="bg_img" />
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
+                            <div className='s_tit'>
+                                <h3>특장점</h3>
+                            </div>
+                            <div className='s_info'>
+                                <ul className='ul_list_2'>
+                                    <li>은둔과 고립에 이르게 된 심리적 원인과 관계 패턴 이해</li>
+                                    <li>우울·불안·자존감 등 심리 상태를 고려한 맞춤 상담</li>
+                                    <li>작은 일상 회복부터 관계와 사회적 연결까지 단계적 지원</li>
+                                    <li>개인의 속도에 맞춘 현실적인 변화와 실행 계획 설계</li>
+                                </ul>
+                                <p>억지로 세상 밖으로 나오게 하는 것이 아니라, 다시 연결될 수 있는 힘을 함께 만들어 갑니다.</p>
+                            </div>
+                            <img src={ico_box_bg3} alt="" className="bg_img" />
+                        </AnimatedSection>
+                        <AnimatedSection className="btn_wrap" direction="up">
+                            <button type="button" className='btn_primary'>상담 신청하기</button>
+                            <button type="button" className='btn_secondary'>정밀 진단부터 시작하기</button>
+                        </AnimatedSection>
+                    </>
+                )}
+                {activeTab === 5 && (
                     <>
                         <AnimatedSection className="tit_img" direction="up">
                             <img src={img_specialized5} alt="중독 회복 상담" />
@@ -304,7 +363,7 @@ const SpecializedFeatures = () => {
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
-                                    <li>충동·습관·행동패턴 회복 상담</li>
+                                    <li>단순한 의지의 문제가 아니라 감정·충동·습관·환경이 연결된 반복 패턴이 형성되어 있을 수 있습니다.</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
@@ -315,7 +374,7 @@ const SpecializedFeatures = () => {
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
-                                    <li>불편한 감정 → 충동 → 행동 → 후회 이 흐름이 반복되면서 중독 행동이 강화됩니다.</li>
+                                    <li>불편한 감정이나 스트레스 → 강한 충동 → 반복 행동 → 일시적 해소 → 후회와 다시 쌓이는 스트레스의 악순환이 반복되면서 행동이 강화될 수 있습니다.</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -326,10 +385,10 @@ const SpecializedFeatures = () => {
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
-                                    <li>반복 행동의 원인 이해</li>
-                                    <li>충동 조절 능력 회복</li>
-                                    <li>재발 예방 구조 설계</li>
-                                    <li>건강한 대처 행동 형성</li>
+                                    <li>반복 행동을 유발하고 유지하는 요인 이해</li>
+                                    <li>충동과 감정 조절 능력 강화</li>
+                                    <li>재발을 줄이기 위한 생활 구조 설계</li>
+                                    <li>건강한 대처 행동과 회복 습관 형성</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg3} alt="" className="bg_img" />
@@ -339,64 +398,15 @@ const SpecializedFeatures = () => {
                                 <h3>위드원의 차별점</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_1'>
-                                    <li>중독 행동보다 원인을 먼저 이해합니다</li>
-                                    <li>심리검사 기반 맞춤 회복 전략을 설계합니다</li>
-                                    <li>감정·관계·생활 패턴을 함께 다룹니다</li>
-                                    <li>"참는 것"이 아닌 "변화가 지속되는 구조"를 만듭니다</li>
+                                <ul className='ul_list_2'>
+                                    <li>중독 행동만 멈추게 하기보다 반복되는 이유와 패턴을 함께 이해합니다.</li>
+                                    <li>심리검사를 바탕으로 개인별 회복 방향을 설계합니다.</li>
+                                    <li>감정·관계·생활환경과 행동 패턴을 통합적으로 다룹니다.</li>
+                                    <li>"참는 회복" 이 아니라 "지속 가능한 변화" 를 만들어갑니다.</li>
                                 </ul>
+                                <p>끊어내는 것에 그치지 않고, 다시 반복되지 않는 삶의 힘을 만들어 갑니다.</p>
                             </div>
                             <img src={ico_box_bg4} alt="" className="bg_img" />
-                        </AnimatedSection>
-                        <AnimatedSection className="btn_wrap" direction="up">
-                            <button type="button" className='btn_primary'>상담 신청하기</button>
-                            <button type="button" className='btn_secondary'>정밀 진단부터 시작하기</button>
-                        </AnimatedSection>
-                    </>
-                )}
-                {activeTab === 5 && (
-                    <>
-                        <AnimatedSection className="tit_img" direction="up">
-                            <img src={img_specialized6} alt="식이장애·감정조절 상담" />
-                        </AnimatedSection>
-                        <AnimatedSection className="tit" direction="up">
-                            <h3>반복되는 폭식과 절식,<span className='pc_br'></span>그 뒤에 감정이 있습니다.</h3>
-                            <p>폭식, 거식, 체중 집착이 반복된다면 단순 식습관이 아니라<span className='pc_br'></span>감정 조절의 어려움이 연결된 상태일 수 있습니다.</p>
-                        </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
-                            <div className='s_tit'>
-                                <h3>핵심 접근</h3>
-                            </div>
-                            <div className='s_info'>
-                                <ul className='ul_list_2'>
-                                    <li>감정과 식이 행동을 함께 회복하는 상담</li>
-                                </ul>
-                            </div>
-                            <img src={ico_box_bg1} alt="" className="bg_img" />
-                        </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
-                            <div className='s_tit'>
-                                <h3>왜 반복될까요?</h3>
-                            </div>
-                            <div className='s_info'>
-                                <ul className='ul_list_2'>
-                                    <li>불편한 감정 → 폭식·절식 → 죄책감과 자기비난 이 악순환이 반복되며 문제가 유지됩니다.</li>
-                                </ul>
-                            </div>
-                            <img src={ico_box_bg2} alt="" className="bg_img" />
-                        </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
-                            <div className='s_tit'>
-                                <h3>특장점</h3>
-                            </div>
-                            <div className='s_info'>
-                                <ul className='ul_list_1'>
-                                    <li>식이 문제와 감정 문제를 함께 다루는 상담</li>
-                                    <li>심리검사 기반 원인 분석 및 맞춤 설계</li>
-                                    <li>자기비난에서 자기회복으로의 전환</li>
-                                </ul>
-                            </div>
-                            <img src={ico_box_bg3} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="btn_wrap" direction="up">
                             <button type="button" className='btn_primary'>상담 신청하기</button>
@@ -407,11 +417,11 @@ const SpecializedFeatures = () => {
                 {activeTab === 6 && (
                     <>
                         <AnimatedSection className="tit_img" direction="up">
-                            <img src={img_specialized7} alt="커리어 전환·방향 설계 상담" />
+                            <img src={img_specialized6} alt="식이장애·감정조절 상담" />
                         </AnimatedSection>
                         <AnimatedSection className="tit" direction="up">
-                            <h3>지금 이 방향이 맞는지 확신이 없으신가요?</h3>
-                            <p>이직, 공백기, 진로 고민이 반복된다면 정보 부족이 아니라<span className='pc_br'></span>선택 기준이 흔들리는 상태일 수 있습니다.</p>
+                            <h3>반복되는 폭식과 절식,<span className='pc_br'></span>그 뒤에는 마음의 어려움이 숨어 있을 수 있습니다.</h3>
+                            <p>폭식, 극단적인 절식, 체중과 체형에 대한 집착이 반복된다면<span className='pc_br'></span>단순한 식습관의 문제가 아니라 감정과 자기인식, 반복되는 섭식 행동이 서로 연결되어 있을 수 있습니다.</p>
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
@@ -419,7 +429,7 @@ const SpecializedFeatures = () => {
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
-                                    <li>자기이해를 바탕으로 삶의 방향을 찾는 상담</li>
+                                    <li>감정과 섭식 행동을 함께 이해하고 회복하는 상담</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
@@ -430,7 +440,7 @@ const SpecializedFeatures = () => {
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
-                                    <li>불확실성 → 고민 반복 → 결정 미루기 이 흐름이 반복되면 방향이 흐려집니다.</li>
+                                    <li>불편한 감정과 스트레스 → 폭식·절식 등 섭식 행동 → 죄책감과 자기비난이 반복되면서 어려움이 지속될 수 있습니다.</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -440,11 +450,65 @@ const SpecializedFeatures = () => {
                                 <h3>특장점</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_1'>
-                                    <li>자기이해 기반 진로·커리어 설계</li>
-                                    <li>강점·가치관·성향을 함께 분석</li>
-                                    <li>막연한 고민을 실행 가능한 계획으로 전환</li>
+                                <ul className='ul_list_2'>
+                                    <li>섭식 행동과 그 이면의 감정을 함께 다루는 상담</li>
+                                    <li>심리검사 기반 반복 패턴 이해 및 맞춤 상담 설계</li>
+                                    <li>신체 이미지와 자기인식의 건강한 변화</li>
+                                    <li>자기비난에서 자기이해와 회복으로의 전환</li>
                                 </ul>
+                                <p>음식과의 싸움을 멈추고, 나 자신과 다시 건강한 관계를 만들어 갑니다.</p>
+                            </div>
+                            <img src={ico_box_bg3} alt="" className="bg_img" />
+                        </AnimatedSection>
+                        <AnimatedSection className="btn_wrap" direction="up">
+                            <button type="button" className='btn_primary'>상담 신청하기</button>
+                            <button type="button" className='btn_secondary'>정밀 진단부터 시작하기</button>
+                        </AnimatedSection>
+                    </>
+                )}
+                {activeTab === 7 && (
+                    <>
+                        <AnimatedSection className="tit_img" direction="up">
+                            <img src={img_specialized7} alt="커리어 전환·방향 설계 상담" />
+                        </AnimatedSection>
+                        <AnimatedSection className="tit" direction="up">
+                            <h3>이직, 공백기, 진로 고민으로<span className='pc_br'></span>같은 고민을 반복하고 있나요?</h3>
+                            <p>정보가 부족해서가 아니라, 나에 대한 이해와 선택의 기준이<span className='pc_br'></span>충분히 정리되지 않았기 때문일 수 있습니다.</p>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
+                            <div className='s_tit'>
+                                <h3>핵심 접근</h3>
+                            </div>
+                            <div className='s_info'>
+                                <ul className='ul_list_2'>
+                                    <li>자기이해를 바탕으로 나에게 맞는 삶과 커리어의 방향을 설계하는 상담·코칭</li>
+                                </ul>
+                            </div>
+                            <img src={ico_box_bg1} alt="" className="bg_img" />
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
+                            <div className='s_tit'>
+                                <h3>왜 반복될까요?</h3>
+                            </div>
+                            <div className='s_info'>
+                                <ul className='ul_list_2'>
+                                    <li>불확실성 → 반복되는 고민 → 결정 미루기 → 자신감 저하의 흐름이 이어지면서 나아갈 방향을 잃기 쉽습니다.</li>
+                                </ul>
+                            </div>
+                            <img src={ico_box_bg2} alt="" className="bg_img" />
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
+                            <div className='s_tit'>
+                                <h3>특장점</h3>
+                            </div>
+                            <div className='s_info'>
+                                <ul className='ul_list_2'>
+                                    <li>자기이해를 기반으로 한 진로·커리어 방향 설계</li>
+                                    <li>강점·가치관·성향을 종합적으로 분석</li>
+                                    <li>현실적인 선택 기준과 우선순위 정립</li>
+                                    <li>막연한 고민을 실행 가능한 계획으로 구체화</li>
+                                </ul>
+                                <p>막연한 고민에서 벗어나, 나만의 기준으로 선택하고 실행하는 삶을 만들어 갑니다.</p>
                             </div>
                             <img src={ico_box_bg3} alt="" className="bg_img" />
                         </AnimatedSection>

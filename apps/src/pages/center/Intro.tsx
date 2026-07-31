@@ -97,7 +97,7 @@ const CenterIntro = () => {
                     <div className='card'>심리검사</div>
                     <div className="box">
                         <div className="thumbnail"><img src={con2_3Img} alt="심리상담" /></div>
-                        <p>원데이 마음스캔 · 종합심리검사<br />진로·학습검사</p>
+                        <p>원데이 마음스캔 · 종합심리검사<br />진로 · 학습검사 · 아동놀이평가 및 검사</p>
                     </div>
                 </AnimatedSection>
                 <AnimatedSection direction="up" as="li" delay={0.45}>

@@ -1005,7 +1005,7 @@
 .intro .con_2 .con_list .box { background:#FAFAFA; border-radius:2rem; overflow:hidden;}
 .intro .con_2 .con_list .box .thumbnail { height:20rem;}
 .intro .con_2 .con_list .box .thumbnail img { width:100%; height:100%; object-fit:cover;}
-.intro .con_2 .con_list .box p { padding:2.5rem; font-size:2rem; font-weight:500; color:#222; text-align:center;}
+.intro .con_2 .con_list .box p { height:14rem; padding:2.5rem 1.5rem; font-size:2rem; font-weight:500; color:#222; text-align:center;}
 
 @media (max-width: 1366px) {
  /* 센터소개 - 센터소개 */
@@ -1085,7 +1085,7 @@
  .intro .con_2 .con_list .box { background:rgba(88, 104, 243, .1); border-radius:2rem; overflow:hidden;}
  .intro .con_2 .con_list .box .thumbnail { height:18rem; }
  .intro .con_2 .con_list .box .thumbnail img { width:100%; height:100%; object-fit:cover;}
- .intro .con_2 .con_list .box p { padding:2rem; font-size:1.8rem; font-weight:500; color:#222; text-align:center;}
+ .intro .con_2 .con_list .box p { height:auto; padding:2rem; font-size:1.8rem; font-weight:500; color:#222; text-align:center;}
 }
 
 
@@ -1134,17 +1134,19 @@
 
 /* 서브 공통 - 탭 */
 .page_sub .tab_wrap { position:relative; display:flex; margin:0 0 6rem; border-top:4px solid #E2E2E2; background:#fff;}
-.page_sub .tab_btn { padding:2rem 0; flex:1; border:none; background:none; font-size:2rem; font-weight:700; color:#999; cursor:pointer; text-align:center; white-space:nowrap; letter-spacing:-0.5px; }
+.page_sub .tab_btn { padding:2rem 3rem; flex:1 1 auto; border:none; background:none; font-size:2rem; font-weight:700; color:#999; cursor:pointer; text-align:center; white-space:nowrap; letter-spacing:-0.5px; position:relative; }
 .page_sub .tab_btn.on { color:#222;}
-.page_sub .tab_bar { position:absolute; top:-0.4rem; left:0; width:50%; height:0.4rem; background:#2662FD; border-radius:0.2rem; transition:left 0.3s;}
+.page_sub .tab_btn.on::after { content:''; position:absolute; top:-0.4rem; left:0; width:100%; height:0.4rem; background:#2662FD; border-radius:0.2rem; transition:opacity 0.3s;}
+.page_sub .tab_bar { display:none; }
 
 
 @media (max-width: 1366px) {
  /* 서브 공통 - 탭 */
  .page_sub .tab_wrap { position:relative; display:flex; flex-wrap:wrap; margin:0 0 3rem; border-top:4px solid #2662FD; background:#fff;}
- .page_sub .tab_btn { padding:1.6rem 1rem; flex:0 0 50%; box-sizing:border-box; border:none; border-bottom:1px solid #E2E2E2; background:none; font-size:1.5rem; font-weight:600; color:#999; cursor:pointer; text-align:center; word-break:keep-all;}
+ .page_sub .tab_btn { padding:1.6rem 1rem; flex:0 0 50%; box-sizing:border-box; border:none; border-bottom:1px solid #E2E2E2; background:none; font-size:1.5rem; font-weight:600; color:#999; cursor:pointer; text-align:center; word-break:keep-all; position:relative;}
  .page_sub .tab_btn:nth-child(odd):not(.tab_bar) { border-right:1px solid #E2E2E2;}
  .page_sub .tab_btn.on { color:#222; background:#F8F8FF;}
+ .page_sub .tab_btn.on::after { content:''; position:absolute; bottom:-0.2rem; left:0; width:100%; height:0.3rem; background:#2662FD; border-radius:0.2rem; transition:opacity 0.3s;}
  .page_sub .tab_bar { display:none; }
 }
 
@@ -1213,7 +1215,7 @@
 .child .tit { text-align:center; margin:0 0 7rem;}
 .child .tit h3 { font-family: 'GmarketSans'; font-size:4.5rem; font-weight:700; margin:0 0 2.5rem;}
 .child .tit p { font-size:2rem; font-weight:500; color:#555;}
-.child .box { display:flex; background-color:rgba(166, 175, 255, 0.05) !important; border-radius:2rem; padding:10rem 12rem; margin:0 0 3rem; gap:3rem; position:relative; overflow:hidden; }
+.child .box { display:flex; background-color:rgba(166, 175, 255, 0.05) !important; border-radius:2rem; padding:10rem 12rem; margin:0 0 3rem; gap:6rem; position:relative; overflow:hidden; }
 
 .child .box .bg_img { position:absolute; right:0; top:0; pointer-events:none; z-index:-1; }
 
@@ -1226,7 +1228,7 @@
 .child .box.d-block .s_tit p { margin:2rem 0 0; font-size:2rem; font-weight:600; color:#333; }
 .child .box .s_info { flex:1; font-size:1.6rem; font-weight:600; }
 .child .box .s_info .no-margin { margin-top:0.5rem !important;}
-.child .box .s_info p { font-size:2rem; font-weight:600; margin:2rem 0 0;}
+.child .box .s_info p { font-size:2rem; font-weight:500; margin:2rem 0 0;}
 .child .box .s_info .top { font-size:2rem; font-weight:600; margin:0 0 2rem;}
 .child .box .s_info .sm { font-size:2rem; margin:1rem 0 0; line-height:1.8; }
 
@@ -1327,10 +1329,10 @@
  .child .box.d-block .s_tit p { margin:2rem 0 0; font-size:1.6rem; font-weight:600; color:#333; }
  .child .box .s_tit { width:100%;}
  .child .box .s_tit h3 { font-size:1.8rem; font-weight:700;}
- .child .box .s_tit p { margin:1.1rem 0 0; font-size:1.4rem; font-weight:600; color:#FF5F37;}
+ .child .box .s_tit p { margin:1.1rem 0 0; font-size:1.4rem; font-weight:600; color:#2662FD;}
  .child .box .s_info { flex:1; font-size:1.4rem; font-weight:600; }
  .child .box .s_info .no-margin { margin-top:0.5rem !important;}
- .child .box .s_info p { font-size:1.4rem; font-weight:600; margin:3rem 0 0;}
+ .child .box .s_info p { font-size:1.4rem; font-weight:500; margin:3rem 0 0;}
  .child .box .s_info .top { font-size:1.4rem; font-weight:600; margin:0 0 3rem;}
  .child .box .s_info .sm { font-size:1.4rem; margin:1rem 0 0;}
 

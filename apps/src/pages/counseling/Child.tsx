@@ -1,4 +1,4 @@
-import AnimatedSection from '../../components/AnimatedSection';
+﻿import AnimatedSection from '../../components/AnimatedSection';
 import { useState } from 'react';
 import img_counseling from '../../assets/images/img_counseling_child.png';
 import img_counseling2 from '../../assets/images/img_counseling_child2.png';
@@ -114,10 +114,10 @@ const CounselingChild = () => {
                             <div className='s_info'>
                                 <ul className='ul_list_3'>
                                     <li>초기 면담 : 50분</li>
-                                    <li>심리검사: 60~120분</li>
                                     <li>아동 상담: 40~50분</li>
+                                    <li>부모 상담: 50분</li>
+                                    <li>심리검사: 60~120분</li>
                                     <li>해석 상담: 50분</li>
-                                    <li>부모 상담: 50분</li> 
                                 </ul>
                             </div>
                             <img src={ico_box_bg_time} alt="" className="bg_img" />
@@ -154,7 +154,7 @@ const CounselingChild = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>치료 방법</h3>
+                                <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
@@ -192,12 +192,12 @@ const CounselingChild = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>치료 방법</h3>
+                                <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
                                     <li>스마트폰보다 재미있는 '성취감'을 경험하면 아이는 스스로 멈출 수 있습니다.</li>
-                                    <li>디지털조절훈련 · 부모코칭 · 생활습관훈련 · 자기조절훈련</li>
+                                    <li>디지털 사용 조절 · 부모코칭 · 생활습관 개선 · 자기조절 능력 향상</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -230,12 +230,12 @@ const CounselingChild = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>치료 방법</h3>
+                                <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
                                     <li>몸으로 터져 나오는 긴장을 말과 호흡으로 안전하게 풀어내어,<span className='pc_br'></span>아이의 몸과 마음을 편안하게 만듭니다.</li>
-                                    <li>긴장이완훈련 · 불안조절훈련 · 가족반응코칭 · 놀이치료</li>
+                                    <li>치료방법 긴장 이완 · 불안 조절 · 가족반응 코칭 · 놀이치료</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -268,12 +268,12 @@ const CounselingChild = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>치료 방법</h3>
+                                <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
                                     <li>화부터 내는 습관을 바꾸기 위해, 아이가 자기 마음을 정확한 언어로 표현하는 법을 배웁니다.</li>
-                                    <li>놀이치료 · 감정코칭 · 정서조절훈련 · 자기표현훈련</li>
+                                    <li>놀이치료 · 감정코칭 · 정서조절력 강화 · 자기표현 향상</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -306,12 +306,12 @@ const CounselingChild = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>치료 방법</h3>
+                                <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
                                     <li>아이가 자신의 강점과 가능성을 발견하고, 스스로를 긍정적으로 바라볼 수 있도록 돕습니다.<span className='pc_br'></span>작은 성공 경험을 통해 "나도 할 수 있다"는 자신감을 키워갑니다.</li>
-                                    <li>자기이해상담 , 놀이치료 , 자기표현훈련, 인지재구성 , 강점 발견 및 성공경험 훈련</li>
+                                    <li>놀이치료 · 자기이해 상담 · 건강한 자기표현 · 긍정적 사고 형성 · 강점 발견 및 성공경험</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -344,7 +344,7 @@ const CounselingChild = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>치료 방법</h3>
+                                <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>

@@ -1,4 +1,4 @@
-import AnimatedSection from '../../components/AnimatedSection';
+﻿import AnimatedSection from '../../components/AnimatedSection';
 import { useState } from 'react';
 import img_counseling from '../../assets/images/img_counseling_teen.png';
 import img_counseling2 from '../../assets/images/img_counseling_teen2.png';
@@ -14,9 +14,9 @@ import ico_box_bg_time from '../../assets/images/ico_box_bg_time.svg';
 const tabList = [
   '특장점',
   '정서불안/자기이해',
-  '진로혼란 · 정체감',
+  '진로탐색 · 정체감',
   '관계 · 또래 · 가족갈등',
-  '학습 · 집중력 · ADHD',
+  'ADHD · 학습 · 집중력',
   '디지털 과의존'
 ];
 
@@ -67,9 +67,9 @@ const CounselingChild = () => {
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
-                                    <li>기질 분석 (TCI) → 성향과 에너지 방향</li>
-                                    <li>심리 상태 (MMPI-A) → 정서·스트레스 상태</li>
-                                    <li>진로 탐색 → 가치관과 방향성</li>
+                                    <li>기질·성격 분석 (TCI)→ 타고난 기질과 성격 특성</li>
+                                    <li>정서·심리 평가 (MMPI-A)→ 정서 상태와 심리적 어려움</li>
+                                    <li>진로 탐색→ 흥미·강점·가치관과 진로 방향</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -136,7 +136,7 @@ const CounselingChild = () => {
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
-                                    <li>정서·생각·행동·관계를 함께 이해하고,자기이해·감정조절·관계기술·실행코칭을 통해 실제 삶의 변화를 돕습니다.</li>
+                                    <li>정서·생각·행동·관계를 통합적으로 이해하고, 자기이해와 감정조절, 관계기술 향상과 실행코칭을 통해 청소년의 실제적인 변화와 성장을 돕습니다.</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg3} alt="" className="bg_img" />
@@ -169,7 +169,7 @@ const CounselingChild = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>치료 방법</h3>
+                                <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
@@ -207,7 +207,7 @@ const CounselingChild = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>치료 방법</h3>
+                                <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
@@ -245,12 +245,12 @@ const CounselingChild = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>치료 방법</h3>
+                                <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
                                     <li>관계 패턴을 분석하고 갈등의 원인을 이해하여, 건강한 의사소통과 관계 회복을 돕습니다.</li>
-                                    <li>관계문제 · 의사소통문제 · 역할갈등 · 가족상담</li>
+                                    <li>관계패턴 이해 · 의사소통 코칭 · 갈등조절 · 가족상담</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -283,12 +283,12 @@ const CounselingChild = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>치료 방법</h3>
+                                <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
                                     <li>부족한 의지를 탓하기보다, 실행기능과 자기조절 능력을 강화하여 스스로 계획하고 끝까지 해내는 경험을 만들어 갑니다.</li>
-                                    <li>학습코칭 · 실행기능훈련 · 시간관리훈련 · 자기조절훈련</li>
+                                    <li>관계패턴 이해 · 의사소통 코칭 · 갈등조절 · 가족상담</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -324,12 +324,12 @@ const CounselingChild = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>치료 방법</h3>
+                                <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
                                     <li>강력한 디지털 자극에 무뎌진 조절력을 회복하고, 일상의 즐거움과 활력을 찾도록 돕습니다</li>
-                                    <li>디지털조절훈련 · 자기조절훈련 · 생활습관코칭 · 부모코칭</li>
+                                    <li>디지털 사용 조절 · 자기조절력 강화 · 생활습관 코칭 · 부모코칭</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />

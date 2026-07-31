@@ -1,4 +1,4 @@
-import AnimatedSection from '../../components/AnimatedSection';
+﻿import AnimatedSection from '../../components/AnimatedSection';
 import { useState } from 'react';
 import img_counseling from '../../assets/images/img_counseling_adult.png';
 import img_counseling2 from '../../assets/images/img_counseling_adult2.png';
@@ -15,9 +15,9 @@ const tabList = [
   '특장점',
   '정서 문제\n(우울 · 불안 · 공황)',
   '관계 문제\n(연애 · 가족 · 직장 갈등 등)',
-  '번아웃 · 직장 스트레스',
-  '진로 · 삶의 방향 혼란',
-  '자존감 · 자기이해'
+  '자존감 · 자기이해',
+  '스트레스 · 번아웃',
+  '진로 · 삶의 방향'
 ];
 
 const CounselingChild = () => {
@@ -164,12 +164,12 @@ const CounselingChild = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>치료 방법</h3>
+                                <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
-                                    <li>나를 힘들게 하는 감정의 원인을 이해하고, 우울과 불안에 휘둘리지 않는 안정감을 회복합니다.</li>
-                                    <li>정서조절훈련 · 인지행동치료 · 감정회복훈련</li>
+                                    <li>나를 힘들게 하는 감정의 원인을 이해하고, 우울과 불안에 휘둘리지 않는 정서적 안정감을 회복합니다.</li>
+                                    <li>정서조절 · 인지행동치료 · 감정중심치료</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg3} alt="" className="bg_img" />
@@ -202,12 +202,12 @@ const CounselingChild = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>치료 방법</h3>
+                                <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
-                                    <li>남에게 맞춰주다 지친 나를 지키고, 상처받지 않으면서 당당하게 내 마음을 전하는 건강한 관계의 기술을 배웁니다.</li>
-                                    <li>관계회복상담 · 의사소통훈련 · 감정표현훈련 · 경계설정훈련</li>
+                                    <li>남에게 맞추느라 지친 나를 돌보고, 관계 속에서 나를 지키면서도 내 마음을 건강하게 표현하는 방법을 배웁니다.</li>
+                                    <li>관계패턴 이해 · 의사소통 코칭 · 감정표현 · 건강한 경계 설정</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -215,82 +215,6 @@ const CounselingChild = () => {
                     </>
                 )}
                 {activeTab === 3 && (
-                    <>
-                        <AnimatedSection className="tit_img" direction="up">
-                            <img src={img_counseling4} alt="번아웃 · 직장 스트레스" />
-                        </AnimatedSection>
-                        <AnimatedSection className="tit" direction="up">
-                            <h3>지속적인 피로와 무기력은<span className='pc_br'></span>단순 피곤함이 아니라 회복이 필요한 상태입니다.</h3>
-                        </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
-                            <div className='s_tit'>
-                                <h3>체크리스트</h3>
-                                <p>2개 이상 해당 시 스트레스 상담 권장</p>
-                            </div>
-                            <div className='s_info'>
-                                <ul className='ul_list_1'>
-                                    <li>일에 대한 의욕이 크게 떨어졌다</li>
-                                    <li>출근이나 업무가 부담스럽다</li>
-                                    <li>쉽게 지치고 에너지가 없다</li>
-                                    <li>감정적으로 무기력하거나 예민하다</li>
-                                    <li>쉬어도 회복되는 느낌이 없다</li>
-                                </ul>
-                            </div>
-                            <img src={ico_box_bg1} alt="" className="bg_img" />
-                        </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
-                            <div className='s_tit'>
-                                <h3>치료 방법</h3>
-                            </div>
-                            <div className='s_info'>
-                                <ul className='ul_list_2'>
-                                    <li>단순히 쉬는 것을 넘어 마음의 배터리를 다시 채우고, 일과 삶 사이에서 나를 잃지 않는 단단한 중심을 잡도록 돕습니다.</li>
-                                    <li>번아웃회복 · 스트레스관리 · 에너지회복훈련 · 삶의균형코칭</li>
-                                </ul>
-                            </div>
-                            <img src={ico_box_bg2} alt="" className="bg_img" />
-                        </AnimatedSection>
-                    </>
-                )}
-                {activeTab === 4 && (
-                    <>
-                        <AnimatedSection className="tit_img" direction="up">
-                            <img src={img_counseling5} alt="진로 · 삶의 방향 혼란" />
-                        </AnimatedSection>
-                        <AnimatedSection className="tit" direction="up">
-                            <h3>방향이 흔들릴 때<span className='pc_br'></span>삶 전체가 막막하게 느껴질 수 있습니다.</h3>
-                        </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
-                            <div className='s_tit'>
-                                <h3>체크리스트</h3>
-                                <p>2개 이상 해당 시 진로·자기이해 상담을 권장합니다.</p>
-                            </div>
-                            <div className='s_info'>
-                                <ul className='ul_list_1'>
-                                    <li>지금의 삶이 맞는지 확신이 없다</li>
-                                    <li>진로 또는 직업 방향이 혼란스럽다</li>
-                                    <li>목표 없이 시간을 보내는 느낌이 든다</li>
-                                    <li>의미나 동기를 찾기 어렵다</li>
-                                    <li>변화가 필요하지만 어떻게 해야 할지 모르겠다</li>
-                                </ul>
-                            </div>
-                            <img src={ico_box_bg1} alt="" className="bg_img" />
-                        </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
-                            <div className='s_tit'>
-                                <h3>치료 방법</h3>
-                            </div>
-                            <div className='s_info'>
-                                <ul className='ul_list_2'>
-                                    <li>나의 강점과 가치관을 발견하고, 삶의 방향과 목표를 구체적으로 설계해 나갑니다.</li>
-                                    <li>진로코칭 · 자기이해 · 가치탐색 · 목표설계</li>
-                                </ul>
-                            </div>
-                            <img src={ico_box_bg2} alt="" className="bg_img" />
-                        </AnimatedSection>
-                    </>
-                )}
-                {activeTab === 5 && (
                     <>
                         <AnimatedSection className="tit_img" direction="up">
                             <img src={img_counseling6} alt="자존감 · 자기이해" />
@@ -316,12 +240,88 @@ const CounselingChild = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>치료 방법</h3>
+                                <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
                                     <li>자신을 있는 그대로 이해하고 수용하며, 건강한 자기존중감을 회복합니다.</li>
                                     <li>자기이해상담 · 인지재구성 · 자기수용훈련 · 강점탐색</li>
+                                </ul>
+                            </div>
+                            <img src={ico_box_bg2} alt="" className="bg_img" />
+                        </AnimatedSection>
+                    </>
+                )}
+                {activeTab === 4 && (
+                    <>
+                        <AnimatedSection className="tit_img" direction="up">
+                            <img src={img_counseling4} alt="스트레스 · 번아웃" />
+                        </AnimatedSection>
+                        <AnimatedSection className="tit" direction="up">
+                            <h3>지속적인 피로와 무기력은<span className='pc_br'></span>단순 피곤함이 아니라 회복이 필요한 상태입니다.</h3>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
+                            <div className='s_tit'>
+                                <h3>체크리스트</h3>
+                                <p>2개 이상 해당 시 스트레스 상담 권장</p>
+                            </div>
+                            <div className='s_info'>
+                                <ul className='ul_list_1'>
+                                    <li>일에 대한 의욕이 크게 떨어졌다</li>
+                                    <li>출근이나 업무가 부담스럽다</li>
+                                    <li>쉽게 지치고 에너지가 없다</li>
+                                    <li>감정적으로 무기력하거나 예민하다</li>
+                                    <li>쉬어도 회복되는 느낌이 없다</li>
+                                </ul>
+                            </div>
+                            <img src={ico_box_bg1} alt="" className="bg_img" />
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
+                            <div className='s_tit'>
+                                <h3>상담 방법</h3>
+                            </div>
+                            <div className='s_info'>
+                                <ul className='ul_list_2'>
+                                    <li>단순히 쉬는 것을 넘어 소진의 원인을 이해하고, 지친 마음과 에너지를 회복하며 일과 삶 속에서 나만의 균형을 되찾도록 돕습니다.</li>
+                                    <li>번아웃 회복 · 스트레스 관리 · 에너지 회복 · 일과 삶의 균형 코칭</li>
+                                </ul>
+                            </div>
+                            <img src={ico_box_bg2} alt="" className="bg_img" />
+                        </AnimatedSection>
+                    </>
+                )}
+                {activeTab === 5 && (
+                    <>
+                        <AnimatedSection className="tit_img" direction="up">
+                            <img src={img_counseling5} alt="진로 · 삶의 방향 혼란" />
+                        </AnimatedSection>
+                        <AnimatedSection className="tit" direction="up">
+                            <h3>방향이 흔들릴 때<span className='pc_br'></span>삶 전체가 막막하게 느껴질 수 있습니다.</h3>
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
+                            <div className='s_tit'>
+                                <h3>체크리스트</h3>
+                                <p>2개 이상 해당 시 진로·자기이해 상담을 권장합니다.</p>
+                            </div>
+                            <div className='s_info'>
+                                <ul className='ul_list_1'>
+                                    <li>지금의 삶이 맞는지 확신이 없다</li>
+                                    <li>진로 또는 직업 방향이 혼란스럽다</li>
+                                    <li>목표 없이 시간을 보내는 느낌이 든다</li>
+                                    <li>의미나 동기를 찾기 어렵다</li>
+                                    <li>변화가 필요하지만 어떻게 해야 할지 모르겠다</li>
+                                </ul>
+                            </div>
+                            <img src={ico_box_bg1} alt="" className="bg_img" />
+                        </AnimatedSection>
+                        <AnimatedSection className="box" direction="up">
+                            <div className='s_tit'>
+                                <h3>상담 방법</h3>
+                            </div>
+                            <div className='s_info'>
+                                <ul className='ul_list_2'>
+                                    <li>나의 강점과 가치관을 발견하고, 삶의 방향과 목표를 구체적으로 설계해 나갑니다.</li>
+                                    <li>진로코칭 · 자기이해 · 가치탐색 · 목표설계</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
