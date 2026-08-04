@@ -17,7 +17,9 @@ const SpecializedFeatures = () => {
             </AnimatedSection>
             <AnimatedSection className="tit" direction="up">
                 <h3>아이의 행동에는 이유가 있습니다</h3>
-                <p>산만함, 짜증, 위축, 떼쓰기 고쳐야 할 문제가 아니라<span className='pc_br'></span>이해해야 할 신호입니다</p>
+                <p>
+                    산만함, 짜증, 위축, 떼쓰기는 단순히 고쳐야 할 문제가 아니라<span className='pc_br'></span>아이의 마음과 발달 상태를 이해해야 할 신호일 수 있습니다.
+                </p>
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -25,10 +27,10 @@ const SpecializedFeatures = () => {
                 </div>
                 <div className='s_info'>
                     <ul className='ul_list_1'>
-                        <li>아이의 행동이 이해되지 않을 때</li>
-                        <li>ADHD 또는 발달 문제가 걱정될 때</li>
-                        <li>정서·행동 문제가 반복될 때</li>
-                        <li>양육 방향이 고민될 때</li>
+                        <li>아이의 행동과 감정 변화를 이해하기 어려울 때</li>
+                        <li>주의집중이나 발달 상태가 걱정될 때</li>
+                        <li>정서·행동의 어려움이 반복될 때</li>
+                        <li>아이에게 맞는 양육 방향이 고민될 때</li>
                     </ul>
                 </div>
                 <img src={ico_box_bg1} alt="" className="bg_img" />
@@ -39,14 +41,15 @@ const SpecializedFeatures = () => {
                 </div>
                 <div className='s_info'>
                     <ul className='ul_list_1'>
-                        <li>아이의 감정 상태</li>
-                        <li>행동 패턴과 문제 원인</li>
-                        <li>발달 수준</li>
-                        <li>부모-자녀 상호작용</li>
+                        <li>아이의 정서 상태와 감정 표현</li>
+                        <li>행동 특성과 반복되는 패턴</li>
+                        <li>현재의 발달 및 인지 수준</li>
+                        <li>부모·자녀 상호작용과 양육환경</li>
                     </ul>
                 </div>
                 <img src={ico_box_bg2} alt="" className="bg_img" />
             </AnimatedSection>
+            {/*
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
                     <h3>평가 구성</h3>
@@ -60,17 +63,19 @@ const SpecializedFeatures = () => {
                 </div>
                 <img src={ico_box_bg3} alt="" className="bg_img" />
             </AnimatedSection>
+            */}
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
-                    <h3>검사를 통해<br />얻을 수 있는 것</h3>
+                    <h3>진행과정</h3>
                 </div>
                 <div className='s_info'>
-                    <p className='top'>아이를 바꾸기 전에, 먼저 아이를 이해합니다.</p>
+                    <p className='top'>아동의 연령과 발달 수준, 평가 내용에 따라 소요 시간과 검사 구성이 달라질 수 있습니다.  이것을 추가 해 주세요</p>
                     <ul className='ul_list_1'>
-                        <li>아이의 특성과 강점 이해</li>
-                        <li>문제 행동의 원인 파악</li>
-                        <li>부모 양육 방향 설정</li>
-                        <li>가정·학교 지원 방법 제안</li>
+                        <li>부모 초기 면담(약 20~30분)</li>
+                        <li>아동 놀이관찰 및 평가(약 40~60분)</li>
+                        <li>필요 시 발달·인지 및 정서·행동 평가 추가</li>
+                        <li>전문가 종합 분석</li>
+                        <li>부모 결과 해석 상담(약 50분)</li>
                     </ul>
                 </div>
                 <img src={ico_box_bg4} alt="" className="bg_img" />

@@ -59,7 +59,7 @@ const CounselingChild = () => {
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
                                 <h3>진행 방식</h3>
-                                <p>아동은 검사처럼 진행하지 않습니다.</p>
+                                <p>아이에게 부담을 주는 검사 중심이 아니라,<span className='pc_br'></span>놀이와 관찰을 통해 자연스럽게 이해합니다</p>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
@@ -89,10 +89,11 @@ const CounselingChild = () => {
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
-                                    <li>정서 상태 (우울·불안)</li>
-                                    <li>학습 및 실행력 흐름</li>
-                                    <li>진로 방향</li>
-                                    <li>부모와의 관계 상태</li>
+                                    <li>정서 상태와 스트레스 수준</li>
+                                    <li>기질·성격과 자기조절 특성</li>
+                                    <li>학업 적응과 실행의 어려움</li>
+                                    <li>부모·또래 관계</li>
+                                    <li>진로와 미래에 대한 고민</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
@@ -103,12 +104,12 @@ const CounselingChild = () => {
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>
-                                    <li>청소년 정서 검사 (MMPI-A)</li>
-                                    <li>기질·성격 검사 (TCI)</li>
-                                    <li>생각·감정 흐름 탐색 (SCT)</li>
-                                    <li>(필요 시) 간단 진로·학습 확인</li>
+                                    <li>청소년 정서·심리 상태(MMPI-A)</li>
+                                    <li>기질·성격 특성(TCI)</li>
+                                    <li>생각과 감정의 흐름(SCT)</li>
+                                    <li>필요 시 학습·진로 관련 검사 추가</li>
                                 </ul>
-                                <p>혼란을 정리하고 방향을 잡는 데 도움을 줍니다.</p>
+                                <p>하루의 검사와 전문 해석 상담을 통해 현재의 어려움을 종합적으로 이해하고, 앞으로의 성장과 상담 방향을 함께 찾아갑니다.</p>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
                         </AnimatedSection>
