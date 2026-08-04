@@ -17,8 +17,8 @@ const SpecializedFeatures = () => {
                 <img src={img_coaching} alt="리더십 코칭" />
             </AnimatedSection>
             <AnimatedSection className="tit" direction="up">
-                <h3>좋은 리더는 사람을 관리하지 않고,<span className='pc_br'></span>관계를 이끕니다</h3>
-                <p>성과와 관계 사이에서 고민하는 리더에게 사람의 마음을 이해하는 리더십을 제공합니다.</p>
+                <h3>좋은 리더는 사람을 관리하는 것을 넘어, 관계를 이끕니다</h3>
+                <p>성과와 관계 사이에서 고민하는 리더에게 자신과 사람을 이해하고<span className='pc_br'></span>조직의 관계를 변화시키는 리더십 코칭을 제공합니다.</p>
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
@@ -27,7 +27,7 @@ const SpecializedFeatures = () => {
                 <div className='s_info'>
                     <ul className='ul_list_1'>
                         <li>팀장 · 관리자</li>
-                        <li>기업 임원</li>
+                        <li>기업 임원 · CEO</li>
                         <li>기관 및 조직 리더</li>
                         <li>교회·사역 리더</li>
                     </ul>
@@ -40,6 +40,7 @@ const SpecializedFeatures = () => {
                 </div>
                 <div className='s_info'>
                     <ul className='ul_list_1'>
+                        <li>자기이해와 리더십 스타일</li>
                         <li>의사소통</li>
                         <li>갈등 관리</li>
                         <li>팀 리더십</li>
@@ -55,10 +56,12 @@ const SpecializedFeatures = () => {
                 </div>
                 <div className='s_info'>
                     <ul className='ul_list_2'>
-                        <li>대상관계이론 기반 리더십 코칭</li>
-                        <li>무의식적 관계 패턴 분석</li>
-                        <li>리더-팀원 상호작용 진단</li>
-                        <li>실제 대화 중심 코칭</li>
+                        <li>리더의 내면을 이해하고, 관계의 변화를 통해 리더십을 성장시킵니다.</li>
+                        <li>심리학·대상관계이론 기반 리더십 코칭</li>
+                        <li>리더의 감정과 무의식적 관계 패턴 이해</li>
+                        <li>리더·팀원 간 관계역동 분석</li>
+                        <li>갈등과 반복되는 관계 패턴의 원인 탐색</li>
+                        <li>실제 조직 상황과 대화 중심의 코칭</li>
                     </ul>
                 </div>
                 <img src={ico_box_bg3} alt="" className="bg_img" />
@@ -69,27 +72,28 @@ const SpecializedFeatures = () => {
                 </div>
                 <div className='s_info'>
                     <ul className='ul_list_2'>
-                        <li>팀원과의 반복되는 갈등</li>
-                        <li>말해도 전달되지 않는 소통 문제</li>
-                        <li>성과 압박과 번아웃</li>
-                        <li>리더십 자신감 저하</li>
-                        <li>조직 내 관계 스트레스</li>
+                        <li>팀원과 반복되는 갈등</li>
+                        <li>말해도 전달되지 않는 소통의 어려움</li>
+                        <li>성과 압박과 리더의 정서적 소진</li>
+                        <li>리더십 역할에 대한 부담과 자신감 저하</li>
+                        <li>조직 내 관계 스트레스와 갈등</li>
+                        <li>중요한 의사결정과 변화 관리</li>
                     </ul>
                 </div>
                 <img src={ico_box_bg4} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
-                    <h3>코칭 결과</h3>
+                    <h3>코칭을 통해 달라지는 것</h3>
                 </div>
                 <div className='s_info'>
-                    <p className="top">리더십은 기술이 아니라 관계의 예술입니다.</p>
+                    <p className="top">리더십은 기술을 넘어, 사람과 관계를 움직이는 힘입니다..</p>
                     <ul className='ul_list_1'>
-                        <li>대화가 달라집니다</li>
-                        <li>갈등이 줄어듭니다</li>
-                        <li>팀 신뢰가 높아집니다</li>
-                        <li>영향력이 커집니다</li>
-                        <li>리더십이 안정됩니다</li>
+                        <li>자신의 리더십 패턴을 이해합니다.</li>
+                        <li>대화와 소통 방식이 달라집니다.</li>
+                        <li>갈등을 다루는 힘이 커집니다.</li>
+                        <li>팀의 신뢰와 협력을 이끄는 역량을 키웁니다.</li>
+                        <li>흔들리지 않는 자신만의 리더십을 만들어갑니다</li>
                     </ul>
                 </div>
                 <img src={ico_box_bg5} alt="" className="bg_img" />

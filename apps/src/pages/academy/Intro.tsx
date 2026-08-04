@@ -5,8 +5,9 @@ const AcademyIntro = () => {
   return (
     <div className="page_cont page_sub child">
         <AnimatedSection className="page_tit" direction="up">
-            <h2>이해에서 시작해,<span className='pc_br'></span>전문가로 완성되는 성장의 여정</h2>
-            <p>배우는 것을 넘어 상담 · 코칭 · 강의 · 기관 활동까지 연결되는 성장 시스템</p>
+            <h2>배움에서 시작해,<span className='pc_br'></span>전문가로 성장하는 여정</h2>
+            <p>배우는 것을 넘어 상담·코칭·강의·기관 활동까지 연결되는<span className='pc_br'></span>
+전문가 성장 시스템을 제공합니다.해, 전문가로 완성되는 성장의 여정</p>
         </AnimatedSection>
         <section className="con_1">
             <AnimatedSection className="tit_img" direction="up">

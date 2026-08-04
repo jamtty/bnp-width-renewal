@@ -25,8 +25,8 @@ const SpecializedFeatures = () => {
                 <div className='s_info'>
                     <p className="top">공부를 못하는 것이 아니라, 공부하는 방식의 문제일 수 있습니다.</p>
                     <ul className='ul_list_2'>
-                        <li>대상 - 학습 효율이 낮은 학생 , 시험 불안이 큰 학생 , 성인 학습자</li>
-                        <li>핵심 영역 - 집중력 , 학습 습관 , 시간 관리, 자기조절</li>
+                        <li>학습 효율이 낮은 학생 · 공부를 시작하고 지속하기 어려운 학생 · 시험 불안이 큰 학생 · 성인 학습자</li>
+                        <li>핵심 영역 - 집중력 · 학습 습관 · 시간 관리 · 학습 동기 · 자기조절 · 실행력</li>
                         <li>
                             위드원만의 차별성
                             <p className="sm">
@@ -51,9 +51,9 @@ const SpecializedFeatures = () => {
                         <li>
                             위드원만의 차별성
                             <p className="sm">
-                                성격·가치·역량 통합 분석<br />
-                                검사 결과를 실제 진로 선택으로 연결<br />
-                                흥미보다 지속 가능한 진로 방향 설계
+                                성격·강점·가치·흥미 통합 분석<br />
+                                검사 결과를 실제 진로 선택과 실행으로 연결<br />
+                                현재의 선택을 넘어 지속 가능한 진로·커리어 방향 설계
                             </p>
                         </li>
                     </ul>
@@ -62,15 +62,15 @@ const SpecializedFeatures = () => {
             </AnimatedSection>
             <AnimatedSection className="box" direction="up">
                 <div className='s_tit'>
-                    <h3>코칭 결과</h3>
+                    <h3>코칭을 통해 달라지는 것</h3>
                 </div>
                 <div className='s_info'>
-                    <p className="top">무엇을 해야 할지보다, 어떻게 할 수 있는지가 중요합니다.</p>
+                    <p className='top'>무엇을 해야 하는지 아는 것을 넘어, 나에게 맞는 방법으로 실행할 수 있도록 돕습니다.</p>
                     <ul className='ul_list_2'>
-                        <li>공부가 쉬워집니다.</li>
-                        <li>실행이 지속됩니다.</li>
-                        <li>진로가 선명해집니다.</li>
-                        <li>선택의 확신이 생깁니다.</li>
+                        <li>나에게 맞는 학습 방법을 찾습니다.</li>
+                        <li>실행하고 지속하는 힘을 키웁니다.</li>
+                        <li>진로와 삶의 방향을 구체화합니다.</li>
+                        <li>나만의 선택 기준을 세웁니다.</li>
                     </ul>
                 </div>
                 <img src={ico_box_bg3} alt="" className="bg_img" />

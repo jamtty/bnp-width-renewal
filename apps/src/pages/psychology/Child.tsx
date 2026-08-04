@@ -2,7 +2,6 @@ import AnimatedSection from '../../components/AnimatedSection';
 import img_counseling from '../../assets/images/img_psychology_child.png';
 import ico_box_bg1 from '../../assets/images/ico_box_bg1.svg';
 import ico_box_bg2 from '../../assets/images/ico_box_bg2.svg';
-import ico_box_bg3 from '../../assets/images/ico_box_bg3.svg';
 import ico_box_bg4 from '../../assets/images/ico_box_bg4.svg';
 
 const SpecializedFeatures = () => {

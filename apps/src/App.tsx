@@ -169,8 +169,8 @@ function App() {
       <Route path="/academy/counselor-training" element={<AcademyLayout title="전문 상담사 수련 과정"><AcademyCounselorTraining /></AcademyLayout>} />
       <Route path="/academy/certification" element={<AcademyLayout title="전문 자격 프로그램"><AcademyCertification /></AcademyLayout>} />
       <Route path="/academy/education" element={<AcademyLayout title="전문상담사 교육"><AcademyEducation /></AcademyLayout>} />
-      <Route path="/academy/church" element={<AcademyLayout title="교회·기관 교육 프로그램"><AcademyChurch /></AcademyLayout>} />
-      <Route path="/academy/corporate" element={<AcademyLayout title="기관·기업 프로그램"><AcademyCorporatePage /></AcademyLayout>} />
+      <Route path="/academy/church" element={<AcademyLayout title="교회·사역자 교육 프로그램"><AcademyChurch /></AcademyLayout>} />
+      <Route path="/academy/corporate" element={<AcademyLayout title="기관·기업 교육 프로그램"><AcademyCorporatePage /></AcademyLayout>} />
       <Route path="/academy/seminar" element={<AcademyLayout title="관계 리디자인 세미나"><AcademySeminar /></AcademyLayout>} />
       {/* 게시판 */}
       <Route path="/notice" element={<BoardLayout title="공지사항"><NoticePage /></BoardLayout>} />
