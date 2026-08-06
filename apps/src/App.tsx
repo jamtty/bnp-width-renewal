@@ -346,7 +346,7 @@ function MainPage() {
             />
             </AnimatedSection>
             <AnimatedSection direction='up' delay={0.1} duration={0.6}>
-              <p className='addr'>서울특별시 마포구 마포대로 12, 1709호 (한신오피스텔)<span className='mo_br'></span>헤세드상담코칭연구소</p>
+              <p className='addr'>서울특별시 마포구 마포대로 12, 1709호 (한신오피스텔)<span className='mo_br'></span> 헤세드상담코칭연구소</p>
             </AnimatedSection>
             <AnimatedSection direction='fade' delay={0.2} duration={0.6}>
             <ul className='partners'>
