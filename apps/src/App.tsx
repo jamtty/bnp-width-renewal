@@ -337,7 +337,7 @@ function MainPage() {
             </AnimatedSection>
             <AnimatedSection className='map' direction='up' duration={0.8}>
             <iframe
-                src="https://maps.google.com/maps?q=37.530774,126.904339&z=17&output=embed"
+                src="https://maps.google.com/maps?q=37.5379078,126.9444349&z=17&output=embed"
                 style={{ border: 0, width: '100%', height: '100%' }}
                 allowFullScreen
                 loading="lazy"
@@ -346,7 +346,7 @@ function MainPage() {
             />
             </AnimatedSection>
             <AnimatedSection direction='up' delay={0.1} duration={0.6}>
-              <p className='addr'>서울특별시 영등포구 당산동 5가 11-47<span className='mo_br'></span>로뎀나무내과 5층 헤세드상담코칭연구소</p>
+              <p className='addr'>서울특별시 마포구 마포대로 12, 1709호 (한신오피스텔)<span className='mo_br'></span>로뎀나무내과 5층 헤세드상담코칭연구소</p>
             </AnimatedSection>
             <AnimatedSection direction='fade' delay={0.2} duration={0.6}>
             <ul className='partners'>
