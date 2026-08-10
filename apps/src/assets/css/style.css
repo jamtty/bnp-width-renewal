@@ -825,10 +825,10 @@
 
 .board_list .tbl_type01 { width:100%; border-collapse:collapse; table-layout:fixed;}
 .board_list .tbl_type01 caption { position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip:rect(0,0,0,0);}
-.board_list .tbl_type01 thead th { height:5.8rem; padding:1.8rem 1rem; font-size:1.5rem; font-weight:600; color:#222; text-align:center; border-top:2px solid #2662FD; border-bottom:1px solid #ccc; border-right:1px solid #ccc; background:#F4F5F9;}
-.board_list .tbl_type01 tbody td { height:5.8rem; padding:1.8rem 1rem; font-size:1.5rem; font-weight:500; color:#222; border-bottom:1px solid #ccc; border-right:1px solid #ccc; text-align:center; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.board_list .tbl_type01 thead th { height:5.8rem; padding:1.8rem 1rem; font-size:1.8rem; font-weight:600; color:#222; text-align:center; border-top:2px solid #2662FD; border-bottom:1px solid #ccc; border-right:1px solid #ccc; background:#F4F5F9;}
+.board_list .tbl_type01 tbody td { height:5.8rem; padding:1.8rem 1rem; font-size:1.8rem; font-weight:500; color:#222; border-bottom:1px solid #ccc; border-right:1px solid #ccc; text-align:center; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 .board_list .tbl_type01 tbody tr:hover td { background:#fafafa;}
-.board_list .tbl_type01 tbody a { color:#222; text-decoration:none; font-size:1.5rem; }
+.board_list .tbl_type01 tbody a { color:#222; text-decoration:none; font-size:1.8rem; }
 .board_list .tbl_type01 tbody a:hover { color:#2662FD;}
 .board_list .tbl_type01 .td_l { text-align:left;}
 .board_list .tbl_type01 th:last-child,
@@ -849,7 +849,7 @@
 /* 게시판 상세보기 (공지사항/자료실 등) */
 .board_list .obj_head {}
 .board_list .obj_head .tit_row { margin:0 0 1.5rem;}
-.board_list .obj_head .tit_row strong { font-size:2.2rem; font-weight:700; color:#222;}
+.board_list .obj_head .tit_row strong { font-size:2.4rem; font-weight:700; color:#222;}
 .board_list .obj_head .meta_row { height:6rem; display:flex; align-items:center; justify-content:space-between; gap:2rem; border-top:1px solid #E2E2E2; border-bottom:1px solid #E2E2E2;}
 .board_list .obj_head .share_btns { display:flex; align-items:center; flex-shrink:0;}
 .board_list .obj_head .share_btns li { display:flex; align-items:center; padding:0 1.6rem;}
@@ -857,8 +857,8 @@
 .board_list .obj_head .share_btns button { width:3.2rem; height:3.2rem; border:none; background:none; cursor:pointer; display:flex; align-items:center; justify-content:center; color:#888;}
 .board_list .obj_head .share_btns button img { width:2.5rem;}
 .board_list .obj_head .share_btns button:hover { color:#2662FD;}
-.board_list .obj_head ul { display:flex; flex-wrap:wrap; align-items:center; font-size:1.5rem; color:#777;}
-.board_list .obj_head ul li { position:relative; padding:0 1.2rem;}
+.board_list .obj_head ul { display:flex; flex-wrap:wrap; align-items:center; }
+.board_list .obj_head ul li { position:relative; padding:0 1.2rem; font-size:1.8rem; color:#777; }
 .board_list .obj_head ul li:first-child { padding-left:0;}
 .board_list .obj_head ul li:not(:first-child)::before { content:''; position:absolute; left:0; top:50%; transform:translateY(-50%); width:1px; height:1.1rem; background:#ddd;}
 .board_list .obj_head ul li a.file { color:#2662FD; text-decoration:underline; margin-right:0.8rem;}
@@ -867,13 +867,13 @@
 .board_list .obj_cont table { width:100% !important; }
 
 .board_list .tbl_prevnext { border-top:1px solid #E2E2E2;}
-.board_list .tbl_prevnext tbody th { height:5rem; padding:0 1rem; font-size:1.5rem; font-weight:500; color:#777; text-align:center; border-bottom:1px solid #E2E2E2;}
+.board_list .tbl_prevnext tbody th { height:5rem; padding:0 1rem; font-size:1.8rem; font-weight:500; color:#777; text-align:center; border-bottom:1px solid #E2E2E2;}
 .board_list .tbl_prevnext tbody td {border-bottom:1px solid #E2E2E2;}
-.board_list .tbl_prevnext tbody td a { font-size:1.5rem; font-weight:500; color:#777;}
+.board_list .tbl_prevnext tbody td a { font-size:1.8rem; font-weight:500; color:#777;}
 
 .board_list .btn_area { display:flex; justify-content: center; margin:5rem 0 0;}
 .board_list .btn_area .right { margin:0 auto; }
-.board_list .btn_area .btn { display:flex; align-items: center; justify-content: center; height:5rem; padding:0 4rem; border:1px solid #ccc; border-radius:2.5rem; background:#333; font-size:1.6rem; font-weight:500; color:#fff; cursor:pointer; transition:all 0.2s;}
+.board_list .btn_area .btn { display:flex; align-items: center; justify-content: center; height:6rem; padding:0 5rem; border:1px solid #ccc; border-radius:3rem; background:#333; font-size:2rem; font-weight:500; color:#fff; cursor:pointer; transition:all 0.2s;}
 .board_list .btn_area .btn:hover { background:#2662FD; color:#fff;}
 
 @media (max-width: 1366px) {
