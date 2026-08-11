@@ -73,23 +73,16 @@ import AdminExpertPage from './pages/admin/AdminExpertPage';
 import AdminExpertFormPage from './pages/admin/AdminExpertFormPage';
 import AdminPopupPage from './pages/admin/AdminPopupPage';
 import AdminPopupFormPage from './pages/admin/AdminPopupFormPage';
+import AdminPartnerPage from './pages/admin/AdminPartnerPage';
+import AdminPartnerFormPage from './pages/admin/AdminPartnerFormPage';
 import PopupLayer from './components/PopupLayer';
+import { fetchActivePartners, type PartnerItem } from './api/partner';
 import AdminLayout from './components/admin/AdminLayout';
 import { useAuthStore, isTokenExpired } from './store/useAuthStore';
 import visImg1 from './assets/images/img_vis_1.png';
 import visImg2 from './assets/images/img_vis_2.png';
 import visImg3 from './assets/images/img_vis_3.png';
 import visImg4 from './assets/images/img_vis_4.png';
-import partner1 from './assets/images/ico_partner_1.svg';
-import partner2 from './assets/images/ico_partner_2.svg';
-import partner3 from './assets/images/ico_partner_3.svg';
-import partner4 from './assets/images/ico_partner_4.svg';
-import partner5 from './assets/images/ico_partner_5.svg';
-import partner6 from './assets/images/ico_partner_6.svg';
-import partner7 from './assets/images/ico_partner_7.svg';
-import partner8 from './assets/images/ico_partner_8.svg';
-import partner9 from './assets/images/ico_partner_9.svg';
-import partner10 from './assets/images/ico_partner_10.svg';
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
   const { isAuthenticated, accessToken, clearAuth } = useAuthStore();
@@ -195,6 +188,9 @@ function App() {
       <Route path="/admin/popup" element={<AdminRoute><AdminPopupPage /></AdminRoute>} />
       <Route path="/admin/popup/write" element={<AdminRoute><AdminPopupFormPage /></AdminRoute>} />
       <Route path="/admin/popup/edit/:id" element={<AdminRoute><AdminPopupFormPage /></AdminRoute>} />
+      <Route path="/admin/partner" element={<AdminRoute><AdminPartnerPage /></AdminRoute>} />
+      <Route path="/admin/partner/write" element={<AdminRoute><AdminPartnerFormPage /></AdminRoute>} />
+      <Route path="/admin/partner/edit/:id" element={<AdminRoute><AdminPartnerFormPage /></AdminRoute>} />
       <Route path="/admin/mypage" element={<AdminRoute><AdminMyPage /></AdminRoute>} />
       </Routes>
     </>
@@ -219,26 +215,14 @@ const VIS_SLIDES = [
   },
   {
     img: visImg4,
-    title: '한국과 세계를 연결하는 글로벌 상담\n유학생 · 선교사 · 해외거주자 · 다문화가정 6개 언어 상담 지원',
+    title: '한국과 세계를 연결하는 글로벌 상담\n유학생 · 선교사 · 해외거주자 · 다문화가정 현지 언어 상담 지원',
     desc: '',
   },
 ];
 
-const PARTNERS = [
-  partner1,
-  partner2,
-  partner3,
-  partner4,
-  partner5,
-  partner6,
-  partner7,
-  partner8,
-  partner9,
-  partner10,
-];
-
 function MainPage() {
   const [slideKey, setSlideKey] = useState(0);
+  const [partners, setPartners] = useState<PartnerItem[]>([]);
 
   const handleSlideChange = useCallback(() => {
     setSlideKey(prev => prev + 1);
@@ -247,11 +231,19 @@ function MainPage() {
   // ScrollTrigger 플러그인 등록 및 초기 레이아웃 refresh
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    // 레이아웃 완료 후 ScrollTrigger 위치 재계산
     const timer = setTimeout(() => {
       ScrollTrigger.refresh();
     }, 300);
     return () => clearTimeout(timer);
+  }, []);
+
+  // 협력기관 로고 API 연동
+  useEffect(() => {
+    fetchActivePartners()
+      .then(setPartners)
+      .catch(() => {
+        // API 실패 시 빈 배열 유지
+      });
   }, []);
 
   return (
@@ -346,19 +338,19 @@ function MainPage() {
             />
             </AnimatedSection>
             <AnimatedSection direction='up' delay={0.1} duration={0.6}>
-              <p className='addr'>서울특별시 마포구 마포대로 12, 1709호 (한신오피스텔)<span className='mo_br'></span> 헤세드상담코칭연구소</p>
+              <p className='addr'>서울특별시 마포구 마포대로 12, 1709호 (한신오피스텔)<span className='mo_br'></span></p>
             </AnimatedSection>
             <AnimatedSection direction='fade' delay={0.2} duration={0.6}>
             <ul className='partners'>
                 <div className='partners_track'>
-                    {PARTNERS.map((img, i) => (
-                        <li key={i}>
-                            <img src={img} alt={`파트너사 로고 ${i + 1}`} />
+                    {partners.map((partner) => (
+                        <li key={partner.id}>
+                            <img src={partner.img_url_full} alt={partner.company_name || `파트너사 로고`} />
                         </li>
                     ))}
-                    {PARTNERS.map((img, i) => (
-                        <li key={`dup-${i}`}>
-                            <img src={img} alt={`파트너사 로고 ${i + 1}`} />
+                    {partners.length > 0 && partners.map((partner) => (
+                        <li key={`dup-${partner.id}`}>
+                            <img src={partner.img_url_full} alt={partner.company_name || `파트너사 로고`} />
                         </li>
                     ))}
                 </div>

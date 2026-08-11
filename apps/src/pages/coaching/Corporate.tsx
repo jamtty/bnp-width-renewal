@@ -8,7 +8,7 @@ const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
         <AnimatedSection className="page_tit" direction="up">
-            <h2>기업 코칭 & 조직 프로그램</h2>
+            <h2>기업 코칭</h2>
         </AnimatedSection>
         <section className="con_1">
             <AnimatedSection className="tit_img" direction="up">

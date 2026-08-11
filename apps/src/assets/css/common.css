@@ -129,6 +129,10 @@ html { font-size:10px; }
   html { font-size:9px; }
 }
 
+@media (max-width: 767px) {
+  html { font-size:12px; }
+}
+
 html,
 body {
   height: 100%;

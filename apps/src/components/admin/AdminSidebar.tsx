@@ -12,6 +12,7 @@ export const sideMenuSections: MenuSection[] = [
       { label: '배너 관리', to: '/admin/banner', icon: 'wallpaper' },
       { label: '전문가 관리', to: '/admin/expert', icon: 'group' },
       { label: '팝업 관리', to: '/admin/popup', icon: 'campaign' },
+      { label: '협력기관 관리', to: '/admin/partner', icon: 'handshake' },
     ],
   },
   {

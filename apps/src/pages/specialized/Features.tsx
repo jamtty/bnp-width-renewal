@@ -16,13 +16,13 @@ import ico_box_bg4 from '../../assets/images/ico_box_bg4.svg';
 
 const tabList = [
   '특장점',
-  '공황·불안 상담',
-  '번아웃·직장 스트레스 상담',
-  'ADHD·실행력 상담',
-  '은둔 · 고립 청년 상담',
-  '중독 회복 상담',
-  '식이장애·섭식문제 상담',
-  '커리어 전환·방향 설계 상담'
+  '공황·불안',
+  '번아웃·직장 스트레스',
+  'ADHD·실행력',
+  '은둔 · 고립 청년',
+  '중독 회복',
+  '식이장애·섭식문제',
+  '커리어 전환·방향 설계'
 ];
 
 const tabKeys = ['features', 'panic', 'burnout', 'adhd', 'recluse', 'addiction', 'eating', 'career'];

@@ -16,11 +16,11 @@ import ico_box_bg5 from '../../assets/images/ico_box_bg5.svg';
 
 const tabList = [
   '특장점',
-  '선교사 심리상담',
-  '다문화·유학생 심리상담',
+  '선교사 상담',
+  '다문화·유학생 상담',
   '해외 거주자 상담',
   '귀국자 상담',
-  'Global Business (B2B)',
+  'Global Business',
   'Partnership'
 ];
 

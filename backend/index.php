@@ -103,6 +103,13 @@ if (($segments[0] ?? '') === 'popup') {
     exit;
 }
 
+// [협력기관 관리] ----------------------------------------------------
+if (($segments[0] ?? '') === 'partner') {
+    require_once __DIR__ . '/routes/partner.php';
+    handlePartner($segments, $method);
+    exit;
+}
+
 // [인증] -------------------------------------------------------------
 if (($segments[0] ?? '') === 'auth') {
     require_once __DIR__ . '/routes/auth.php';

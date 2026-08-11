@@ -10,11 +10,11 @@ const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
         <AnimatedSection className="page_tit" direction="up">
-            <h2>기관·기업 교육 프로그램</h2>
+            <h2>기관·기업 교육</h2>
         </AnimatedSection>
         <section className="con_1">
             <AnimatedSection className="tit_img" direction="up">
-                <img src={img_academy} alt="기관·기업 교육 프로그램" />
+                <img src={img_academy} alt="기관·기업 교육" />
             </AnimatedSection>
             <AnimatedSection className="tit" direction="up">
                 <h3>사람이 성장하면, 조직의 가능성이 커집니다</h3>

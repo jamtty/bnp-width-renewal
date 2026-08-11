@@ -4,11 +4,11 @@ const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
         <AnimatedSection className="page_tit" direction="up">
-            <h2>관계 리디자인 세미나</h2>
+            <h2>관계 리디자인 교육</h2>
         </AnimatedSection>
         <section className="con_1">
             <AnimatedSection className="tit_img" direction="up">
-                <img src={img_academy} alt="관계 리디자인 세미나" />
+                <img src={img_academy} alt="관계 리디자인 교육" />
             </AnimatedSection>
             <AnimatedSection className="tit" direction="up">
                 <h3>관계는 이해하는 만큼, 달라질 수 있습니다</h3>

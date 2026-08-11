@@ -1308,7 +1308,7 @@
 .child .con_1 .roadmap_quote::after { content:''; display:inline-block; vertical-align: top; width:6.5rem; height:15.6rem; background:url('../images/ico_academy_tta2.svg') no-repeat top/contain; margin-left:-2rem; }
 
 .child .btn_wrap { display:flex; justify-content:center; gap:2rem; margin:7rem 0 0;}
-.child .btn_wrap button { padding:0 7.4rem; height:8rem; border-radius:5rem; font-size:2.4rem; font-weight:600; cursor:pointer; transition:all 0.2s;}
+.child .btn_wrap button { padding:0 7rem; height:8rem; border-radius:5rem; font-size:2.4rem; font-weight:600; cursor:pointer; transition:all 0.2s;}
 .child .btn_wrap .btn_primary { background:#2662FD; color:#fff;}
 .child .btn_wrap .btn_primary:hover { background:#1B44CC;}
 .child .btn_wrap .btn_secondary { background:#333; color:#fff;}
@@ -1390,7 +1390,7 @@
  .child .con_1 .roadmap_quote::after { content:''; display:inline-block; vertical-align: top; width:4rem; height:9rem; background:url('../images/ico_academy_tta2.svg') no-repeat top/contain; margin-left:0.8rem;}
 
  .child .btn_wrap { display:flex; flex-direction: column; justify-content:center; gap:1rem; margin:4rem 0 0;}
- .child .btn_wrap button { width:100%; height:6rem; border-radius:5rem; font-size:1.8rem; font-weight:700; cursor:pointer; transition:all 0.2s;}
+ .child .btn_wrap button { width:100%; height:6rem; padding:0 2rem; border-radius:5rem; font-size:1.8rem; font-weight:700; cursor:pointer; transition:all 0.2s;}
  .child .btn_wrap .btn_primary { background:#2662FD; color:#fff;}
  .child .btn_wrap .btn_primary:hover { background:#1B44CC;}
  .child .btn_wrap .btn_secondary { background:#333; color:#fff;}

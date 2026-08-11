@@ -8,11 +8,11 @@ const SpecializedFeatures = () => {
   return (
     <div className="page_cont page_sub child">
         <AnimatedSection className="page_tit" direction="up">
-            <h2>관계 대화 코치 과정</h2>
+            <h2>관계 대화 코치</h2>
         </AnimatedSection>
         <section className="con_1">
             <AnimatedSection className="tit_img" direction="up">
-                <img src={img_academy} alt="관계 대화 코치 과정" />
+                <img src={img_academy} alt="관계 대화 코치" />
             </AnimatedSection>
             <AnimatedSection className="tit" direction="up">
                 <h3>관계를 바꾸는 사람은 말을 잘하는 사람이 아니라,<span className='pc_br'></span>마음을 이해하는 사람입니다</h3>
