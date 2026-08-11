@@ -327,20 +327,46 @@ function MainPage() {
             <AnimatedSection className='tit' direction='up' duration={0.7}>
                 <h2>오시는 길</h2>
             </AnimatedSection>
-            <AnimatedSection className='map' direction='up' duration={0.8}>
-            <iframe
-                src="https://maps.google.com/maps?q=37.5379078,126.9444349&z=17&output=embed"
-                style={{ border: 0, width: '100%', height: '100%' }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="헤세드상담코칭연구소 오시는 길"
-            />
-            </AnimatedSection>
-            <AnimatedSection direction='up' delay={0.1} duration={0.6}>
-              <p className='addr'>서울특별시 마포구 마포대로 12, 1709호 (한신오피스텔)<span className='mo_br'></span></p>
-            </AnimatedSection>
-            <AnimatedSection direction='fade' delay={0.2} duration={0.6}>
+            
+            <div className='row'>
+                <div className='col'>
+                    <AnimatedSection className='map' direction='up' duration={0.8}>
+                    <iframe
+                        src="https://maps.google.com/maps?q=37.5379078,126.9444349&z=17&output=embed"
+                        style={{ border: 0, width: '100%', height: '100%' }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="위드원상담코칭연구소 마포 오시는 길"
+                    />
+                    </AnimatedSection>
+                    <AnimatedSection direction='up' delay={0.1} duration={0.6}>
+                    <p className='addr'>서울특별시 마포구 마포대로 12, 1709호(한신오피스텔)</p>
+                    </AnimatedSection>
+                </div>
+                <div className='col'>
+                    <AnimatedSection className='map' direction='up' duration={0.8}>
+                    <iframe
+                        src="https://maps.google.com/maps?q=서울+영등포구+영신로+259&z=17&output=embed"
+                        style={{ border: 0, width: '100%', height: '100%' }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="위드원상담코칭연구소 당산 오시는 길"
+                    />
+                    </AnimatedSection>
+                    <AnimatedSection direction='up' delay={0.1} duration={0.6}>
+                    <p className='addr'>서울특별시 영등포구 영신로 259(5층)</p>
+                    </AnimatedSection>
+                </div>
+            </div>
+        </div>
+      </section>
+
+        
+      <section className='partnersWrap'>
+        <div className='inner'>
+        <AnimatedSection direction='fade' delay={0.2} duration={0.6}>
             <ul className='partners'>
                 <div className='partners_track'>
                     {partners.map((partner) => (
@@ -355,10 +381,9 @@ function MainPage() {
                     ))}
                 </div>
             </ul>
-            </AnimatedSection>
+        </AnimatedSection>
         </div>
       </section>
-
       <ScrollTopButton />
       <Footer />
     </>
