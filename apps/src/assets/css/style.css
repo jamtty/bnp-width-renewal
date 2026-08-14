@@ -35,12 +35,8 @@
 .header { position:fixed; top:0; left:0; width:100%; z-index:999999; transition: background .25s;}
 .header .logo { display:flex; justify-content:center; margin:3rem 0 4rem; transition: all 0.35s ease;}
 
-/* 로고 기본/활성 전환 */
+/* 로고 기본 표시 */
 .header .logo-default { display:block;}
-.header .logo-active { display:none;}
-.header.gnb-open:not(.scrolled) .logo-default,
-.header.scrolled .logo-default { display:none;}
-.header.gnb-open:not(.scrolled) .logo-active { display:block;}
 
 /* 스크롤 시 로고 영역 숨김 (gnb-open 상태에서도 유지) */
 .header.scrolled .logo,
@@ -51,9 +47,6 @@
  height: 0;
  overflow: hidden;
 }
-/* 스크롤+gnb-open 시 로고 이미지도 강제 숨김 */
-.header.scrolled.gnb-open .logo-active,
-.header.scrolled .logo-active { display:none;}
 .header .gnb {  position:sticky; top:0; z-index:999999; height:7.2rem; display:flex; align-items: center; justify-content: space-between; border-top:1px solid rgba(255,255,255,.6); border-bottom:1px solid rgba(255,255,255,.6); padding:0 15rem; }
 .header .gnb li {}
 .header .gnb a { font-size:2.2rem; font-weight:600; color:#fff;}
@@ -228,9 +221,8 @@
 }
  .header .logo { margin:0;}
  .header .logo img { height:3rem; width:auto;}
- /* 모바일에서는 항상 액티브 로고 */
- .header .logo-default { display:none !important;}
- .header .logo-active { display:block !important;}
+ /* 모바일에서도 기본 로고 표시 */
+ .header .logo-default { display:block !important;}
  /* 모바일: 스크롤 시에도 로고 유지 (PC 숨김 규칙 덮어쓰기) */
  .header.scrolled .logo,
  .header.scrolled.gnb-open .logo {
@@ -238,10 +230,6 @@
    opacity: 1;
    height: auto;
    overflow: visible;
- }
- .header.scrolled .logo-active,
- .header.scrolled.gnb-open .logo-active {
-   display: block !important;
  }
 }
 

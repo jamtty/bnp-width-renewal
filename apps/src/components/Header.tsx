@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { NAV_ITEMS } from '../constants/nav';
-import logoImg from '../assets/images/logo.svg';
-import logoActiveImg from '../assets/images/logo_active.svg';
+import logoImg from '../assets/images/logo.png';
 
 const Header = () => {
   const location = useLocation();
@@ -67,7 +66,6 @@ const Header = () => {
             <h1 className="logo">
             <Link to="/" onClick={handleLogoClick}>
                 <img className="logo-default" src={logoImg} alt="헤세드상담코칭연구소" />
-                <img className="logo-active" src={logoActiveImg} alt="헤세드상담코칭연구소" />
             </Link>
             </h1>
 
@@ -119,7 +117,7 @@ const Header = () => {
         <nav className={`mobile_nav${mobileOpen ? ' open' : ''}`}>
           <div className="mobile_nav_head">
             <Link to="/" className="mobile_nav_logo" onClick={closeMenu}>
-              <img src={logoActiveImg} alt="헤세드상담코칭연구소" />
+              <img src={logoImg} alt="헤세드상담코칭연구소" />
             </Link>
             <button type="button" className="mobile_nav_close" aria-label="메뉴 닫기" onClick={closeMenu}>
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

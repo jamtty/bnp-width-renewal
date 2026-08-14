@@ -140,7 +140,7 @@ export default function AdminPartnerFormPage() {
                 <div className="adm_form_file_wrap">
                   <input
                     type="file"
-                    accept="image/*"
+                    accept=".jpg,.jpeg,.png"
                     onChange={handleImgChange}
                     className="adm_form_file"
                   />
@@ -153,7 +153,7 @@ export default function AdminPartnerFormPage() {
                       />
                     </div>
                   )}
-                  <span className="adm_form_hint">권장: 가로 288px, 세로 88px 이내의 SVG/PNG 이미지</span>
+                  <span className="adm_form_hint">권장: 가로 288px, 세로 88px 이내의 JPG/PNG 이미지</span>
                 </div>
               </div>
 

@@ -83,6 +83,7 @@ import visImg1 from './assets/images/img_vis_1.png';
 import visImg2 from './assets/images/img_vis_2.png';
 import visImg3 from './assets/images/img_vis_3.png';
 import visImg4 from './assets/images/img_vis_4.png';
+import visImg5 from './assets/images/img_vis_5.png';
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
   const { isAuthenticated, accessToken, clearAuth } = useAuthStore();
@@ -218,6 +219,11 @@ const VIS_SLIDES = [
     title: '한국과 세계를 연결하는 글로벌 상담\n유학생 · 선교사 · 해외거주자 · 다문화가정 현지 언어 상담 지원',
     desc: '',
   },
+  {
+    img: visImg5,
+    title: '',
+    desc: '',
+  }
 ];
 
 function MainPage() {

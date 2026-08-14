@@ -1,4 +1,4 @@
-import FooterLogo from '../assets/images/ico_footer_logo.svg';
+import FooterLogo from '../assets/images/ico_footer_logo.png';
 
 const Footer = () => {
   return (

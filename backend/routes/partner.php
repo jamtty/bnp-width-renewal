@@ -144,7 +144,7 @@ function handlePartner(array $seg, string $method): void
         $imgUrl      = '';
 
         if (!empty($_FILES['img_file']['name'])) {
-            $up          = uploadFile($_FILES['img_file'], 'partner');
+            $up          = uploadFile($_FILES['img_file'], 'partner', ['jpg', 'jpeg', 'png']);
             $imgOriName  = $up['ori_name'];
             $imgSaveName = $up['save_name'];
             $imgUrl      = $up['file_url'];
@@ -185,7 +185,7 @@ function handlePartner(array $seg, string $method): void
             if ($old['img_save_name']) {
                 deleteUploadedFile('partner', $old['img_save_name']);
             }
-            $up          = uploadFile($_FILES['img_file'], 'partner');
+            $up          = uploadFile($_FILES['img_file'], 'partner', ['jpg', 'jpeg', 'png']);
             $imgOriName  = $up['ori_name'];
             $imgSaveName = $up['save_name'];
             $imgUrl      = $up['file_url'];
