@@ -151,13 +151,13 @@ const CounselingChild = () => {
                         <AnimatedSection className="tit" direction="up">
                             <h3>감정의 혼란은 청소년기의<span className='pc_br'></span>중요한 성장 신호일 수 있습니다.</h3>
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>체크리스트</h3>
                                 <p>3개 이상 반복된다면 정서·자기이해 상담을 권합니다.</p>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_1'>
+                                <ul className='ul_list_checklist'>
                                     <li>감정 기복이 크고 조절이 어렵다</li>
                                     <li>이유 없이 우울하거나 불안할 때가 많다</li>
                                     <li>자기비난이나 부정적인 생각이 반복된다</li>
@@ -167,12 +167,12 @@ const CounselingChild = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
+                                <ul className='ul_list_Counseling'>
                                     <li>감정의 원인을 이해하고, 자기비난보다 자기이해를 통해 건강한 자아를 형성하도록 돕습니다.</li>
                                     <li>정서조절훈련 · 자기이해상담 · 인지개입 · 자기표현훈련 · 자아정체감 탐색</li>
                                 </ul>
@@ -189,13 +189,13 @@ const CounselingChild = () => {
                         <AnimatedSection className="tit" direction="up">
                             <h3>진로 문제는 단순 선택이 아니라<span className='pc_br'></span>“나는 누구인가”의 문제입니다.</h3>
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>체크리스트</h3>
                                 <p>3개 이상 반복된다면 진로·정체감 상담을 권합니다.</p>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_1'>
+                                <ul className='ul_list_checklist'>
                                     <li>진로에 대한 방향이 전혀 잡히지 않는다</li>
                                     <li>하고 싶은 것과 해야 할 것 사이에서 혼란스럽다</li>
                                     <li>목표 없이 시간을 보내는 경우가 많다</li>
@@ -205,12 +205,12 @@ const CounselingChild = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
+                                <ul className='ul_list_Counseling'>
                                     <li>진로와 정체감 문제는 자기이해에서 출발합니다. 자신의 강점과 가치를 발견하고 구체적인 목표를 설계하는 과정을 통해, 막연한 불안을 방향감 있는 미래 설계로 전환합니다.</li>
                                     <li>자기이해코칭 · 진로탐색 · 강점분석 · 가치관 탐색 · 목표설계</li>
                                 </ul>
@@ -227,13 +227,13 @@ const CounselingChild = () => {
                         <AnimatedSection className="tit" direction="up">
                             <h3>관계의 어려움은 정서와 자존감에<span className='pc_br'></span>직접적인 영향을 줍니다.</h3>
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>체크리스트</h3>
                                 <p>3개 이상 해당 시 관계 상담 권장</p>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_1'>
+                                <ul className='ul_list_checklist'>
                                     <li>친구와의 관계에서 스트레스를 자주 느낀다</li>
                                     <li>또래나 길들이 반복된다</li>
                                     <li>혼자 있는 시간이 많아졌다</li>
@@ -243,12 +243,12 @@ const CounselingChild = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
+                                <ul className='ul_list_Counseling'>
                                     <li>관계 패턴을 분석하고 갈등의 원인을 이해하여, 건강한 의사소통과 관계 회복을 돕습니다.</li>
                                     <li>관계패턴 이해 · 의사소통 코칭 · 갈등조절 · 가족상담</li>
                                 </ul>
@@ -265,13 +265,13 @@ const CounselingChild = () => {
                         <AnimatedSection className="tit" direction="up">
                             <h3>학습의 어려움은<span className='pc_br'></span>단순한 성적 문제가 아니라<span className='pc_br'></span>주의력, 감정, 동기와 깊이 연결되어 있습니다</h3>
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>체크리스트</h3>
                                 <p>3개 이상 해당 시 학습·집중력 평가 및 상담 권장합니다.</p>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_1'>
+                                <ul className='ul_list_checklist'>
                                     <li>집중이 잘 되지 않아 공부 지속이 어렵다</li>
                                     <li>해야 할 일을 자주 미루거나 놓친다</li>
                                     <li>계획을 세우지만 실행이 어렵다</li>
@@ -281,12 +281,12 @@ const CounselingChild = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
+                                <ul className='ul_list_Counseling'>
                                     <li>부족한 의지를 탓하기보다, 실행기능과 자기조절 능력을 강화하여 스스로 계획하고 끝까지 해내는 경험을 만들어 갑니다.</li>
                                     <li>관계패턴 이해 · 의사소통 코칭 · 갈등조절 · 가족상담</li>
                                 </ul>
@@ -303,13 +303,13 @@ const CounselingChild = () => {
                         <AnimatedSection className="tit" direction="up">
                             <h3>디지털 과의존은 단순한 습관이 아니라<span className='pc_br'></span>자기조절의 문제입니다.</h3>
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>체크리스트</h3>
                                 <p>3개 이상 해당 시 디지털 사용습관 평가 및 상담 권장합니다.</p>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_1'>
+                                <ul className='ul_list_checklist'>
                                     <li>스마트폰·게임을 스스로 멈추기 어렵다</li>
                                     <li>사용 제한 시 강한 짜증이나 분노가 나타난다</li>
                                     <li>사용 시간이 점점 늘어난다</li>
@@ -322,12 +322,12 @@ const CounselingChild = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
+                                <ul className='ul_list_Counseling'>
                                     <li>강력한 디지털 자극에 무뎌진 조절력을 회복하고, 일상의 즐거움과 활력을 찾도록 돕습니다</li>
                                     <li>디지털 사용 조절 · 자기조절력 강화 · 생활습관 코칭 · 부모코칭</li>
                                 </ul>

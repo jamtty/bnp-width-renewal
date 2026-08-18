@@ -130,13 +130,13 @@ const CounselingChild = () => {
                         <AnimatedSection className="tit" direction="up">
                             <h3>감정의 어려움은 단순한 기분 문제가 아니라<span className='pc_br'></span>삶의 에너지와 방향에 영향을 주는 중요한 신호입니다.</h3>
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>우울 체크리스트</h3>
                                 <p>2개 이상 해당 시 우울·불안 상담을 권장 합니다.</p>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_1'>
+                                <ul className='ul_list_checklist'>
                                     <li>우울감이나 무기력이 지속된다</li>
                                     <li>해야 할 일을 시작하기 어렵다</li>
                                     <li>긴장과 불안이 자주 반복된다</li>
@@ -146,13 +146,13 @@ const CounselingChild = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>불안 · 공황 체크리스트</h3>
                                 <p>2개 이상 해당 시 우울·불안 상담을 권장 합니다.</p>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_1'>
+                                <ul className='ul_list_checklist'>
                                     <li>걱정이 많고 생각이 멈추지 않는다</li>
                                     <li>긴장하거나 불안한 상태가 자주 지속된다</li>
                                     <li>가슴 답답함, 두근거림, 숨막힘을 느낀다</li>
@@ -162,12 +162,12 @@ const CounselingChild = () => {
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
+                                <ul className='ul_list_Counseling'>
                                     <li>나를 힘들게 하는 감정의 원인을 이해하고, 우울과 불안에 휘둘리지 않는 정서적 안정감을 회복합니다.</li>
                                     <li>정서조절 · 인지행동치료 · 감정중심치료</li>
                                 </ul>
@@ -184,13 +184,13 @@ const CounselingChild = () => {
                         <AnimatedSection className="tit" direction="up">
                             <h3>관계에서 반복되는 패턴은<span className='pc_br'></span>나의 감정과 삶 전체에 영향을 미칩니다.</h3>
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>체크리스트</h3>
                                 <p>2개 이상 해당 시 관계 상담을 권장합니다.</p>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_1'>
+                                <ul className='ul_list_checklist'>
                                     <li>관계에서 반복되는 갈등이 있다</li>
                                     <li>상대에게 맞추다 지치거나 억울함이 쌓인다</li>
                                     <li>감정을 표현하기 어렵다</li>
@@ -200,12 +200,12 @@ const CounselingChild = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
+                                <ul className='ul_list_Counseling'>
                                     <li>남에게 맞추느라 지친 나를 돌보고, 관계 속에서 나를 지키면서도 내 마음을 건강하게 표현하는 방법을 배웁니다.</li>
                                     <li>관계패턴 이해 · 의사소통 코칭 · 감정표현 · 건강한 경계 설정</li>
                                 </ul>
@@ -222,13 +222,13 @@ const CounselingChild = () => {
                         <AnimatedSection className="tit" direction="up">
                             <h3>자존감의 문제는<span className='pc_br'></span>내가 나를 어떻게 바라보는지에서 시작됩니다.</h3>
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>체크리스트</h3>
                                 <p>3개 이상 해당 시 디지털 사용습관 평가 및 상담 권장합니다.</p>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_1'>
+                                <ul className='ul_list_checklist'>
                                     <li>스스로에 대한 확신이 부족하다</li>
                                     <li>비교나 평가에 민감하다</li>
                                     <li>자신을 자주 비난한다</li>
@@ -238,12 +238,12 @@ const CounselingChild = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
+                                <ul className='ul_list_Counseling'>
                                     <li>자신을 있는 그대로 이해하고 수용하며, 건강한 자기존중감을 회복합니다.</li>
                                     <li>자기이해상담 · 인지재구성 · 자기수용훈련 · 강점탐색</li>
                                 </ul>
@@ -260,13 +260,13 @@ const CounselingChild = () => {
                         <AnimatedSection className="tit" direction="up">
                             <h3>지속적인 피로와 무기력은<span className='pc_br'></span>단순 피곤함이 아니라 회복이 필요한 상태입니다.</h3>
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>체크리스트</h3>
                                 <p>2개 이상 해당 시 스트레스 상담 권장</p>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_1'>
+                                <ul className='ul_list_checklist'>
                                     <li>일에 대한 의욕이 크게 떨어졌다</li>
                                     <li>출근이나 업무가 부담스럽다</li>
                                     <li>쉽게 지치고 에너지가 없다</li>
@@ -276,12 +276,12 @@ const CounselingChild = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
+                                <ul className='ul_list_Counseling'>
                                     <li>단순히 쉬는 것을 넘어 소진의 원인을 이해하고, 지친 마음과 에너지를 회복하며 일과 삶 속에서 나만의 균형을 되찾도록 돕습니다.</li>
                                     <li>번아웃 회복 · 스트레스 관리 · 에너지 회복 · 일과 삶의 균형 코칭</li>
                                 </ul>
@@ -298,13 +298,13 @@ const CounselingChild = () => {
                         <AnimatedSection className="tit" direction="up">
                             <h3>방향이 흔들릴 때<span className='pc_br'></span>삶 전체가 막막하게 느껴질 수 있습니다.</h3>
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>체크리스트</h3>
                                 <p>2개 이상 해당 시 진로·자기이해 상담을 권장합니다.</p>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_1'>
+                                <ul className='ul_list_checklist'>
                                     <li>지금의 삶이 맞는지 확신이 없다</li>
                                     <li>진로 또는 직업 방향이 혼란스럽다</li>
                                     <li>목표 없이 시간을 보내는 느낌이 든다</li>
@@ -314,12 +314,12 @@ const CounselingChild = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>상담 방법</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
+                                <ul className='ul_list_Counseling'>
                                     <li>나의 강점과 가치관을 발견하고, 삶의 방향과 목표를 구체적으로 설계해 나갑니다.</li>
                                     <li>진로코칭 · 자기이해 · 가치탐색 · 목표설계</li>
                                 </ul>

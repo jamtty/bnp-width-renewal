@@ -56,19 +56,18 @@ const CounselingChild = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>진행 방식</h3>
-                                <p>아이에게 부담을 주는 검사 중심이 아니라,<span className='pc_br'></span>놀이와 관찰을 통해 자연스럽게 이해합니다</p>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_1'>
+                                <ul className='ul_list_test'>
                                     <li>놀이관찰 및 간단 놀이평가</li>
                                     <li>부모 양육태도 검사</li>
                                     <li>아동 정서·행동 체크</li>
                                     <li>(필요 시) 주의력 간단 확인</li>
                                 </ul>
-                                <p>아이의 상태를 자연스럽게 이해하고, 부모의 방향까지 함께 정리합니다</p>
+                                <p className='Package-txt-blue-box'>아이의 상태를 자연스럽게 이해하고, 부모의 방향까지 함께 정리합니다</p>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
                         </AnimatedSection>
@@ -98,18 +97,18 @@ const CounselingChild = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>검사 구성</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_1'>
+                                <ul className='ul_list_test'>
                                     <li>청소년 정서·심리 상태(MMPI-A)</li>
                                     <li>기질·성격 특성(TCI)</li>
                                     <li>생각과 감정의 흐름(SCT)</li>
                                     <li>필요 시 학습·진로 관련 검사 추가</li>
                                 </ul>
-                                <p>하루의 검사와 전문 해석 상담을 통해 현재의 어려움을 종합적으로 이해하고, 앞으로의 성장과 상담 방향을 함께 찾아갑니다.</p>
+                                <p className='Package-txt-blue-box'>하루의 검사와 전문 해석 상담을 통해 현재의 어려움을 종합적으로 이해하고, 앞으로의 성장과 상담 방향을 함께 찾아갑니다.</p>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
                         </AnimatedSection>
@@ -136,12 +135,12 @@ const CounselingChild = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>검사 구성</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_3'>
+                                <ul className='ul_list_test no-ico'>
                                     <li>성격·기질 검사 (TCI)</li>
                                     <li>정서 상태 검사 (MMPI-2)</li>
                                     <li>생각·감정 흐름 탐색 (SCT)</li>

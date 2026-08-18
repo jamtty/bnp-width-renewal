@@ -160,13 +160,15 @@ const SpecializedFeatures = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>왜 반복될까요?</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
-                                    <li>몸의 반응 → 불안한 생각 → 회피 행동 이 패턴이 반복되며 불안이 유지됩니다.</li>
+                                <ul className='ul_list_why'>
+                                    <li>몸의 반응</li>
+                                    <li>불안한 생각</li>
+                                    <li>회피 행동 이 패턴이 반복되며 불안이 유지됩니다.</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -210,13 +212,15 @@ const SpecializedFeatures = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>왜 반복될까요?</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
-                                    <li>과도한 책임감 → 감정 소진 → 회복 부족 이 악순환이 반복되며 번아웃이 지속됩니다.</li>
+                                <ul className='ul_list_why'>
+                                    <li>과도한 책임감</li>
+                                    <li>감정 소진</li>
+                                    <li>회복 부족 이 악순환이 반복되며 번아웃이 지속됩니다.</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -264,13 +268,16 @@ const SpecializedFeatures = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>왜 반복될까요?</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
-                                    <li>해야 할 일은 많아지고 → 시작은 어려워지고 → 미루게 되고 → 자책과 죄책감이 쌓이면서 실행에 대한 자신감이 점점 낮아질 수 있습니다.</li>
+                                <ul className='ul_list_why'>
+                                    <li>해야 할 일은 많아지고</li>
+                                    <li>시작은 어려워지고</li>
+                                    <li>미루게 되고</li>
+                                    <li>자책과 죄책감이 쌓이면서 실행에 대한 자신감이 점점 낮아질 수 있습니다.</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -316,13 +323,16 @@ const SpecializedFeatures = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>왜 반복될까요?</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
-                                    <li>불안과 상처 → 관계·사회생활 회피 → 고립 → 자신감 저하의 흐름이 반복되면서 세상으로 다시 나가는 일이 점점 더 어려워질 수 있습니다.</li>
+                                <ul className='ul_list_why'>
+                                    <li>불안과 상처</li>
+                                    <li>관계·사회생활 회피</li>
+                                    <li>고립</li>
+                                    <li>자신감 저하의 흐름이 반복되면서 세상으로 다시 나가는 일이 점점 더 어려워질 수 있습니다.</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -368,13 +378,17 @@ const SpecializedFeatures = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>왜 반복될까요?</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
-                                    <li>불편한 감정이나 스트레스 → 강한 충동 → 반복 행동 → 일시적 해소 → 후회와 다시 쌓이는 스트레스의 악순환이 반복되면서 행동이 강화될 수 있습니다.</li>
+                                <ul className='ul_list_why'>
+                                    <li>불편한 감정이나 스트레스</li>
+                                    <li>강한 충동</li>
+                                    <li>반복 행동</li>
+                                    <li>일시적 해소</li>
+                                    <li>후회와 다시 쌓이는 스트레스의 악순환이 반복되면서 행동이 강화될 수 있습니다.</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -434,13 +448,15 @@ const SpecializedFeatures = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>왜 반복될까요?</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
-                                    <li>불편한 감정과 스트레스 → 폭식·절식 등 섭식 행동 → 죄책감과 자기비난이 반복되면서 어려움이 지속될 수 있습니다.</li>
+                                <ul className='ul_list_why'>
+                                    <li>불편한 감정과 스트레스</li>
+                                    <li>폭식·절식 등 섭식 행동</li>
+                                    <li>죄책감과 자기비난이 반복되면서 어려움이 지속될 수 있습니다.</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
@@ -486,13 +502,16 @@ const SpecializedFeatures = () => {
                             </div>
                             <img src={ico_box_bg1} alt="" className="bg_img" />
                         </AnimatedSection>
-                        <AnimatedSection className="box" direction="up">
+                        <AnimatedSection className="box d-block-new" direction="up">
                             <div className='s_tit'>
                                 <h3>왜 반복될까요?</h3>
                             </div>
                             <div className='s_info'>
-                                <ul className='ul_list_2'>
-                                    <li>불확실성 → 반복되는 고민 → 결정 미루기 → 자신감 저하의 흐름이 이어지면서 나아갈 방향을 잃기 쉽습니다.</li>
+                                <ul className='ul_list_why'>
+                                    <li>불확실성</li>
+                                    <li>불반복되는 고민</li>
+                                    <li>결정 미루기</li>
+                                    <li>자신감 저하의 흐름이 이어지면서 나아갈 방향을 잃기 쉽습니다.</li>
                                 </ul>
                             </div>
                             <img src={ico_box_bg2} alt="" className="bg_img" />
