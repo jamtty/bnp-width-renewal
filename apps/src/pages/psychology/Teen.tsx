@@ -20,12 +20,12 @@ const SpecializedFeatures = () => {
                 <h3>문제가 아니라, 방향의 문제일 수 있습니다</h3>
                 <p>무기력, 반항, 학업 문제는 단순한 의지의 문제가 아니라<span className='pc_br'></span>정서·관계·진로가 연결된 결과일 수 있습니다.</p>
             </AnimatedSection>
-            <AnimatedSection className="box" direction="up">
+            <AnimatedSection className="box d-block-new" direction="up">
                 <div className='s_tit'>
                     <h3>이런 경우 필요합니다</h3>
                 </div>
                 <div className='s_info'>
-                    <ul className='ul_list_1'>
+                    <ul className='ul_list_checklist'>
                         <li>학습 의욕이 떨어지고 무기력이 심한 경우</li>
                         <li>불안, 우울, 감정 기복이 반복되는 경우</li>
                         <li>진로 방향이 혼란스러운 경우</li>
@@ -34,12 +34,12 @@ const SpecializedFeatures = () => {
                 </div>
                 <img src={ico_box_bg1} alt="" className="bg_img" />
             </AnimatedSection>
-            <AnimatedSection className="box" direction="up">
+            <AnimatedSection className="box d-block-new" direction="up">
                 <div className='s_tit'>
                     <h3>무엇을 확인하나요?</h3>
                 </div>
                 <div className='s_info'>
-                    <ul className='ul_list_1'>
+                    <ul className='ul_list_Counseling'>
                         <li>정서 상태(우울·불안·스트레스)</li>
                         <li>기질·성격 및 감정 반응 특성</li>
                         <li>학습 동기와 실행의 어려움</li>
@@ -49,12 +49,12 @@ const SpecializedFeatures = () => {
                 </div>
                 <img src={ico_box_bg2} alt="" className="bg_img" />
             </AnimatedSection>
-            <AnimatedSection className="box" direction="up">
+            <AnimatedSection className="box d-block-new" direction="up">
                 <div className='s_tit'>
                     <h3>검사 구성</h3>
                 </div>
                 <div className='s_info'>
-                    <ul className='ul_list_1'>
+                    <ul className='ul_list_test no-ico'>
                         <li>MMPI-A → 정서·심리 상태</li>
                         <li>TCI → 기질·성격 특성</li>
                         <li>Holland 진로탐색검사 → 진로 흥미와 방향</li>

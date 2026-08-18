@@ -22,15 +22,15 @@ const SpecializedFeatures = () => {
                     종합심리검사는 현재의 문제뿐 아니라 그 원인이 되는<span className='pc_br'></span>심리적 구조까지 함께 이해하도록 돕습니다.
                 </p>
             </AnimatedSection>
-            <AnimatedSection className="box" direction="up">
-                <div className='s_tit'>
+            <AnimatedSection className="box d-block-new" direction="up">
+                <div className='s_tit d-flex'>
                     <h3>종합심리검사란<br />무엇인가요?</h3>
+                    <p>
+                        지능, 인지, 정서, 성격, 행동, 관계, 주의집중 및 스트레스 반응 등 심리 기능 전반을 종합적으로 평가하여 현재의 어려움을 깊이 이해하고 적절한 상담 및 개입 방향을 찾는 정밀 심리평가입니다. 이런 경우 권합니다.
+                    </p>
                 </div>
                 <div className='s_info'>
-                    <p className='top'>
-                        지능, 인지, 정서, 성격, 행동, 관계, 주의집중 및 스트레스 반응 등 심리 기능 전반을 종합적으로 평가하여 현재의 어려움을 깊이 이해하고 적절한 상담 및 개입 방향을 찾는 정밀 심리평가입니다.<br /><br />이런 경우 권합니다.
-                    </p>
-                    <ul className='ul_list_1'>
+                    <ul className='ul_list_total'>
                         <li>ADHD 등 주의집중의 어려움이 의심될 때</li>
                         <li>정서·행동 문제가 반복될 때</li>
                         <li>학습 및 집중력 저하가 지속될 때</li>
@@ -40,15 +40,15 @@ const SpecializedFeatures = () => {
                 </div>
                 <img src={ico_box_bg1} alt="" className="bg_img" />
             </AnimatedSection>
-            <AnimatedSection className="box" direction="up">
-                <div className='s_tit'>
+            <AnimatedSection className="box d-block-new" direction="up">
+                <div className='s_tit d-flex'>
                     <h3>아동 종합검사</h3>
-                </div>
-                <div className='s_info'>
-                    <p className='top'>
+                    <p>
                         아이의 행동과 감정은 발달 특성과 가족관계, 양육환경을 함께 살펴보아야 합니다.<br />아이의 현재 상태를 종합적으로 이해하고 필요한 상담과 부모의 양육 방향을 함께 제시합니다.
                     </p>
-                    <ul className='ul_list_1'>
+                </div>
+                <div className='s_info'>
+                    <ul className='ul_list_total'>
                         <li>놀이·정서·행동 평가</li>
                         <li>발달 및 인지 기능 평가</li>
                         <li>주의집중 및 학습 특성 확인</li>
@@ -57,16 +57,16 @@ const SpecializedFeatures = () => {
                 </div>
                 <img src={ico_box_bg2} alt="" className="bg_img" />
             </AnimatedSection>
-            <AnimatedSection className="box" direction="up">
-                <div className='s_tit'>
+            <AnimatedSection className="box d-block-new" direction="up">
+                <div className='s_tit d-flex'>
                     <h3>청소년 종합검사</h3>
-                </div>
-                <div className='s_info'>
-                    <p className='top'>
+                    <p>
                         무기력, 학업 문제, 감정 기복은 정서·성격·학업·관계의 어려움이 서로 연결되어 나타날 수 있습니다.<br />
                         겉으로 드러난 문제만이 아니라 청소년의 심리적 특성과 현재의 어려움을 종합적으로 이해합니다.
                     </p>
-                    <ul className='ul_list_1'>
+                </div>
+                <div className='s_info'>
+                    <ul className='ul_list_total'>
                         <li>정서 상태 및 스트레스</li>
                         <li>성격과 자기조절 특성</li>
                         <li>학습 및 주의집중 특성</li>
@@ -75,16 +75,16 @@ const SpecializedFeatures = () => {
                 </div>
                 <img src={ico_box_bg3} alt="" className="bg_img" />
             </AnimatedSection>
-            <AnimatedSection className="box" direction="up">
-                <div className='s_tit'>
+            <AnimatedSection className="box d-block-new" direction="up">
+                <div className='s_tit d-flex'>
                     <h3>성인 종합검사</h3>
-                </div>
-                <div className='s_info'>
-                    <p className='top'>
+                    <p>
                         반복되는 감정과 관계의 어려움은 성격 특성과 내면의 심리적 갈등, 스트레스 대처 방식과 연결되어 있을 수 있습니다.<br />
                         현재의 어려움에 영향을 미치는 심리적 요인을 다각도로 이해합니다.
                     </p>
-                    <ul className='ul_list_1'>
+                </div>
+                <div className='s_info'>
+                    <ul className='ul_list_total'>
                         <li>정서 상태 (우울·불안·스트레스)</li>
                         <li>성격 및 감정 반응 특성</li>
                         <li>관계 및 대인관계 패턴</li>
@@ -94,12 +94,12 @@ const SpecializedFeatures = () => {
                 </div>
                 <img src={ico_box_bg4} alt="" className="bg_img" />
             </AnimatedSection>
-            <AnimatedSection className="box" direction="up">
+            <AnimatedSection className="box d-block-new" direction="up">
                 <div className='s_tit'>
                     <h3>검사 구성</h3>
                 </div>
                 <div className='s_info'>
-                    <ul className='ul_list_1'>
+                    <ul className='ul_list_test'>
                         <li>지능검사(WAIS/WISC)</li>
                         <li>정서·성격검사(MMPI-2/MMPI-A)</li>
                         <li>기질·성격검사(TCI)</li>
@@ -107,7 +107,7 @@ const SpecializedFeatures = () => {
                         <li>그림검사(HTP, KFD 등)</li>
                         <li>BGT</li>
                     </ul>
-                    <p>연령, 개인의 특성 및 호소 문제에 따라 검사 구성이 달라질 수 있습니다.</p>
+                    <p className='Package-txt-blue-box'>연령, 개인의 특성 및 호소 문제에 따라 검사 구성이 달라질 수 있습니다.</p>
                 </div>
                 <img src={ico_box_bg5} alt="" className="bg_img" />
             </AnimatedSection>

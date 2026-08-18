@@ -26,7 +26,7 @@ const CounselingChild = () => {
   return (
     <div className="page_cont page_sub child">
         <AnimatedSection className="page_tit" direction="up">
-            <h2>성인 상담 (20세 이상)</h2>
+            <h2>성인 상담<br />(20세 이상)</h2>
         </AnimatedSection>
         <section className="con_1">
             <div className="tab_wrap">
