@@ -1216,7 +1216,7 @@
 .child .box .bg_img { display:none !important; position:absolute; right:0; top:0; pointer-events:none; z-index:-1; }
 
 .child .box .bg { flex:1; display:flex; align-items: center; background:url('../images/ico_seminar_arrow.svg') no-repeat center center/21.6rem;}
-.child .box .s_tit { width:35rem;}
+.child .box .s_tit { width:40rem;}
 .child .box .s_tit h3 { font-family: 'GmarketSans';  font-size:3.6rem; font-weight:700;  }
 .child .box .s_tit p { margin:2rem 0 0; font-size:1.8rem; font-weight:600; color:#2662FD;}
 .child .box.d-block { display:block;}
