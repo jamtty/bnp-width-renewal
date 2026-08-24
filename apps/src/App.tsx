@@ -83,7 +83,9 @@ import visImg1 from './assets/images/img_vis_1.png';
 import visImg2 from './assets/images/img_vis_2.png';
 import visImg3 from './assets/images/img_vis_3.png';
 import visImg4 from './assets/images/img_vis_4.png';
-import visImg5 from './assets/images/img_vis_5.png';
+import visImg5 from './assets/images/img_vis_4_2.png';
+import visImg6 from './assets/images/img_vis_4_3.png';
+import visImg7 from './assets/images/img_vis_5.png';
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
   const { isAuthenticated, accessToken, clearAuth } = useAuthStore();
@@ -221,6 +223,16 @@ const VIS_SLIDES = [
   },
   {
     img: visImg5,
+    title: '',
+    desc: '',
+  },
+  {
+    img: visImg6,
+    title: '',
+    desc: '',
+  },
+  {
+    img: visImg7,
     title: '',
     desc: '',
   }
