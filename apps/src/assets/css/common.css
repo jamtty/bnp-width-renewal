@@ -124,8 +124,7 @@
 /* 초기화 */
 html { font-size:10px; }
 
-/* 노트북 해상도 (1367px ~ 1440px) : 폰트 9px로 축소 */
-@media (max-width: 1440px) and (min-width: 1367px) {
+@media (max-width: 1600px) {
   html { font-size:9px; }
 }
 

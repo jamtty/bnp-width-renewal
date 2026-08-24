@@ -1216,7 +1216,7 @@
 .child .box .bg_img { display:none !important; position:absolute; right:0; top:0; pointer-events:none; z-index:-1; }
 
 .child .box .bg { flex:1; display:flex; align-items: center; background:url('../images/ico_seminar_arrow.svg') no-repeat center center/21.6rem;}
-.child .box .s_tit { width:45rem;}
+.child .box .s_tit { width:35rem;}
 .child .box .s_tit h3 { font-family: 'GmarketSans';  font-size:3.6rem; font-weight:700;  }
 .child .box .s_tit p { margin:2rem 0 0; font-size:1.8rem; font-weight:600; color:#2662FD;}
 .child .box.d-block { display:block;}
@@ -1232,8 +1232,8 @@
 .child .box .s_info .top { font-size:2.1rem; font-weight:600; margin:0 0 2rem;}
 .child .box .s_info .sm { font-size:2.1rem; margin:1rem 0 0; line-height:1.8; }
 
-.child .box .s_info .ul_list_1 { display:flex; gap:2rem 0; flex-wrap: wrap;  }
-.child .box .s_info .ul_list_1 li { width:50%; font-size:2.1rem; font-weight:500; background:url('../images/ico_list_chk.svg') no-repeat left 0.5rem; background-size:2rem; padding-left:3rem; letter-spacing: -1px;}
+.child .box .s_info .ul_list_1 { display:flex; gap:2rem; flex-wrap: wrap;  }
+.child .box .s_info .ul_list_1 li { width:calc((100% - 2rem) / 2); font-size:2.1rem; font-weight:500; background:url('../images/ico_list_chk.svg') no-repeat left 0.5rem; background-size:2rem; padding-left:3rem;  letter-spacing: -1px;}
 
 .child .box .s_info .ul_list_1_2 { margin:1rem 0 0;}
 .child .box .s_info .ul_list_1_2 li { font-size:2.1rem; font-weight:500; background:url('../images/ico_list_chk.svg') no-repeat left 0.5rem; background-size:2rem; padding-left:3rem; letter-spacing: -1px; margin:0 0 2rem;}
