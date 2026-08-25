@@ -10,7 +10,7 @@ const CenterGuide = () => {
             <ul className="card_list">
                 <AnimatedSection direction="up" as="li" delay={0}>
                     <div className='tit'>
-                        <div className="num">1</div>
+                        <div className="num"></div>
                         <h3>상담신청</h3>
                     </div>
                     <p>
@@ -19,7 +19,7 @@ const CenterGuide = () => {
                 </AnimatedSection>
                 <AnimatedSection direction="up" as="li" delay={0.15}>
                     <div className='tit'>
-                        <div className="num">2</div>
+                        <div className="num"></div>
                         <h3>초기면담</h3>
                     </div>
                     <p>
@@ -28,7 +28,7 @@ const CenterGuide = () => {
                 </AnimatedSection>
                 <AnimatedSection direction="up" as="li" delay={0.3}>
                     <div className='tit'>
-                        <div className="num">3</div>
+                        <div className="num"></div>
                         <h3>심리평가</h3>
                     </div>
                     <p>
@@ -37,7 +37,7 @@ const CenterGuide = () => {
                 </AnimatedSection>
                 <AnimatedSection direction="up" as="li" delay={0.45}>
                     <div className='tit'>
-                        <div className="num">4</div>
+                        <div className="num"></div>
                         <h3>맞춤 상담·코칭</h3>
                     </div>
                     <p>
@@ -46,7 +46,7 @@ const CenterGuide = () => {
                 </AnimatedSection>
                 <AnimatedSection direction="up" as="li" delay={0.6}>
                     <div className='tit'>
-                        <div className="num">5</div>
+                        <div className="num"></div>
                         <h3>회복 및 변화 추적</h3>
                     </div>
                     <p>

@@ -259,7 +259,7 @@ const SpecializedFeatures = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>핵심 접근</h3>
+                                <h3>특장점</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>
@@ -369,7 +369,7 @@ const SpecializedFeatures = () => {
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>핵심 접근</h3>
+                                <h3>특장점</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_2'>

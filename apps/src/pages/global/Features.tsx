@@ -477,7 +477,7 @@ WithOne은 개인의 문화적 배경을 이해하며 정서·관계·정체성�
                         </AnimatedSection>
                         <AnimatedSection className="box" direction="up">
                             <div className='s_tit'>
-                                <h3>핵심 강점</h3>
+                                <h3>특장점</h3>
                             </div>
                             <div className='s_info'>
                                 <ul className='ul_list_1'>

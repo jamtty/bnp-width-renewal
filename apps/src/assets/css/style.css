@@ -1110,9 +1110,15 @@
 .guide .card_list { display:flex; gap:2rem;}
 .guide .card_list li { position:relative; width:calc((100% - 8rem) / 5); height:26rem; }
 .guide .card_list li .tit { height:10rem; padding:0 2.5rem; border-radius:5rem 2rem 5rem 2rem; border:1px solid transparent; background-image:linear-gradient(#EAF0FF, #EAF0FF), linear-gradient(to right, #ADC4FF, #2662FD); background-origin:border-box; background-clip:padding-box, border-box; display:flex; align-items: center; }
-.guide .card_list li .tit .num { width:5rem; height:5rem; border-radius:50%; background:#fff; display:flex; align-items: center; justify-content: center; font-size:2.4rem; font-weight:500; color:#2662FD; }
-.guide .card_list li .tit h3 { font-size:2.8rem; font-weight:700; color:#2662FD; margin-left:auto; }
-.guide .card_list li p {margin:0.9rem 0 0; border-radius:5rem 2rem 5rem 2rem; padding:2.5rem; background:#FAFAFA; font-size:2.1rem; font-weight:500; color:#333; text-align:center; line-height:1.6; word-break:keep-all; overflow-wrap:break-word; }
+.guide .card_list li .tit .num { width:7rem; height:7rem; border-radius:50%;  }
+.guide .card_list li:nth-child(1) .tit .num { background:#fff url('../images/ico_guide_card_list_1.svg') no-repeat center/45%; }
+.guide .card_list li:nth-child(2) .tit .num { background:#fff url('../images/ico_guide_card_list_2.svg') no-repeat center/45%; }
+.guide .card_list li:nth-child(3) .tit .num { background:#fff url('../images/ico_guide_card_list_3.svg') no-repeat center/45%; }
+.guide .card_list li:nth-child(4) .tit .num { background:#fff url('../images/ico_guide_card_list_4.svg') no-repeat center/45%; }
+.guide .card_list li:nth-child(5) .tit .num { background:#fff url('../images/ico_guide_card_list_5.svg') no-repeat center/45%; }
+
+.guide .card_list li .tit h3 { font-size:2.4rem; font-weight:700; color:#2662FD; margin-left:auto; }
+.guide .card_list li p {margin:0.9rem 0 0; border-radius:5rem 2rem 5rem 2rem; padding:2.5rem; background:#FAFAFA; font-size:2rem; font-weight:500; color:#333; text-align:center; line-height:1.6; word-break:keep-all; overflow-wrap:break-word; }
 
 
 @media (max-width: 1366px) {
@@ -1121,8 +1127,13 @@
  .guide .con_1 { position:relative; max-width:162rem; margin:0 auto;}
  .guide .card_list { display:flex; flex-direction: column; gap:2rem;}
  .guide .card_list li { position:relative; width:100%; height:auto; border-radius:2rem; padding:2rem 0; }
- .guide .card_list li .tit { height:6rem; padding:0 1.8rem; border-radius:3rem 1.5rem 3rem 1.5rem; border:1px solid transparent; background-image:linear-gradient(#EAF0FF, #EAF0FF), linear-gradient(to right, #ADC4FF, #2662FD); background-origin:border-box; background-clip:padding-box, border-box; display:flex; align-items: center; }
- .guide .card_list li .tit .num { width:3.5rem; height:3.5rem; border-radius:50%; background:#fff; display:flex; align-items: center; justify-content: center; font-size:1.8rem; font-weight:600; color:#2662FD; }
+ .guide .card_list li .tit { height:10rem; padding:0 1.8rem; border-radius:3rem 1.5rem 3rem 1.5rem; border:1px solid transparent; background-image:linear-gradient(#EAF0FF, #EAF0FF), linear-gradient(to right, #ADC4FF, #2662FD); background-origin:border-box; background-clip:padding-box, border-box; display:flex; align-items: center; }
+ .guide .card_list li .tit .num { width:7rem; height:7rem; border-radius:50%; }
+ .guide .card_list li:nth-child(1) .tit .num { background:#fff url('../images/ico_guide_card_list_1.svg') no-repeat center/45%; }
+ .guide .card_list li:nth-child(2) .tit .num { background:#fff url('../images/ico_guide_card_list_2.svg') no-repeat center/45%; }
+ .guide .card_list li:nth-child(3) .tit .num { background:#fff url('../images/ico_guide_card_list_3.svg') no-repeat center/45%; }
+ .guide .card_list li:nth-child(4) .tit .num { background:#fff url('../images/ico_guide_card_list_4.svg') no-repeat center/45%; }
+ .guide .card_list li:nth-child(5) .tit .num { background:#fff url('../images/ico_guide_card_list_5.svg') no-repeat center/45%; }
  .guide .card_list li .tit h3 { font-size:2.1rem; font-weight:700; color:#2662FD; margin-left:auto; }
  .guide .card_list li p { margin:0.8rem 0 0; border-radius:3rem 1.5rem 3rem 1.5rem; padding:2rem; background:#FAFAFA; font-size:1.6rem; font-weight:500; color:#333; text-align:center; line-height:1.6; }
 }
@@ -1567,6 +1578,7 @@
     font-size:2.4rem;
     font-weight:700;
 }
+.ul_list_Counseling li:last-child { border:1px solid #2662FD; }
 
 @media (max-width: 1366px) {
     /* 상담(아동&청소년&성인) */
@@ -1610,13 +1622,13 @@
 }
 
 /* 상담(패키지(부부&시니어)) */
-.ul_list_Package_1 { position:relative; margin:5.5rem 0 0; display:flex; flex-wrap:wrap; gap:2rem; counter-reset:package1; }
+.ul_list_Package_1 { position:relative; margin:5.5rem 0 0; display:flex; justify-content: center; flex-wrap:wrap; gap:2rem; counter-reset:package1; }
 .ul_list_Package_1::after { content:""; position:absolute; bottom:-15rem; left:50%; width:20rem; height:30rem; transform: translateX(-50%); background:url('../images/ico_down_arrrow.svg') no-repeat center center; z-index:-1; }
-.ul_list_Package_1 li { flex:1; min-width:26rem; box-sizing:border-box; padding:3rem; background:#fff; border-radius:3rem; counter-increment:package1; font-size:2rem; font-weight:500; word-break:keep-all; overflow-wrap:break-word; }
+.ul_list_Package_1 li { width:26rem; height:26rem; box-sizing:border-box; padding:3rem; background:#fff; border-radius:100%; counter-increment:package1; font-size:2rem; font-weight:500; word-break:keep-all; overflow-wrap:break-word; border:1px solid #2662FD; text-align:center; }
 .ul_list_Package_1 li::before {
     content:counter(package1);
     display:block;
-    margin:0 0 3rem;
+    margin:1rem 0 3rem;
     color:#D9E1FF;
     font-size:5rem;
     font-weight:500;
@@ -1634,18 +1646,17 @@
 .ul_list_Package_3 li::after { content:counter(package3); position:absolute; bottom:-7rem; left:50%; transform: translateX(-50%); width:3.8rem; height:3.8rem; border-radius:50%; background:#2662FD; color:#fff; display:flex; align-items: center; justify-content: center; font-size:2rem; font-weight:500; }
 
 @media (max-width: 1366px) {
-    .ul_list_Package_1 { position:relative; margin:3rem 0 0; display:flex; flex-wrap:wrap; gap:2rem; counter-reset:package1; }
+    .ul_list_Package_1 { position:relative; margin:3rem 0 0; display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; counter-reset:package1; }
     .ul_list_Package_1::after { content:""; position:absolute; bottom:-15rem; left:50%; width:20rem; height:30rem; transform: translateX(-50%); background:url('../images/ico_down_arrrow.svg') no-repeat center center; z-index:-1; display:none;}
-    .ul_list_Package_1 li { flex:1; min-width:26rem; box-sizing:border-box; padding:1.5rem; background:#fff; border-radius:3rem; counter-increment:package1; font-size:1.8rem; font-weight:500; word-break:keep-all; overflow-wrap:break-word; }
+    .ul_list_Package_1 li { width:26rem; height:26rem; box-sizing:border-box; padding:3rem; background:#fff; border-radius:100%; counter-increment:package1; font-size:2rem; font-weight:500; word-break:keep-all; overflow-wrap:break-word; border:1px solid #2662FD; text-align:center; }
     .ul_list_Package_1 li::before {
         content:counter(package1);
         display:block;
-        margin:0 0 2rem;
+        margin:1rem 0 3rem;
         color:#D9E1FF;
-        font-size:4rem;
+        font-size:5rem;
         font-weight:500;
         font-style:italic;
-        
     }
 
     .Package-txt-blue { margin:4rem 0 0 !important; font-size:2rem !important; font-weight:700 !important; color:#2662FD !important; text-align:left !important; }
