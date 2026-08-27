@@ -4,7 +4,10 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/renewal/' : '/',
+  // 앱이 서버 문서 루트(/)에 배포되므로 base는 '/'로 고정한다.
+  // '/renewal/'을 쓰면 assets 경로가 /renewal/... 로 생성되어
+  // 실제 배포 위치와 어긋나 404 -> index.html(text/html) 응답 -> JS 모듈 로드 실패가 발생한다.
+  base: '/',
   plugins: [react()],
   resolve: {
     alias: {
