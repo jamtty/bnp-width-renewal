@@ -115,7 +115,7 @@ const SpecializedFeatures = () => {
                 </div>
             </AnimatedSection>
             <AnimatedSection className="btn_wrap" direction="up">
-                <button type="button" className='btn_primary'>관계 리디자인 세미나 신청하기</button>
+                <a href="http://pf.kakao.com/_AXwJn/chat" target="_blank" rel="noopener noreferrer" className='btn_primary'>관계 리디자인 세미나 신청하기</a>
                 <button type="button" className='btn_secondary'>교육 일정 확인하기</button>
             </AnimatedSection>
         </section>

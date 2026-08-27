@@ -87,7 +87,7 @@ const SpecializedFeatures = () => {
                 <img src={ico_box_bg2} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="btn_wrap" direction="up">
-                <button type="button" className='btn_primary'>전문상담사 교육 신청하기</button>
+                <a href="http://pf.kakao.com/_AXwJn/chat" target="_blank" rel="noopener noreferrer" className='btn_primary'>전문상담사 교육 신청하기</a>
                 <button type="button" className='btn_secondary'>교육 일정 확인하기</button>
             </AnimatedSection>
         </section>

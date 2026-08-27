@@ -164,7 +164,7 @@ const CounselingChild = () => {
                 )}
             </div>
             <AnimatedSection className="btn_wrap" direction="up">
-                <button type="button" className='btn_primary'>원데이 검사 예약하기</button>
+                <a href="http://pf.kakao.com/_AXwJn/chat" target="_blank" rel="noopener noreferrer" className='btn_primary'>원데이 검사 예약하기</a>
             </AnimatedSection>
         </section>
     </div>

@@ -115,7 +115,7 @@ const CounselingChild = () => {
                             <img src={ico_box_bg5} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="btn_wrap" direction="up">
-                            <button type="button" className='btn_primary'>임상심리사 자격과정 신청하기</button>
+                            <a href="http://pf.kakao.com/_AXwJn/chat" target="_blank" rel="noopener noreferrer" className='btn_primary'>임상심리사 자격과정 신청하기</a>
                             <button type="button" className='btn_secondary'>교육 일정 확인하기</button>
                         </AnimatedSection>
                     </>
@@ -182,7 +182,7 @@ const CounselingChild = () => {
                             <img src={ico_box_bg4} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="btn_wrap" direction="up">
-                            <button type="button" className='btn_primary'>미술치료 자격과정 신청하기</button>
+                            <a href="http://pf.kakao.com/_AXwJn/chat" target="_blank" rel="noopener noreferrer" className='btn_primary'>미술치료 자격과정 신청하기</a>
                             <button type="button" className='btn_secondary'>교육 일정 확인하기</button>
                         </AnimatedSection>
                     </>
@@ -249,7 +249,7 @@ const CounselingChild = () => {
                             <img src={ico_box_bg4} alt="" className="bg_img" />
                         </AnimatedSection>
                         <AnimatedSection className="btn_wrap" direction="up">
-                            <button type="button" className='btn_primary'>놀이치료 자격과정 신청하기</button>
+                            <a href="http://pf.kakao.com/_AXwJn/chat" target="_blank" rel="noopener noreferrer" className='btn_primary'>놀이치료 자격과정 신청하기</a>
                             <button type="button" className='btn_secondary'>교육 일정 확인하기</button>
                         </AnimatedSection>
                     </>

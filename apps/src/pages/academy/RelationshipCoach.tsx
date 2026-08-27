@@ -72,7 +72,7 @@ const SpecializedFeatures = () => {
                 <img src={ico_box_bg3} alt="" className="bg_img" />
             </AnimatedSection>
             <AnimatedSection className="btn_wrap" direction="up">
-                <button type="button" className='btn_primary'>코칭 프로그램 제안서 요청하기</button>
+                <a href="http://pf.kakao.com/_AXwJn/chat" target="_blank" rel="noopener noreferrer" className='btn_primary'>코칭 프로그램 제안서 요청하기</a>
                 <button type="button" className='btn_secondary'>비즈니스 미팅 신청</button>
             </AnimatedSection>
         </section>
