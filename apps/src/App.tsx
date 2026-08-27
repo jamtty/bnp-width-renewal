@@ -76,6 +76,7 @@ import AdminPopupFormPage from './pages/admin/AdminPopupFormPage';
 import AdminPartnerPage from './pages/admin/AdminPartnerPage';
 import AdminPartnerFormPage from './pages/admin/AdminPartnerFormPage';
 import PopupLayer from './components/PopupLayer';
+import NotFoundPage from './pages/NotFoundPage';
 import { fetchActivePartners, type PartnerItem } from './api/partner';
 import AdminLayout from './components/admin/AdminLayout';
 import { useAuthStore, isTokenExpired } from './store/useAuthStore';
@@ -195,6 +196,8 @@ function App() {
       <Route path="/admin/partner/write" element={<AdminRoute><AdminPartnerFormPage /></AdminRoute>} />
       <Route path="/admin/partner/edit/:id" element={<AdminRoute><AdminPartnerFormPage /></AdminRoute>} />
       <Route path="/admin/mypage" element={<AdminRoute><AdminMyPage /></AdminRoute>} />
+      {/* 404 - 존재하지 않는 경로 */}
+      <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );
